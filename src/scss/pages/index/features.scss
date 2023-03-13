@@ -1,0 +1,250 @@
+.features {
+  color: #fff;
+
+  &__inner {
+    @extend .section-inner;
+
+    background-color: var(--main-L-20);
+  }
+
+  &__title {
+    @extend .title-h1;
+
+    max-width: 88rem;
+    margin-bottom: 8rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 6.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__numbers {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-right: -8.8rem;
+    margin-bottom: 5rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-right: -6rem;
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem 1.2rem;
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__number {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 8.8rem;
+    margin-bottom: 3rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-right: 6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    @include mq('custom', 'max', 640) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__number-desc {
+    margin-bottom: 0.8rem;
+
+    font: var(--content-big);
+    color: var(--white-50);
+    line-height: 110%;
+
+    @include mq('custom', 'max', 768) {
+      font: var(--content-small);
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 0.4rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__number-digit {
+    font: var(--regular) 10rem/110% var(--secondary-ff);
+    letter-spacing: -0.01em;
+
+    @include mq('custom', 'max', 1024) {
+      font-size: 7.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      font-size: 5.3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      font-size: 3rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @include mq('custom', 'max', 360) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    @extend .white-card;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3.2rem;
+    min-height: 26.3rem;
+
+    border: 0;
+
+    @include mq('custom', 'max', 1024) {
+      padding: 2.4rem;
+      min-height: 20.9rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 1.8rem;
+      min-height: 15.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 1.2rem;
+      min-height: 10.3rem;
+
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 3rem;
+
+    font: var(--title-h5);
+    color: var(--main-base-0);
+
+    @include mq('custom', 'max', 768) {
+      font: var(--content-small);
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.8rem;
+    margin-bottom: -0.8rem;
+    margin-top: auto;
+
+    @include mq('custom', 'max', 640) {
+      margin-right: -0.4rem;
+      margin-bottom: -0.4rem;
+    }
+  }
+
+  &__item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.4rem;
+    min-width: 12rem;
+    margin-right: 0.8rem;
+    margin-bottom: 0.8rem;
+
+    border-radius: 99.9rem;
+    overflow: hidden;
+
+    @include mq('custom', 'max', 1024) {
+      width: 9.4rem;
+      min-width: auto;
+      height: 5.2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      min-width: 7rem;
+      height: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 4.4rem;
+      height: 2.8rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+
+      @include mq('custom', 'max', 640) {
+        max-width: 60%;
+        max-height: 60%;
+      }
+    }
+
+    &--rounded {
+      width: 6.4rem;
+      margin-right: 0.4rem;
+      padding: 0;
+      min-width: auto;
+
+      @include mq('custom', 'max', 1024) {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        width: 3.4rem;
+        height: 3.4rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      img {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        max-height: none;
+      }
+    }
+  }
+}

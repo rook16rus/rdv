@@ -1,0 +1,129 @@
+.team {
+  &__title {
+    @extend .title-h1;
+
+    max-width: 95rem;
+    margin-bottom: 8.8rem;
+
+    color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 7rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__slider {
+    overflow: visible;
+  }
+
+  &__slide {
+    position: relative;
+
+    width: auto;
+    height: auto;
+
+    img {
+      width: 36.7rem;
+      height: 36.7rem;
+      object-fit: cover;
+
+      border-radius: 1.6rem;
+      overflow: hidden;
+
+      @include mq('custom', 'max', 1024) {
+        width: 28rem;
+        height: 28rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        width: 22rem;
+        height: 22rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        width: 16.4rem;
+        height: 16.4rem;
+
+        border-radius: 1.2rem;
+      }
+    }
+  }
+
+  &__position {
+    position: absolute;
+    left: 0.8rem;
+    bottom: 0.8rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    height: 4rem;
+    padding: 0 1.6rem;
+
+    border-radius: 99.9rem;
+    background-color: #fff;
+
+    font: var(--content-smalles);
+    text-transform: uppercase;
+    color: var(--main-base-0);
+
+    @include mq('custom', 'max', 768) {
+      height: 3rem;
+      gap: 0.6rem;
+      padding: 0 0.8rem;
+    }
+
+
+    @include mq('custom', 'max', 640) {
+      position: static;
+
+      align-items: flex-start;
+      gap: 0.8rem;
+      height: auto;
+      padding: 0;
+      margin-top: 1.2rem;
+      width: 16.4rem;
+
+      border-radius: 0;
+      background-color: transparent;
+
+      font: var(--button-small);
+    }
+
+    &::before {
+      content: '';
+
+      width: 0.4rem;
+      height: 0.4rem;
+
+      border-radius: 50%;
+      background-color: var(--main-base-0);
+
+      @include mq('custom', 'max', 640) {
+        margin-top: 0.3rem;
+      }
+    }
+  }
+
+  .slider-navigation {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 11.6rem);
+
+    @include mq('custom', 'max', 1024) {
+      position: static;
+
+      display: inline-grid;
+      margin-top: 3.2rem;
+    }
+  }
+}

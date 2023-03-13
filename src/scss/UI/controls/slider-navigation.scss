@@ -1,0 +1,101 @@
+.slider-navigation {
+  position: absolute;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.4rem;
+
+  &--grey {
+    .slider-navigation__button {
+      background-color: var(--grey-base-0);
+      color: var(--main-base-0);
+
+      @include mq('custom', 'min', 1025) {
+        &:hover {
+          background-color: var(--grey-D-10);
+        }
+
+        &:focus {
+          background-color: var(--grey-D-20);
+        }
+      }
+
+      &.swiper-button-disabled {
+        background-color: var(--grey-base-0);
+        color: var(--main-base-0);
+
+        svg {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.6rem;
+    height: 5.6rem;
+
+    border-radius: 1.2rem;
+    background-color: var(--white-10);
+
+    color: #fff;
+
+    transition: 0.3s;
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        background-color: var(--white-20);
+      }
+
+      &:focus {
+        background-color: var(--white-30);
+      }
+    }
+
+    @include mq('custom', 'max', 1024) {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 4rem;
+      height: 4rem;
+
+      border-radius: 0.8rem;
+    }
+
+    &:first-child {
+      transform: rotate(180deg);
+    }
+
+    &.swiper-button-disabled {
+      background-color: var(--white-10);
+      color: var(--white-20);
+
+      svg {
+        opacity: 0.8;
+      }
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      transition: opacity 0.3s;
+
+      @include mq('custom', 'max', 640) {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+    }
+  }
+}

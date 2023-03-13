@@ -1,0 +1,6 @@
+mixin slider-navigation(mod)
+  div(class=`slider-navigation${mod ? ' ' + mod : ''}`)
+    button.slider-navigation__button.js-prev-slide(aria-label="Назад")
+      +icon-multi("button-arrow")
+    button.slider-navigation__button.js-next-slide(aria-label="Вперед")
+      +icon-multi("button-arrow")

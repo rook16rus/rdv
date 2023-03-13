@@ -1,0 +1,42 @@
+.brands {
+  &__slider {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    transition: linear;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24rem;
+    height: 24rem;
+    padding: 1.7rem;
+
+    border: 1px solid #D9DEED;
+    border-radius: 1.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 16rem;
+      height: 16rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 12rem;
+      height: 12rem;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}

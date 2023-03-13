@@ -1,0 +1,65 @@
+-
+  const expertise = [
+    {
+      title: "Внедрение 1C:ERP для оперативного и производственного учета",
+      tags: [
+        {name: "Внедрение ERP"},
+        {name: "Переход с УПП на ERP"},
+        {name: "Переход с SAP, Axapta и Oracle на 1С:ERP"},
+      ]
+    },
+    {
+      title: "Решения 1С для автоматизации финансового и управленческого учета",
+      tags: [
+        {name: "Сближение учетных политик УУ и РСБУ"},
+        {name: "Автоматизация бюджетирования"},
+        {name: "МСФО и корпоративная отчетность"},
+      ]
+    },
+    {
+      title: "Разработка инновационных проектов и интеграция систем",
+      tags: [
+        {name: "Разработка маркетплейсов"},
+        {name: "Разработка B2B-порталов"},
+      ]
+    },
+    {
+      title: "Технологическая экспертиза и разработка заказных решений",
+      tags: [
+        {name: "Запуск 1С на Linux и PostgeSQL"},
+        {name: "Оптимизация производительности 1С"},
+      ]
+    },
+    {
+      title: "Поддержка и сопровождение клиентов",
+      tags: [
+        {name: "Поддержка ИТ-систем"},
+      ]
+    },
+    {
+      title: "E-commerce",
+      tags: [
+        {name: "RDV Маркет"},
+        {name: "Автоматизация складских процессов"},
+        {name: "Комплексное сопровождение на маркетплейсах"},
+      ]
+    },
+  ]
+
+section.expertise.page-section--large-margin
+  .container
+    .expertise__inner
+      h2.expertise__title
+        | Наша экспертиза
+      .js-more-button-container
+        ul.expertise__list
+          for item in expertise
+            li.expertise__item.js-more-button-item
+              h3.expertise__item-title= item.title
+              .expertise__item-tags
+                for tag in item.tags
+                  a.expertise__item-tag.button.button--medium.button--grey(href="#")
+                    span= tag.name
+                    +icon-multi('button-arrow')
+        button.expertise__button.button.button--big.button--grey.js-more-button(data-mobile-count="3")
+          | Показать еще

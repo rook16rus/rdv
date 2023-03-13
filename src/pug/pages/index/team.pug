@@ -1,0 +1,35 @@
+-
+  const team = [
+    {
+      img: "team-1.jpg",
+      position: "Разработчик"
+    },
+    {
+      img: "team-2.jpg",
+      position: "Старший аналитик"
+    },
+    {
+      img: "team-3.jpg",
+      position: "Руководитель проектов"
+    },
+    {
+      img: "team-4.jpg",
+      position: "Методолог"
+    },
+    {
+      img: "team-5.jpg",
+      position: "Функциональный архитектор"
+    },
+  ]
+
+section.team.page-section--large-margin
+  .container.container--mobile-padding-large
+    h2.team__title
+      | На вашем проекте будет работать команда профессионалов
+    .team__slider.swiper.js-init-slider(data-slides="auto" data-space="24")
+      .swiper-wrapper
+        for item in team
+          .team__slide.swiper-slide
+            +pictureLazy(item.img, "Фото сотрудника")
+            span.team__position= item.position
+      +slider-navigation('slider-navigation--grey')

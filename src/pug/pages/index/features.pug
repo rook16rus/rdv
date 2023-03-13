@@ -1,0 +1,117 @@
+-
+  const numbers = [
+    {
+      desc: "лет на рынке",
+      digit: "5+"
+    },
+    {
+      desc: "штатных сотрудников",
+      digit: "100+"
+    },
+    {
+      desc: "годовой оборот, млн ₽",
+      digit: "200+"
+    },
+  ]
+
+-
+  const features = [
+    {
+      title: "Ключевой партнер",
+      images: [
+        {
+          img: "features-1.png",
+          background: "#EFF2FA"
+        },
+        {
+          img: "features-2.png",
+          background: "#EFF2FA"
+        },
+      ]
+    },
+    {
+      title: "Лидеры рынка e-commerce ",
+      images: [
+        {
+          img: "features-3.png",
+          background: "var(--gradient-04)"
+        },
+      ]
+    },
+    {
+      title: "Ведущий IT-разработчик сложных интеграционных проектов в Digital",
+      images: [
+        {
+          img: "features-4.png",
+          background: "var(--gradient-01)"
+        },
+      ]
+    },
+    {
+      title: "Сертифицированные эксперты рынка 1С",
+      images: [
+        {
+          img: "features-5.png",
+          background: "var(--gradient-03)"
+        },
+      ]
+    },
+    {
+      title: "Ключевой партнер по внедрению решений BPMSoft",
+      images: [
+        {
+          img: "features-6.png",
+          background: "#EFF2FA"
+        },
+      ]
+    },
+    {
+      title: "Технологический партнер всех популярных маркетплейсов",
+      images: [
+        {
+          img: "features-7.png",
+          background: "none",
+          rounded: true
+        },
+        {
+          img: "features-8.png",
+          background: "none",
+          rounded: true
+        },
+        {
+          img: "features-9.png",
+          background: "none",
+          rounded: true
+        },
+        {
+          img: "features-10.png",
+          background: "none",
+          rounded: true
+        },
+        {
+          img: "features-11.png",
+          background: "none",
+          rounded: true
+        },
+      ]
+    },
+  ]
+
+section.features.page-section
+  .container
+    .features__inner.lazyload(data-bg="assets/images/features-bg.png")
+      h2.features__title
+        | Сильная экспертиза и доверие крупнейших компаний России
+      ul.features__numbers
+        for item in numbers
+          li.features__number
+            span.features__number-desc= item.desc
+            span.features__number-digit= item.digit
+      ul.features__list
+        for item in features
+          li.features__item
+            h3.features__item-title= item.title
+            .features__item-images
+              for image in item.images
+                div(class=`features__item-image${image.rounded ? " features__item-image--rounded" : ""}` style=`background: ${image.background}`)
+                  +imgLazy(image.img, "Фото приемущества")

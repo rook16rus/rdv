@@ -1,0 +1,32 @@
+@font-face {
+  font-weight: 500;
+  font-family: 'Geometria';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Geometria"),
+    url("../fonts/Geometria-Medium.woff2") format("woff2"),
+    url("../fonts/Geometria-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Geometria';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Geometria"),
+    url("../fonts/Geometria-Regular.woff2") format("woff2"),
+    url("../fonts/Geometria-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Geometria"),
+    url("../fonts/Manrope-Regular.woff2") format("woff2"),
+    url("../fonts/Manrope-Regular.woff") format("woff");
+}

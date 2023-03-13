@@ -1,0 +1,119 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.4rem;
+
+  overflow: hidden;
+
+  @extend .button-uppercase-text;
+
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &--big {
+    height: 5.6rem;
+    border-radius: 1.2rem;
+  }
+
+  &--medium {
+    min-height: 4rem;
+    border-radius: 0.8rem;
+  }
+
+  &--blue {
+    background-color: var(--main-base-0);
+    color: #fff;
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        background-color: var(--main-L-10);
+      }
+
+      &:focus {
+        background-color: var(--main-D-10);
+      }
+    }
+  }
+
+  &--yellow {
+    background-color: var(--other-yellow-01);
+    color: var(--other-black);
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        background-color: var(--other-yellow-02);
+      }
+
+      &:focus {
+        background-color: var(--other-yellow-03);
+      }
+    }
+  }
+
+  &--bordered {
+    border: 1px solid var(--grey-L-10);
+    color: var(--main-base-0);
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        border-color: rgba(23, 79, 119, 0.5);
+      }
+
+      &:focus {
+        border-color: var(--main-base-0);
+      }
+    }
+  }
+
+  &--grey {
+    background-color: var(--grey-base-0);
+    color: var(--main-base-0);
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        background-color: var(--grey-D-10);
+      }
+
+      &:focus {
+        background-color: var(--grey-D-20);
+      }
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+    color: var(--main-base-0);
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        background-color: var(--grey-D-10);
+      }
+
+      &:focus {
+        background-color: var(--grey-D-20);
+      }
+    }
+  }
+
+  &--white-trasparent {
+    background-color: var(--white-10);
+    color: #fff;
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        background-color: var(--white-20);
+      }
+
+      &:focus {
+        background-color: var(--white-30);
+      }
+    }
+  }
+}

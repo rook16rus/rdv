@@ -1,0 +1,102 @@
+-
+  const cooperation = [
+    {
+      img: "cooperation-1.png",
+      title: "Запуск популярного сервиса доставки по всей стране",
+      underline: "var(--gradient-04)",
+      text: "Запуск популярного сервиса доставки: более 250 складов, обработка 70000+ заказов в день",
+      tags: [
+        {name: "управленческий учет"},
+        {name: "oms"},
+      ]
+    },
+    {
+      img: "cooperation-2.png",
+      title: "Разработка и автоматизация ИТ-систем маркетплейса",
+      underline: "var(--gradient-04)",
+      tags: [
+        {name: "1С:Управление холдингом"},
+        {name: "oms"},
+        {name: "биллинг"},
+        {name: "управленческий учет"},
+        {name: "пвз"},
+        {name: "oms"},
+      ]
+    },
+    {
+      img: "cooperation-3.png",
+      title: "Объединение и оптимизация сложных ИТ-систем",
+      underline: "var(--gradient-03)",
+      text: "Переход из 4-х в единую автоматизированную систему и сокращение сроков по закрытию отчётного финансового периода",
+      tags: [
+        {name: "Автоматизация систем"},
+        {name: "Финансовый учёт"},
+      ]
+    },
+    {
+      img: "cooperation-4.png",
+      title: "Внедрение 1С:Управление холдингом",
+      underline: "var(--gradient-04)",
+      tags: [
+        {name: "бухгалтерский учет"},
+        {name: "управленческий учет"},
+        {name: "разработка методологии"},
+      ]
+    },
+    {
+      img: "cooperation-5.png",
+      title: "Внедрение БИТ.ФИНАНС на базе 1С:ERP",
+      underline: "var(--gradient-03)",
+      text: "Поддержание высокой транзакционности и формирования достоверной управленческой отчётности в широкой аналитике",
+      tags: [
+        {name: "управленческий учет"},
+      ]
+    },
+    {
+      img: "cooperation-6.png",
+      title: "Разработка гибкой системы мотивации сотрудников",
+      underline: "var(--gradient-01)",
+      text: "С полностью автоматизированным расчётом премиальной части ",
+      tags: [
+        {name: "1С:ЗУП кор"},
+        {name: "Бит.Финанс"},
+      ]
+    },
+    {
+      img: "cooperation-6.png",
+      title: "Разработка гибкой системы мотивации сотрудников",
+      underline: "var(--gradient-01)",
+      text: "С полностью автоматизированным расчётом премиальной части ",
+      tags: [
+        {name: "1С:ЗУП кор"},
+        {name: "Бит.Финанс"},
+      ]
+    },
+  ]
+
+section.cooperation.page-section
+  .container
+    .cooperation__inner
+      h2.cooperation__title
+        | Работаем с лидерами рынка
+      .js-more-button-container
+        ul.cooperation__list
+          for item in cooperation
+            li.cooperation__item.js-more-button-item
+              .cooperation__item-header
+                a.cooperation__item-logo(href="#")
+                  +imgLazy(item.img, "Логотип компании")
+              h3.cooperation__item-title
+                span= item.title
+                .cooperation__item-title-underline(style=`background-image: ${item.underline}`)
+              .cooperation__item-bottom
+                if item.text
+                  p.cooperation__item-text= item.text
+                .cooperation__item-tags.js-more-button-container
+                  for tag in item.tags
+                    a.cooperation__item-tag.button.button--medium.button--bordered.js-more-button-item(href="#")= tag.name
+                  button.cooperation__item-tag.button.button--medium.button--grey.js-more-button(data-count="5")
+                    | Еще&nbsp;#[span.js-more-button-surplus 1]
+        button.cooperation__button.button.button--grey.js-more-button(data-count="6" data-mobile-count="3")
+          | Показать еще
+

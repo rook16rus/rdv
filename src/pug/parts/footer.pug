@@ -1,0 +1,39 @@
+-
+  const footerMenu = [
+    {text: "Услуги"},
+    {text: "О компании"},
+    {text: "Продукты"},
+    {text: "Мероприятия"},
+    {text: "Проекты"},
+    {text: "ПРЕСС-центр"},
+    {text: "RDV Маркет"},
+    {text: "Контакты"},
+  ]
+
+footer.footer
+  .container.container--mobile-padding-large
+    nav.footer__top
+      .footer__phone-block
+        a.footer__phone.link(href="tel:84951270347")
+          | 8(495) 127-03-47
+        button.footer__phone-button.button.button--big.button--white
+          | Заказать звонок
+      .footer__middle
+        a.footer__email.link(href="mailto:info@rdv-it.ru")
+          | info@rdv-it.ru
+        address.footer__address
+          | Москва, Красносельская нижн. 35,  стр. 64, офис 305, Бизнес-центр «Виктория плаза»
+        +socials(["socials-footer-1.svg", "socials-footer-2.svg", "socials-footer-3.svg", "socials-footer-4.svg", "socials-footer-5.svg"])
+      ul.footer__menu
+        for item in footerMenu
+          li.footer__menu-item
+            a.footer__menu-link.link(href="#")= item.text
+    .footer__bottom
+      span.footer__copyright
+        | © 2021 Все права защищены
+      a.footer__copyright-link(href="#")
+        | Правовая информация
+      .footer__developer
+        span Разработка сайта
+        a(href="https://markweber.agency/")
+          +icon-multi('mark-weber')

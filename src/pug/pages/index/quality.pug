@@ -1,0 +1,76 @@
+-
+  const quality1 = [
+    {
+      icon: "quality-1.svg",
+      title: "Разработка методологии под потребности бизнеса",
+    },
+    {
+      icon: "quality-2.svg",
+      title: "Отлаженная модель управления проектами"
+    },
+    {
+      icon: "quality-3.svg",
+      title: "Три линии поддержки"
+    },
+  ]
+
+-
+  const quality2 = [
+    {
+      icon: "quality-4.svg",
+      title: "Упор на качество и стандарты разработки"
+    },
+    {
+      icon: "quality-5.svg",
+      title: "Полностью прозрачный менеджмент по проекту"
+    },
+    {
+      icon: "quality-6.svg",
+      title: "Выделенная команда на каждый проект"
+    },
+  ]
+
+section.quality.page-section--large-margin
+  .container
+    .quality__inner
+      p.quality__desc
+        | Почему нас выбирают
+      h2.quality__title
+        | Комплексно подходим к работе над каждым проектом
+      .quality__wrapper
+        ul.quality__list
+          for item in quality1
+            li(class=`quality__item js-accordion${item.active ? ' active' : ''}`)
+              .quality__item-header.js-accordion-btn
+                .quality__item-icon
+                  +imgLazy(item.icon, "Иконка преимущества")
+                h3.quality__item-title= item.title
+                button.quality__item-button.button.button--bordered
+                  +icon-multi('arrow-down')
+              .quality__item-body.js-accordion-content
+                p
+                  | Имеем большой опыт разработки методологии учетных процессов и сближения учетных политик совместно с методологами BIG4
+                ul
+                  li Помогаем корректно выстроить бизнес-процессы
+                  li Подбираем варианты развития и изменения процессов таким образом, чтобы не поломать архитектуру системы
+              button.quality__item-button.button.button--bordered.js-accordion-btn
+                +icon-multi('arrow-down')
+                span.js-accordion-btn-text Подробнее
+        ul.quality__list
+          for item in quality2
+            li(class=`quality__item js-accordion${item.active ? ' active' : ''}`)
+              .quality__item-header.js-accordion-btn
+                .quality__item-icon
+                  +imgLazy(item.icon, "Иконка преимущества")
+                h3.quality__item-title= item.title
+                button.quality__item-button.button.button--bordered
+                  +icon-multi('arrow-down')
+              .quality__item-body.js-accordion-content
+                p
+                  | Имеем большой опыт разработки методологии учетных процессов и сближения учетных политик совместно с методологами BIG4
+                ul
+                  li Помогаем корректно выстроить бизнес-процессы
+                  li Подбираем варианты развития и изменения процессов таким образом, чтобы не поломать архитектуру системы
+              button.quality__item-button.button.button--bordered.js-accordion-btn
+                +icon-multi('arrow-down')
+                span.js-accordion-btn-text Подробнее

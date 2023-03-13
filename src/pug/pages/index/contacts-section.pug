@@ -1,0 +1,30 @@
+section.contacts-section.page-section--large-margin
+  .container
+    .contacts-section__inner.lazyload(data-bg="assets/images/contacts-section-bg.png")
+      h2.contacts-section__title
+        | Расскажите о вашем проекте
+      p.contacts-section__desc
+        | Заполните форму обратной связи и мы свяжемся с вами в&nbsp;ближайшее время!
+      form.contacts-section__form(data-need-validation)
+        .contacts-section__input-wrapper.input-wrapper
+          input.contacts-section__input.input.input--big.input--white(type="text" name="contactsName" id="contactsName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
+          label.contacts-section__label(for="contactsName")
+            | Ваше Имя
+        .contacts-section__input-wrapper.input-wrapper
+          input.contacts-section__input.input.input--big.input--white.js-phone-input(type="tel" name="contactsPhone" id="contactsPhone" data-parsley-phone required)
+          label.contacts-section__label(for="contactsPhone")
+            | Ваш телефон
+        .contacts-section__input-wrapper.contacts-section__input-wrapper--large.input-wrapper
+          input.contacts-section__input.input.input--big.input--white(type="email" name="contactsEmail" id="contactsEmail" required)
+          label.contacts-section__label(for="contactsEmail")
+            | Email
+        .contacts-section__input-wrapper.contacts-section__input-wrapper--large.input-wrapper.input-wrapper--textarea
+          textarea.contacts-section__textarea.input.input--big.input--white(name="contactsComment" id="contactsComment")
+          label.contacts-section__label(for="contactsComment")
+            | Ваш комментарий
+        button.contacts-section__button.button.button--big.button--yellow
+          | Отправить
+        .contacts-section__checkbox-wrapper
+          input.contacts-section__checkbox.visually-hidden(type="checkbox" name="contactsConfidence" id="contactsConfidence" required)
+          label.contacts-section__checkbox-label(for="contactsConfidence")
+            span Даю согласие на обработку #[a(href="#") персональных данных]

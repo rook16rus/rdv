@@ -1,0 +1,59 @@
+-
+  const menuTop = [
+    {
+      text: "О компании"
+    },
+    {
+      text: "Мероприятия"
+    },
+    {
+      text: "Пресс-центр"
+    },
+    {
+      text: "Контакты"
+    },
+  ]
+
+-
+  const menuBottom = [
+    {
+      text: "Услуги"
+    },
+    {
+      text: "Продукты"
+    },
+    {
+      text: "Проекты"
+    },
+    {
+      text: "RDV Маркет"
+    },
+  ]
+
+header.header
+  nav.narrow-container
+    .header__top
+      ul.header__top-menu
+        for item in menuTop
+          li.header__top-menu-item
+            a.header__top-menu-link.link(href="#")= item.text
+      a.header__phone.link(href="tel:84951270347")
+        | 8 (495) 127-03-47
+      a.header__mail.link(href="mailto:info@rdv-it.ru")
+       | info@rdv-it.ru
+      +socials(["socials-1.svg", "socials-2.svg"])
+    .header__bottom
+      a.header__logo.link(href="index.html")
+        +imgLazy("logo.svg", "Логотип компании")
+      p.header__logo-desc
+        | ИТ консалтинг и комплексная автоматизация бизнеса
+      ul.header__bottom-menu
+        for item in menuBottom
+          li.header__bottom-menu-item
+            a.header__bottom-menu-link.link(href="#")= item.text
+      button.header__search-button
+        +icon-multi('search-icon')
+      button.header__button.button.button--medium.button--blue
+        | Оставить заявку
+      button.header__burger-button
+        +icon-multi('burger-icon')

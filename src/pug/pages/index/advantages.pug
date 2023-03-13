@@ -1,0 +1,48 @@
+-
+  const advantages = [
+    {
+      text: "Бесплатное экспресс-обследование по функциональным блокам и архитектуру системы",
+      img: "advantages-1.svg"
+    },
+    {
+      text: "Подробную информацию о ходе работы проекта в рамках которого знакомитесь с командой и ее принципами",
+      img: "advantages-2.svg"
+    },
+    {
+      text: "Конкретный план действий с описанием технологий управления проектом для контроля его успешного выполнения",
+      img: "advantages-3.svg"
+    },
+    {
+      text: "Прозрачную и детальную схему бюджета по этапам, модулям и функциям",
+      img: "advantages-4.svg"
+    },
+  ]
+
+-
+  const examination = [
+    "бизнес-ценности, которых придерживается компания",
+    "поиск путей для быстрого запуска системы в эксплуатацию",
+    "оптимизацию стоимости проекта",
+    "перспективы развития и масштабирования архитектуры",
+    "техническую экспертизу по вопросам сайзинга (подбор серверного оборудования)",
+  ]
+
+section.advantages.page-section--large-margin
+  .container.container--mobile-padding-large
+    h2.advantages__title
+      | Сотрудничая с нами, вы получаете
+    .advantages__wrapper
+      ul.advantages__list
+        for item in advantages
+          li.advantages__item
+            p.advantages__item-text= item.text
+            .advantages__item-icon
+              +imgLazy(item.img, "Иконка премущества")
+      .advantages__examination.lazyload(data-bg="assets/images/examination-bg.png")
+        h3.advantages__examination-title
+          | При подготовке коммерческого предложения опираемся на:
+        ul.advantages__examination-list
+          for item in examination
+            li.advantages__examination-item= item
+        button.advantages__examination-button.button.button--big.button--white
+          | Заказать обследование

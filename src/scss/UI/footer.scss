@@ -1,0 +1,259 @@
+.footer {
+  padding: 12rem 0 5rem;
+
+  background: url("../images/footer-bg.png") no-repeat center;
+  background-size: cover;
+
+  color: #fff;
+
+  @include mq('custom', 'max', 1024) {
+    padding: 8rem 0 4.2rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    padding: 5rem 0 3.6rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding: 2rem 0 3rem;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 12rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 9rem;
+    }
+
+    @include mq('custom', 'max', 991) {
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 0;
+    }
+  }
+
+  &__phone-block, &__middle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mq('custom', 'max', 991) {
+      margin-bottom: 5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__middle {
+    margin-right: auto;
+    margin-left: 19.7rem;
+
+    @include mq('custom', 'max', 1199) {
+      margin-left: 9rem;
+    }
+
+    @include mq('custom', 'max', 991) {
+      margin-left: 0;
+    }
+  }
+
+  &__phone, &__email {
+    display: inline-block;
+
+    font: var(--title-h4);
+    letter-spacing: -0.03em;
+
+    @include mq('custom', 'max', 768) {
+      letter-spacing: -0.01em;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 4.8rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 3.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__phone-button {
+    @include mq('custom', 'max', 640) {
+      width: 100%;
+    }
+  }
+
+  &__email {
+    margin-bottom: 5.4rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__address {
+    display: inline-block;
+    max-width: 41rem;
+    margin-bottom: 2.4rem;
+
+    font: var(--content-medium);
+    letter-spacing: -0.02em;
+    color: var(--white-30);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .socials {
+    margin-left: -1.5rem;
+    gap: 0.8rem;
+
+    @include mq('custom', 'max', 640) {
+      gap: 0;
+    }
+  }
+
+  .socials__item:not(:first-child) {
+    @include mq('custom', 'max', 640) {
+      margin-left: -0.4rem;
+    }
+  }
+
+  .socials__item img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2.4rem 8.5rem;
+    margin-right: 10rem;
+
+    @include mq('custom', 'max', 1199) {
+      margin-right: 0;
+    }
+
+    @include mq('custom', 'max', 991) {
+      order: -1;
+      margin-bottom: 5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__menu-link {
+    font: var(--button-big);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font: var(--content-medium);
+    letter-spacing: -0.02em;
+    color: var(--white-30);
+
+    @include mq('custom', 'max', 768) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq('custom', 'max', 640) {
+      font: var(--content-small);
+    }
+  }
+
+  &__copyright-link {
+    margin-right: auto;
+    margin-left: 22.2rem;
+
+    transition: 0.3s;
+
+    @include mq('custom', 'max', 1199) {
+      margin-left: 11.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: var(--white-70);
+    }
+  }
+
+  &__developer {
+    display: flex;
+    align-items: center;
+    align-self: center;
+
+    @include mq('custom', 'max', 768) {
+      grid-row: 1 / 3;
+      grid-column: 2 / 3;
+      margin-left: auto;
+    }
+
+    span {
+      @include mq('custom', 'max', 768) {
+        display: none;
+      }
+    }
+
+    svg {
+      width: 11.5rem;
+      height: 3rem;
+      margin-left: 1.6rem;
+
+      transition: 0.3s;
+
+      @include mq('custom', 'max', 640) {
+        width: 10.5rem;
+        height: 2.7rem;
+        margin-left: 0;
+      }
+
+      &:hover {
+        color: var(--white-70);
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+-
+  const intro = [
+    {
+      title: "Внедрение 1C:ERP",
+      text: "Внедряем современные IT-решения и развиваем направление оперативного и производственного учета (ERP)",
+      img: "intro-1"
+    },
+    {
+      title: "Корпоративные проекты 1С по автоматизации управленческого учета",
+      text: "Бизнес-консалтинг, разработка методологии, внедрение 1С:ERP, 1С:Управление холдингом, 1С:Комплексная автоматизация, БИТ.ФИНАНССлайд ",
+      img: "intro-2"
+    },
+    {
+      title: "Переход с SAP на 1С:ERP",
+      text: "Импортозамещение: помогаем осуществить переход с зарубежных систем на отечественный софт",
+      img: "intro-3"
+    },
+    {
+      title: "Оптимизация производительности систем",
+      text: "Сильная технологическая экспертиза для разработки и развития ИТ-продуктов на базе 1С",
+      img: "intro-4"
+    },
+    {
+      title: "Разработка маркетплейса",
+      text: "Надежные производительные ИТ-платформы для масштабирования вашего бизнеса",
+      img: "intro-5"
+    },
+  ]
+
+section.intro.page-section
+  .narrow-container
+    h1.intro__title
+      | Консалтинг и комплексная автоматизация бизнеса в сфере IT
+  .container
+    .intro__slider.swiper
+      .swiper-wrapper
+        for item in intro
+          .intro__slide.swiper-slide(style=`background-image: url('assets/images/${item.img}.png');`)
+            .intro__slide-tags
+              a.intro__slide-tag(href="#") Актуальные услуги
+            h3.intro__slide-title= item.title
+            .intro__slide-text
+              p= item.text
+            a.intro__slide-link.button.button--big.button--white(href="#")
+              span Узнать больше
+              +icon-multi('button-arrow')
+      +slider-navigation()
+      .swiper-pagination
+        span.swiper-pagination-current 0
+        span.swiper-pagination-total 0
+      .swiper-pagination-bullets
