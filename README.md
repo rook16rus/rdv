@@ -2,7 +2,7 @@
 
 ## Ссылки
 
-1. [Главная](http://rdv.markweber.ru/local/static/build/)
+1. [Главная](https://rook16rus.github.io/rdv/)
 
 
 ## Документация
