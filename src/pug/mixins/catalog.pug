@@ -1,3 +1,34 @@
-mixin catalog()
+mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
   section.catalog
-
+    .narrow-container
+      +breadcrumbs(breadcrumbsData)
+      h1.catalog__title= title
+      .catalog__desc
+        p= desc
+    .container
+      .catalog__inner
+        form.catalog__filter(action="#")
+          .catalog__filter-top
+            .catalog__tags
+              each item, index in tags
+                .catalog__tag
+                  input.catalog__tag-radio.visually-hidden(type="radio" name="catalogTags" id=`catalogTag${index}`)
+                  label.catalog__tag-label(for=`catalogTag${index}`)= item.value
+            .catalog__buttons
+              .catalog__search
+                button.catalog__search-button
+                  +icon-multi('search-icon')
+                input.catalog__search-input(type="text" name="catalogSearch" id="catalogSearch" aria-label="Поиск мероприятия")
+              .catalog__date-button
+                +icon-multi('date-icon')
+              .catalog__grid-buttons
+                .catalog__grid-button
+                  +icon-multi('grid-tile-icon')
+                .catalog__grid-button
+                  +icon-multi('grid-list-icon')
+        ul.catalog__list
+          for item in catalogData
+            li.catalog__item
+              +catalog-card(item.start, item.meta, item.title, item.text, item.markets, item.button)
+        button.catalog__button.button.button--big.button--grey
+          | Показать еще

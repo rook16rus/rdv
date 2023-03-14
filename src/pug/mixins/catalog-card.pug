@@ -1,0 +1,16 @@
+mixin catalog-card(start, meta, title, text, markets, buttonText)
+  article.catalog-card
+    header.catalog-card__header
+      .catalog-card__start= start
+      .catalog-card__meta
+        for item in meta
+          .catalog-card__meta-item
+            +imgLazy(item.icon, "Иконка мета тега")
+            span= item.text
+      h3.catalog-card__title= title
+    p.catalog-card__text= text
+    .catalog-card__footer
+      ul.catalog-card__markets
+        for item in markets
+          li.catalog-card__market= item.value
+      a.catalog-card__button.button.button--medium.button--yellow(href="#")= buttonText
