@@ -1,10 +1,13 @@
-mixin catalog-card(start, meta, title, text, markets, buttonText)
+mixin catalog-card(start, meta, title, text, markets, buttonText, record)
   article.catalog-card
     header.catalog-card__header
-      .catalog-card__start= start
+      if record
+        .catalog-card__record.card-tag.card-tag--yellow= record
+      else
+        .catalog-card__start.card-tag.card-tag--white= start
       .catalog-card__meta
         for item in meta
-          .catalog-card__meta-item
+          .catalog-card__meta-item.card-tag.card-tag--transparent
             +imgLazy(item.icon, "Иконка мета тега")
             span= item.text
       h3.catalog-card__title= title
@@ -12,5 +15,5 @@ mixin catalog-card(start, meta, title, text, markets, buttonText)
     .catalog-card__footer
       ul.catalog-card__markets
         for item in markets
-          li.catalog-card__market= item.value
+          li.catalog-card__market.button.button--small.button--border-grey= item.value
       a.catalog-card__button.button.button--medium.button--yellow(href="#")= buttonText

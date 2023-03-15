@@ -136,61 +136,19 @@
     color: var(--main-base-0);
   }
 
-  &__search-button, &__burger-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    flex-shrink: 0;
-
-    border-radius: 0.8rem;
-
-    transition: 0.3s background-color;
-
-    svg {
-      width: 1.3rem;
-      height: 1.3rem;
-    }
-  }
-
   &__search-button {
     margin-right: 0.8rem;
-    background-color: var(--grey-base-0);
 
     @include mq('custom', 'max', 1024) {
       margin-left: 2rem;
-    }
-
-    @include mq('custom', 'min', 1025) {
-      &:hover {
-        background-color: var(--grey-D-10);
-      }
-
-      &:focus {
-        background-color: var(--grey-D-20);
-      }
     }
   }
 
   &__burger-button {
     display: none;
 
-    border: 1px solid var(--grey-L-10);
-    color: var(--main-base-0);
-
     @include mq('custom', 'max', 1024) {
       display: flex;
-    }
-
-    @include mq('custom', 'min', 1025) {
-      &:hover {
-        border-color: rgba(23, 79, 119, 0.5);
-      }
-
-      &:focus {
-        border-color: var(--main-base-0);
-      }
     }
   }
 

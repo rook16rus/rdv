@@ -1,0 +1,26 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-right: -1.6rem;
+
+  &__item {
+    margin-right: 1.6rem;
+
+    font: var(--content-small);
+    letter-spacing: -0.02em;
+
+    &:last-child {
+      color: var(--grey-D-60);
+    }
+  }
+
+  &__arrow {
+    width: 0.3rem;
+    height: 0.3rem;
+    margin-right: 1.6rem;
+    margin-bottom: 0.1rem;
+
+    border-radius: 50%;
+    background-color: var(--grey-D-60);
+  }
+}

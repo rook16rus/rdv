@@ -1,3 +1,104 @@
 .catalog {
+  padding-top: 4rem;
 
+  .breadcrumbs {
+    margin-bottom: 3.2rem;
+  }
+
+  &__title {
+    @extend .title-h1;
+
+    margin-bottom: 2rem;
+  }
+
+  &__desc {
+    max-width: 44rem;
+    margin-bottom: 4rem;
+
+    font: var(--content-huge);
+    letter-spacing: -0.02em;
+    color: var(--main-base-0);
+  }
+
+  &__inner {
+    @extend .section-inner;
+  }
+
+  &__filter {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-bottom: 5.6rem;
+  }
+
+  &__filter-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.4rem;
+    margin-bottom: -0.4rem;
+  }
+
+  &__tag {
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+
+    white-space: nowrap;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__search {
+    position: relative;
+
+    margin-right: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  &__date-button {
+    margin-right: 1.2rem;
+  }
+
+  &__search-input {
+    display: none;
+  }
+
+  &__grid-buttons {
+    display: flex;
+    flex-shrink: 0;
+
+    border-radius: 0.8rem;
+    overflow: hidden;
+  }
+
+  &__grid-button {
+    border-radius: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+  }
+
+  &__button {
+    width: 100%;
+    height: 8rem;
+    margin-top: 5.6rem;
+
+    background-color: var(--grey-D-10);
+
+    @include mq('custom', 'min', 1025) {
+      &:hover, &:focus {
+        background-color:  var(--grey-D-20);
+      }
+    }
+  }
 }
