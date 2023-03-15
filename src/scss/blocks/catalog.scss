@@ -1,26 +1,26 @@
 .catalog {
   padding-top: 4rem;
 
-  @include mq('custom', 'max', 1024) {
-
-  }
-
-  @include mq('custom', 'max', 768) {
-
-  }
-
   @include mq('custom', 'max', 640) {
-
+    padding-top: 4.8rem;
   }
 
   .breadcrumbs {
     margin-bottom: 3.2rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__title {
     @extend .title-h1;
 
     margin-bottom: 2rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__desc {
@@ -34,6 +34,10 @@
 
   &__inner {
     @extend .section-inner;
+
+    @include mq('custom', 'max', 640) {
+      padding: 1.2rem;
+    }
   }
 
   &__filter {
@@ -41,6 +45,18 @@
     grid-template-columns: 1fr;
     gap: 0.8rem;
     margin-bottom: 5.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__filter-top {
@@ -81,6 +97,10 @@
     height: 4rem;
     padding-right: 1.6rem;
 
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
+
     svg {
       width: 1.4rem;
       height: 1.4rem;
@@ -98,10 +118,18 @@
 
     margin-right: 0.8rem;
     flex-shrink: 0;
+
+    @include mq('custom', 'max', 640) {
+      margin-right: 0.4rem;
+    }
   }
 
   &__date-button {
     margin-right: 1.2rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-right: 0;
+    }
   }
 
   &__search-input {
@@ -114,6 +142,10 @@
 
     border-radius: 0.8rem;
     overflow: hidden;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__grid-button {
@@ -124,6 +156,10 @@
   &__filter-bottom {
     background-color: #fff;
     border-radius: 0.8rem;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
 
     & > * {
       margin: 2.4rem;
@@ -189,6 +225,22 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
+
+    @include mq('custom', 'max', 1199) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: 1fr;
+    }
+
+    @include mq('custom', 'max', 768) {
+      gap: 0.8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.4rem;
+    }
   }
 
   &__button {
@@ -202,6 +254,21 @@
       &:hover, &:focus {
         background-color:  var(--grey-D-20);
       }
+    }
+
+    @include mq('custom', 'max', 1024) {
+      height: 7.2rem;
+      margin-top: 4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      height: 6.4rem;
+      margin-top: 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 5.6rem;
+      margin-top: 1.2rem;
     }
   }
 }
