@@ -1,6 +1,18 @@
 .catalog {
   padding-top: 4rem;
 
+  @include mq('custom', 'max', 1024) {
+
+  }
+
+  @include mq('custom', 'max', 768) {
+
+  }
+
+  @include mq('custom', 'max', 640) {
+
+  }
+
   .breadcrumbs {
     margin-bottom: 3.2rem;
   }
@@ -55,10 +67,26 @@
     @extend .button--white;
 
     border-color: white;
+
+    &:hover {
+      background-color: #fff;
+    }
   }
 
   &__tag-label {
     cursor: pointer;
+  }
+
+  &__tag-more-button {
+    height: 4rem;
+    padding-right: 1.6rem;
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      margin: 0 0 0 1rem;
+      margin-bottom: 0.2rem;
+    }
   }
 
   &__buttons {
@@ -90,6 +118,7 @@
 
   &__grid-button {
     border-radius: 0;
+    color: var(--main-base-0);
   }
 
   &__filter-bottom {
@@ -118,7 +147,7 @@
     }
   }
 
-  &__subtag-label {
+  &__subtag-label, &__subtag-more-button {
     display: flex;
     align-items: center;
     height: 3.2rem;
@@ -133,7 +162,17 @@
     @extend .button-small-text;
     color: var(--main-base-0);
 
-    transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        border-color: rgba(23, 79, 119, 0.5);
+      }
+
+      &:focus {
+        border-color: var(--main-base-0);
+      }
+    }
 
     svg {
       transform: scaleX(0);

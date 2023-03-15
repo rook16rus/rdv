@@ -6,20 +6,23 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
       .catalog__desc
         p= desc
     .container
-      .catalog__inner
+      .catalog__inner.js-more-button-container
         form.catalog__filter(action="#")
           .catalog__filter-top
-            .catalog__tags
+            .catalog__tags.js-more-button-container
               each item, index in tags
-                .catalog__tag
+                .catalog__tag.js-more-button-item
                   input.catalog__tag-radio.visually-hidden(type="radio" name="catalogTags" id=`catalogTag${index}`)
                   label.catalog__tag-label.button.button--medium.button--bordered(for=`catalogTag${index}`)= item.value
+              button.catalog__tag-more-button.button.button--medium.button--bordered.js-more-button(data-count=5)
+                span Ещё
+                +icon-multi('arrow-down')
             .catalog__buttons
               .catalog__search
                 button.catalog__search-button.button.button--icon.button--bordered
                   +icon-multi('search-icon')
                 input.catalog__search-input(type="text" name="catalogSearch" id="catalogSearch" aria-label="Поиск мероприятия")
-              .catalog__date-button.button.button--icon.button--bordered
+              button.catalog__date-button.button.button--icon.button--bordered
                 +icon-multi('date-icon')
               .catalog__grid-buttons
                 button.catalog__grid-button.button.button--icon.button--white
@@ -28,16 +31,18 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
                   +icon-multi('grid-list-icon')
           .catalog__filter-bottom
             .cotalog__filter-bottom-content
-              .catalog__subtags
+              .catalog__subtags.js-more-button-container
                 each item, index in tags[0].subtags
-                  .catalog__subtag
+                  .catalog__subtag.js-more-button-item
                     input.catalog__subtag-radio.visually-hidden(type="checkbox" name=`catalogSubtag${index}` id=`catalogSubtag${index}`)
                     label.catalog__subtag-label(for=`catalogSubtag${index}`)
                       span= item.value
                       +icon-multi('cross-icon')
+                .catalog__subtag-more-button.js-more-button(data-count=6)
+                  | + #[span.js-more-button-surplus 0]
         ul.catalog__list
           for item in catalogData
-            li.catalog__item
+            li.catalog__item.js-more-button-item
               +catalog-card(item.start, item.meta, item.title, item.text, item.markets, item.buttonText, item.record)
-        button.catalog__button.button.button--big.button--grey
+        button.catalog__button.button.button--big.button--grey.js-more-button(data-count=6 data-mobile-count=3)
           | Показать еще

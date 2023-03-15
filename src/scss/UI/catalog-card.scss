@@ -1,6 +1,14 @@
 .catalog-card {
   @extend .white-card;
 
+  transition: border-color 0.3s;
+
+  @include mq('custom', 'min', 1025) {
+    &:hover {
+      border-color: var(--main-base-0);
+    }
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
@@ -35,6 +43,17 @@
     font: var(--title-h6);
     color: #fff;
     letter-spacing: -0.01em;
+
+    a::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__text {
@@ -66,6 +85,9 @@
   }
 
   &__button {
+    position: relative;
+    z-index: 1;
+
     flex-shrink: 0;
   }
 }

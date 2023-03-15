@@ -10,7 +10,8 @@ mixin catalog-card(start, meta, title, text, markets, buttonText, record)
           .catalog-card__meta-item.card-tag.card-tag--transparent
             +imgLazy(item.icon, "Иконка мета тега")
             span= item.text
-      h3.catalog-card__title= title
+      h3.catalog-card__title
+        a(href="#")= title
     p.catalog-card__text= text
     .catalog-card__footer
       ul.catalog-card__markets

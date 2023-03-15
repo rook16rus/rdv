@@ -6,8 +6,13 @@ export default function catalog() {
 
   tags.forEach(tag => {
     tag.addEventListener('click', (e) => {
-      tag.classList.add('active')
-      console.log(tag.checked)
+      if (tag.classList.contains('active')) {
+        tag.checked = false;
+        tag.classList.remove('active');
+      } else {
+        tags.forEach(tag => tag.classList.remove('active'));
+        tag.classList.add('active');
+      }
     })
   })
 }
