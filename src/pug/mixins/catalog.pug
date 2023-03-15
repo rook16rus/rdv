@@ -11,9 +11,9 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
           .catalog__filter-top
             .catalog__tags
               each item, index in tags
-                .catalog__tag.button.button--medium.button--bordered
+                .catalog__tag
                   input.catalog__tag-radio.visually-hidden(type="radio" name="catalogTags" id=`catalogTag${index}`)
-                  label.catalog__tag-label(for=`catalogTag${index}`)= item.value
+                  label.catalog__tag-label.button.button--medium.button--bordered(for=`catalogTag${index}`)= item.value
             .catalog__buttons
               .catalog__search
                 button.catalog__search-button.button.button--icon.button--bordered
@@ -26,6 +26,15 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
                   +icon-multi('grid-tile-icon')
                 button.catalog__grid-button.button.button--icon.button--white
                   +icon-multi('grid-list-icon')
+          .catalog__filter-bottom
+            .cotalog__filter-bottom-content
+              .catalog__subtags
+                each item, index in tags[0].subtags
+                  .catalog__subtag
+                    input.catalog__subtag-radio.visually-hidden(type="checkbox" name=`catalogSubtag${index}` id=`catalogSubtag${index}`)
+                    label.catalog__subtag-label(for=`catalogSubtag${index}`)
+                      span= item.value
+                      +icon-multi('cross-icon')
         ul.catalog__list
           for item in catalogData
             li.catalog__item

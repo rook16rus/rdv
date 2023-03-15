@@ -23,6 +23,7 @@ import introSlider from "./helpers/introSlider";
 import moreButton from "./helpers/moreButton";
 import infinitySlider from "./helpers/infinitySlider";
 import header from "./helpers/header";
+import catalog from "./helpers/catalog";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -46,6 +47,7 @@ documenReady(() => {
   moreButton();
   infinitySlider();
   header();
+  catalog();
 });
 
 document.fonts.ready.then((res) => {
