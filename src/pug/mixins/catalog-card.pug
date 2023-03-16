@@ -1,5 +1,5 @@
-mixin catalog-card(start, meta, title, text, markets, buttonText, record)
-  article.catalog-card
+mixin catalog-card(start, meta, title, text, markets, buttonText, record, mod)
+  article(class=`catalog-card${mod ? ' ' + mod : ""}`)
     header.catalog-card__header
       if record
         .catalog-card__record.card-tag.card-tag--yellow= record
@@ -12,9 +12,16 @@ mixin catalog-card(start, meta, title, text, markets, buttonText, record)
             span= item.text
       h3.catalog-card__title
         a(href="#")= title
-    p.catalog-card__text= text
-    .catalog-card__footer
-      ul.catalog-card__markets
-        for item in markets
-          li.catalog-card__market.button.button--small.button--border-grey= item.value
-      a.catalog-card__button.button.button--medium.button--yellow(href="#")= buttonText
+      span.catalog-card__title.catalog-card__title--start= start
+      span.catalog-card__day Понедельник
+    .catalog-card__body
+      h3.catalog-card__title.catalog-card__title--right
+        a(href="#")= title
+      p.catalog-card__text= text
+      .catalog-card__footer
+        ul.catalog-card__markets.js-more-button-row-container
+          for item in markets
+            li.catalog-card__market.button.button--small.button--border-grey.js-more-button-row-item= item.value
+          button.catalog-card__market-more-button.button.button--small.button--border-grey.js-more-button-row
+            | + #[span.js-more-button-row-surplus 0]
+        a.catalog-card__button.button.button--medium.button--yellow(href="#")= buttonText

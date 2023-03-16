@@ -1,3 +1,92 @@
+-
+  const catalogDates = [
+    {
+      value: "Все года",
+      months: [
+        {value: "Январь"},
+        {value: "Февраль"},
+        {value: "Март"},
+        {value: "Апрель"},
+        {value: "Май"},
+        {value: "Июнь"},
+        {value: "Июль"},
+        {value: "Август"},
+        {value: "Сентябрь"},
+        {value: "Октябрь"},
+        {value: "Ноябрь"},
+        {value: "Декабрь"},
+      ]
+    },
+    {
+      value: "2023",
+      months: [
+        {value: "Январь"},
+        {value: "Февраль"},
+        {value: "Март"},
+        {value: "Апрель"},
+        {value: "Май"},
+        {value: "Июнь"},
+        {value: "Июль"},
+        {value: "Август"},
+        {value: "Сентябрь"},
+        {value: "Октябрь"},
+        {value: "Ноябрь"},
+        {value: "Декабрь"},
+      ]
+    },
+    {
+      value: "2022",
+      months: [
+        {value: "Январь"},
+        {value: "Февраль"},
+        {value: "Март"},
+        {value: "Апрель"},
+        {value: "Май"},
+        {value: "Июнь"},
+        {value: "Июль"},
+        {value: "Август"},
+        {value: "Сентябрь"},
+        {value: "Октябрь"},
+        {value: "Ноябрь"},
+        {value: "Декабрь"},
+      ]
+    },
+    {
+      value: "2021",
+      months: [
+        {value: "Январь"},
+        {value: "Февраль"},
+        {value: "Март"},
+        {value: "Апрель"},
+        {value: "Май"},
+        {value: "Июнь"},
+        {value: "Июль"},
+        {value: "Август"},
+        {value: "Сентябрь"},
+        {value: "Октябрь"},
+        {value: "Ноябрь"},
+        {value: "Декабрь"},
+      ]
+    },
+    {
+      value: "2020",
+      months: [
+        {value: "Январь"},
+        {value: "Февраль"},
+        {value: "Март"},
+        {value: "Апрель"},
+        {value: "Май"},
+        {value: "Июнь"},
+        {value: "Июль"},
+        {value: "Август"},
+        {value: "Сентябрь"},
+        {value: "Октябрь"},
+        {value: "Ноябрь"},
+        {value: "Декабрь"},
+      ]
+    },
+  ]
+
 mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
   section.catalog&attributes(attributes)
     .narrow-container
@@ -7,39 +96,61 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
         p= desc
     .container
       .catalog__inner.js-more-button-container
-        form.catalog__filter(action="#")
+        form.catalog__filter.js-tabs-container(action="#")
           .catalog__filter-top
-            .catalog__tags.js-more-button-container
-              each item, index in tags
-                .catalog__tag.js-more-button-item
-                  input.catalog__tag-radio.visually-hidden(type="radio" name="catalogTags" id=`catalogTag${index}`)
-                  label.catalog__tag-label.button.button--medium.button--bordered(for=`catalogTag${index}`)= item.value
-              button.catalog__tag-more-button.button.button--medium.button--bordered.js-more-button(data-count=5)
-                span Ещё
-                +icon-multi('arrow-down')
+            .catalog__tags-block
+              .catalog__tags.js-more-button-container.js-more-button-row-container(data-tablet)
+                each item, index in tags
+                  .catalog__tag.js-more-button-item.js-more-button-row-item
+                    input.catalog__tag-radio.visually-hidden(type="radio" name="catalogTags" id=`catalogTag${index}`)
+                    label.catalog__tag-label.button.button--medium.button--bordered.js-tab(for=`catalogTag${index}` data-href=`catalogTab${index}`)= item.value
+                button.catalog__tag-more-button.button.button--medium.button--bordered.js-more-button.js-more-button-row(data-count=5 type="button")
+                  span Ещё
+                  +icon-multi('arrow-down')
+              button.catalog__tags-more.button.button--icon.button--bordered(type="button")
+                +icon-multi('elipsis-icon')
             .catalog__buttons
               .catalog__search
-                button.catalog__search-button.button.button--icon.button--bordered
+                button.catalog__search-button.button.button--icon.button--bordered(type="button")
                   +icon-multi('search-icon')
-                input.catalog__search-input(type="text" name="catalogSearch" id="catalogSearch" aria-label="Поиск мероприятия")
-              button.catalog__date-button.button.button--icon.button--bordered
+                .catalog__search-input-block
+                  +icon-multi('search-icon')
+                  input.catalog__search-input.input.input--white.input--small(type="text" name="catalogSearch" id="catalogSearch" placeholder="Поиск мероприятия" aria-label="Поиск мероприятия")
+              button.catalog__date-button.button.button--icon.button--bordered.js-tab(type="button" data-href="catalogDate")
                 +icon-multi('date-icon')
               .catalog__grid-buttons
-                button.catalog__grid-button.button.button--icon.button--white
+                button.catalog__grid-button.button.button--icon.button--white.active(type="button" data-modification="" data-modification-cards="")
                   +icon-multi('grid-tile-icon')
-                button.catalog__grid-button.button.button--icon.button--white
+                button.catalog__grid-button.button.button--icon.button--white(type="button" data-modification="catalog__list--list" data-modification-cards="catalog-card--row")
                   +icon-multi('grid-list-icon')
           .catalog__filter-bottom
-            .cotalog__filter-bottom-content
-              .catalog__subtags.js-more-button-container
-                each item, index in tags[0].subtags
-                  .catalog__subtag.js-more-button-item
-                    input.catalog__subtag-radio.visually-hidden(type="checkbox" name=`catalogSubtag${index}` id=`catalogSubtag${index}`)
-                    label.catalog__subtag-label(for=`catalogSubtag${index}`)
-                      span= item.value
-                      +icon-multi('cross-icon')
-                .catalog__subtag-more-button.js-more-button(data-count=6)
-                  | + #[span.js-more-button-surplus 0]
+            each tag, index in tags
+              .catalog__filter-bottom-content.js-tab-content(data-id=`catalogTab${index}`)
+                .catalog__subtags.js-more-button-container
+                  each subtag, i in tag.subtags
+                    .catalog__subtag.js-more-button-item
+                      input.catalog__subtag-radio.visually-hidden(type="checkbox" name=`catalogSubtag${index}-${i}` id=`catalogSubtag${index}-${i}`)
+                      label.catalog__subtag-label(for=`catalogSubtag${index}-${i}`)
+                        span= subtag.value
+                        +icon-multi('cross-icon')
+                  .catalog__subtag-more-button.js-more-button(data-count=6)
+                    | + #[span.js-more-button-surplus 0]
+            .catalog__filter-bottom-content.js-tab-content(data-id=`catalogDate`)
+              .catalog__date.js-tabs-container
+                .catalog__date-tabs
+                  each item, index in catalogDates
+                    .catalog__date-tab
+                      input.catalog__date-radio.visually-hidden(type="radio" name="catalogDates" id=`catalogDate${index}`)
+                      label.catalog__date-label.js-tab(for=`catalogDate${index}` data-href=`catalogMonths${index}`)= item.value
+                .catalog__date-contents
+                  each item, index in catalogDates
+                    ul.catalog__months.js-tab-content(data-id=`catalogMonths${index}`)
+                      each elem, i in item.months
+                        li.catalog__month
+                          input.catalog__month-checkbox.visually-hidden(type="checkbox" name=`catalogSubtag${index}-${i}` id=`catalogSubtag${index}-${i}`)
+                          label.catalog__month-label(for=`catalogSubtag${index}-${i}`)
+                            span= elem.value
+                            +icon-multi('cross-icon')
         ul.catalog__list
           for item in catalogData
             li.catalog__item.js-more-button-item

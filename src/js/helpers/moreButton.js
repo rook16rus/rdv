@@ -32,11 +32,11 @@ export default function moreButton() {
       }
 
       button.addEventListener('click', () => {
-        items.forEach(item => item.classList.remove('visually-hidden'))
-        button.remove();
+        surplus.forEach(item => item.classList.remove('visually-hidden'))
+        button.classList.add('visually-hidden');
       })
     } else {
-      button.remove();
+      button.classList.add('visually-hidden');
     }
   })
 }

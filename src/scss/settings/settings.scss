@@ -183,14 +183,6 @@ img {
   list-style: none;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-}
-
 .site-container {
   width: 100%;
   max-width: 1470px;
@@ -241,15 +233,15 @@ a:focus {
 }
 
 .visually-hidden {
-  border: 0;
+  border: 0 !important;
   clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
   position: absolute !important;
-  width: 1px;
-  white-space: nowrap;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
 
 .link {

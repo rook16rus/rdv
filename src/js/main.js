@@ -24,6 +24,8 @@ import moreButton from "./helpers/moreButton";
 import infinitySlider from "./helpers/infinitySlider";
 import header from "./helpers/header";
 import catalog from "./helpers/catalog";
+import moreButtonRow from "./helpers/moreButtonRow";
+import tabs from "./helpers/tabs";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -48,6 +50,8 @@ documenReady(() => {
   infinitySlider();
   header();
   catalog();
+  moreButtonRow();
+  tabs();
 });
 
 document.fonts.ready.then((res) => {
@@ -63,5 +67,5 @@ window.addEventListener('load', function () {
 });
 
 window.addEventListener('resize', () => {
-
+  moreButtonRow();
 })
