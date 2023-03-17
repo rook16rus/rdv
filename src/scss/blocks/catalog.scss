@@ -137,8 +137,13 @@
       transition: 0.3s width, 0.3s margin;
     }
 
-    &.count-active::after {
-      display: flex;
+    &.count-active {
+      background-color: #fff;
+      border-color: #fff;
+
+      &::after {
+        display: flex;
+      }
     }
   }
 
