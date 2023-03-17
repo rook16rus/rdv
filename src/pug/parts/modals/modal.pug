@@ -1,5 +1,25 @@
-.modal__container(data-target="demo").modal-demo
+.modal__container(data-target="event").modal-event
   .modal__content
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
       span
+    h3.modal-event__title
+      | Оставьте заявку
+    p.modal-event__desc
+      | Мы с вами свяжемся и обсудим все детали
+    form.modal-event__form(action="#" data-need-validation)
+      .modal-event__input-wrapper.input-wrapper
+        input.modal-event__input.input.input--big.input--blue(type="text" id="eventName" name="eventName" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+        label.modal-event__label(for="eventName")
+          | Имя
+      .modal-event__input-wrapper.input-wrapper
+        input.modal-event__input.input.input--big.input--blue.js-phone-input(type="tel" id="eventPhone" name="eventPhone" required data-parsley-phone)
+        label.modal-event__label(for="eventPhone")
+          | Телефон
+      .modal-event__input-wrapper.modal-event__input-wrapper--big.input-wrapper.input-wrapper--textarea
+        textarea.modal-event__textarea.input.input--big.input--blue(id="eventComment" name="eventComment" required)
+        label.modal-event__label(for="eventComment")
+          | Вопрос или комментарий
+      button.modal-event__button.button.button--big.button--yellow
+        | Отправить
+      +confidence-block("contactsConfidence", "confidence-block--blue")

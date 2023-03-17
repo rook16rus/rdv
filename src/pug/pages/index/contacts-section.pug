@@ -24,7 +24,4 @@ section.contacts-section.page-section--large-margin
             | Ваш комментарий
         button.contacts-section__button.button.button--big.button--yellow
           | Отправить
-        .contacts-section__checkbox-wrapper
-          input.contacts-section__checkbox.visually-hidden(type="checkbox" name="contactsConfidence" id="contactsConfidence" required)
-          label.contacts-section__checkbox-label(for="contactsConfidence")
-            span Даю согласие на обработку #[a(href="#") персональных данных]
+        +confidence-block("contactsConfidence")

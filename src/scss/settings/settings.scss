@@ -426,6 +426,11 @@ a:focus {
   letter-spacing: -0.01em;
 }
 
+.title-h3 {
+  font: var(--title-h3);
+  letter-spacing: -0.01em;
+}
+
 .section-title {
   @extend .title-h1;
 

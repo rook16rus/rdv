@@ -1,0 +1,5 @@
+mixin confidence-block(id, mod)
+  div(class=`confidence-block${mod ? ' ' + mod : ""}`)
+    input.confidence-block__checkbox.visually-hidden(type="checkbox" name=id id=id required)
+    label.confidence-block__checkbox-label(for=id)
+      span Даю согласие на обработку #[a(href="#") персональных данных]
