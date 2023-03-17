@@ -108,7 +108,35 @@
   }
 
   &__tag-label {
+    display: flex;
+    align-items: center;
     cursor: pointer;
+
+    &::after {
+      content: attr(data-count);
+
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 2.4rem;
+      min-width: 2.4rem;
+      padding: 0 0.7rem;
+      margin-left: 0.8rem;
+
+      border-radius: 50%;
+      background-color: var(--grey-D-10);
+      overflow: hidden;
+
+      font: var(--button-meduim);
+      white-space: nowrap;
+      color: var(--main-base-0);
+
+      transition: 0.3s width, 0.3s margin;
+    }
+
+    &.count-active::after {
+      display: flex;
+    }
   }
 
   &__tag-more-button {

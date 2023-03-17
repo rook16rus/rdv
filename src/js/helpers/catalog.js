@@ -54,4 +54,32 @@ export default function catalog() {
       moreButtonRow();
     }
   })
+
+  const countsDisplays = catalog.querySelectorAll('.catalog__tag-label');
+
+  countsDisplays.forEach(countDisplay => {
+    const subTagsContainer = catalog.querySelector(`*[data-id="${countDisplay.dataset.href}"]`);
+    const subTags = subTagsContainer.querySelectorAll('.catalog__subtag-radio');
+
+    let count = countDisplay.dataset.count;
+
+    checkSubtagsCount();
+
+    subTags.forEach(subtag => {
+      subtag.addEventListener('change', () => {
+        count = [...subTags].filter(tag => tag.checked).length;
+        countDisplay.dataset.count = count;
+
+        checkSubtagsCount();
+      })
+    })
+
+    function checkSubtagsCount() {
+      if (count > 0) {
+        countDisplay.classList.add('count-active')
+      } else {
+        countDisplay.classList.remove('count-active')
+      }
+    }
+  })
 }

@@ -104,7 +104,7 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
                 each item, index in tags
                   .catalog__tag.js-more-button-item.js-more-button-row-item
                     input.catalog__tag-radio.visually-hidden(type="radio" name="catalogTags" id=`catalogTag${index}`)
-                    label.catalog__tag-label.button.button--medium.button--bordered.js-tab(for=`catalogTag${index}` data-href=`catalogTab${index}`)= item.value
+                    label.catalog__tag-label.button.button--medium.button--bordered.js-tab(for=`catalogTag${index}` data-href=`catalogTab${index}` data-count=0)= item.value
                 button.catalog__tag-more-button.button.button--medium.button--bordered.js-more-button.js-more-button-row(data-count=5 type="button")
                   span Ещё
                   +icon-multi('arrow-down')
