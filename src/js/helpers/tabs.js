@@ -2,10 +2,18 @@ export default function tabs() {
   const tabsContainers = document.querySelectorAll('.js-tabs-container');
 
   tabsContainers.forEach(tabsContainer => {
-    const contents = tabsContainer.querySelectorAll('.js-tab-content');
+    let contents = tabsContainer.querySelectorAll('.js-tab-content');
+    contents = [...contents].filter(content => content.closest('.js-tabs-container').innerHTML === tabsContainer.innerHTML)
 
     let tabs = tabsContainer.querySelectorAll('.js-tab');
     tabs = [...tabs].filter(tab => tab.closest('.js-tabs-container').innerHTML === tabsContainer.innerHTML)
+
+    let scroll = tabsContainer.querySelector('.js-tabs-scroll');
+    scroll = scroll.closest('.js-tabs-container').innerHTML === tabsContainer.innerHTML ?
+      tabsContainer.querySelector('.js-tabs-scroll') :
+      null;
+
+    if (scroll) scroll.style.setProperty('--active-tab-width', tabs[0].clientWidth / 10 + 'rem');
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
@@ -14,7 +22,6 @@ export default function tabs() {
     })
 
     function tabActivate(id, tab) {
-
       if (tab.classList.contains('tab-active')) {
         tab.classList.remove('tab-active');
       } else {
@@ -38,6 +45,11 @@ export default function tabs() {
           tabContent.classList.remove('active')
         }
       })
+
+      if (scroll) {
+        scroll.style.setProperty('--active-tab-offset', tab.offsetLeft / 10 + 'rem');
+        scroll.style.setProperty('--active-tab-width', tab.clientWidth / 10 + 'rem');
+      }
     }
   })
 }

@@ -285,7 +285,7 @@
     margin-bottom: -0.4rem;
   }
 
-  &__subtag-radio:checked + &__subtag-label {
+  &__subtag-radio:checked + &__subtag-label, &__month-checkbox:checked + &__month-label {
     background-color: var(--main-base-0);
     color: #fff;
 
@@ -295,7 +295,7 @@
     }
   }
 
-  &__subtag-label, &__subtag-more-button {
+  &__subtag-label, &__subtag-more-button, &__month-label {
     display: flex;
     align-items: center;
     height: 3.2rem;
@@ -340,10 +340,28 @@
   }
 
   &__date-tabs {
+    position: relative;
+
     display: flex;
     padding-bottom: 2.4rem;
 
     border-bottom: 1px solid var(--grey-D-10);
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      transform: translateX(var(--active-tab-offset));
+
+      width: var(--active-tab-width);
+      height: 1px;
+
+      background-color: var(--main-base-0);
+
+      transition: 0.4s ease-in-out;
+    }
   }
 
   &__date-tab {
@@ -355,6 +373,17 @@
     color: rgba(23, 79, 119, 0.5);
   }
 
+  &__date-label {
+    display: block;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    &.tab-active {
+      color: var(--main-base-0);
+    }
+  }
+
   &__date-contents {
     position: relative;
   }
@@ -364,7 +393,11 @@
     left: 0;
     top: 0;
 
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    margin-right: -0.4rem;
+    margin-bottom: 0.4rem;
 
     opacity: 0;
     visibility: hidden;
