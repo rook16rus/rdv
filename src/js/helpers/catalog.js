@@ -19,13 +19,19 @@ export default function catalog() {
   })
 
   const search = catalog.querySelector('.catalog__search');
+  const searchInput = catalog.querySelector('.catalog__search-input');
+  const searchReset = catalog.querySelector('.catalog__search-reset');
 
   document.addEventListener('mousedown', e => {
     if (e.target.closest(".catalog__search-button") || e.target.closest(".catalog__search-input-block")) {
       search.classList.add('active');
     } else {
-      search.classList.remove('active')
+      if (searchInput.value === '') search.classList.remove('active')
     }
+  })
+
+  searchReset.addEventListener('click', () => {
+    searchInput.value = '';
   })
 
   const gridButtons = catalog.querySelector('.catalog__grid-buttons');

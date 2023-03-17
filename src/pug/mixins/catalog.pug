@@ -117,6 +117,8 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
                 .catalog__search-input-block
                   +icon-multi('search-icon')
                   input.catalog__search-input.input.input--white.input--small(type="text" name="catalogSearch" id="catalogSearch" placeholder="Поиск мероприятия" aria-label="Поиск мероприятия")
+                  button.catalog__search-reset(type="button")
+                    +icon-multi('cross-icon')
               button.catalog__date-button.button.button--icon.button--bordered.js-tab(type="button" data-href="catalogDate")
                 +icon-multi('date-icon')
               .catalog__grid-buttons
