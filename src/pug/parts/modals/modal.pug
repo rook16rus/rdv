@@ -23,3 +23,24 @@
       button.modal-event__button.button.button--big.button--yellow
         | Отправить
       +confidence-block("contactsConfidence", "confidence-block--blue")
+
+-
+  const modalCatalogTags = [
+    {
+      value: "",
+    },
+  ]
+
+.modal__container(data-target="tags").modal-tags
+  .modal__content
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      span
+      span
+    h3.modal-tags__title
+      | Все теги
+    form.modal-tags__form
+    .modal-tags__tags
+      each item, index in modalCatalogTags
+        button.modal-tags__tag.button.button--medium.button--bordered(data-path=`catalogSubtags${index}`)
+          span= item.value
+          +icon-multi('cross-icon')
