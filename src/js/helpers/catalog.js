@@ -61,25 +61,40 @@ export default function catalog() {
     const subTagsContainer = catalog.querySelector(`*[data-id="${countDisplay.dataset.href}"]`);
     const subTags = subTagsContainer.querySelectorAll('.catalog__subtag-radio');
 
-    let count = countDisplay.dataset.count;
+    let subtagsCount = countDisplay.dataset.count;
 
-    checkSubtagsCount();
+    checkCount(subtagsCount, countDisplay);
 
     subTags.forEach(subtag => {
       subtag.addEventListener('change', () => {
-        count = [...subTags].filter(tag => tag.checked).length;
-        countDisplay.dataset.count = count;
+        subtagsCount = [...subTags].filter(tag => tag.checked).length;
+        countDisplay.dataset.count = subtagsCount;
 
-        checkSubtagsCount();
+        checkCount(subtagsCount, countDisplay);
       })
     })
-
-    function checkSubtagsCount() {
-      if (count > 0) {
-        countDisplay.classList.add('count-active')
-      } else {
-        countDisplay.classList.remove('count-active')
-      }
-    }
   })
+
+  const dateButton = catalog.querySelector('.catalog__date-button');
+  const monthCheckBoxes = catalog.querySelectorAll('.catalog__month-checkbox');
+
+  let count = [...monthCheckBoxes].filter(checkbox => checkbox.checked).length;
+
+  checkCount(count, dateButton)
+
+  monthCheckBoxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      count = [...monthCheckBoxes].filter(checkbox => checkbox.checked).length;
+
+      checkCount(count, dateButton);
+    })
+  })
+
+  function checkCount(count, display) {
+    if (count > 0) {
+      display.classList.add('count-active')
+    } else {
+      display.classList.remove('count-active')
+    }
+  }
 }

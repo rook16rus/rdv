@@ -112,6 +112,9 @@
     align-items: center;
     cursor: pointer;
 
+    padding-top: 0;
+    padding-bottom: 0;
+
     &::after {
       content: attr(data-count);
 
@@ -212,10 +215,49 @@
   }
 
   &__date-button {
+    position: relative;
     margin-right: 1.2rem;
+
+    overflow: visible;
 
     @include mq('custom', 'max', 1024) {
       margin-right: 0;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: -0.2rem;
+      right: -0.2rem;
+
+      display: none;
+      width: 0.8rem;
+      height: 0.8rem;
+
+      border-radius: 50%;
+      background-color: var(--other-red-01);
+    }
+
+    svg:last-child {
+      display: none;
+    }
+
+    &.count-active::before {
+      display: block;
+    }
+
+    &.tab-active {
+      background-color: #fff;
+      border-color: #fff;
+
+      svg:first-child {
+        display: none;
+      }
+
+      svg:last-child {
+        display: block;
+      }
     }
   }
 
