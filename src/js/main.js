@@ -26,6 +26,7 @@ import header from "./helpers/header";
 import catalog from "./helpers/catalog";
 import moreButtonRow from "./helpers/moreButtonRow";
 import tabs from "./helpers/tabs";
+import catalogModal from "./helpers/catalogModal";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -52,6 +53,7 @@ documenReady(() => {
   catalog();
   moreButtonRow();
   tabs();
+  catalogModal();
 });
 
 document.fonts.ready.then((res) => {

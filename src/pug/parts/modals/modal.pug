@@ -100,19 +100,19 @@
     },
   ]
 
-.modal__container(data-target="tags").modal-tags.modal-open
+.modal__container(data-target="tags").modal-tags.modal-open.js-catalog-modal
   .modal__content
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
       span
-    h3.modal-tags__title
+    h3.modal-tags__title.js-catalog-modal-title
       | Все теги
     form.modal-tags__form.js-tabs-container
       .modal-tags__contents
         .modal-tags__content.js-tab-content.active(data-id="modalCatalogTags")
           .modal-tags__tags
             each item, index in modalCatalogTags
-              button.modal-tags__tag.button.button--medium.button--bordered.js-tab(type="button" data-href=`modalCatalogSubtags${index}`)
+              button.modal-tags__tag.button.button--medium.button--bordered.js-tab.js-catalog-modal-tag(type="button" data-href=`modalCatalogSubtags${index}` data-count=0)
                 span= item.value
           button.modal-tags__tags-button.button.button--medium.button--bordered(type="submit")
             | Применить
@@ -121,11 +121,11 @@
             ul.modal-tags__subtags
               each ite, i in item.subtags
                 li.modal-tags__subtag
-                  input.modal-tags__subtag-input.visually-hidden(type="checkbox" name=`modalCatalogSubtag${index}-${i}` id=`modalCatalogSubtag${index}-${i}`)
+                  input.modal-tags__subtag-input.visually-hidden.js-catalog-modal-subtag(type="checkbox" name=`modalCatalogSubtag${index}-${i}` id=`modalCatalogSubtag${index}-${i}`)
                   label.modal-tags__subtag-label(for=`modalCatalogSubtag${index}-${i}`)
                     span= ite.value
                     +icon-multi('cross-icon')
-            button.modal-tags__subtags-button.button.button--medium.button--bordered.js-tab(type="button" data-href="modalCatalogTags") Применить
-            button.modal-tags__subtags-button-reset.button.button--medium(type="button")
+            button.modal-tags__subtags-button.button.button--medium.button--bordered.js-tab.js-catalog-modal-back(type="button" data-href="modalCatalogTags") Применить
+            button.modal-tags__subtags-button-reset.button.button--medium.js-catalog-modal-reset(type="button")
               span Очистить все
               +icon-multi('reset-icon')
