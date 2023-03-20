@@ -9,9 +9,11 @@ export default function tabs() {
     tabs = [...tabs].filter(tab => tab.closest('.js-tabs-container').innerHTML === tabsContainer.innerHTML)
 
     let scroll = tabsContainer.querySelector('.js-tabs-scroll');
-    scroll = scroll.closest('.js-tabs-container').innerHTML === tabsContainer.innerHTML ?
-      tabsContainer.querySelector('.js-tabs-scroll') :
-      null;
+    if (scroll) {
+      scroll = scroll.closest('.js-tabs-container').innerHTML === tabsContainer.innerHTML ?
+        tabsContainer.querySelector('.js-tabs-scroll') :
+        null;
+    }
 
     if (scroll) scroll.style.setProperty('--active-tab-width', tabs[0].clientWidth / 10 + 'rem');
 
