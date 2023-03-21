@@ -1,0 +1,27 @@
+include variables
+
+main.page-main.main
+  +catalog(
+    breadcrumbs,
+    "Пресс-центр",
+    "Актульная информация о нашей деятельности и полезные статьи",
+    tags,
+    catalog
+  ).page-section--large-margin
+  include ../../parts/mailing
+
+//-
+
+          @include mq('custom', 'max', 1024) {
+
+          }
+
+          @include mq('custom', 'max', 768) {
+
+          }
+
+          @include mq('custom', 'max', 640) {
+
+          }
+
+//

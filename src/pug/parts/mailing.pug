@@ -1,0 +1,17 @@
+article.mailing.page-section--large-margin
+  .container
+    .mailing__inner.lazyload(data-bg="assets/images/mailing-bg.svg")
+      .mailing__content
+        h2.mailing__title
+          | Подпишитесь на рассылку
+        .mailing__text
+          p
+            | Получайте актуальную информацию об акциях и полезные статьи
+      form.mailing__form(action="#" data-need-validation)
+        .mailing__input-wrapper.input-wrapper
+          input.mailing__input.input.input--big.input--white(type="email" name="mailingEmail" id="mailingEmail" required)
+          label.mailing__label(for="mailingEmail") E-mail
+        button.mailing__button.button.button--big.button--yellow
+          | Подписаться
+        +confidence-block("mailingConfidence")
+
