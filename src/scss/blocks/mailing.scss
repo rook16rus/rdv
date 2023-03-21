@@ -12,6 +12,21 @@
     overflow: hidden;
 
     color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 5rem 4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 4rem 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 3.2rem 1.2rem;
+      border-radius: 2rem;
+    }
   }
 
   &__title {
@@ -28,6 +43,15 @@
 
     font: var(--content-huge);
     color: var(--white-50);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      font: var(--content-big);
+      color: #fff;
+    }
   }
 
   &__form {
@@ -36,14 +60,45 @@
     gap: 1.2rem 2.4rem;
     align-items: center;
     max-width: 50rem;
+
+    @include mq('custom', 'max', 1024) {
+
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+      max-width: none;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.6rem;
+    }
   }
 
   &__input-wrapper {
     grid-column: span 2;
+
+    @include mq('custom', 'max', 1024) {
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-column: span 1;
+    }
+
+    @include mq('custom', 'max', 640) {
+
+    }
   }
 
   &__button {
     width: 20rem;
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+      margin-bottom: 1.4rem;
+    }
   }
 
   .confidence-block {
@@ -52,4 +107,6 @@
 
     font: var(--content-small);
   }
+
+
 }
