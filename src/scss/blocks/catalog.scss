@@ -40,6 +40,50 @@
     }
   }
 
+  &__category-filter {
+    position: relative;
+
+    display: flex;
+    margin-right: -3.2rem;
+    padding-bottom: 2.4rem;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateX(var(--active-tab-offset));
+
+      width: var(--active-tab-width);
+      height: 1px;
+
+      background-color: var(--main-base-0);
+
+      transition: 0.4s ease-in-out;
+    }
+  }
+
+  &__category-filter-item {
+    margin-right: 3.2rem;
+  }
+
+  &__category-filter-input:checked +  &__category-filter-label {
+    color: var(--main-base-0);
+  }
+
+  &__category-filter-label {
+    display: block;
+
+    cursor: pointer;
+
+    font: var(--title-h6);
+    letter-spacing: -0.01em;
+    color: rgba(23, 79, 119, 0.5);
+
+    transition: 0.3s;
+  }
+
   &__filter {
     display: grid;
     grid-template-columns: 1fr;

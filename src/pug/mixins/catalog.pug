@@ -1,10 +1,27 @@
-mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
+mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter)
   section.catalog&attributes(attributes)
     .narrow-container
       +breadcrumbs(breadcrumbsData)
       h1.catalog__title= title
       .catalog__desc
         p= desc
+      if categoryFilter
+        form.catalog__category-filter.js-tabs-container.js-tabs-scroll
+          .catalog__category-filter-item
+            input.catalog__category-filter-input.visually-hidden(type="radio" name="categoryFilter" id="categoryFilter1" checked)
+            label.catalog__category-filter-label.js-tab(for="categoryFilter1") Все
+          .catalog__category-filter-item
+            input.catalog__category-filter-input.visually-hidden(type="radio" name="categoryFilter" id="categoryFilter2")
+            label.catalog__category-filter-label.js-tab(for="categoryFilter2") Блог
+          .catalog__category-filter-item
+            input.catalog__category-filter-input.visually-hidden(type="radio" name="categoryFilter" id="categoryFilter3")
+            label.catalog__category-filter-label.js-tab(for="categoryFilter3") Кейсы
+          .catalog__category-filter-item
+            input.catalog__category-filter-input.visually-hidden(type="radio" name="categoryFilter" id="categoryFilter4")
+            label.catalog__category-filter-label.js-tab(for="categoryFilter4") Новости
+          .catalog__category-filter-item
+            input.catalog__category-filter-input.visually-hidden(type="radio" name="categoryFilter" id="categoryFilter5")
+            label.catalog__category-filter-label.js-tab(for="categoryFilter5") СМИ
     .container
       .catalog__inner.js-more-button-container
         form.catalog__filter.js-tabs-container(action="#" data-no-tablet=true)

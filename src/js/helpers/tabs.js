@@ -16,6 +16,9 @@ export default function tabs() {
         tabsContainer.querySelector('.js-tabs-scroll') :
         null;
     }
+    if (tabsContainer.classList.contains('js-tabs-scroll')) {
+      scroll = tabsContainer;
+    }
 
     if (scroll) scroll.style.setProperty('--active-tab-width', tabs[0].clientWidth / 10 + 'rem');
 
