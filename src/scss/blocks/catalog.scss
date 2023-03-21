@@ -47,6 +47,8 @@
     margin-right: -3.2rem;
     padding-bottom: 2.4rem;
 
+    overflow-x: auto;
+
     &::after {
       content: '';
 

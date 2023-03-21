@@ -1,4 +1,4 @@
-mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter)
+mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter, buttonLink)
   section.catalog&attributes(attributes)
     .narrow-container
       +breadcrumbs(breadcrumbsData)
@@ -85,6 +85,6 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter)
         ul.catalog__list
           for item in catalogData
             li.catalog__item.js-more-button-item
-              +catalog-card(item.start, item.meta, item.title, item.text, item.markets, item.buttonText, item.record)
+              +catalog-card(item.start, item.meta, item.title, item.text, item.markets, item.buttonText, item.record, false, buttonLink)
         button.catalog__button.button.button--big.button--grey.js-more-button(data-count=6 data-mobile-count=3)
           | Показать еще

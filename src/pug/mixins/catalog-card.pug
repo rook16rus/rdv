@@ -1,14 +1,15 @@
-mixin catalog-card(start, meta, title, text, markets, buttonText, record, mod)
+mixin catalog-card(start, meta, title, text, markets, buttonText, record, mod, buttonLink)
   article(class=`catalog-card${mod ? ' ' + mod : ""}`)
     header.catalog-card__header
       if record
         .catalog-card__record.card-tag.card-tag--yellow= record
-      else
+      else if start
         .catalog-card__start.card-tag.card-tag--white= start
       .catalog-card__meta
         for item in meta
           .catalog-card__meta-item.card-tag.card-tag--transparent
-            +imgLazy(item.icon, "Иконка мета тега")
+            if item.icon
+              +imgLazy(item.icon, "Иконка мета тега")
             span= item.text
       h3.catalog-card__title
         a(href="#")= title
@@ -24,4 +25,7 @@ mixin catalog-card(start, meta, title, text, markets, buttonText, record, mod)
             li.catalog-card__market.button.button--small.button--border-grey.js-more-button-row-item= item.value
           button.catalog-card__market-more-button.button.button--small.button--border-grey.js-more-button-row
             | + #[span.js-more-button-row-surplus 0]
-        button.catalog-card__button.button.button--medium.button--yellow(data-path="event")= buttonText
+        if buttonLink
+          a.catalog-card__button.button.button--medium.button--yellow(href=buttonLink)= buttonText
+        else
+          button.catalog-card__button.button.button--medium.button--yellow(data-path="event")= buttonText
