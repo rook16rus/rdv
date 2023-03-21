@@ -1,0 +1,138 @@
+.choices {
+  margin: 0;
+
+  font: var(--button-meduim);
+  text-transform: uppercase;
+
+  color: var(--grey-D-60);
+}
+
+.choices[data-type*=select-one]::after {
+  right: 1.6rem;
+  transform: translateY(-50%);
+
+  width: 1.4rem;
+  height: 1.4rem;
+
+  border: 0;
+  background: url("../images/icons/multi/arrow-down.svg");
+
+  margin-top: 0;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  margin: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.choices__inner {
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem 0 1.2rem;
+
+  border-radius: 1.2rem;
+  border: 0;
+
+  background-color: var(--grey-base-0);
+}
+
+.choices__list--single {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.is-open .choices__inner {
+  border-radius: 1.2rem;
+}
+
+.choices.is-open .choices__inner {
+  border: 1px solid var(--main-base-0);
+  border-radius: 1.2rem 1.2rem 0 0;
+  border-bottom: 0;
+  padding: 0 4rem 0 1.2rem;
+
+  background-color: #fff;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding: 0 4rem 0 1.2rem;
+}
+
+.is-open .choices__list--dropdown, .is-open .choices__list[aria-expanded] {
+  border: 0;
+}
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  max-height: 14rem;
+  padding: 1.1rem 1.2rem 1.8rem 1.6rem;
+
+  border: 1px solid var(--main-base-0) !important;
+  border-top: 0 !important;
+  border-radius: 0 0 1.2rem 1.2rem;
+  background-color: #fff;
+  overflow: auto;
+
+  & {
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+  }
+
+  &::-moz-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+
+  overflow: hidden;
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0;
+
+  font: var(--button-meduim);
+  color: var(--main-base-0);
+
+  &::before {
+    content: '';
+
+    width: 1.4rem;
+    height: 1.4rem;
+
+    border: 1px solid var(--main-base-0);
+    border-radius: 0.3rem;
+    overflow: hidden;
+  }
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: #fff;
+}
+
+.choices__item.is-selected {
+  &::before {
+    background: var(--main-base-0) url("../images/checkbox-icon-white.svg") no-repeat center;
+  }
+}
+

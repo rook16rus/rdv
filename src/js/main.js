@@ -27,6 +27,7 @@ import catalog from "./helpers/catalog";
 import moreButtonRow from "./helpers/moreButtonRow";
 import tabs from "./helpers/tabs";
 import catalogModal from "./helpers/catalogModal";
+import catalogAdaptive from "./helpers/catalogAdaptive";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -50,10 +51,10 @@ documenReady(() => {
   moreButton();
   infinitySlider();
   header();
-  catalog();
   moreButtonRow();
   tabs();
   catalogModal();
+  catalogAdaptive()
 });
 
 document.fonts.ready.then((res) => {
@@ -70,4 +71,5 @@ window.addEventListener('load', function () {
 
 window.addEventListener('resize', () => {
   moreButtonRow();
+  catalogAdaptive()
 })

@@ -2,6 +2,8 @@ export default function tabs() {
   const tabsContainers = document.querySelectorAll('.js-tabs-container');
 
   tabsContainers.forEach(tabsContainer => {
+    if (tabsContainer.dataset.noTablet && matchMedia('(max-width: 1024px)').matches) return
+
     let contents = tabsContainer.querySelectorAll('.js-tab-content');
     contents = [...contents].filter(content => content.closest('.js-tabs-container').innerHTML === tabsContainer.innerHTML)
 

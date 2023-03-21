@@ -100,7 +100,7 @@
     },
   ]
 
-.modal__container(data-target="tags").modal-tags.modal-open.js-catalog-modal
+.modal__container(data-target="tags").modal-tags.js-catalog-modal
   .modal__content
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
@@ -129,3 +129,45 @@
             button.modal-tags__subtags-button-reset.button.button--medium.js-catalog-modal-reset(type="button")
               span Очистить все
               +icon-multi('reset-icon')
+
+-
+  const modalCatalogMonths = [
+    {value: "Январь"},
+    {value: "Февраль"},
+    {value: "Март"},
+    {value: "АПрель"},
+    {value: "Май"},
+    {value: "Июнь"},
+    {value: "Июль"},
+    {value: "Август"},
+    {value: "Сентябрь"},
+    {value: "Октябрь"},
+    {value: "Ноябрь"},
+    {value: "Декабрь"},
+  ]
+
+.modal__container(data-target="dates").modal-dates
+  .modal__content
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      span
+      span
+    h3.modal-dates__title
+      | Календарь
+    form.modal-dates__form
+      select.modal-dates__select.js-custom-select(name="modalCatalogAge" id="modalCatalogAge")
+        option(value="all") Все года
+        option(value="2023") 2023
+        option(value="2022") 2022
+        option(value="2021") 2021
+        option(value="2020") 2020
+      ul.modal-dates__months
+        each item, index in modalCatalogMonths
+          li.modal-dates__month
+            input.modal-dates__month-input.visually-hidden(type="checkbox" name=`modalCatalogMonth${index}` id=`modalCatalogMonth${index}`)
+            label.modal-dates__month-label(for=`modalCatalogMonth${index}`)
+              span= item.value
+              +icon-multi("cross-icon")
+      button.modal-dates__button.button.button--medium.button--bordered Применить
+      button.modal-dates__button-reset.button.button--medium(type="reset")
+        span Очистить все
+        +icon-multi('reset-icon')

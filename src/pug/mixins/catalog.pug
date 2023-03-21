@@ -7,7 +7,7 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData)
         p= desc
     .container
       .catalog__inner.js-more-button-container
-        form.catalog__filter.js-tabs-container(action="#")
+        form.catalog__filter.js-tabs-container(action="#" data-no-tablet=true)
           .catalog__filter-top
             .catalog__tags-block
               .catalog__tags.js-more-button-container.js-more-button-row-container(data-tablet)
