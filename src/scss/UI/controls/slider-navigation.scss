@@ -15,10 +15,6 @@
         &:hover {
           background-color: var(--grey-D-10);
         }
-
-        &:focus {
-          background-color: var(--grey-D-20);
-        }
       }
 
       &.swiper-button-disabled {
@@ -50,10 +46,6 @@
       &:hover {
         background-color: var(--white-20);
       }
-
-      &:focus {
-        background-color: var(--white-30);
-      }
     }
 
     @include mq('custom', 'max', 1024) {
@@ -80,6 +72,8 @@
     &.swiper-button-disabled {
       background-color: var(--white-10);
       color: var(--white-20);
+
+      cursor: default;
 
       svg {
         opacity: 0.8;

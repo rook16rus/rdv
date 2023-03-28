@@ -111,7 +111,7 @@
       letter-spacing: -0.02em;
     }
 
-    @include mq('custom', 'max', 390) {
+    @include mq('custom', 'max', 380) {
       display: none;
     }
   }
