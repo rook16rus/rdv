@@ -53,9 +53,11 @@ export default function tabs() {
         }
       })
 
+      const htmlFontSize = parseInt(window.getComputedStyle(document.documentElement).fontSize);
+
       if (scroll) {
-        scroll.style.setProperty('--active-tab-offset', tab.offsetLeft / 10 + 'rem');
-        scroll.style.setProperty('--active-tab-width', tab.clientWidth / 10 + 'rem');
+        scroll.style.setProperty('--active-tab-offset', tab.offsetLeft / htmlFontSize + 'rem');
+        scroll.style.setProperty('--active-tab-width', tab.clientWidth / htmlFontSize + 'rem');
       }
     }
   })

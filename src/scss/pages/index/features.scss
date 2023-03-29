@@ -189,6 +189,37 @@
     border-radius: 99.9rem;
     overflow: hidden;
 
+    &--rounded {
+      &#{&} {
+        width: 6.4rem;
+        margin-right: 0.4rem;
+        padding: 0;
+        min-width: auto;
+
+        @include mq('custom', 'max', 1024) {
+          width: 4.8rem;
+          height: 4.8rem;
+        }
+
+        @include mq('custom', 'max', 768) {
+          width: 3.4rem;
+          height: 3.4rem;
+        }
+
+        @include mq('custom', 'max', 640) {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        img {
+          width: 100%;
+          max-width: none;
+          height: 100%;
+          max-height: none;
+        }
+      }
+    }
+
     @include mq('custom', 'max', 1024) {
       width: 9.4rem;
       min-width: auto;
@@ -215,35 +246,6 @@
       @include mq('custom', 'max', 640) {
         max-width: 60%;
         max-height: 60%;
-      }
-    }
-
-    &--rounded {
-      width: 6.4rem;
-      margin-right: 0.4rem;
-      padding: 0;
-      min-width: auto;
-
-      @include mq('custom', 'max', 1024) {
-        width: 4.8rem;
-        height: 4.8rem;
-      }
-
-      @include mq('custom', 'max', 768) {
-        width: 3.4rem;
-        height: 3.4rem;
-      }
-
-      @include mq('custom', 'max', 640) {
-        width: 2rem;
-        height: 2rem;
-      }
-
-      img {
-        width: 100%;
-        max-width: none;
-        height: 100%;
-        max-height: none;
       }
     }
   }

@@ -134,7 +134,7 @@
       transition: background-color var(--transition);
 
       @include mq('custom', 'max', 640) {
-        width: 1.6rem;
+        width: 2.2rem;
       }
 
       &:nth-child(1) {
@@ -347,6 +347,7 @@
 
   &__subtags-button-reset {
     width: 100%;
+    color: var(--grey-D-60);
 
     svg {
       width: 0.8rem;
@@ -431,5 +432,9 @@
       margin: 0;
       margin-left: 1rem;
     }
+  }
+
+  &__button-reset {
+    color: var(--grey-D-60);
   }
 }
