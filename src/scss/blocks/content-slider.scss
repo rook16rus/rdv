@@ -1,0 +1,30 @@
+.content-slider {
+  &__slide-img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding-top: 69.76%;
+    margin-bottom: 2.4rem;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    img {
+      @extend .fully-filled-el;
+      object-fit: cover;
+    }
+  }
+
+  &__slide-desc {
+    @extend .content-small-text;
+    color: rgba(13, 54, 83, 0.5);
+  }
+
+  .slider-navigation {
+    position: static;
+
+    display: inline-grid;
+    margin-top: 4rem;
+  }
+}

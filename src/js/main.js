@@ -30,6 +30,7 @@ import catalogModal from "./helpers/catalogModal";
 import catalogAdaptive from "./helpers/catalogAdaptive";
 import backgroundWebp from "./helpers/backgroundWebp";
 import speakersSlider from "./helpers/speakersSlider";
+import contentSlider from "./helpers/contentSlider";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -59,6 +60,7 @@ documenReady(() => {
   catalogAdaptive();
   backgroundWebp();
   speakersSlider();
+  contentSlider();
 });
 
 document.fonts.ready.then((res) => {
