@@ -299,10 +299,105 @@ a:focus {
 
 .text-container {
   width: 100%;
-  max-width: 72rem;
+  max-width: calc(var(--max-narrow-container-width) + 2 * var(--content-narrow-padding));
+  margin: 0 auto;
+  padding: 0 var(--content-narrow-padding);
+  @supports (width: max(20vw, 100px)) {
+    padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-narrow-padding));
+    padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-narrow-padding));
+  }
 
-  @include mq('custom', 'max', 1024) {
-    max-width: none;
+  & > p {
+    margin: 2rem 0;
+
+    @extend .content-medium-text;
+    color: var(--main-D-10);
+  }
+
+  & > h2 {
+    margin: 6.4rem 0 4rem;
+
+    @extend .title-h2;
+    color: var(--main-base-0);
+  }
+
+  & > h3 {
+    margin: 6.4rem 0 4rem;
+
+    @extend .title-h3;
+    color: var(--main-base-0);
+  }
+
+  & > ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin: 4rem 0;
+
+    li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.6rem;
+
+      @extend .content-medium-text;
+      color: var(--main-D-10);
+
+      &::before {
+        content: '';
+
+        width: 0.4rem;
+        height: 0.4rem;
+        margin-top: 0.8rem;
+
+        border-radius: 50%;
+        background-color: var(--main-D-10);
+      }
+    }
+  }
+
+  & > ol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin: 4rem 0;
+
+    counter-reset: order;
+
+    li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 1.6rem;
+
+      @extend .content-medium-text;
+      color: var(--main-D-10);
+
+      &::before {
+        counter-increment: order;
+        content: counter(order);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+        min-width: 3.2rem;
+        height: 3.2rem;
+        padding: 0 0.6rem;
+
+        border-radius: 50%;
+        background-color: var(--grey-base-0);
+
+        font: var(--button-meduim);
+      }
+    }
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -430,6 +525,11 @@ a:focus {
   letter-spacing: -0.01em;
 }
 
+.title-h2 {
+  font: var(--title-h2);
+  letter-spacing: -0.01em;
+}
+
 .title-h3 {
   font: var(--title-h3);
   letter-spacing: -0.01em;
@@ -452,6 +552,11 @@ a:focus {
   @include mq('custom', 'max', 640) {
     margin-bottom: 4rem;
   }
+}
+
+.content-medium-text {
+  font: var(--content-medium);
+  letter-spacing: -0.02em;
 }
 
 .button-uppercase-text {
