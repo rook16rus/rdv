@@ -1,0 +1,59 @@
+-
+  const postMeta = [
+    {
+      icon: "meta-icon-3-white.svg",
+      desc: "7500",
+    },
+    {
+      icon: "meta-icon-2-white.svg",
+      desc: "1 Час",
+    },
+    {
+      icon: "meta-icon-4-white.svg",
+      desc: "Вебинар",
+    },
+    {
+      icon: "meta-icon-5-white.svg",
+      desc: "Москва, Красносельская нижн. ул., д. 35 стр. 64",
+    },
+  ]
+
+-
+  const postTags = [
+    "Технологии",
+    "1С:УПП",
+    "Ритейл",
+    "Перевод клиентов",
+    "Linux",
+    "1С:ERP",
+    "Технологии",
+    "PostgreSQL",
+  ]
+
+header.post-header
+  .narrow-container
+    +breadcrumbs([
+      ["Главная", "./index.html"],
+      ["Мероприятия", "./events.html"],
+      ["RDV на New Retail Forum 2021: обсуждаем новые технологии и полезные онлайн-сервисы для ритейла", "#"]
+    ])
+  .container
+    .post-header__inner.lazyload(data-bg="assets/images/post-header-1.jpg" data-bg-webp="assets/images/post-header-1.webp")
+      .post-header__meta
+        time.post-header__time.tag.tag--yellow(datetime="2023-03-30")
+          +icon-multi('date-icon')
+          span 30 марта 2023, 08:00
+        ul.post-header__meta-list
+          for item in postMeta
+            li.post-header__meta-item
+              .post-header__meta-icon
+                +imgLazy(item.icon)
+              span.post-header__meta-desc= item.desc
+      h1.post-header__title
+        | RDV на New Retail Forum 2022: обсуждаем новые технологии и полезные онлайн-сервисы для ритейла
+      button.post-header__button.button.button--big.button--yellow(data-path="event")
+        | Зарегистрироваться
+  .narrow-container
+    ul.post-header__tags
+      for item in postTags
+        li.post-header__tag.button.button--small.button--bordered= item

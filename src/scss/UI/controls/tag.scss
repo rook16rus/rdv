@@ -1,0 +1,17 @@
+.tag {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.6rem;
+  height: 3.2rem;
+  padding: 0 1.2rem;
+
+  border-radius: 99.9rem;
+
+  @extend .button-small-text;
+
+  &--yellow {
+    background-color: var(--other-yellow-01);
+    color: var(--main-D-30);
+  }
+}

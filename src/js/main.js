@@ -28,6 +28,7 @@ import moreButtonRow from "./helpers/moreButtonRow";
 import tabs from "./helpers/tabs";
 import catalogModal from "./helpers/catalogModal";
 import catalogAdaptive from "./helpers/catalogAdaptive";
+import backgroundWebp from "./helpers/backgroundWebp";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -54,7 +55,8 @@ documenReady(() => {
   moreButtonRow();
   tabs();
   catalogModal();
-  catalogAdaptive()
+  catalogAdaptive();
+  backgroundWebp();
 });
 
 document.fonts.ready.then((res) => {
