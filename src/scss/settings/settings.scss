@@ -540,6 +540,11 @@ a:focus {
   letter-spacing: -0.01em;
 }
 
+.title-h7 {
+  font: var(--title-h7);
+  letter-spacing: -0.01em;
+}
+
 .section-title {
   @extend .title-h1;
 
@@ -566,6 +571,11 @@ a:focus {
 
 .content-medium-text {
   font: var(--content-medium);
+  letter-spacing: -0.02em;
+}
+
+.content-regular-text {
+  font: vaR(--content-regular);
   letter-spacing: -0.02em;
 }
 
