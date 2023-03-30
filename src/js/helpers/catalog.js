@@ -60,17 +60,18 @@ export default function catalog() {
   countsDisplays.forEach(countDisplay => {
     const subTagsContainer = catalog.querySelector(`*[data-id="${countDisplay.dataset.href}"]`);
     const subTags = subTagsContainer.querySelectorAll('.catalog__subtag-radio');
+    const resetButton = subTagsContainer.querySelector('.catalog__filter-reset');
 
     let subtagsCount = countDisplay.dataset.count;
 
-    checkCount(subtagsCount, countDisplay);
+    checkCount(subtagsCount, countDisplay, resetButton);
 
     subTags.forEach(subtag => {
       subtag.addEventListener('change', () => {
         subtagsCount = [...subTags].filter(tag => tag.checked).length;
         countDisplay.dataset.count = subtagsCount;
 
-        checkCount(subtagsCount, countDisplay);
+        checkCount(subtagsCount, countDisplay, resetButton);
       })
     })
   })
@@ -80,21 +81,52 @@ export default function catalog() {
 
   let count = [...monthCheckBoxes].filter(checkbox => checkbox.checked).length;
 
-  checkCount(count, dateButton)
-
   monthCheckBoxes.forEach(checkbox => {
+    const container = checkbox.closest(".catalog__date-content");
+    const resetButton = container.querySelector('.catalog__filter-reset');
+
+    checkCount(count, dateButton, resetButton);
+
     checkbox.addEventListener('change', () => {
       count = [...monthCheckBoxes].filter(checkbox => checkbox.checked).length;
 
-      checkCount(count, dateButton);
+      checkCount(count, dateButton, resetButton);
     })
   })
 
-  function checkCount(count, display) {
+  function checkCount(count, display, resetButton, buttonClicked) {
     if (count > 0) {
-      display.classList.add('count-active')
+      if (!buttonClicked) resetButton.classList.add('active');
+      display.classList.add('count-active');
     } else {
       display.classList.remove('count-active')
+      resetButton.classList.remove('active');
     }
   }
+
+  const resetButtons = catalog.querySelectorAll('.catalog__filter-reset');
+
+  resetButtons.forEach(button => {
+    const container = catalog.querySelector(`*[data-reset-id="${button.dataset.container}"]`);
+    const countContainer = button.closest('.catalog__filter-bottom-content');
+    const countButton = catalog.querySelector(`*[data-href="${countContainer.dataset.id}"]`);
+
+    button.addEventListener('click', () => {
+      const inputs = container.querySelectorAll('input[type="checkbox"]');
+      inputs.forEach(input => input.checked = false);
+
+      let count = 0;
+
+      if (button.closest('.catalog__date')) {
+        count = Array.from(catalog.querySelectorAll('.catalog__month-checkbox')).filter(checkbox => checkbox.checked).length;
+      } else {
+        count = [...inputs].filter(input => input.checked).length;
+      }
+
+      button.classList.remove('active');
+      checkCount(count, countButton, button, true);
+    })
+  })
+
+
 }

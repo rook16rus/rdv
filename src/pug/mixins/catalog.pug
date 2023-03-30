@@ -56,7 +56,7 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter, b
                   +icon-multi('grid-list-icon')
           .catalog__filter-bottom
             each tag, index in tags
-              .catalog__filter-bottom-content.js-tab-content(data-id=`catalogTab${index}`)
+              .catalog__filter-bottom-content.js-tab-content(data-id=`catalogTab${index}` data-reset-id=`catalogTab${index}`)
                 .catalog__subtags.js-more-button-container
                   each subtag, i in tag.subtags
                     .catalog__subtag.js-more-button-item
@@ -66,6 +66,9 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter, b
                         +icon-multi('cross-icon')
                   .catalog__subtag-more-button.js-more-button(data-count=6)
                     | + #[span.js-more-button-surplus 0]
+                button.catalog__filter-reset.button(type="button" data-container=`catalogTab${index}`)
+                  span Очистить все
+                  +icon-multi('reset-icon')
             .catalog__filter-bottom-content.js-tab-content(data-id=`catalogDate`)
               .catalog__date.js-tabs-container
                 .catalog__date-tabs.js-tabs-scroll
@@ -75,13 +78,17 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter, b
                       label(class=`catalog__date-label js-tab${item.active ? ' tab-active' : ""}` for=`catalogDate${index}` data-href=`catalogMonths${index}`)= item.value
                 .catalog__date-contents
                   each item, index in catalogDates
-                    ul(class=`catalog__months js-tab-content${item.active ? ' active' : ""}` data-id=`catalogMonths${index}`)
-                      each elem, i in item.months
-                        li.catalog__month
-                          input.catalog__month-checkbox.visually-hidden(type="checkbox" name=`catalogMonth${index}-${i}` id=`catalogMonth${index}-${i}`)
-                          label.catalog__month-label(for=`catalogMonth${index}-${i}`)
-                            span= elem.value
-                            +icon-multi('cross-icon')
+                    div(class=`catalog__date-content js-tab-content${item.active ? ' active' : ""}` data-id=`catalogMonths${index}` data-reset-id=`catalogMonths${index}`)
+                      ul(class=`catalog__months`)
+                        each elem, i in item.months
+                          li.catalog__month
+                            input.catalog__month-checkbox.visually-hidden(type="checkbox" name=`catalogMonth${index}-${i}` id=`catalogMonth${index}-${i}`)
+                            label.catalog__month-label(for=`catalogMonth${index}-${i}`)
+                              span= elem.value
+                              +icon-multi('cross-icon')
+                      button.catalog__filter-reset.button(type="button" data-container=`catalogMonths${index}`)
+                        span Очистить все
+                        +icon-multi('reset-icon')
         ul.catalog__list
           for item in catalogData
             li.catalog__item.js-more-button-item

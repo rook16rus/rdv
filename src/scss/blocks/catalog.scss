@@ -427,16 +427,21 @@
     left: 0;
     top: 0;
 
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
     width: 100%;
 
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 
     &.active {
       position: static;
 
       opacity: 1;
       visibility: visible;
+      pointer-events: auto;
     }
   }
 
@@ -550,28 +555,63 @@
     position: relative;
   }
 
-  &__months {
+  &__date-content {
     position: absolute;
     left: 0;
     top: 0;
 
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
     width: 100%;
-    margin-right: -0.4rem;
-    margin-bottom: 0.4rem;
 
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 
     &.active {
       position: static;
 
       opacity: 1;
       visibility: visible;
+      pointer-events: auto;
     }
   }
 
+  &__months {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &__filter-reset {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    height: 3.2rem;
+
+    color: var(--grey-D-60);
+
+    opacity: 0;
+    visibility: hidden;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
+
+    svg {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin: 0 0 0.3rem;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
