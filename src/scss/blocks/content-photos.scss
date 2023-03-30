@@ -1,0 +1,27 @@
+.content-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+
+  &__item-img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding-top: 69.76%;
+    margin-bottom: 2.4rem;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    img {
+      @extend .fully-filled-el;
+      object-fit: cover;
+    }
+  }
+
+  &__item-desc {
+    @extend .content-small-text;
+    color: rgba(13, 54, 83, 0.5);
+  }
+}
