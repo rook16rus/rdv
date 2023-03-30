@@ -1,0 +1,53 @@
+-
+  const speakers = [
+    {
+      img: "speakers-1.jpg",
+      title: "Попов Александр",
+      position: "ERP-инженер",
+    },
+    {
+      img: "speakers-2.jpg",
+      title: "Попов Александр",
+      position: "ERP-инженер",
+    },
+    {
+      img: "speakers-3.jpg",
+      title: "Елена Веренич",
+      position: "ERP-инженер",
+    },
+    {
+      img: "speakers-4.jpg",
+      title: "Попов Александр",
+      position: "ERP-инженер",
+    },
+    {
+      img: "speakers-2.jpg",
+      title: "Попов Александр",
+      position: "ERP-инженер",
+    },
+    {
+      img: "speakers-3.jpg",
+      title: "Елена Веренич",
+      position: "ERP-инженер",
+    },
+    {
+      img: "speakers-1.jpg",
+      title: "Попов Александр",
+      position: "ERP-инженер",
+    },
+    {
+      img: "speakers-2.jpg",
+      title: "Попов Александр",
+      position: "ERP-инженер",
+    },
+  ]
+
+.speakers.swiper
+  .swiper-wrapper
+    for item in speakers
+      .speakers__slide.swiper-slide
+        .speakers__slide-img
+          +pictureLazy(item.img, "Фото спикера")
+        h3.speakers__slide-title= item.title
+        span.speakers__slide-position= item.position
+  +slider-navigation("slider-navigation--grey slider-navigation--medium")

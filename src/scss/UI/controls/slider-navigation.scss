@@ -28,6 +28,20 @@
     }
   }
 
+  &--medium {
+    .slider-navigation__button {
+      width: 4rem;
+      height: 4rem;
+
+      border-radius: 0.8rem;
+
+      svg {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+    }
+  }
+
   &__button {
     display: flex;
     justify-content: center;

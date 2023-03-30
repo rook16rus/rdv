@@ -554,8 +554,18 @@ a:focus {
   }
 }
 
+.content-big-text {
+  font: var(--content-big);
+  letter-spacing: -0.02em;
+}
+
 .content-medium-text {
   font: var(--content-medium);
+  letter-spacing: -0.02em;
+}
+
+.content-small-text {
+  font: var(--content-small);
   letter-spacing: -0.02em;
 }
 
