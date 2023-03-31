@@ -577,6 +577,11 @@ a:focus {
   }
 }
 
+.content-huge-text {
+  font: var(--content-huge);
+  letter-spacing: -0.02em;
+}
+
 .content-big-text {
   font: var(--content-big);
   letter-spacing: -0.02em;

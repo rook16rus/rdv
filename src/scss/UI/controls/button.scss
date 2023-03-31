@@ -48,6 +48,11 @@
     }
   }
 
+  &--icon-big {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
   &--blue {
     background-color: var(--main-base-0);
     color: #fff;
