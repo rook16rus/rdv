@@ -312,6 +312,10 @@ a:focus {
 
     @extend .content-medium-text;
     color: var(--main-D-10);
+
+    @include mq('custom', 'max', 640) {
+      margin: 1.8rem 0;
+    }
   }
 
   & > h2 {
@@ -319,6 +323,18 @@ a:focus {
 
     @extend .title-h2;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin: 5.6rem 0 3.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin: 4.8rem 0 3.5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin: 4rem 0 3.2rem;
+    }
   }
 
   & > h3 {
@@ -326,6 +342,19 @@ a:focus {
 
     @extend .title-h3;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin: 5.6rem 0 3.8rem;
+      font: var(--title-h1);
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin: 4.8rem 0 3.5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin: 4rem 0 3.2rem;
+    }
   }
 
   & > ul {
@@ -333,6 +362,10 @@ a:focus {
     grid-template-columns: 1fr;
     gap: 1.2rem;
     margin: 4rem 0;
+
+    @include mq('custom', 'max', 640) {
+      margin: 3.2rem 0;
+    }
 
     li {
       display: grid;
@@ -351,6 +384,10 @@ a:focus {
 
         border-radius: 50%;
         background-color: var(--main-D-10);
+
+        @include mq('custom', 'max', 640) {
+          margin-top: 0.6rem;
+        }
       }
     }
   }
@@ -363,6 +400,10 @@ a:focus {
 
     counter-reset: order;
 
+    @include mq('custom', 'max', 640) {
+      margin: 3.2rem 0;
+    }
+
     li {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -371,6 +412,10 @@ a:focus {
 
       @extend .content-medium-text;
       color: var(--main-D-10);
+
+      @include mq('custom', 'max', 640) {
+        gap: 1rem;
+      }
 
       &::before {
         counter-increment: order;
@@ -388,16 +433,45 @@ a:focus {
         background-color: var(--grey-base-0);
 
         font: var(--button-meduim);
+
+        @include mq('custom', 'max', 640) {
+          min-width: 2.8rem;
+          height: 2.8rem;
+        }
       }
     }
   }
 
   .speakers, .content-photos, .content-slider, .content-videos {
     margin: 4rem 0 6.4rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin: 5.6rem 0 3.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin: 4.8rem 0 3.5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin: 4rem 0 3.2rem;
+    }
   }
 
   .blockquote, .content-transition, .content-footer {
     margin: 6.4rem 0;
+
+    @include mq('custom', 'max', 1024) {
+      margin: 5.6rem 0;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin: 4.8rem 0;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin: 4rem 0;
+    }
   }
 
   & > *:first-child {
