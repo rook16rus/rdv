@@ -78,3 +78,6 @@
         for item in otherEvents
           li.other-events__item
             +catalog-card(item.start, item.meta, item.title, item.text, item.markets, item.buttonText)
+      a.other-events__more-button.button.button--medium.button--bordered(href="#")
+        | Смотреть все
+        +icon-multi('button-arrow')
