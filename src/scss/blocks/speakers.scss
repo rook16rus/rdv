@@ -1,4 +1,31 @@
 .speakers {
+  @include mq('custom', 'max', 1024) {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    @include mq('custom', 'max', 768) {
+      transform: none !important;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.6rem;
+    }
+  }
+
+  &__slide {
+    @include mq('custom', 'max', 1024) {
+      width: 19rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: auto;
+    }
+  }
+
   &__slide-img {
     position: relative;
     z-index: 1;
@@ -9,6 +36,14 @@
 
     border-radius: 1.2rem;
     overflow: hidden;
+
+    @include mq('custom', 'max', 768) {
+      filter: grayscale(1);
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+    }
 
     img {
       @extend .fully-filled-el;
@@ -21,6 +56,10 @@
 
     @extend .content-big-text;
     color: var(--main-D-10);
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 0.4rem;
+    }
   }
 
   &__slide-position {
@@ -33,5 +72,18 @@
 
     display: inline-grid;
     margin-top: 4rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 3rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
+  }
+
+  &__more-button {
+    width: 100%;
+    margin-top: 3.2rem;
   }
 }

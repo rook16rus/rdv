@@ -42,12 +42,14 @@
     },
   ]
 
-.speakers.swiper
+.speakers.swiper.js-more-button-container
   .swiper-wrapper
     for item in speakers
-      .speakers__slide.swiper-slide
+      .speakers__slide.swiper-slide.js-more-button-item
         .speakers__slide-img
           +pictureLazy(item.img, "Фото спикера")
         h3.speakers__slide-title= item.title
         span.speakers__slide-position= item.position
+  button.speakers__more-button.button.button--big.button--grey.js-more-button(data-mobile-count=4)
+    | Показать еще
   +slider-navigation("slider-navigation--grey slider-navigation--medium")

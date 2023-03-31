@@ -7,11 +7,20 @@ export default function speakersSlider() {
   if (!speakers) return
 
   const swiper = new Swiper('.speakers', {
-    slidesPerView: 6,
-    spaceBetween: 32,
+    slidesPerView: "auto",
+    spaceBetween: 0,
     navigation: {
       nextEl: speakers.querySelector('.js-next-slide'),
       prevEl: speakers.querySelector('.js-prev-slide')
+    },
+    breakpoints: {
+      769: {
+        spaceBetween: 26,
+      },
+      1025: {
+        slidesPerView: 6,
+        spaceBetween: 32
+      }
     }
   })
 }
