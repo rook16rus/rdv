@@ -7,11 +7,27 @@ export default function contentSlider() {
   if (!contentSlider) return
 
   const swiper = new Swiper(contentSlider, {
-    slidesPerView: 2,
-    spaceBetween: 32,
+    slidesPerView: 1,
+    spaceBetween: 16,
     navigation: {
       nextEl: contentSlider.querySelector('.js-next-slide'),
       prevEl: contentSlider.querySelector('.js-prev-slide')
+    },
+    pagination: {
+      el: contentSlider.querySelector('.swiper-pagination-bullets'),
+      type: "bullets"
+    },
+    breakpoints: {
+      641: {
+        spaceBetween: 20
+      },
+      769: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      1025: {
+        spaceBetween: 32,
+      }
     }
   })
 }

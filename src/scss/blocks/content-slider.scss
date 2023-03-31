@@ -10,6 +10,19 @@
     border-radius: 1.2rem;
     overflow: hidden;
 
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding-top: 64.57%;
+      margin-bottom: 1.2rem;
+    }
+
     img {
       @extend .fully-filled-el;
       object-fit: cover;
@@ -26,5 +39,23 @@
 
     display: inline-grid;
     margin-top: 4rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 3rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullets {
+    display: none;
+    margin-top: 2rem;
+
+    @include mq('custom', 'max', 768) {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
