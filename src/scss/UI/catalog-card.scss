@@ -193,14 +193,6 @@
 
     flex-shrink: 0;
 
-    @include mq('custom', 'max', 1024) {
-
-    }
-
-    @include mq('custom', 'max', 768) {
-
-    }
-
     @include mq('custom', 'max', 640) {
       width: 100%;
     }

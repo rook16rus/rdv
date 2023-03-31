@@ -24,6 +24,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    align-self: stretch;
     margin-right: -1.6rem;
     margin-bottom: 2.4rem;
   }
@@ -68,6 +69,10 @@
     }
   }
 
+  &__share {
+    margin-left: auto;
+  }
+
   &__title {
     max-width: 104rem;
     margin-bottom: 3rem;
@@ -92,5 +97,9 @@
     padding: 0 1.6rem;
     margin-right: 0.4rem;
     margin-bottom: 0.4rem;
+
+    &:hover {
+      border-color: var(--grey-L-10);
+    }
   }
 }

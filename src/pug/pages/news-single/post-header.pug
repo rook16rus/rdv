@@ -49,6 +49,9 @@ header.post-header
               .post-header__meta-icon
                 +imgLazy(item.icon)
               span.post-header__meta-desc= item.desc
+        button.post-header__share.tag.tag--medium.tag--reverse.tag--border-grey
+          span Поделиться
+          +icon-multi('share-icon')
       h1.post-header__title
         | RDV на New Retail Forum 2022: обсуждаем новые технологии и полезные онлайн-сервисы для ритейла
       button.post-header__button.button.button--big.button--yellow(data-path="event")
