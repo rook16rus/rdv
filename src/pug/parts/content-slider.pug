@@ -1,19 +1,19 @@
 .content-slider.swiper
   .swiper-wrapper
     .content-slider__slide.swiper-slide
-      .content-slider__slide-img
+      .content-slider__slide-img(data-fancybox data-src="assets/images/content-slider-1.jpg")
         +pictureLazy("content-slider-1.jpg", "Контентое фото")
       .content-slider__slide-desc
         | Мелкая сноска с описанием фото
     .content-slider__slide.swiper-slide
-      .content-slider__slide-img
+      .content-slider__slide-img(data-fancybox data-src="assets/images/content-slider-1.jpg")
         +pictureLazy("content-slider-1.jpg", "Контентое фото")
       .content-slider__slide-desc
         | Мелкая сноска с описанием фото
     .content-slider__slide.swiper-slide
-      .content-slider__slide-img
+      .content-slider__slide-img(data-fancybox data-src="assets/images/content-slider-1.jpg")
         +pictureLazy("content-slider-1.jpg", "Контентое фото")
-      .content-slider__slide-desc
+      .content-slider__slide-desc(data-fancybox data-src="assets/images/content-slider-1.jpg")
         | Мелкая сноска с описанием фото
   +slider-navigation("slider-navigation--grey slider-navigation--medium")
   .swiper-pagination-bullets

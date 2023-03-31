@@ -27,6 +27,7 @@ export default function contentSlider() {
       },
       1025: {
         spaceBetween: 32,
+        slidesPerView: 2,
       }
     }
   })

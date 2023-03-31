@@ -9,6 +9,7 @@
 
     border-radius: 1.2rem;
     overflow: hidden;
+    cursor: pointer;
 
     @include mq('custom', 'max', 1024) {
       margin-bottom: 2rem;
