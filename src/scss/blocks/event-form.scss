@@ -6,11 +6,23 @@
     align-items: flex-end;
 
     color: #fff;
+
+    @include mq('custom', 'max', 640) {
+      padding-bottom: 3.3rem;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
   }
 
   &__title {
     margin-bottom: 2rem;
     @extend .title-h1;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__text {
@@ -21,6 +33,21 @@
 
     @extend .content-huge-text;
     color: var(--white-50);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+
+      font: var(--content-big);
+      color: #fff;
+    }
   }
 
   &__form {
@@ -28,20 +55,53 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
     max-width: 62rem;
+
+    @include mq('custom', 'max', 1024) {
+      max-width: none;
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      max-width: none;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.6rem;
+    }
   }
 
   &__input-wrapper {
     &--large {
       grid-column: span 2;
+
+      @include mq('custom', 'max', 768) {
+        grid-column: span 1;
+      }
     }
   }
 
   &__textarea {
     height: 13rem;
+
+    @include mq('custom', 'max', 1024) {
+      height: 11.2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      height: 9.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 8rem;
+    }
   }
 
   &__button {
     margin-top: 1.6rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 0.6rem;
+    }
   }
 
   &__socials {
@@ -49,6 +109,10 @@
     margin-right: -0.4rem;
     flex-shrink: 0;
     margin-left: auto;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__social {
