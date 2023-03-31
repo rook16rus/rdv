@@ -9,18 +9,16 @@
   &--medium {
     height: 3.2rem;
     padding: 0 1.2rem;
+
+    @include mq('custom', 'max', 640) {
+      height: 2.4rem;
+      padding: 0 1rem;
+    }
   }
 
   &--small {
     height: 2.4rem;
     padding: 0 1.2rem;
-  }
-
-  &--reverse {
-    svg {
-      margin-right: 0;
-      margin-left: 0.6rem;
-    }
   }
 
   svg {
@@ -42,5 +40,12 @@
   &--border-grey {
     border: 1px solid var(--white-40);
     color: #fff;
+  }
+
+  &--reverse {
+    svg {
+      margin-right: 0;
+      margin-left: 0.6rem;
+    }
   }
 }

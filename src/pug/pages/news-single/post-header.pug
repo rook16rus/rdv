@@ -35,7 +35,7 @@ header.post-header
     +breadcrumbs([
       ["Главная", "./index.html"],
       ["Мероприятия", "./events.html"],
-      ["RDV на New Retail Forum 2021: обсуждаем новые технологии и полезные онлайн-сервисы для ритейла", "#"]
+      ["RDV на New Retail Forum 2021: обсуждаем новые технологии и полезные онлайн-сервисы для ритейла", "#"]
     ])
   .container
     .post-header__inner.lazyload(data-bg="assets/images/post-header-1.jpg" data-bg-webp="assets/images/post-header-1.webp")
@@ -52,11 +52,14 @@ header.post-header
         button.post-header__share.tag.tag--medium.tag--reverse.tag--border-grey
           span Поделиться
           +icon-multi('share-icon')
+          +icon-multi('share-icon-mobile')
       h1.post-header__title
         | RDV на New Retail Forum 2022: обсуждаем новые технологии и полезные онлайн-сервисы для ритейла
       button.post-header__button.button.button--big.button--yellow(data-path="event")
         | Зарегистрироваться
   .narrow-container
-    ul.post-header__tags
+    ul.post-header__tags.js-more-button-row-container
       for item in postTags
-        li.post-header__tag.button.button--small.button--bordered= item
+        li.post-header__tag.button.button--small.button--bordered.js-more-button-row-item= item
+      button.post-header__tag-more.button.button--small.button--bordered.js-more-button-row
+        | + #[span.js-more-button-row-surplus 0]
