@@ -392,6 +392,14 @@ a:focus {
     }
   }
 
+  .speakers, .content-photos, .content-slider, .content-videos {
+    margin: 4rem 0 6.4rem;
+  }
+
+  .blockquote, .content-transition, .content-footer {
+    margin: 6.4rem 0;
+  }
+
   & > *:first-child {
     margin-top: 0;
   }
