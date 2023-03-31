@@ -88,7 +88,15 @@
     }
   }
 
+  &__meta-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.4rem;
+    margin-bottom: 2.6rem;
+  }
+
   &__start, &__record {
+    margin-right: 0.4rem;
     margin-bottom: 0.4rem;
   }
 
@@ -96,7 +104,6 @@
     display: flex;
     flex-wrap: wrap;
     margin-right: -0.4rem;
-    margin-bottom: 2.6rem;
   }
 
   &__meta-item {

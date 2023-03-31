@@ -1,16 +1,17 @@
 mixin catalog-card(start, meta, title, text, markets, buttonText, record, mod, buttonLink)
   article(class=`catalog-card${mod ? ' ' + mod : ""}`)
     header.catalog-card__header
-      if record
-        .catalog-card__record.card-tag.card-tag--yellow= record
-      else if start
-        .catalog-card__start.card-tag.card-tag--white= start
-      .catalog-card__meta
-        for item in meta
-          .catalog-card__meta-item.card-tag.card-tag--transparent
-            if item.icon
-              +imgLazy(item.icon, "Иконка мета тега")
-            span= item.text
+      .catalog-card__meta-block
+        if record
+          .catalog-card__record.card-tag.card-tag--yellow= record
+        else if start
+          .catalog-card__start.card-tag.card-tag--white= start
+        .catalog-card__meta
+          for item in meta
+            .catalog-card__meta-item.card-tag.card-tag--transparent
+              if item.icon
+                +imgLazy(item.icon, "Иконка мета тега")
+              span= item.text
       h3.catalog-card__title
         a(href="#")= title
       span.catalog-card__title.catalog-card__title--start= start

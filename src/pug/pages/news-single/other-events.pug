@@ -1,0 +1,80 @@
+-
+  const otherEvents = [
+    {
+      start: "30 марта 2023, 08:00",
+      meta: [
+        {
+          icon: "meta-icon-1-white.svg",
+          text: "Конференция",
+        },
+        {
+          icon: "meta-icon-2-white.svg",
+          text: "1 час",
+        },
+      ],
+      title: "WildBerries и 1С: автоматизация создания карточек товаров на маркетплейсе и мониторинг цен на свои товары",
+      text: "На вебинаре 6 октября мы подробно рассказали, с чего нужно начать подготовку к распродажам и поговорили про полезные инструменты RDV Маркет.",
+      markets: [
+        {value: "wildberries"},
+        {value: "Ozon"},
+        {value: "RDV Маркет"},
+      ],
+      buttonText: "Регистрация"
+    },
+    {
+      start: "30 марта 2023, 08:00",
+      meta: [
+        {
+          icon: "meta-icon-1-white.svg",
+          text: "Конференция",
+        },
+        {
+          icon: "meta-icon-2-white.svg",
+          text: "1 час",
+        },
+      ],
+      title: "Выставка E-com’23",
+      text: "На вебинаре 6 октября мы подробно рассказали, с чего нужно начать подготовку к распродажам и поговорили про полезные инструменты RDV Маркет.",
+      markets: [
+        {value: "wildberries"},
+        {value: "Ozon"},
+        {value: "RDV Маркет"},
+      ],
+      buttonText: "Регистрация"
+    },
+    {
+      start: "30 марта 2023, 08:00",
+      meta: [
+        {
+          icon: "meta-icon-1-white.svg",
+          text: "Конференция",
+        },
+        {
+          icon: "meta-icon-2-white.svg",
+          text: "1 час",
+        },
+      ],
+      title: "Как подготовиться к распродажам на маркетплейсах Wildberries и Ozon",
+      text: "На вебинаре 6 октября мы подробно рассказали, с чего нужно начать подготовку к распродажам и поговорили про полезные инструменты RDV Маркет.",
+      markets: [
+        {value: "wildberries"},
+        {value: "Ozon"},
+        {value: "RDV Маркет"},
+      ],
+      buttonText: "Регистрация"
+    },
+  ]
+
+.other-events.page-section--large-margin
+  .container
+    .other-events__inner
+      header.other-events__header
+        h2.other-events__title
+          | Другие мероприятия
+        a.other-events__link.button.button--medium.button--bordered(href="#")
+          span Смотреть все
+          +icon-multi('button-arrow')
+      ul.other-events__list
+        for item in otherEvents
+          li.other-events__item
+            +catalog-card(item.start, item.meta, item.title, item.text, item.markets, item.buttonText)
