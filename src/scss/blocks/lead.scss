@@ -4,6 +4,18 @@
   border-radius: 1.2rem;
   background-color: var(--grey-base-0);
 
+  @include mq('custom', 'max', 1024) {
+    padding: 2.8rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    padding: 2.4rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding: 2rem;
+  }
+
   &__text {
     display: grid;
     grid-template-columns: 1fr;
@@ -12,6 +24,18 @@
 
     @extend .content-medium-text;
     color: var(--main-D-10);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__list {
@@ -34,6 +58,10 @@
 
       border-radius: 50%;
       background-color: var(--main-D-10);
+
+      @include mq('custom', 'max', 640) {
+        margin-top: 0.6rem;
+      }
     }
   }
 
@@ -42,6 +70,10 @@
 
     @extend .title-h7;
     color: var(--main-D-10);
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 0.8rem;
+    }
   }
 
   &__item-text {
