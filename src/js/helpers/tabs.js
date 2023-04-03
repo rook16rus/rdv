@@ -1,3 +1,5 @@
+import {disableScroll, enableScroll} from "./disableScroll";
+
 export default function tabs() {
   const tabsContainers = document.querySelectorAll('.js-tabs-container');
 
@@ -29,8 +31,13 @@ export default function tabs() {
     })
 
     function tabActivate(id, tab) {
-      if (tab.classList.contains('tab-active')) {
+      if (tab.classList.contains('tab-active') && !tabsContainer.dataset.tabsLikeRadio) {
         tab.classList.remove('tab-active');
+        if (scroll) scroll.classList.remove('active');
+        if (tabsContainer.dataset.headerTab) {
+          enableScroll();
+          tabsContainer.querySelector('.header__tabs-contents').style.display = 'none';
+        }
       } else {
         tabs.forEach((tab) => {
           if (tab.dataset.href === id) {
@@ -39,11 +46,16 @@ export default function tabs() {
             tab.classList.remove('tab-active');
           }
         });
+        if (scroll) scroll.classList.add('active');
+        if (tabsContainer.dataset.headerTab) {
+          disableScroll();
+          tabsContainer.querySelector('.header__tabs-contents').style.display = 'block';
+        }
       }
 
       contents.forEach(tabContent => {
         if (tabContent.dataset.id === id) {
-          if (tabContent.classList.contains('active')) {
+          if (tabContent.classList.contains('active') && !tabsContainer.dataset.tabsLikeRadio) {
             tabContent.classList.remove('active')
           } else {
             tabContent.classList.add('active')

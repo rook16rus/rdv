@@ -1,4 +1,6 @@
 export function disableScroll() {
+  if (document.body.classList.contains('disable-scroll')) return
+
   let pagePosition = window.scrollY;
   lockPadding();
   document.body.classList.add('disable-scroll');
