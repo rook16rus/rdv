@@ -438,3 +438,164 @@
     color: var(--grey-D-60);
   }
 }
+
+.modal-burger {
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 100%;
+  padding-top: 8rem;
+
+  border-radius: 0;
+  background-color: var(--grey-base-0);
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 0;
+
+    overflow-y: auto;
+  }
+
+  &__buttons {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    padding: 2rem;
+
+    transition: 0.3s background-color;
+
+    .modal-close {
+      margin-left: auto;
+    }
+
+    .icon-button-arrow {
+      transform: rotate(180deg);
+    }
+
+    &.fixed {
+      background-color: #fff;
+    }
+  }
+
+  &__list {
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    border-top: 1px solid var(--grey-D-20);
+
+    &:last-child {
+      border-bottom: 1px solid var(--grey-D-20);
+    }
+  }
+
+  &__link {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem 0;
+
+    text-align: left;
+
+    @extend .title-h7;
+    text-transform: uppercase;
+    color: var(--main-base-0);
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
+    &--sublink {
+      &#{&} {
+        @extend .title-h6;
+        text-transform: none;
+      }
+    }
+  }
+
+  &__order-button {
+    margin-top: auto;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    margin: 2.4rem 0;
+
+    @extend .title-h1;
+    color: var(--main-base-0);
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin: 2.4rem 0;
+
+    @extend .title-h1;
+    color: var(--main-base-0);
+  }
+
+  &__submenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  &__submenu-item {
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid var(--grey-D-20);
+  }
+
+  &__submenu-title {
+    margin-bottom: 2.4rem;
+
+    font: var(--title-h8);
+    text-transform: uppercase;
+    color: #18BBDC;
+  }
+
+  &__submenu-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  &__submenu-link {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.6rem;
+    margin-bottom: 0.8rem;
+
+    @extend .title-h7;
+    color: var(--main-base-0);
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgba(23, 79, 119, 0.4);
+
+    &::before {
+      content: '';
+
+      width: 0.7rem;
+      height: 0.7rem;
+      margin-top: 0.4rem;
+
+      border-radius: 50%;
+      border: 1px solid var(--main-base-0);
+    }
+  }
+
+  &__submenu-link-text {
+    margin-left: 2.3rem;
+
+    font: var(--content-small);
+    color: rgba(3, 29, 47, 0.5);
+  }
+}

@@ -31,6 +31,8 @@ import catalogAdaptive from "./helpers/catalogAdaptive";
 import backgroundWebp from "./helpers/backgroundWebp";
 import speakersSlider from "./helpers/speakersSlider";
 import contentSlider from "./helpers/contentSlider";
+import simpleBar from "./helpers/simpleBar";
+import fixedModalButtons from "./helpers/fixedModalButtons";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -61,6 +63,8 @@ documenReady(() => {
   backgroundWebp();
   speakersSlider();
   contentSlider();
+  simpleBar();
+  fixedModalButtons();
 });
 
 document.fonts.ready.then((res) => {

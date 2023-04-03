@@ -272,6 +272,10 @@ button.swiper-pagination-bullet {
   background-color: #D9D9D9;
 }
 
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
 .simplebar-content-wrapper {
   & {
     scrollbar-width: 0;
