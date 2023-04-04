@@ -33,6 +33,7 @@ import speakersSlider from "./helpers/speakersSlider";
 import contentSlider from "./helpers/contentSlider";
 import simpleBar from "./helpers/simpleBar";
 import fixedModalButtons from "./helpers/fixedModalButtons";
+import registrationForm from "./helpers/registrationForm";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -65,6 +66,7 @@ documenReady(() => {
   contentSlider();
   simpleBar();
   fixedModalButtons();
+  registrationForm();
 });
 
 document.fonts.ready.then((res) => {

@@ -182,7 +182,6 @@ export default function validation() {
       if ($(form).parsley().isValid()) {
         axios.post(url, formData)
           .then((response) => {
-            console.log(response)
             const fileContainer = form.querySelector(".file-upload__text");
             form.querySelector(".form__btn").classList.remove("disabled");
 
