@@ -3593,7 +3593,7 @@ each item, index in burgerList
       each item, index in registrationForm
         div(class=`modal-registration__form-group${item.active ? ' active' : ''} js-tab-content` data-id=`answerTab${index}`)
           h4.modal-registration__question= item.question
-          div(class=`modal-registration__answers${item.answersRight.length === 0 ? ' modal-registration__answers--single-column' : ''}`)
+          div(class=`modal-registration__answers js-simplebar${item.answersRight.length === 0 ? ' modal-registration__answers--single-column' : ''}`)
             .modal-registration__answers-left
               each answer, i in item.answersLeft
                 .modal-registration__answer
