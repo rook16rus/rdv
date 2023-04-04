@@ -101,7 +101,7 @@
   ]
 
 .modal__container(data-target="tags").modal-tags.js-catalog-modal
-  .modal__content.js-simplebar
+  .modal__content
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
       span
@@ -3506,3 +3506,111 @@ each item, index in burgerList
                     li.modal-burger__submenu-link-block
                       a.modal-burger__submenu-link(href="#")= el.name
                       p.modal-burger__submenu-link-text= el.text
+
+-
+  const registrationForm = [
+    {
+      question: "Продаете на МП?",
+      type: "radio",
+      active: true,
+      answersLeft: [
+        {text: "Да продаю"},
+        {text: "Нет, планирую выходить на МП"},
+        {text: "Нет, не планирую"},
+      ],
+      answersRight: [
+
+      ],
+    },
+    {
+      question: "С какими маркетплейсами планируете работать?",
+      type: "checkbox",
+      answersLeft: [
+        {text: "Ozon"},
+        {text: "Яндекс.Маркет"},
+        {text: "Aliexpress"},
+      ],
+      answersRight: [
+        {text: "Wildberries"},
+        {text: "СберМегаМаркет"},
+        {text: "Другой"},
+      ],
+    },
+    {
+      question: "По каким схемам планируете работать?",
+      type: "checkbox",
+      answersLeft: [
+        {text: "FBM - Продажа со склада маркетплейса"},
+        {text: "FBS - Продажа со склада продавца"},
+        {text: "DBS - Доставка силами продавца"},
+        {text: "Click & Collect - Закажи и забери в магазине"},
+      ],
+      answersRight: [
+
+      ],
+    },
+    {
+      question: "Сколько у вас заказов на маркетплейсах в день?",
+      type: "radio",
+      answersLeft: [
+        {text: "Больше 250"},
+        {text: "50-250"},
+        {text: "До 50"},
+      ],
+      answersRight: [
+
+      ],
+    },
+    {
+      question: "Текущая система для автоматизации?",
+      type: "radio",
+      answersLeft: [
+        {text: "1С УТ"},
+        {text: "1С ERP"},
+        {text: "1C Комплексная автоматизация"},
+        {text: "1С УНФ"},
+      ],
+      answersRight: [
+        {text: "Мой склад"},
+        {text: "Другая"},
+        {text: "Нет системы, но очень хочу"},
+      ],
+    },
+  ]
+
+.modal__container(data-target="registration").modal-registration.modal-open
+  .modal__content.js-tabs-container
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      span
+      span
+    h3.modal-registration__title
+      | Анкета
+    p.modal-registration__desc
+      | Пожалуйста, ответьте на несколько вопросов
+    .modal-registration__progressbar
+      .modal-registration__progressbar-line
+    form.modal-registration__form(data-need-validation action="#")
+      each item, index in registrationForm
+        div(class=`modal-registration__form-group${item.active ? ' active' : ''} js-tab-content` data-id=`answerTab${index}`)
+          h4.modal-registration__question= item.question
+          div(class=`modal-registration__answers${item.answersRight.length === 0 ? ' modal-registration__answers--single-column' : ''}`)
+            .modal-registration__answers-left
+              each answer, i in item.answersLeft
+                .modal-registration__answer
+                  input.modal-registration__input.visually-hidden(type=item.type name=`${type === "checkbox" ? "answer-" + index + "-" + i : "answer-" + index}` id=`answer-${index}-${i}`)
+                  label.modal-registration__label(for=`answer-${index}-${i}`)= answer.text
+            .modal-registration__answers-right
+              each answer, i in item.answersRight
+                .modal-registration__answer
+                  input.modal-registration__input.visually-hidden(type=item.type name=`${type === "checkbox" ? "answer-" + index + "-" + i : "answer-" + index}` id=`answer-${index}-${i}`)
+                  label.modal-registration__label(for=`answer-${index}-${i}`)= answer.text
+          .modal-registration__buttons
+            if index > 0
+              button.modal-registration__button.button.button--medium.button--bordered.js-tab(type="button" data-href=`answerTab${index - 1}`)
+                | Назад
+            if index + 1 < registrationForm.length
+              button.modal-registration__button.button.button--medium.button--blue.js-tab(type="button" data-href=`answerTab${index + 1}`)
+                | Далее
+            if index + 1 === registrationForm.length
+              button.modal-registration__button.button.button--medium.button--blue(type="submit")
+                | Завершить
