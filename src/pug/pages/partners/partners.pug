@@ -1,0 +1,60 @@
+-
+  const partners = [
+    {
+      img: "partners-1.png",
+      title: "1С:Предприятие",
+      text: "Система программ «1С:Предприятие» предназначена для автоматизации управления и учета на предприятиях различных отраслей, видов деятельности и типов финансирования, и включает в себя решения для комплексной автоматизации производственных, торговых и сервисных предприятий, продукты для управления финансами холдингов и отдельных предприятий, ведения бухгалтерского учета («1С:Бухгалтерия» самая известная учетная программа в ряде стран), расчета зарплаты и управления кадрами, для учета в бюджетных учреждениях, разнообразные отраслевые и специализированные решения, разработанные самой фирмой «1С», ее партнерами и независимыми организациями.",
+    },
+    {
+      img: "partners-2.png",
+      title: "Террасофт",
+      text: "Террасофт — один из ключевых игроков на глобальном рынке low-code, BPM и CRM, известный своими программными продуктами Creatio (ранее bpm’online). Технологии Creatio помогают тысячам крупных и средних компаний по всему миру оптимизировать и ускорять процессы продаж, маркетинга, сервиса и операционные процессы организации.",
+    },
+    {
+      img: "partners-3.png",
+      title: "DataMobile",
+      text: "Специализированное ПО DataMobile предназначено для терминалов сбора данных (ТСД) и других мобильных устройств на Android. ПО решает ряд типовых и специализированных задач: инвентаризация, учет, движение и отпуск товара, идентификация, формирование заказа, адресное хранение, переоценка, торговля по образцам.",
+    },
+  ]
+
+section.partners.page-section
+  .narrow-container
+    +breadcrumbs([
+      ["Главная", "./index.html"],
+      ["Наши партнеры", "#"],
+    ])
+    h1.partners__title
+      | Наши партнеры
+  .partners__tabs-container.js-tabs-container(data-tabs-like-radio='true')
+    .narrow-container
+      .partners__tabs.js-tabs-scroll
+        button.partners__tab.js-tab.tab-active(data-href="partners1")
+          | Вендоры
+        button.partners__tab.js-tab(data-href="partners2")
+          | Инфопартнеры
+    .container
+      .partners__tabs-content
+        .partners__tab-content.active.js-tab-content(data-id="partners1")
+          ul.partners__list
+            for item in partners
+              li.partners__item.js-more-text-container
+                .partners__item-img
+                  +imgLazy(item.img, "Логотип компании")
+                h3.partners__item-title= item.title
+                .partners__item-text.js-more-text
+                  p= item.text
+                button.partners__item-button.button.js-more-text-button
+                  span Раскрыть
+                  +icon-multi('arrow-down')
+        .partners__tab-content.js-tab-content(data-id="partners2")
+          ul.partners__list
+            for item in partners
+              li.partners__item.js-more-text-container
+                .partners__item-img
+                  +imgLazy(item.img, "Логотип компании")
+                h3.partners__item-title= item.title
+                .partners__item-text.js-more-text
+                  p= item.text
+                button.partners__item-button.button.js-more-text-button
+                  span Раскрыть
+                  +icon-multi('arrow-down')

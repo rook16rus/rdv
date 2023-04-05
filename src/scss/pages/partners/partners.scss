@@ -1,0 +1,141 @@
+.partners {
+  padding-top: 4rem;
+
+  .breadcrumbs {
+    margin-bottom: 3.2rem;
+  }
+
+  &__title {
+    @extend .section-title;
+  }
+
+  &__tabs-contents {
+    position: relative;
+  }
+
+  &__tab-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    &.active {
+      position: static;
+
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &__tabs {
+    position: relative;
+
+    display: flex;
+    margin-right: -3.2rem;
+    padding-bottom: 2.4rem;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: var(--active-tab-offset);
+      bottom: 0;
+
+      width: var(--active-tab-width);
+      height: 1px;
+
+      background-color: var(--main-base-0);
+
+      transition: 0.3s;
+    }
+  }
+
+  &__tab {
+    margin-right: 3.2rem;
+
+    @extend .title-h6;
+    color: rgba(23, 79, 119, 0.5);
+
+    &.tab-active {
+      color: var(--main-base-0);
+    }
+  }
+
+  &__list {
+    @extend .section-inner;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    align-items: flex-start;
+  }
+
+  &__item {
+    @extend .white-card;
+  }
+
+  &__item-img {
+    position: relative;
+
+    width: 100%;
+    padding-top: 53.29%;
+    margin-bottom: 3.2rem;
+
+    border: 1px solid var(--grey-D-10);
+    border-radius: 1.6rem;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 26rem;
+      height: 14.6rem;
+      object-fit: cover;
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 1.6rem;
+
+    @extend .title-h5;
+    color: var(--main-base-0);
+  }
+
+  &__item-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 3.2rem;
+
+    @extend .content-regular-text;
+    color: rgba(23, 79, 119, 0.5);
+
+    @include maxSizeText(3);
+
+    &.active {
+      display: grid;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item-button {
+    padding: 0;
+    height: auto;
+
+    &.active svg {
+      transform: rotate(180deg);
+    }
+  }
+}
