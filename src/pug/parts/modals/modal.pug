@@ -3615,7 +3615,7 @@ each item, index in burgerList
               button.modal-registration__button.button.button--medium.button--blue(type="submit" disabled)
                 | Завершить
 
-.modal__container(data-target="sure").modal-sure.modal-open
+.modal__container(data-target="sure").modal-sure
   .modal__content.js-tabs-container
     h3.modal-sure__title
       | Вы уверены?
@@ -3627,4 +3627,21 @@ each item, index in burgerList
       button.modal-sure__button.button.button--medium.button--bordered(data-path="registration")
         | Нет
 
-,
+.modal__container(data-target="sure").modal-registration-success.modal-open
+  .modal__content.js-tabs-container
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      span
+      span
+    h2.modal-registration-success__title
+      | Анкета
+    p.modal-registration-success__desc
+      | Спасибо за регистрацию и заполнение анкеты!
+    .modal-registration-success__text
+      p
+        | На вашу почту #[span.js-mail test@domain.com] будут отправлены данные для входа на вебинар.
+      p
+        | Если вы не получили письмо, проверьте папку «Спам». Если письма нет ни в одной из папок, пожалуйста, повторите регистрацию с другим email-адресом или напишите нам на почту:
+      a(href="mailto:academy@rdt-it.ru")
+        | academy@rdt-it.ru
+    button.modal-registration-success__button.button.button--medium.button--blue
+      | ОК
