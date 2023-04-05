@@ -23,7 +23,6 @@ import introSlider from "./helpers/introSlider";
 import moreButton from "./helpers/moreButton";
 import infinitySlider from "./helpers/infinitySlider";
 import header from "./helpers/header";
-import catalog from "./helpers/catalog";
 import moreButtonRow from "./helpers/moreButtonRow";
 import tabs from "./helpers/tabs";
 import catalogModal from "./helpers/catalogModal";

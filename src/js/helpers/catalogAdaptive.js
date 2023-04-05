@@ -1,5 +1,4 @@
 import catalog from "./catalog";
-import InitModal from "../modules/initModal";
 
 export default function catalogAdaptive() {
   const catalogSection = document.querySelector('.catalog')
@@ -13,7 +12,6 @@ export default function catalogAdaptive() {
     dateButton.setAttribute("data-path", "dates");
     dotesButton.setAttribute("data-path", "tags");
     tags.forEach(tag => tag.setAttribute("data-path", "tags"));
-    InitModal();
   } else {
     catalog();
   }

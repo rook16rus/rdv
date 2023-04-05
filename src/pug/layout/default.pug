@@ -18,10 +18,11 @@ html(lang=siteLang)
       block footer
         include ../parts/footer.pug
 
-    .modal.is-open
+    .modal
       include ../parts/modals/modal.pug
 
   block scripts
     script(src="assets/js/main.js?v=" + siteVersion)
     script(src="assets/js/backend.js?v=" + siteVersion)
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js")

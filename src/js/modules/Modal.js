@@ -36,6 +36,7 @@ export class Modal {
           this.animation = animation ? animation : 'fade';
           this.speed = speed ? parseInt(speed) : 300;
           this.overlay = overlay ? overlay : "rgba($color: #1e1e1e, $alpha: 60%)";
+
           if (window.openedModal) {
             const prevModalId = window.openedModal.dataset.target;
             const newOpenModal = document.querySelector(`[data-target="${target}"]`);
@@ -45,8 +46,9 @@ export class Modal {
               prevButton.dataset.path = prevModalId;
             }
 
-            this.close();
+            this.close(true);
           }
+
           this.modalContainer = document.querySelector(`[data-target="${target}"]`);
           this.open(this.modalContainer.closest(".modal"));
           return;
@@ -116,7 +118,7 @@ export class Modal {
     }, this.speed);
   }
 
-  close() {
+  close(isNewModalOpen) {
     if (this.modalContainer) {
       this.modalContainer.classList.remove('animate-open');
       this.modalContainer.classList.remove(this.animation);
@@ -125,12 +127,22 @@ export class Modal {
       })
       this.modalContainer.classList.remove('modal-open');
 
+      let isRegistrationModal = false;
+
+      if (!isNewModalOpen && this.modalContainer.classList.contains('modal-registration')) {
+        isRegistrationModal = true;
+      }
+
       this.enableScroll();
       this.options.isClose(this);
       this.isOpen = false;
       this.focusTrap();
       this.modalContainer = null;
       window.openedModal = null;
+
+      if (isRegistrationModal) {
+        this.onOpen('sure');
+      }
     }
   }
 

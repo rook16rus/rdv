@@ -177,21 +177,13 @@ export default function validation() {
       let formData = new FormData(form);
       const url = form.getAttribute("action");
 
-      const labels = form.querySelectorAll('.js-input-heading');
-
       if ($(form).parsley().isValid()) {
         axios.post(url, formData)
           .then((response) => {
-            const fileContainer = form.querySelector(".file-upload__text");
-            form.querySelector(".form__btn").classList.remove("disabled");
-
-            if (fileContainer) fileContainer.remove();
-
             window.rdv_API.modal.close();
             window.rdv_API.modal.onOpen("success");
 
             $(form).trigger("reset");
-            labels.forEach(label => label.classList.remove("is-active"));
           })
           .catch((error) => {
             console.log(error.message);

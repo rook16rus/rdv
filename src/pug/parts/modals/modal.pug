@@ -3461,7 +3461,7 @@
       each item, index in burgerList
         li.modal-burger__item
           if item.link
-            a.modal-burger__link(href=link)= item.text
+            a.modal-burger__link(href=item.link)= item.text
           else
             button.modal-burger__link(data-path=`burger-${index}`)
               span= item.text
@@ -3627,7 +3627,7 @@ each item, index in burgerList
       button.modal-sure__button.button.button--medium.button--bordered(data-path="registration")
         | Нет
 
-.modal__container(data-target="sure").modal-registration-success.modal-open
+.modal__container(data-target="registration-success").modal-registration-success
   .modal__content.js-tabs-container
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
@@ -3638,10 +3638,10 @@ each item, index in burgerList
       | Спасибо за регистрацию и заполнение анкеты!
     .modal-registration-success__text
       p
-        | На вашу почту #[span.js-mail test@domain.com] будут отправлены данные для входа на вебинар.
+        | На вашу почту #[span.js-email test@domain.com] будут отправлены данные для входа на вебинар.
       p
         | Если вы не получили письмо, проверьте папку «Спам». Если письма нет ни в одной из папок, пожалуйста, повторите регистрацию с другим email-адресом или напишите нам на почту:
       a(href="mailto:academy@rdt-it.ru")
         | academy@rdt-it.ru
-    button.modal-registration-success__button.button.button--medium.button--blue
+    button.modal-registration-success__button.button.button--medium.button--blue.modal-close
       | ОК

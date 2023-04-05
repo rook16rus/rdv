@@ -1,3 +1,6 @@
+import 'parsleyjs'
+import $ from "jquery";
+
 export default function registrationForm() {
   const form = document.querySelector('.modal-registration');
   if (!form) return
@@ -29,9 +32,32 @@ export default function registrationForm() {
       const activeIndex = [...groups].findIndex(group => group.classList.contains('active'));
       const percent = activeIndex / (groups.length) * 100;
 
-      console.log(percent);
-
       progressbarLine.style.setProperty('--registration-progress', percent + '%');
     })
+  })
+
+  const eventForm = document.querySelector('.event-form__form');
+  if (!eventForm) return;
+
+  const eventFormButton = eventForm.querySelector('.event-form__button');
+
+  $(eventForm).parsley({
+    errorsContainer: function (field) {
+      return field.$element.closest('.input-wrapper');
+    },
+    focus: 'none',
+    errorClass: 'is-error',
+    successClass: 'success',
+    classHandler: (field) => {
+      return field.$element.closest('.js-validation-wrapper');
+    },
+    trigger: 'change'
+  });
+
+  eventFormButton.addEventListener('click', () => {
+    if ($(eventForm).parsley().isValid()) {
+      console.log(1);
+      window.rdv_API.modal.onOpen('registration');
+    }
   })
 }
