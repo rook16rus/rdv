@@ -3578,7 +3578,7 @@ each item, index in burgerList
     },
   ]
 
-.modal__container(data-target="registration").modal-registration.modal-open
+.modal__container(data-target="registration").modal-registration
   .modal__content.js-tabs-container
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
@@ -3614,3 +3614,17 @@ each item, index in burgerList
             if index + 1 === registrationForm.length
               button.modal-registration__button.button.button--medium.button--blue(type="submit" disabled)
                 | Завершить
+
+.modal__container(data-target="sure").modal-sure.modal-open
+  .modal__content.js-tabs-container
+    h3.modal-sure__title
+      | Вы уверены?
+    p.modal-sure__desc
+      | Вы уверены, что хотите отменить регистрацию на мероприятие?
+    .modal-sure__buttons
+      button.modal-sure__button.button.button--medium.button--blue.modal-close
+        | Да
+      button.modal-sure__button.button.button--medium.button--bordered(data-path="registration")
+        | Нет
+
+,
