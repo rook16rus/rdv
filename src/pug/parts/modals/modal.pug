@@ -3730,7 +3730,7 @@ each item, index in burgerList
             +imgLazy(item.icon, "Иконка социальной сети")
     span.modal-share__caption
       | Или скопировать ссылку:
-    .modal-share__link
-      input.modal-share__link-input.input.input--big.input--blue(type="text" value="https://rdv-it.ru/" name="shareLink" id="shareLink" readonly)
-      button.modal-share__link-button.button.button--big.button--bordered
+    .modal-share__link.js-copy-link
+      input.modal-share__link-input.input.input--big.input--blue.js-copy-link-input(type="text" value="https://rdv-it.ru/" name="shareLink" id="shareLink" readonly)
+      button.modal-share__link-button.button.button--big.button--bordered.js-copy-link-button
         | Скопировать

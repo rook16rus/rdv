@@ -34,6 +34,7 @@ import simpleBar from "./helpers/simpleBar";
 import fixedModalButtons from "./helpers/fixedModalButtons";
 import registrationForm from "./helpers/registrationForm";
 import moreText from "./helpers/moreText";
+import copyLink from "./helpers/copyLink";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -68,6 +69,7 @@ documenReady(() => {
   fixedModalButtons();
   registrationForm();
   moreText();
+  copyLink();
 });
 
 document.fonts.ready.then((res) => {
