@@ -3673,3 +3673,64 @@ each item, index in burgerList
       | По какой-то причине, ваша заявка не была отправлена
     button.modal-error__button.button.button--medium.button--blue.modal-close
       | Повторить
+
+-
+  const shareSocials = [
+    {
+      link: "",
+      icon: "share-socials-1.svg",
+    },
+    {
+      link: "",
+      icon: "share-socials-2.svg",
+    },
+    {
+      link: "",
+      icon: "share-socials-3.svg",
+    },
+    {
+      link: "",
+      icon: "share-socials-4.svg",
+    },
+    {
+      link: "",
+      icon: "share-socials-5.svg",
+    },
+    {
+      link: "",
+      icon: "share-socials-6.svg",
+    },
+    {
+      link: "",
+      icon: "share-socials-7.svg",
+    },
+    {
+      link: "",
+      icon: "share-socials-8.svg",
+    },
+    {
+      link: "",
+      icon: "share-socials-9.svg",
+    },
+  ]
+
+.modal__container(data-target="share").modal-share.modal-open
+  .modal__content.js-tabs-container
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      span
+      span
+    h2.modal-share__title
+      | Поделиться материалом
+    span.modal-share__caption
+      | Поделиться через:
+    ul.modal-share__socials
+      for item in shareSocials
+        li.modal-share__social
+          a.modal-share__social-link(href=item.link)
+            +imgLazy(item.icon, "Иконка социальной сети")
+    span.modal-share__caption
+      | Или скопировать ссылку:
+    .modal-share__link
+      input.modal-share__link-input.input.input--big.input--blue(type="text" value="https://rdv-it.ru/" name="shareLink" id="shareLink" readonly)
+      button.modal-share__link-button.button.button--big.button--bordered
+        | Скопировать
