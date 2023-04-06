@@ -17,9 +17,7 @@
         label.modal-event__label(for="eventPhone")
           | Телефон
       .modal-event__input-wrapper.modal-event__input-wrapper--big.input-wrapper.input-wrapper--textarea
-        textarea.modal-event__textarea.input.input--big.input--blue(id="eventComment" name="eventComment" required)
-        label.modal-event__label(for="eventComment")
-          | Вопрос или комментарий
+        textarea.modal-event__textarea.input.input--big.input--blue(id="eventComment" name="eventComment" required placeholder="Вопрос или комментарий")
       button.modal-event__button.button.button--big.button--yellow
         | Отправить
       +confidence-block("contactsConfidence", "confidence-block--blue")

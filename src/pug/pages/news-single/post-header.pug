@@ -49,7 +49,7 @@ header.post-header
               .post-header__meta-icon
                 +imgLazy(item.icon)
               span.post-header__meta-desc= item.desc
-        button.post-header__share.tag.tag--medium.tag--reverse.tag--border-grey
+        button.post-header__share.tag.tag--medium.tag--reverse.tag--border-grey(data-path='share')
           span Поделиться
           +icon-multi('share-icon')
           +icon-multi('share-icon-mobile')

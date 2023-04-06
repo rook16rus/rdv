@@ -26,9 +26,7 @@ mixin event-form()
               label.event-form__label(for="eventRegEmail")
                 | Email
             .event-form__input-wrapper.event-form__input-wrapper--large.input-wrapper.input-wrapper--textarea
-              textarea.event-form__textarea.input.input--big.input--white(name="eventRegComment" id="eventRegComment")
-              label.event-form__label(for="eventRegComment")
-                | Ваш комментарий
+              textarea.event-form__textarea.input.input--big.input--white(name="eventRegComment" id="eventRegComment" placeholder="Ваш комментарий")
             button.event-form__button.button.button--big.button--yellow(type="button")
               | Отправить
             +confidence-block("eventRegConfidence")
