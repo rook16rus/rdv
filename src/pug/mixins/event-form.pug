@@ -8,7 +8,7 @@ mixin event-form()
           .event-form__text
             p
               | Мы с вами свяжемся и обсудим все детали
-          form.event-form__form(action="#" data-need-validation)
+          form.event-form__form(action="#")
             .event-form__input-wrapper.input-wrapper
               input.event-form__input.input.input--big.input--white(type="text" name="eventRegName" id="eventRegName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
               label.event-form__label(for="eventRegName")

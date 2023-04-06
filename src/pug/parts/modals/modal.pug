@@ -3657,10 +3657,10 @@ each item, index in burgerList
       | Заявка отправлена
     p.modal-success__desc
       | Мы ответим вам в  ближайшее время
-    .modal-success__button.button.button--medium.button--blue.modal-close
+    button.modal-success__button.button.button--medium.button--blue.modal-close
       | Хорошо
 
-.modal__container(data-target="error").modal-error.modal-open
+.modal__container(data-target="error").modal-error
   .modal__content.js-tabs-container
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
@@ -3671,5 +3671,5 @@ each item, index in burgerList
       | Ошибка при отправке
     p.modal-error__desc
       | По какой-то причине, ваша заявка не была отправлена
-    .modal-error__button.button.button--medium.button--blue.modal-prev
-      | Хорошо
+    button.modal-error__button.button.button--medium.button--blue.modal-close
+      | Повторить

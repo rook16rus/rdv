@@ -56,7 +56,6 @@ export default function registrationForm() {
 
   eventFormButton.addEventListener('click', () => {
     if ($(eventForm).parsley().isValid()) {
-      console.log(1);
       window.rdv_API.modal.onOpen('registration');
     }
   })
