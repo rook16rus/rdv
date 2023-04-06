@@ -3645,3 +3645,31 @@ each item, index in burgerList
         | academy@rdt-it.ru
     button.modal-registration-success__button.button.button--medium.button--blue.modal-close
       | ОК
+
+.modal__container(data-target="success").modal-success
+  .modal__content.js-tabs-container
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      span
+      span
+    .modal-success__icon
+      +icon-multi('success-icon')
+    h2.modal-success__title
+      | Заявка отправлена
+    p.modal-success__desc
+      | Мы ответим вам в  ближайшее время
+    .modal-success__button.button.button--medium.button--blue.modal-close
+      | Хорошо
+
+.modal__container(data-target="error").modal-error.modal-open
+  .modal__content.js-tabs-container
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      span
+      span
+    .modal-error__icon
+      +icon-multi('error-icon')
+    h2.modal-error__title
+      | Ошибка при отправке
+    p.modal-error__desc
+      | По какой-то причине, ваша заявка не была отправлена
+    .modal-error__button.button.button--medium.button--blue.modal-prev
+      | Хорошо

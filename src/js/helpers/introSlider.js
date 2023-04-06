@@ -3,6 +3,8 @@ import Swiper, {Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
 
 export default function introSlider() {
+  if (document.body.classList.contains('is-admin')) return;
+
   const intro = document.querySelector('.intro');
   if (!intro) return
 

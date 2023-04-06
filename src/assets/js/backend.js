@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       .catch((error) => {
         console.log(error.message);
         window.rdv_API.modal.close();
-        window.rdv_API.modal.onOpen("registration-success");
+        window.rdv_API.modal.onOpen("error");
       });
   })
 });

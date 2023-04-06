@@ -3,6 +3,8 @@ import Swiper, {Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
 
 export default function infinitySlider() {
+  if (document.body.classList.contains('is-admin')) return;
+
   const sliders = document.querySelectorAll('.js-infinity-slider');
 
   sliders.forEach(slider => {
