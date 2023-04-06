@@ -1112,9 +1112,22 @@
 .modal-share {
   &__title {
     margin-bottom: 4rem;
+    margin-right: 3.4rem;
 
     @extend .title-h3;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 3.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__caption {
@@ -1130,6 +1143,10 @@
     flex-wrap: wrap;
     margin-right: -0.8rem;
     margin-bottom: 2.4rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__social {
@@ -1148,6 +1165,21 @@
     background-color: var(--grey-D-60);
     overflow: hidden;
 
+    @include mq('custom', 'max', 1024) {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 4rem;
+      height: 4rem;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -1159,6 +1191,16 @@
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 1rem;
+
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.4rem;
+    }
   }
 
   &__link-input {
