@@ -4943,8 +4943,7 @@
               <label class="modal-event__label" for="eventPhone">Телефон</label>
             </div>
             <div class="modal-event__input-wrapper modal-event__input-wrapper--big input-wrapper input-wrapper--textarea">
-              <textarea class="modal-event__textarea input input--big input--blue" id="eventComment" name="eventComment" required></textarea>
-              <label class="modal-event__label" for="eventComment">Вопрос или комментарий</label>
+              <textarea class="modal-event__textarea input input--big input--blue" id="eventComment" name="eventComment" required placeholder="Вопрос или комментарий"></textarea>
             </div>
             <button class="modal-event__button button button--big button--yellow">Отправить</button>
             <div class="confidence-block confidence-block--blue">
@@ -9561,6 +9560,92 @@
             <a href="mailto:academy@rdt-it.ru">academy@rdt-it.ru</a>
           </div>
           <button class="modal-registration-success__button button button--medium button--blue modal-close">ОК</button>
+        </div>
+      </div>
+      <div class="modal__container modal-success" data-target="success">
+        <div class="modal__content js-tabs-container">
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
+          </button>
+          <div class="modal-success__icon">
+            <svg class="icon icon-success-icon">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#success-icon"></use>
+            </svg>
+          </div>
+          <h2 class="modal-success__title">Заявка отправлена</h2>
+          <p class="modal-success__desc">Мы ответим вам в ближайшее время</p>
+          <button class="modal-success__button button button--medium button--blue modal-close">Хорошо</button>
+        </div>
+      </div>
+      <div class="modal__container modal-error" data-target="error">
+        <div class="modal__content js-tabs-container">
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
+          </button>
+          <div class="modal-error__icon">
+            <svg class="icon icon-error-icon">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#error-icon"></use>
+            </svg>
+          </div>
+          <h2 class="modal-error__title">Ошибка при отправке</h2>
+          <p class="modal-error__desc">По какой-то причине, ваша заявка не была отправлена</p>
+          <button class="modal-error__button button button--medium button--blue modal-close">Повторить</button>
+        </div>
+      </div>
+      <div class="modal__container modal-share" data-target="share">
+        <div class="modal__content js-tabs-container">
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
+          </button>
+          <h2 class="modal-share__title">Поделиться материалом</h2><span class="modal-share__caption">Поделиться через:</span>
+          <ul class="modal-share__socials">
+            <li class="modal-share__social">
+              <a class="modal-share__social-link" href="#">
+                <img class="lazyload" data-src="assets/images/share-socials-1.svg" src="#" alt="Иконка социальной сети">
+              </a>
+            </li>
+            <li class="modal-share__social">
+              <a class="modal-share__social-link" href="#">
+                <img class="lazyload" data-src="assets/images/share-socials-2.svg" src="#" alt="Иконка социальной сети">
+              </a>
+            </li>
+            <li class="modal-share__social">
+              <a class="modal-share__social-link" href="#">
+                <img class="lazyload" data-src="assets/images/share-socials-3.svg" src="#" alt="Иконка социальной сети">
+              </a>
+            </li>
+            <li class="modal-share__social">
+              <a class="modal-share__social-link" href="#">
+                <img class="lazyload" data-src="assets/images/share-socials-4.svg" src="#" alt="Иконка социальной сети">
+              </a>
+            </li>
+            <li class="modal-share__social">
+              <a class="modal-share__social-link" href="#">
+                <img class="lazyload" data-src="assets/images/share-socials-5.svg" src="#" alt="Иконка социальной сети">
+              </a>
+            </li>
+            <li class="modal-share__social">
+              <a class="modal-share__social-link" href="#">
+                <img class="lazyload" data-src="assets/images/share-socials-6.svg" src="#" alt="Иконка социальной сети">
+              </a>
+            </li>
+            <li class="modal-share__social">
+              <a class="modal-share__social-link" href="#">
+                <img class="lazyload" data-src="assets/images/share-socials-7.svg" src="#" alt="Иконка социальной сети">
+              </a>
+            </li>
+            <li class="modal-share__social">
+              <a class="modal-share__social-link" href="#">
+                <img class="lazyload" data-src="assets/images/share-socials-8.svg" src="#" alt="Иконка социальной сети">
+              </a>
+            </li>
+            <li class="modal-share__social">
+              <a class="modal-share__social-link" href="#">
+                <img class="lazyload" data-src="assets/images/share-socials-9.svg" src="#" alt="Иконка социальной сети">
+              </a>
+            </li>
+          </ul><span class="modal-share__caption">Или скопировать ссылку:</span>
+          <div class="modal-share__link js-copy-link">
+            <input class="modal-share__link-input input input--big input--blue js-copy-link-input" type="text" value="https://rdv-it.ru/" name="shareLink" id="shareLink" readonly="readonly">
+            <button class="modal-share__link-button button button--big button--bordered js-copy-link-button">Скопировать</button>
+          </div>
         </div>
       </div>
     </div>
