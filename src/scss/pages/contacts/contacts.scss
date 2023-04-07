@@ -1,8 +1,16 @@
 .contacts {
   padding-top: 4rem;
 
+  @include mq('custom', 'max', 640) {
+    padding-top: 4.8rem;
+  }
+
   .breadcrumbs {
     margin-bottom: 3.2rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__title {
@@ -14,6 +22,20 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
     margin-bottom: 4.8rem;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.4rem;
+      margin-bottom: 4rem;
+    }
   }
 
   &__office {
@@ -27,6 +49,21 @@
     cursor: pointer;
 
     transition: 0.3s;
+
+    @include mq('custom', 'max', 1024) {
+      min-height: 30rem;
+      padding: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      min-height: 28rem;
+      padding: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      min-height: auto;
+      padding: 2rem;
+    }
 
     @include mq('custom', 'min', 1025) {
       &:hover {
@@ -50,10 +87,23 @@
     height: 0.8rem;
 
     border-radius: 99.9rem;
+
+    @include mq('custom', 'max', 1024) {
+      width: 10rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 6rem;
+      height: 0.2rem;
+    }
   }
 
   &__office-text {
-    margin-bottom: 3rem;
+    margin-bottom: 3.2rem;
 
     @extend .content-medium-text;
     color: rgba(23, 79, 119, 0.5);
@@ -64,19 +114,33 @@
     grid-template-columns: 1fr;
     gap: 1.2rem;
     margin-top: auto;
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.8rem;
+    }
   }
 
   &__office-link {
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: center;
     gap: 1.2rem;
 
     font: var(--button-big);
     color: var(--main-base-0);
 
+    @include mq('custom', 'max', 640) {
+      font: var(--button-small);
+    }
+
     svg {
       width: 1.6rem;
       height: 1.6rem;
+
+      @include mq('custom', 'max', 640) {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
     }
   }
 
@@ -88,6 +152,19 @@
     display: flex;
     align-items: flex-end;
     min-height: 72rem;
+
+    @include mq('custom', 'max', 1024) {
+      min-height: 66rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      min-height: 61rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      align-items: flex-start;
+      min-height: 55.4rem;
+    }
   }
 
   &__map {
@@ -98,6 +175,10 @@
   &__card {
     @extend .white-card;
     width: 45.8rem;
+
+    @include mq('custom', 'max', 640) {
+      width: 100%;
+    }
   }
 
   &__card-title {
@@ -105,10 +186,26 @@
 
     @extend .title-h4;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__card-slider {
     height: auto;
+
+    @include mq('custom', 'max', 640) {
+      display: none;
+    }
 
     .swiper-pagination-bullets {
       position: static;
@@ -117,6 +214,14 @@
       justify-content: center;
       margin-top: 2.4rem;
       margin-bottom:  3.2rem;
+
+      @include mq('custom', 'max', 1024) {
+        margin-bottom: 2.8rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        margin-bottom: 2.4rem;
+      }
     }
   }
 
@@ -132,11 +237,25 @@
     grid-template-columns: 1fr;
     gap: 1.2rem;
     margin-bottom: 3.2rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+      gap: 0.8rem;
+    }
   }
 
   &__card-info-item {
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: center;
     gap: 0.8rem;
 
     @extend .content-small-text;
@@ -150,5 +269,9 @@
 
   &__card-button {
     width: 100%;
+
+    @include mq('custom', 'max', 640) {
+      height: 4rem;
+    }
   }
 }
