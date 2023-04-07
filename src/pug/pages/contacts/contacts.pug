@@ -1,0 +1,79 @@
+-
+  const contactsOffices = [
+    {
+      title: "Головной офис",
+      gradient: "var(--gradient-01)",
+    },
+    {
+      title: "Маркетинг/PR",
+      text: "Ваши предложения по продвижению и рекламе вы может отправить на почту",
+      gradient: "var(--gradient-02)",
+    },
+    {
+      title: "Отдел продаж",
+      text: "Консультация клиентов по вопросам связанным с приобретением продуктов и услуг компании",
+      gradient: "var(--gradient-03)",
+    },
+  ]
+
+-
+  const contactsCardInfo = [
+    {
+      icon: "map-info-1.svg",
+      text: "Бауманская"
+    },
+    {
+      icon: "map-info-2.svg",
+      text: "Москва, Красносельская нижн. ул., д. 35 стр. 64, офис 305"
+    },
+    {
+      icon: "map-info-3.svg",
+      text: "Пн-Пт: c 10:00 до 19:00"
+    },
+  ]
+
+section.contacts.page-section
+  .narrow-container
+    +breadcrumbs([
+      ["Главная", "./index.html"],
+      ["Контакты", "#"]
+    ])
+    h1.contacts__title
+      | Контакты
+    .contacts__offices
+      for item in contactsOffices
+        .contacts__office
+          h3.contacts__office-title
+            span= item.title
+            .contacts__office-title-underline(style=`background: ${item.gradient}`)
+          if item.text
+            p.contacts__office-text= item.text
+          .contacts__office-links
+            a.contacts__office-link(href="tel:+74951270347")
+              +imgLazy('info-icon-1.svg', "Иконка")
+              span +7 (495) 127-03-47
+            a.contacts__office-link(href="mailto:info@rdv-it.ru")
+              +imgLazy('info-icon-2.svg', "Иконка")
+              span info@rdv-it.ru
+  .container
+    .contacts__map-container
+      .contacts__map
+      .contacts__card
+        h3.contacts__card-title
+          | Головной офис RDV
+        .contacts__card-slider.swiper
+          .swiper-wrapper
+            .contacts__card-slide.swiper-slide
+              +pictureLazy("contacts-1.jpg", "Фото офиса")
+            .contacts__card-slide.swiper-slide
+              +pictureLazy("contacts-1.jpg", "Фото офиса")
+            .contacts__card-slide.swiper-slide
+              +pictureLazy("contacts-1.jpg", "Фото офиса")
+          .swiper-pagination-bullets
+        .contacts__card-info
+          for item in contactsCardInfo
+            .contacts__card-info-item
+              +imgLazy(item.icon, "Иконка")
+              span= item.text
+        button.contacts__card-button.button.button--big.button--blue
+          | Проложить маршрут

@@ -1,0 +1,154 @@
+.contacts {
+  padding-top: 4rem;
+
+  .breadcrumbs {
+    margin-bottom: 3.2rem;
+  }
+
+  &__title {
+    @extend .section-title;
+  }
+
+  &__offices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    margin-bottom: 4.8rem;
+  }
+
+  &__office {
+    @extend .white-card;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 32rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        border-color: var(--main-base-0);
+      }
+    }
+  }
+
+  &__office-title {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @extend .title-h4;
+    color: var(--main-base-0);
+  }
+
+  &__office-title-underline {
+    width: 12rem;
+    height: 0.8rem;
+
+    border-radius: 99.9rem;
+  }
+
+  &__office-text {
+    margin-bottom: 3rem;
+
+    @extend .content-medium-text;
+    color: rgba(23, 79, 119, 0.5);
+  }
+
+  &__office-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: auto;
+  }
+
+  &__office-link {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.2rem;
+
+    font: var(--button-big);
+    color: var(--main-base-0);
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  &__map-container {
+    position: relative;
+    z-index: 1;
+
+    @extend .section-inner;
+    display: flex;
+    align-items: flex-end;
+    min-height: 72rem;
+  }
+
+  &__map {
+    @extend .fully-filled-el;
+    z-index: -1;
+  }
+
+  &__card {
+    @extend .white-card;
+    width: 45.8rem;
+  }
+
+  &__card-title {
+    margin-bottom: 3.2rem;
+
+    @extend .title-h4;
+    color: var(--main-base-0);
+  }
+
+  &__card-slider {
+    height: auto;
+
+    .swiper-pagination-bullets {
+      position: static;
+
+      display: flex;
+      justify-content: center;
+      margin-top: 2.4rem;
+      margin-bottom:  3.2rem;
+    }
+  }
+
+  &__card-slide {
+    height: 20rem;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+  }
+
+  &__card-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__card-info-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.8rem;
+
+    @extend .content-small-text;
+    color: var(--main-base-0);
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
+  &__card-button {
+    width: 100%;
+  }
+}

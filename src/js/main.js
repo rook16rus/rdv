@@ -36,6 +36,7 @@ import registrationForm from "./helpers/registrationForm";
 import moreText from "./helpers/moreText";
 import copyLink from "./helpers/copyLink";
 import isAdminMod from "./helpers/isAdminMod";
+import mapSlider from "./helpers/mapSlider";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -72,6 +73,7 @@ documenReady(() => {
   registrationForm();
   moreText();
   copyLink();
+  mapSlider();
 });
 
 document.fonts.ready.then((res) => {
