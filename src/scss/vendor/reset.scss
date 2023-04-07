@@ -250,6 +250,17 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
+.swiper--admin {
+  .swiper-wrapper {
+    display: grid !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+    height: auto !important;
+    gap: 2rem;
+    transform: none !important;
+  }
+}
+
 .lazyload,
 .lazyloading {
   opacity: 0;

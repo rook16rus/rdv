@@ -3,8 +3,6 @@ import Swiper, {Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
 
 export default function initSliders() {
-  if (document.body.classList.contains('is-admin')) return;
-
     const sliders = Array.from(document.querySelectorAll('.js-init-slider'));
     sliders.forEach((slider, i) => {
         if (slider.classList.contains('js-init-slider-mobile') && matchMedia('(max-width: 640px)').matches) return;
@@ -126,6 +124,7 @@ export default function initSliders() {
         })
 
         slider.dataset.swiperId ? window[`swiper${slider.dataset.swiperId}`] = swiper : null;
+        window.rdv_API.swipers.push(swiper);
     })
 
 }

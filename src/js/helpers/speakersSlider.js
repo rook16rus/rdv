@@ -3,8 +3,6 @@ import Swiper, {Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
 
 export default function speakersSlider() {
-  if (document.body.classList.contains('is-admin')) return;
-
   const speakers = document.querySelector('.speakers');
   if (!speakers) return
 
@@ -25,4 +23,6 @@ export default function speakersSlider() {
       }
     }
   })
+
+  window.rdv_API.swipers.push(swiper);
 }

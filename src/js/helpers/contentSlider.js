@@ -3,8 +3,6 @@ import Swiper, {Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
 
 export default function contentSlider() {
-  if (document.body.classList.contains('is-admin')) return;
-
   const contentSlider = document.querySelector('.content-slider');
   if (!contentSlider) return
 
@@ -33,4 +31,6 @@ export default function contentSlider() {
       }
     }
   })
+
+  window.rdv_API.swipers.push(swiper);
 }

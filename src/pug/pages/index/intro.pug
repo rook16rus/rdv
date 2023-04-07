@@ -35,7 +35,8 @@ section.intro.page-section
     .intro__slider.swiper
       .swiper-wrapper
         for item in intro
-          .intro__slide.swiper-slide(style=`background-image: url('assets/images/${item.img}.png');`)
+          .intro__slide.swiper-slide
+            +imgLazy(`${item.img}.png`, 'Фон слайда').intro__slide-bg
             .intro__slide-tags
               a.intro__slide-tag(href="#") Актуальные услуги
             h3.intro__slide-title= item.title

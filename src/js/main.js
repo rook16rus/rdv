@@ -35,9 +35,11 @@ import fixedModalButtons from "./helpers/fixedModalButtons";
 import registrationForm from "./helpers/registrationForm";
 import moreText from "./helpers/moreText";
 import copyLink from "./helpers/copyLink";
+import isAdminMod from "./helpers/isAdminMod";
 
 documenReady(() => {
   window.rdv_API = { };
+  window.rdv_API.swipers = [];
 
   lazyIMages();
   initModal();
@@ -78,6 +80,7 @@ document.fonts.ready.then((res) => {
 
 window.addEventListener('load', function () {
   document.body.classList.add('loaded');
+  isAdminMod();
 
   setTimeout(() => {
     document.body.classList.add('animatable')
