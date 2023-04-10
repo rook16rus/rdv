@@ -1,0 +1,25 @@
+-
+  const includeList = [
+    "Специфику отрасли",
+    "Масштабность разработки проекта",
+    "Сложность ИТ-архитектуры",
+    "Необходимость проведения индивидуальных доработок",
+    "Участие ИТ-специалистов заказчика в разработке проекта",
+    "Количество пользователей",
+    "Интеграции с внешними системами",
+    "Особенности исторической системы",
+  ]
+
+mixin include-section(title, text, img)
+  section.include-section&attributes(attributes)
+    .container
+      .include-section__inner
+        .include-section__content
+          h2.include-section__title= title
+          .include-section__text
+            p= text
+          ul.include-section__list
+            for item in includeList
+              li.include-section__item= item
+        .include-section__img
+          +pictureLazy(img, "Фото")
