@@ -13,7 +13,6 @@ import initSliders from "./modules/initSliders";
 import fancybox from "./helpers/fancybox";
 import validation from "./helpers/validation";
 import masks from "./helpers/masks";
-import yandexMap from "./helpers/yandexMap";
 import fileInputs from "./helpers/fileInputs";
 import alignHeights from "./modules/alignHeights";
 import inputPlaceholder from "./helpers/inputPlaceholder";
@@ -37,6 +36,7 @@ import moreText from "./helpers/moreText";
 import copyLink from "./helpers/copyLink";
 import isAdminMod from "./helpers/isAdminMod";
 import mapSlider from "./helpers/mapSlider";
+import contactsMap from "./helpers/contactsMap";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -52,7 +52,6 @@ documenReady(() => {
   validation();
   masks();
   fancybox();
-  yandexMap();
   fileInputs();
   inputPlaceholder();
   customSelects();
@@ -74,6 +73,7 @@ documenReady(() => {
   moreText();
   copyLink();
   mapSlider();
+  contactsMap();
 });
 
 document.fonts.ready.then((res) => {

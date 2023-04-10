@@ -159,10 +159,10 @@
 
     @include mq('custom', 'max', 768) {
       min-height: 61rem;
+      align-items: flex-start;
     }
 
     @include mq('custom', 'max', 640) {
-      align-items: flex-start;
       min-height: 55.4rem;
     }
   }
@@ -173,11 +173,27 @@
   }
 
   &__card {
+    position: relative;
+
     @extend .white-card;
     width: 45.8rem;
 
-    @include mq('custom', 'max', 640) {
+    @include mq('custom', 'max', 768) {
       width: 100%;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+
+        width: 2rem;
+        height: 1.6rem;
+
+        background: url("../images/triangle.svg") no-repeat center;
+      }
     }
   }
 
@@ -203,7 +219,7 @@
   &__card-slider {
     height: auto;
 
-    @include mq('custom', 'max', 640) {
+    @include mq('custom', 'max', 768) {
       display: none;
     }
 
