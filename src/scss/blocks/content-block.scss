@@ -1,0 +1,44 @@
+.content-block {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12rem;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+
+    @extend .title-h2;
+    color: var(--main-base-0);
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+
+    @extend .content-medium-text;
+    color: var(--main-D-10);
+  }
+
+  &__img {
+    position: relative;
+
+    width: 59.2rem;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+
+      display: block;
+      width: 100%;
+      padding-top: 70.94%;
+    }
+
+    img {
+      @extend .fully-filled-el;
+    }
+  }
+}
