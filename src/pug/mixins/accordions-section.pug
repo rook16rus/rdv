@@ -1,0 +1,31 @@
+-
+  const accordions = [
+    {
+      title: "Использование промышленного подхода к разработке",
+      text: "Комплексное тестирование, запуск автотестов, code review, промышленный процесс выхода новых релизов для минимизации рисков некачественного кода и исключения ошибок в рабочих базах"
+    },
+    {
+      title: "Выстроенная система поддержки на стороне интегратора",
+      text: "Комплексное тестирование, запуск автотестов, code review, промышленный процесс выхода новых релизов для минимизации рисков некачественного кода и исключения ошибок в рабочих базах"
+    },
+    {
+      title: "Наличие специалистов различного профиля для комплексной работы над проектом",
+      text: "Комплексное тестирование, запуск автотестов, code review, промышленный процесс выхода новых релизов для минимизации рисков некачественного кода и исключения ошибок в рабочих базах"
+    },
+  ]
+
+mixin accordions-section(title, text)
+  section.accordions-section&attributes(attributes)
+    .narrow-container
+      h2.accordions-section__title= title
+      .accordions-section__text
+        p= text
+      .accordions-section__accordions
+        for item in accordions
+          .accordions-section__accordion.js-accordion
+            .accordions-section__accordion-header.js-accordion-btn
+              h3.accordions-section__accordion-title= item.title
+              button.accordions-section__accordion-button
+            .accordions-section__accordion-content.js-accordion-content
+              .accordions-section__accordion-text
+                p= item.text

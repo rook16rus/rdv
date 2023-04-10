@@ -1,0 +1,132 @@
+.accordions-section {
+  &__title {
+    max-width: 95rem;
+    margin-bottom: 3.2rem;
+
+    @extend .title-h2;
+    color: var(--main-base-0);
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 5.6rem;
+
+    @extend .content-big-text;
+    color: var(--main-D-10);
+  }
+
+  &__accordions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+
+    counter-reset: order;
+  }
+
+  &__accordion {
+    padding: 3.2rem;
+
+    border-radius: 2.4rem;
+    background-color: var(--grey-base-0);
+
+    &:nth-child(3n+1) .accordions-section__accordion-header::before {
+      background: var(--gradient-01);
+    }
+
+    &:nth-child(3n+2) .accordions-section__accordion-header::before {
+      background: var(--gradient-02);
+    }
+
+    &:nth-child(3n+3) .accordions-section__accordion-header::before {
+      background: var(--gradient-03);
+    }
+
+    &.active {
+      .accordions-section__accordion-button::after {
+        transform: translate(-50%, -50%) rotate(0);
+      }
+    }
+  }
+
+  &__accordion-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2.4rem;
+
+    &::before {
+      counter-increment: order;
+      content: counter(order, decimal-leading-zero);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 7.2rem;
+      height: 7.2rem;
+
+      border-radius: 50%;
+
+      @extend .title-h4;
+      color: #fff;
+    }
+  }
+
+  &__accordion-title {
+    max-width: 52rem;
+
+    @extend .title-h6;
+    color: var(--main-base-0);
+  }
+
+  &__accordion-button {
+    position: relative;
+
+    width: 7.2rem;
+    height: 7.2rem;
+
+    border-radius: 50%;
+    background-color: var(--grey-D-10);
+
+    &::before, &::after {
+      content: '';
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 1.7rem;
+      height: 1px;
+
+      border-radius: 0.2rem;
+      background-color: var(--main-base-0);
+
+      transition: 0.3s;
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &__accordion-content {
+    height: 0;
+    margin: 0 9.6rem;
+
+    overflow: hidden;
+
+    & > *:first-child {
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__accordion-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @extend .content-medium-text;
+  }
+}
