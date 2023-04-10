@@ -1,0 +1,39 @@
+-
+  const featuresSectionList = [
+    {
+      icon: "features-section-1.svg",
+      text: "Использование в работе устаревших технологий, которые сложно поддерживать и развивать"
+    },
+    {
+      icon: "features-section-2.svg",
+      text: "Рост проблем с производительностью текущей системы"
+    },
+    {
+      icon: "features-section-3.svg",
+      text: "Отсутствие своевременных обновлений и получения нового функционала от вендора"
+    },
+    {
+      icon: "features-section-4.svg",
+      text: "Открытие нового направления в бизнесе, где требуется современная система с широкими возможностями масштабирования"
+    },
+    {
+      icon: "features-section-5.svg",
+      text: "Нехватка профильных специалистов для развития текущей системы 1С"
+    },
+    {
+      icon: "features-section-6.svg",
+      text: "Если доработка и поддержка текущей системы зависят от конкретного специалиста"
+    },
+  ]
+
+mixin features-section(title)
+  section.features-section&attributes(attributes)
+    .container
+      .features-section__inner
+        h2.features-section__title= title
+        ul.features-section__list
+          for item in featuresSectionList
+            li.features-section__item
+              .features-section__item-icon
+                +imgLazy(item.icon, "Фото иконки")
+              p.features-section__item-text.text=item.text

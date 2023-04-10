@@ -1,0 +1,39 @@
+.features-section {
+  &__inner {
+    @extend .section-inner;
+  }
+
+  &__title {
+    max-width: 91rem;
+    @extend .section-title;
+    @extend .title-h2;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+  }
+
+  &__item {
+    @extend .white-card;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2.4rem;
+
+    @extend .content-big-text;
+  }
+
+  &__item-icon {
+    width: 7.2rem;
+    height: 7.2rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
