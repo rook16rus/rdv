@@ -1,0 +1,39 @@
+-
+  const numeredFeatures = [
+    "Проведем экспресс-встречу с участниками проекта для определения основных требований",
+    "Сформируем ценности ERP-проекта",
+    "Расскажем про архитектуру, ее модули и компоненты",
+    "Подберем правильные версии софта, отвечающие требованиям проекта",
+    "Подготовим детальный план работ с указанием предметных задач",
+    "Расскажем о нашем опыте внедрения ERP, где мы уже реализовывали подобное",
+    "Сформируем коммерческое предложение, в котором вы найдете ответы на все ваши вопросы и узнаете стоимость внедрения системы 1С:ERP.",
+  ]
+
+mixin numered-features-section(title)
+  section.numered-features-section&attributes(attributes)
+    .narrow-container
+      h2.numered-features-section__title= title
+    .container
+      .numered-features-section__inner
+        ul.numered-features-section__list
+          for item in numeredFeatures
+            li.numered-features-section__item= item
+        form.numered-features-section__form
+          h3.numered-features-section__form-title
+            | Ваша заявка
+          .numered-features-section__input-wrapper.input-wrapper
+            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+            label.numered-features-section__label(for="featuresCompany") Название компании
+          .numered-features-section__input-wrapper.input-wrapper
+            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+            label.numered-features-section__label(for="featuresCompany") Название компании
+          .numered-features-section__input-wrapper.input-wrapper
+            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+            label.numered-features-section__label(for="featuresCompany") Название компании
+          .numered-features-section__input-wrapper.input-wrapper
+            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+            label.numered-features-section__label(for="featuresCompany") Название компании
+          .numered-features-section__input-wrapper.input-wrapper
+            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+            label.numered-features-section__label(for="featuresCompany") Название компании
+
