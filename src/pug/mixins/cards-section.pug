@@ -75,7 +75,7 @@
   ]
 
 mixin cards-section(title, visibleCount, mobileVisibleCount)
-  section.cards-section.page-section
+  section.cards-section&attributes(attributes)
     .container
       .cards-section__inner
         h2.cards-section__title= title
