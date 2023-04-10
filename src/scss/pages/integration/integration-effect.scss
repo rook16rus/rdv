@@ -1,0 +1,125 @@
+.integration-effect {
+  &__title {
+    max-width: 95rem;
+
+    @extend .section-title;
+    @extend .title-h2;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: flex-start;
+    gap: 7.2rem;
+  }
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 38.4rem;
+  }
+
+  &__tab {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    min-height: 5rem;
+    padding: 0.6rem 0;
+
+    @extend .title-h7;
+    color: var(--main-base-0);
+
+    transition: color 0.3s;
+
+    &::before {
+      content: '';
+
+      align-self: stretch;
+      width: 0.4rem;
+
+      background-color: var(--grey-D-10);
+
+      transition: 0.3s;
+    }
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        color: var(--main-L-30);
+      }
+    }
+
+    &.tab-active {
+      color: var(--main-L-30);
+
+      &::before {
+        background-color: var(--main-L-20);
+      }
+    }
+  }
+
+  &__contents {
+    position: relative;
+    min-width: 0;
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    @extend .section-inner;
+
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      position: static;
+
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__content-title {
+    max-width: 62rem;
+    margin-bottom: 3.2rem;
+
+    @extend .title-h4;
+    color: var(--main-base-0);
+  }
+
+  &__content-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 5.6rem;
+
+    @extend .content-medium-text;
+  }
+
+  &__slider {
+    .slider-navigation {
+      position: static;
+
+      display: inline-grid;
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__slide {
+    height: 24.5rem;
+
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

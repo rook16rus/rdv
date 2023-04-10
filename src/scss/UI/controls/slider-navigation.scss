@@ -28,6 +28,28 @@
     }
   }
 
+  &--white {
+    .slider-navigation__button {
+      background-color: #fff;
+      color: var(--main-base-0);
+
+      @include mq('custom', 'min', 1025) {
+        &:hover {
+          background-color: var(--grey-D-10);
+        }
+      }
+
+      &.swiper-button-disabled {
+        background-color: var(--grey-base-0);
+        color: var(--main-base-0);
+
+        svg {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
   &--medium {
     .slider-navigation__button {
       width: 4rem;

@@ -37,6 +37,7 @@ import copyLink from "./helpers/copyLink";
 import isAdminMod from "./helpers/isAdminMod";
 import mapSlider from "./helpers/mapSlider";
 import contactsMap from "./helpers/contactsMap";
+import integrationEffectSlider from "./helpers/integrationEffectSlider";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -74,6 +75,7 @@ documenReady(() => {
   copyLink();
   mapSlider();
   contactsMap();
+  integrationEffectSlider();
 });
 
 document.fonts.ready.then((res) => {

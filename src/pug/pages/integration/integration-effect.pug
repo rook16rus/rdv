@@ -1,0 +1,125 @@
+-
+  const integrationEffect = [
+    {
+      title: "Сквозное планирование продаж, закупок и производства",
+      active: true,
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Учет маркируемых товаров",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Прослеживаемость импортных товаров",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Управление резервами",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Обеспечение потребностей в запасах",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Организация адресного хранения на складе",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Получение оплат от клиентов в срок",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Сборка товаров под заказ",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Анализ рентабельности продаж",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Расчет показателей для мотивации менеджеров",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+    {
+      title: "Расчет финансового результата",
+      photos: [
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+        "integration-effect-1.jpg",
+      ],
+    },
+  ]
+
+section.integration-effect.page-section--large-margin
+  .container
+    h2.integration-effect__title
+      | Какой эффект после внедрения 1C:ERP получает компания
+    .integration-effect__wrapper.js-tabs-container(data-tabs-like-radio='true')
+      .integration-effect__tabs
+        each item, index in integrationEffect
+          button(class=`integration-effect__tab js-tab${item.active ? ' tab-active' : ''}` data-href=`effect${index}`)= item.title
+      .integration-effect__contents
+        each item, index in integrationEffect
+          div(class=`integration-effect__content js-tab-content${item.active ? ' active' : ''}` data-id=`effect${index}`)
+            h3.integration-effect__content-title= item.title
+            .integration-effect__content-text
+              p
+                | Выстраивание процесса сквозного планирования в 1С:ERP позволяет системно управлять взаимосвязанными блоками закупок, производства и продаж, сократить дополнительные расходы и обеспечивать бесперебойное и своевременное снабжение необходимыми материалами, товарами и прочими ТМЦ. Таким образом, компания не работает “вслепую”, прогнозирует развитие своей деятельности, ставя перед собой стратегические цели и задачи.
+            .integration-effect__slider.swiper
+              .swiper-wrapper
+                for photo in item.photos
+                  .integration-effect__slide.swiper-slide
+                    +pictureLazy(photo, "Фото")
+              +slider-navigation('slider-navigation--medium slider-navigation--white')
