@@ -1,5 +1,5 @@
 -
-  const cooperation = [
+  const data = [
     {
       img: "cooperation-1.png",
       title: "Запуск популярного сервиса доставки по всей стране",
@@ -74,29 +74,28 @@
     },
   ]
 
-section.cooperation.page-section
-  .container
-    .cooperation__inner
-      h2.cooperation__title
-        | Работаем с лидерами рынка
-      .js-more-button-container
-        ul.cooperation__list
-          for item in cooperation
-            li.cooperation__item.js-more-button-item
-              .cooperation__item-header
-                a.cooperation__item-logo(href="#")
-                  +imgLazy(item.img, "Логотип компании")
-              h3.cooperation__item-title
-                span= item.title
-                .cooperation__item-title-underline(style=`background-image: ${item.underline}`)
-              .cooperation__item-bottom
-                if item.text
-                  p.cooperation__item-text= item.text
-                .cooperation__item-tags.js-more-button-container
-                  for tag in item.tags
-                    a.cooperation__item-tag.button.button--medium.button--bordered.js-more-button-item(href="#")= tag.name
-                  button.cooperation__item-tag.button.button--medium.button--grey.js-more-button(data-count="5")
-                    | Еще&nbsp;#[span.js-more-button-surplus 1]
-        button.cooperation__button.button.button--grey.js-more-button(data-count="6" data-mobile-count="3")
-          | Показать еще
-
+mixin cards-section(title, visibleCount, mobileVisibleCount)
+  section.cards-section.page-section
+    .container
+      .cards-section__inner
+        h2.cards-section__title= title
+        .js-more-button-container
+          ul.cards-section__list
+            for item in data
+              li.cards-section__item.js-more-button-item
+                .cards-section__item-header
+                  a.cards-section__item-logo(href="#")
+                    +imgLazy(item.img, "Логотип компании")
+                h3.cards-section__item-title
+                  span= item.title
+                  .cards-section__item-title-underline(style=`background-image: ${item.underline}`)
+                .cards-section__item-bottom
+                  if item.text
+                    p.cards-section__item-text= item.text
+                  .cards-section__item-tags.js-more-button-container
+                    for tag in item.tags
+                      a.cards-section__item-tag.button.button--medium.button--bordered.js-more-button-item(href="#")= tag.name
+                    button.cards-section__item-tag.button.button--medium.button--grey.js-more-button(data-count="5")
+                      | Еще&nbsp;#[span.js-more-button-surplus 1]
+          button.cards-section__button.button.button--grey.js-more-button(data-count=visibleCount data-mobile-count=mobileVisibleCount)
+            | Показать еще
