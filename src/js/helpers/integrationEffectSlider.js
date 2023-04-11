@@ -7,11 +7,20 @@ export default function integrationEffectSlider() {
 
   sliders.forEach(slider => {
     const swiper = new Swiper(slider, {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 16,
       navigation: {
         nextEl: slider.querySelector('.slider-navigation .js-next-slide'),
         prevEl: slider.querySelector('.slider-navigation .js-prev-slide')
+      },
+      pagination: {
+        type: "bullets",
+        el: slider.querySelector('.swiper-pagination-bullets')
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 2,
+        }
       }
     })
 

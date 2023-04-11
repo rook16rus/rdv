@@ -50,6 +50,9 @@ export default function accordions() {
         el.classList.toggle('active');
         el.classList.toggle('accordion-close');
       }
+
+      if (el.classList.contains('js-accordion-tablet') && matchMedia('(min-width: 1025px)').matches) return
+      el.classList.remove('active');
     })
 
     document.addEventListener('click', (event) => {

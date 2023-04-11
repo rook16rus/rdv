@@ -112,14 +112,19 @@ section.integration-effect.page-section--large-margin
           button(class=`integration-effect__tab js-tab${item.active ? ' tab-active' : ''}` data-href=`effect${index}`)= item.title
       .integration-effect__contents
         each item, index in integrationEffect
-          div(class=`integration-effect__content js-tab-content${item.active ? ' active' : ''}` data-id=`effect${index}`)
-            h3.integration-effect__content-title= item.title
-            .integration-effect__content-text
-              p
-                | Выстраивание процесса сквозного планирования в 1С:ERP позволяет системно управлять взаимосвязанными блоками закупок, производства и продаж, сократить дополнительные расходы и обеспечивать бесперебойное и своевременное снабжение необходимыми материалами, товарами и прочими ТМЦ. Таким образом, компания не работает “вслепую”, прогнозирует развитие своей деятельности, ставя перед собой стратегические цели и задачи.
-            .integration-effect__slider.swiper
-              .swiper-wrapper
-                for photo in item.photos
-                  .integration-effect__slide.swiper-slide(data-fancybox data-src=`assets/images/${photo}`)
-                    +pictureLazy(photo, "Фото")
-              +slider-navigation('slider-navigation--medium slider-navigation--white')
+          div(class=`integration-effect__content js-tab-content js-accordion js-accordion-tablet${item.active ? ' active' : ''}` data-id=`effect${index}`)
+            .integration-effect__content-header.js-accordion-btn
+              h3.integration-effect__content-title= item.title
+              button.integration-effect__content-button
+                +icon-multi('arrow-down')
+            .integration-effect__accordion-content.js-accordion-content
+              .integration-effect__content-text
+                p
+                  | Выстраивание процесса сквозного планирования в 1С:ERP позволяет системно управлять взаимосвязанными блоками закупок, производства и продаж, сократить дополнительные расходы и обеспечивать бесперебойное и своевременное снабжение необходимыми материалами, товарами и прочими ТМЦ. Таким образом, компания не работает “вслепую”, прогнозирует развитие своей деятельности, ставя перед собой стратегические цели и задачи.
+              .integration-effect__slider.swiper
+                .swiper-wrapper
+                  for photo in item.photos
+                    .integration-effect__slide.swiper-slide(data-fancybox data-src=`assets/images/${photo}`)
+                      +pictureLazy(photo, "Фото")
+                +slider-navigation('slider-navigation--medium slider-navigation--white')
+                .swiper-pagination-bullets
