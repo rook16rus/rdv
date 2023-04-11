@@ -6,6 +6,19 @@
     grid-template-columns: 1fr auto;
     gap: 5.6rem;
     align-items: flex-start;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: 1fr;
+      gap: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      gap: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 3.2rem;
+    }
   }
 
   &__title {
@@ -13,6 +26,18 @@
 
     @extend .title-h2;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__text {
@@ -23,12 +48,37 @@
 
     @extend .content-big-text;
     color: var(--main-D-10);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem 3.2rem;
+
+    @include mq('custom', 'max', 1024) {
+      gap: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.2rem;
+    }
   }
 
   &__item {
@@ -50,6 +100,11 @@
       background-size: cover;
       border-radius: 50%;
       overflow: hidden;
+
+      @include mq('custom', 'max', 640) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
     }
   }
 
@@ -57,9 +112,18 @@
     position: relative;
 
     width: 59.2rem;
+    max-width: 100%;
 
     border-radius: 2rem;
     overflow: hidden;
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+    }
+
+    @include mq('custom', 'max', 640) {
+      border-radius: 1.2rem;
+    }
 
     &::before {
       content: '';
