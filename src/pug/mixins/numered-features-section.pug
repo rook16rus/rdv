@@ -21,19 +21,23 @@ mixin numered-features-section(title)
         form.numered-features-section__form
           h3.numered-features-section__form-title
             | Ваша заявка
-          .numered-features-section__input-wrapper.input-wrapper
-            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
-            label.numered-features-section__label(for="featuresCompany") Название компании
-          .numered-features-section__input-wrapper.input-wrapper
-            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
-            label.numered-features-section__label(for="featuresCompany") Название компании
-          .numered-features-section__input-wrapper.input-wrapper
-            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
-            label.numered-features-section__label(for="featuresCompany") Название компании
-          .numered-features-section__input-wrapper.input-wrapper
-            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
-            label.numered-features-section__label(for="featuresCompany") Название компании
-          .numered-features-section__input-wrapper.input-wrapper
-            input.numered-features-section__input.input.input--big.input--big(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
-            label.numered-features-section__label(for="featuresCompany") Название компании
-
+          .numered-features-section__form-wrapper
+            .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
+              input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+              label.numered-features-section__label(for="featuresCompany") Название компании
+            .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
+              input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+              label.numered-features-section__label(for="featuresCompany") Название компании
+            .numered-features-section__input-wrapper.input-wrapper
+              input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+              label.numered-features-section__label(for="featuresCompany") Название компании
+            .numered-features-section__input-wrapper.input-wrapper
+              input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+              label.numered-features-section__label(for="featuresCompany") Название компании
+            .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
+              input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+              label.numered-features-section__label(for="featuresCompany") Название компании
+          .numered-features-section__form-bottom
+            button.numered-features-section__button.button.button--big.button--yellow
+              | Отправить заявку
+            +confidence-block()
