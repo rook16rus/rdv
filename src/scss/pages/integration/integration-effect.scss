@@ -4,6 +4,11 @@
 
     @extend .section-title;
     @extend .title-h2;
+
+    @include mq('custom', 'max', 768) {
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+    }
   }
 
   &__wrapper {

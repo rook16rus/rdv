@@ -5,6 +5,18 @@
 
     @extend .title-h2;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__text {
@@ -15,6 +27,18 @@
 
     @extend .content-big-text;
     color: var(--main-D-10);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__accordions {
@@ -30,6 +54,19 @@
 
     border-radius: 2.4rem;
     background-color: var(--grey-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      padding: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 2rem;
+      border-radius: 2rem;
+    }
 
     &:nth-child(3n+1) .accordions-section__accordion-header::before {
       background: var(--gradient-01);
@@ -47,6 +84,12 @@
       .accordions-section__accordion-button::after {
         transform: translate(-50%, -50%) rotate(0);
       }
+
+      .accordions-section__accordion-mobile-button {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 
@@ -55,6 +98,18 @@
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 2.4rem;
+
+    @include mq('custom', 'max', 1024) {
+      gap: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      gap: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.2rem;
+    }
 
     &::before {
       counter-increment: order;
@@ -70,6 +125,21 @@
 
       @extend .title-h4;
       color: #fff;
+
+      @include mq('custom', 'max', 1024) {
+        width: 6.4rem;
+        height: 6.4rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        width: 5.6rem;
+        height: 5.6rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
     }
   }
 
@@ -78,6 +148,10 @@
 
     @extend .title-h6;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 640) {
+      font: var(--title-h7);
+    }
   }
 
   &__accordion-button {
@@ -88,6 +162,15 @@
 
     border-radius: 50%;
     background-color: var(--grey-D-10);
+
+    @include mq('custom', 'max', 1024) {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
 
     &::before, &::after {
       content: '';
@@ -117,8 +200,20 @@
 
     overflow: hidden;
 
+    @include mq('custom', 'max', 1024) {
+      margin: 0 8.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin: 0;
+    }
+
     & > *:first-child {
       margin-top: 2.4rem;
+
+      @include mq('custom', 'max', 640) {
+        margin-top: 2rem;
+      }
     }
   }
 
@@ -128,5 +223,19 @@
     gap: 2rem;
 
     @extend .content-medium-text;
+  }
+
+  &__accordion-mobile-button {
+    display: none;
+    width: 100%;
+    margin-top: 2rem;
+
+    @include mq('custom', 'max', 768) {
+      display: flex;
+    }
+
+    svg {
+      margin-top: 0.2rem;
+    }
   }
 }

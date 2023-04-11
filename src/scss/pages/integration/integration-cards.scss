@@ -1,5 +1,9 @@
 .integration-cards {
   .cards-section__title {
     @extend .title-h2;
+
+    @include mq('custom', 'max', 640) {
+      font: var(--title-h1);
+    }
   }
 }
