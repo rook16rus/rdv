@@ -3472,7 +3472,7 @@ each item, index in burgerList
     .modal__container(class=`modal-burger${item.active ? " modal-open" : ""}` data-target=`burger-${index}`)
       .modal__content.js-simplebar
         .modal-burger__buttons
-          button.modal-burger__button.button.button--icon.button--bordered.modal-prev(type="button")
+          button.modal-burger__button.button.button--icon.button--bordered(type="button" data-path="burger")
             +icon-multi('button-arrow')
           button.modal-burger__button.button.button--icon.button--bordered.button-reset.modal-close(type="button")
             +icon-multi('cross-icon')

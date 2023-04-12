@@ -1,8 +1,8 @@
 -
   const footerMenu = [
-    {text: "Услуги"},
+    {text: "Услуги", path: "burger-0"},
     {text: "О компании"},
-    {text: "Продукты"},
+    {text: "Продукты", path: "burger-1"},
     {text: "Мероприятия"},
     {text: "Проекты"},
     {text: "ПРЕСС-центр"},
@@ -27,7 +27,14 @@ footer.footer
       ul.footer__menu
         for item in footerMenu
           li.footer__menu-item
-            a.footer__menu-link.link(href="#")= item.text
+            if item.path
+              button.footer__menu-link.link(href="#" data-path=item.path)
+                span= item.text
+                +icon-multi('button-arrow')
+            else
+              a.footer__menu-link.link(href="#")
+                span= item.text
+                +icon-multi('button-arrow')
     .footer__bottom
       span.footer__copyright
         | © 2021 Все права защищены
