@@ -43,6 +43,12 @@
         background-color: var(--grey-base-0);
         color: var(--main-base-0);
 
+        @include mq('custom', 'min', 1025) {
+          &:hover {
+            background-color: var(--grey-base-0);
+          }
+        }
+
         svg {
           opacity: 0.4;
         }
@@ -110,6 +116,12 @@
       color: var(--white-20);
 
       cursor: default;
+
+      @include mq('custom', 'min', 1025) {
+        &:hover {
+          background-color: var(--white-10);
+        }
+      }
 
       svg {
         opacity: 0.8;

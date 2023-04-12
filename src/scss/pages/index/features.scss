@@ -233,6 +233,7 @@
 
     @include mq('custom', 'max', 640) {
       width: 4.4rem;
+      min-width: auto;
       height: 2.8rem;
       margin-right: 0.4rem;
       margin-bottom: 0.4rem;
