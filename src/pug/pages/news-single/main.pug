@@ -1,6 +1,6 @@
 main.page-main.main
-  section.news-single.page-section.page-section--large-margin
+  section.news-single
     include post-header
     include post-body
-  +event-form().page-section
-  include other-events
+    +event-form().page-section
+    include other-events

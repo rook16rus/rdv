@@ -21,8 +21,8 @@
     position: relative;
     z-index: 1;
 
+    display: block;
     width: 100%;
-
     padding-top: 69.76%;
     margin-bottom: 2.4rem;
 
@@ -47,6 +47,12 @@
       padding-top: 64.57%;
       margin-bottom: 1.2rem;
     }
+  }
+
+  &__item-img {
+    @extend .fully-filled-el;
+    z-index: -1;
+    object-fit: cover;
   }
 
   &__item-time {

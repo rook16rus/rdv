@@ -1,6 +1,7 @@
 .content-videos
   .content-videos__item
-    .content-videos__item-block.lazyload(data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ" data-bg="assets/images/content-videos-1.jpg" data-bg-webp="assets/images/content-videos-1.webp")
+    a.content-videos__item-block(data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ" href="#")
+      +pictureLazy("content-videos-1.jpg", "Превью к видео").content-videos__item-img
       span.content-videos__item-time.tag.tag--small.tag--grey
         | 23:48
       h4.content-videos__item-title
@@ -10,7 +11,8 @@
     p.content-videos__item-desc
       | Мелкая сноска с описанием фото для видео
   .content-videos__item
-    .content-videos__item-block.lazyload(data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ" data-bg="assets/images/content-videos-1.jpg" data-bg-webp="assets/images/content-videos-1.webp")
+    a.content-videos__item-block.lazyload(data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ" href="#")
+      +pictureLazy("content-videos-1.jpg", "Превью к видео").content-videos__item-img
       span.content-videos__item-time.tag.tag--small.tag--grey
         | 23:48
       h4.content-videos__item-title

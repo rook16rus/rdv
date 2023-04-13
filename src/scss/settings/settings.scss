@@ -318,10 +318,13 @@ a:focus {
     }
   }
 
-  & > h2 {
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6, {
     margin: 6.4rem 0 4rem;
-
-    @extend .title-h2;
     color: var(--main-base-0);
 
     @include mq('custom', 'max', 1024) {
@@ -337,24 +340,32 @@ a:focus {
     }
   }
 
-  & > h3 {
-    margin: 6.4rem 0 4rem;
+  & > h1 {
+    @extend .title-h1;
+  }
 
+  & > h2 {
+    @extend .title-h2;
+  }
+
+  & > h3 {
     @extend .title-h3;
-    color: var(--main-base-0);
 
     @include mq('custom', 'max', 1024) {
-      margin: 5.6rem 0 3.8rem;
       font: var(--title-h1);
     }
+  }
 
-    @include mq('custom', 'max', 768) {
-      margin: 4.8rem 0 3.5rem;
-    }
+  & > h4 {
+    @extend .title-h4;
+  }
 
-    @include mq('custom', 'max', 640) {
-      margin: 4rem 0 3.2rem;
-    }
+  & > h5 {
+    @extend .title-h5;
+  }
+
+  & > h6 {
+    @extend .title-h6;
   }
 
   & > ul {
@@ -479,7 +490,19 @@ a:focus {
   }
 
   & > *:last-child {
-    margin-bottom: 0;
+    margin-bottom: 14rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 10rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 7rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 4rem;
+    }
   }
 }
 
