@@ -3463,7 +3463,7 @@
       </header>
 
       <main class="page-main main">
-        <section class="news-single page-section page-section--large-margin">
+        <section class="news-single">
 
           <header class="post-header">
             <div class="narrow-container">
@@ -3638,21 +3638,21 @@
             <h3>Вариант 1</h3>
             <div class="content-photos">
               <div class="content-photos__item">
-                <div class="content-photos__item-img" data-fancybox data-src="assets/images/content-photos-1.jpg">
+                <a class="content-photos__item-img" data-fancybox data-src="assets/images/content-photos-1.jpg" href="#">
                   <picture>
                     <source type="image/webp" data-srcset="assets/images/content-photos-1.webp" alt="Контентое фото" srcset="#">
                     <img class="lazyload" data-src="assets/images/content-photos-1.jpg" src="#" alt="Контентое фото">
                   </picture>
-                </div>
+                </a>
                 <div class="content-photos__item-desc">Мелкая сноска с описанием фото</div>
               </div>
               <div class="content-photos__item">
-                <div class="content-photos__item-img" data-fancybox data-src="assets/images/content-photos-1.jpg">
+                <a class="content-photos__item-img" data-fancybox data-src="assets/images/content-photos-1.jpg" href="#">
                   <picture>
                     <source type="image/webp" data-srcset="assets/images/content-photos-1.webp" alt="Контентое фото" srcset="#">
                     <img class="lazyload" data-src="assets/images/content-photos-1.jpg" src="#" alt="Контентое фото">
                   </picture>
-                </div>
+                </a>
                 <div class="content-photos__item-desc">Мелкая сноска с описанием фото</div>
               </div>
             </div>
@@ -3715,30 +3715,30 @@
             <div class="content-slider swiper">
               <div class="swiper-wrapper">
                 <div class="content-slider__slide swiper-slide">
-                  <div class="content-slider__slide-img" data-fancybox data-src="assets/images/content-slider-1.jpg">
+                  <a class="content-slider__slide-img" data-fancybox data-src="assets/images/content-slider-1.jpg" href="#">
                     <picture>
                       <source type="image/webp" data-srcset="assets/images/content-slider-1.webp" alt="Контентое фото" srcset="#">
                       <img class="lazyload" data-src="assets/images/content-slider-1.jpg" src="#" alt="Контентое фото">
                     </picture>
-                  </div>
+                  </a>
                   <div class="content-slider__slide-desc">Мелкая сноска с описанием фото</div>
                 </div>
                 <div class="content-slider__slide swiper-slide">
-                  <div class="content-slider__slide-img" data-fancybox data-src="assets/images/content-slider-1.jpg">
+                  <a class="content-slider__slide-img" data-fancybox data-src="assets/images/content-slider-1.jpg" href="#">
                     <picture>
                       <source type="image/webp" data-srcset="assets/images/content-slider-1.webp" alt="Контентое фото" srcset="#">
                       <img class="lazyload" data-src="assets/images/content-slider-1.jpg" src="#" alt="Контентое фото">
                     </picture>
-                  </div>
+                  </a>
                   <div class="content-slider__slide-desc">Мелкая сноска с описанием фото</div>
                 </div>
                 <div class="content-slider__slide swiper-slide">
-                  <div class="content-slider__slide-img" data-fancybox data-src="assets/images/content-slider-1.jpg">
+                  <a class="content-slider__slide-img" data-fancybox data-src="assets/images/content-slider-1.jpg" href="#">
                     <picture>
                       <source type="image/webp" data-srcset="assets/images/content-slider-1.webp" alt="Контентое фото" srcset="#">
                       <img class="lazyload" data-src="assets/images/content-slider-1.jpg" src="#" alt="Контентое фото">
                     </picture>
-                  </div>
+                  </a>
                   <div class="content-slider__slide-desc" data-fancybox data-src="assets/images/content-slider-1.jpg">Мелкая сноска с описанием фото</div>
                 </div>
               </div>
@@ -3759,25 +3759,33 @@
             <h3>Блок с видео</h3>
             <div class="content-videos">
               <div class="content-videos__item">
-                <div class="content-videos__item-block lazyload" data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ" data-bg="assets/images/content-videos-1.jpg" data-bg-webp="assets/images/content-videos-1.webp"><span class="content-videos__item-time tag tag--small tag--grey">23:48</span>
+                <a class="content-videos__item-block" data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ" href="#">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/content-videos-1.webp" alt="Превью к видео" srcset="#">
+                    <img class="lazyload content-videos__item-img" data-src="assets/images/content-videos-1.jpg" src="#" alt="Превью к видео">
+                  </picture><span class="content-videos__item-time tag tag--small tag--grey">23:48</span>
                   <h4 class="content-videos__item-title">Примерный заголовок видео или анонс видео в одну или две строки</h4>
                   <div class="content-videos__item-button">
                     <svg class="icon icon-play-icon">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#play-icon"></use>
                     </svg>
                   </div>
-                </div>
+                </a>
                 <p class="content-videos__item-desc">Мелкая сноска с описанием фото для видео</p>
               </div>
               <div class="content-videos__item">
-                <div class="content-videos__item-block lazyload" data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ" data-bg="assets/images/content-videos-1.jpg" data-bg-webp="assets/images/content-videos-1.webp"><span class="content-videos__item-time tag tag--small tag--grey">23:48</span>
+                <a class="content-videos__item-block lazyload" data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ" href="#">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/content-videos-1.webp" alt="Превью к видео" srcset="#">
+                    <img class="lazyload content-videos__item-img" data-src="assets/images/content-videos-1.jpg" src="#" alt="Превью к видео">
+                  </picture><span class="content-videos__item-time tag tag--small tag--grey">23:48</span>
                   <h4 class="content-videos__item-title">Примерный заголовок видео или анонс видео в одну или две строки</h4>
                   <div class="content-videos__item-button">
                     <svg class="icon icon-play-icon">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#play-icon"></use>
                     </svg>
                   </div>
-                </div>
+                </a>
                 <p class="content-videos__item-desc">Мелкая сноска с описанием фото для видео</p>
               </div>
             </div>
@@ -3806,189 +3814,189 @@
               <a class="content-footer__link button button--big button--blue" href="#">Связаться</a>
             </footer>
           </div>
-        </section>
-        <div class="event-form page-section">
-          <div class="container">
-            <div class="event-form__inner lazyload" data-bg="assets/images/contacts-section-bg.png">
-              <div class="event-form__content">
-                <h2 class="event-form__title">Запишитесь на мероприятие</h2>
-                <div class="event-form__text">
-                  <p>Мы с вами свяжемся и обсудим все детали</p>
+          <div class="event-form page-section">
+            <div class="container">
+              <div class="event-form__inner lazyload" data-bg="assets/images/contacts-section-bg.png">
+                <div class="event-form__content">
+                  <h2 class="event-form__title">Запишитесь на мероприятие</h2>
+                  <div class="event-form__text">
+                    <p>Мы с вами свяжемся и обсудим все детали</p>
+                  </div>
+                  <form class="event-form__form" action="#">
+                    <div class="event-form__input-wrapper input-wrapper">
+                      <input class="event-form__input input input--big input--white" type="text" name="eventRegName" id="eventRegName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$" required="required">
+                      <label class="event-form__label" for="eventRegName">Ваше Имя</label>
+                    </div>
+                    <div class="event-form__input-wrapper input-wrapper">
+                      <input class="event-form__input input input--big input--white" type="text" name="eventRegPosition" id="eventRegPosition" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$" required="required">
+                      <label class="event-form__label" for="eventRegPosition">Должность</label>
+                    </div>
+                    <div class="event-form__input-wrapper input-wrapper">
+                      <input class="event-form__input input input--big input--white js-phone-input" type="tel" name="eventRegPhone" id="eventRegPhone" data-parsley-phone="data-parsley-phone" required="required">
+                      <label class="event-form__label" for="eventRegPhone">Ваш телефон</label>
+                    </div>
+                    <div class="event-form__input-wrapper input-wrapper">
+                      <input class="event-form__input input input--big input--white" type="email" name="eventRegEmail" id="eventRegEmail" required="required">
+                      <label class="event-form__label" for="eventRegEmail">Email</label>
+                    </div>
+                    <div class="event-form__input-wrapper event-form__input-wrapper--large input-wrapper input-wrapper--textarea">
+                      <textarea class="event-form__textarea input input--big input--white" name="eventRegComment" id="eventRegComment" placeholder="Ваш комментарий"></textarea>
+                    </div>
+                    <button class="event-form__button button button--big button--yellow" type="button">Отправить</button>
+                    <div class="confidence-block">
+                      <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="eventRegConfidence" id="eventRegConfidence" checked="checked" required="required">
+                      <label class="confidence-block__checkbox-label" for="eventRegConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
+                      </label>
+                    </div>
+                  </form>
                 </div>
-                <form class="event-form__form" action="#">
-                  <div class="event-form__input-wrapper input-wrapper">
-                    <input class="event-form__input input input--big input--white" type="text" name="eventRegName" id="eventRegName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$" required="required">
-                    <label class="event-form__label" for="eventRegName">Ваше Имя</label>
-                  </div>
-                  <div class="event-form__input-wrapper input-wrapper">
-                    <input class="event-form__input input input--big input--white" type="text" name="eventRegPosition" id="eventRegPosition" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$" required="required">
-                    <label class="event-form__label" for="eventRegPosition">Должность</label>
-                  </div>
-                  <div class="event-form__input-wrapper input-wrapper">
-                    <input class="event-form__input input input--big input--white js-phone-input" type="tel" name="eventRegPhone" id="eventRegPhone" data-parsley-phone="data-parsley-phone" required="required">
-                    <label class="event-form__label" for="eventRegPhone">Ваш телефон</label>
-                  </div>
-                  <div class="event-form__input-wrapper input-wrapper">
-                    <input class="event-form__input input input--big input--white" type="email" name="eventRegEmail" id="eventRegEmail" required="required">
-                    <label class="event-form__label" for="eventRegEmail">Email</label>
-                  </div>
-                  <div class="event-form__input-wrapper event-form__input-wrapper--large input-wrapper input-wrapper--textarea">
-                    <textarea class="event-form__textarea input input--big input--white" name="eventRegComment" id="eventRegComment" placeholder="Ваш комментарий"></textarea>
-                  </div>
-                  <button class="event-form__button button button--big button--yellow" type="button">Отправить</button>
-                  <div class="confidence-block">
-                    <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="eventRegConfidence" id="eventRegConfidence" checked="checked" required="required">
-                    <label class="confidence-block__checkbox-label" for="eventRegConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
-                    </label>
-                  </div>
-                </form>
-              </div>
-              <div class="event-form__socials">
-                <a class="event-form__social button button--icon button--icon-big button--white-trasparent" href="#">
-                  <img class="lazyload" data-src="assets/images/socials-footer-3.svg" src="#">
-                </a>
-                <a class="event-form__social button button--icon button--icon-big button--white-trasparent" href="#">
-                  <img class="lazyload" data-src="assets/images/socials-footer-6.svg" src="#">
-                </a>
-                <a class="event-form__social button button--icon button--icon-big button--white-trasparent" href="#">
-                  <img class="lazyload" data-src="assets/images/socials-footer-5.svg" src="#">
-                </a>
+                <div class="event-form__socials">
+                  <a class="event-form__social button button--icon button--icon-big button--white-trasparent" href="#">
+                    <img class="lazyload" data-src="assets/images/socials-footer-3.svg" src="#">
+                  </a>
+                  <a class="event-form__social button button--icon button--icon-big button--white-trasparent" href="#">
+                    <img class="lazyload" data-src="assets/images/socials-footer-6.svg" src="#">
+                  </a>
+                  <a class="event-form__social button button--icon button--icon-big button--white-trasparent" href="#">
+                    <img class="lazyload" data-src="assets/images/socials-footer-5.svg" src="#">
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="other-events page-section--large-margin">
-          <div class="container">
-            <div class="other-events__inner">
+          <div class="other-events page-section--large-margin">
+            <div class="container">
+              <div class="other-events__inner">
 
-              <header class="other-events__header">
-                <h2 class="other-events__title">Другие мероприятия</h2>
-                <a class="other-events__link button button--medium button--bordered" href="#"><span>Смотреть все</span>
-                  <svg class="icon icon-button-arrow">
+                <header class="other-events__header">
+                  <h2 class="other-events__title">Другие мероприятия</h2>
+                  <a class="other-events__link button button--medium button--bordered" href="#"><span>Смотреть все</span>
+                    <svg class="icon icon-button-arrow">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#button-arrow"></use>
+                    </svg>
+                  </a>
+                </header>
+                <ul class="other-events__list">
+                  <li class="other-events__item">
+                    <article class="catalog-card">
+
+                      <header class="catalog-card__header">
+                        <div class="catalog-card__meta-block">
+                          <div class="catalog-card__start card-tag card-tag--white">30 марта 2023, 08:00</div>
+                          <div class="catalog-card__meta">
+                            <div class="catalog-card__meta-item card-tag card-tag--transparent">
+                              <img class="lazyload" data-src="assets/images/meta-icon-1-white.svg" src="#" alt="Иконка мета тега"><span>Конференция</span>
+                            </div>
+                            <div class="catalog-card__meta-item card-tag card-tag--transparent">
+                              <img class="lazyload" data-src="assets/images/meta-icon-2-white.svg" src="#" alt="Иконка мета тега"><span>1 час</span>
+                            </div>
+                          </div>
+                        </div>
+                        <h3 class="catalog-card__title">
+                          <a href="#">WildBerries и 1С: автоматизация создания карточек товаров на маркетплейсе и мониторинг цен на свои товары</a>
+                        </h3><span class="catalog-card__title catalog-card__title--start">30 марта 2023, 08:00</span><span class="catalog-card__day">Понедельник</span>
+                      </header>
+                      <div class="catalog-card__body">
+                        <h3 class="catalog-card__title catalog-card__title--right">
+                          <a href="#">WildBerries и 1С: автоматизация создания карточек товаров на маркетплейсе и мониторинг цен на свои товары</a>
+                        </h3>
+                        <p class="catalog-card__text">На вебинаре 6 октября мы подробно рассказали, с чего нужно начать подготовку к распродажам и поговорили про полезные инструменты RDV Маркет.</p>
+                        <div class="catalog-card__footer">
+                          <ul class="catalog-card__markets js-more-button-row-container">
+                            <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">wildberries</li>
+                            <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">Ozon</li>
+                            <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">RDV Маркет</li>
+                            <button class="catalog-card__market-more-button button button--small button--border-grey js-more-button-row">+<span class="js-more-button-row-surplus">0</span>
+                            </button>
+                          </ul>
+                          <button class="catalog-card__button button button--medium button--yellow" data-path="event">Регистрация</button>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="other-events__item">
+                    <article class="catalog-card">
+
+                      <header class="catalog-card__header">
+                        <div class="catalog-card__meta-block">
+                          <div class="catalog-card__start card-tag card-tag--white">30 марта 2023, 08:00</div>
+                          <div class="catalog-card__meta">
+                            <div class="catalog-card__meta-item card-tag card-tag--transparent">
+                              <img class="lazyload" data-src="assets/images/meta-icon-1-white.svg" src="#" alt="Иконка мета тега"><span>Конференция</span>
+                            </div>
+                            <div class="catalog-card__meta-item card-tag card-tag--transparent">
+                              <img class="lazyload" data-src="assets/images/meta-icon-2-white.svg" src="#" alt="Иконка мета тега"><span>1 час</span>
+                            </div>
+                          </div>
+                        </div>
+                        <h3 class="catalog-card__title">
+                          <a href="#">Выставка E-com’23</a>
+                        </h3><span class="catalog-card__title catalog-card__title--start">30 марта 2023, 08:00</span><span class="catalog-card__day">Понедельник</span>
+                      </header>
+                      <div class="catalog-card__body">
+                        <h3 class="catalog-card__title catalog-card__title--right">
+                          <a href="#">Выставка E-com’23</a>
+                        </h3>
+                        <p class="catalog-card__text">На вебинаре 6 октября мы подробно рассказали, с чего нужно начать подготовку к распродажам и поговорили про полезные инструменты RDV Маркет.</p>
+                        <div class="catalog-card__footer">
+                          <ul class="catalog-card__markets js-more-button-row-container">
+                            <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">wildberries</li>
+                            <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">Ozon</li>
+                            <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">RDV Маркет</li>
+                            <button class="catalog-card__market-more-button button button--small button--border-grey js-more-button-row">+<span class="js-more-button-row-surplus">0</span>
+                            </button>
+                          </ul>
+                          <button class="catalog-card__button button button--medium button--yellow" data-path="event">Регистрация</button>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="other-events__item">
+                    <article class="catalog-card">
+
+                      <header class="catalog-card__header">
+                        <div class="catalog-card__meta-block">
+                          <div class="catalog-card__start card-tag card-tag--white">30 марта 2023, 08:00</div>
+                          <div class="catalog-card__meta">
+                            <div class="catalog-card__meta-item card-tag card-tag--transparent">
+                              <img class="lazyload" data-src="assets/images/meta-icon-1-white.svg" src="#" alt="Иконка мета тега"><span>Конференция</span>
+                            </div>
+                            <div class="catalog-card__meta-item card-tag card-tag--transparent">
+                              <img class="lazyload" data-src="assets/images/meta-icon-2-white.svg" src="#" alt="Иконка мета тега"><span>1 час</span>
+                            </div>
+                          </div>
+                        </div>
+                        <h3 class="catalog-card__title">
+                          <a href="#">Как подготовиться к распродажам на маркетплейсах Wildberries и Ozon</a>
+                        </h3><span class="catalog-card__title catalog-card__title--start">30 марта 2023, 08:00</span><span class="catalog-card__day">Понедельник</span>
+                      </header>
+                      <div class="catalog-card__body">
+                        <h3 class="catalog-card__title catalog-card__title--right">
+                          <a href="#">Как подготовиться к распродажам на маркетплейсах Wildberries и Ozon</a>
+                        </h3>
+                        <p class="catalog-card__text">На вебинаре 6 октября мы подробно рассказали, с чего нужно начать подготовку к распродажам и поговорили про полезные инструменты RDV Маркет.</p>
+                        <div class="catalog-card__footer">
+                          <ul class="catalog-card__markets js-more-button-row-container">
+                            <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">wildberries</li>
+                            <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">Ozon</li>
+                            <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">RDV Маркет</li>
+                            <button class="catalog-card__market-more-button button button--small button--border-grey js-more-button-row">+<span class="js-more-button-row-surplus">0</span>
+                            </button>
+                          </ul>
+                          <button class="catalog-card__button button button--medium button--yellow" data-path="event">Регистрация</button>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+                <a class="other-events__more-button button button--medium button--bordered" href="#">Смотреть все<svg class="icon icon-button-arrow">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#button-arrow"></use>
                   </svg>
                 </a>
-              </header>
-              <ul class="other-events__list">
-                <li class="other-events__item">
-                  <article class="catalog-card">
-
-                    <header class="catalog-card__header">
-                      <div class="catalog-card__meta-block">
-                        <div class="catalog-card__start card-tag card-tag--white">30 марта 2023, 08:00</div>
-                        <div class="catalog-card__meta">
-                          <div class="catalog-card__meta-item card-tag card-tag--transparent">
-                            <img class="lazyload" data-src="assets/images/meta-icon-1-white.svg" src="#" alt="Иконка мета тега"><span>Конференция</span>
-                          </div>
-                          <div class="catalog-card__meta-item card-tag card-tag--transparent">
-                            <img class="lazyload" data-src="assets/images/meta-icon-2-white.svg" src="#" alt="Иконка мета тега"><span>1 час</span>
-                          </div>
-                        </div>
-                      </div>
-                      <h3 class="catalog-card__title">
-                        <a href="#">WildBerries и 1С: автоматизация создания карточек товаров на маркетплейсе и мониторинг цен на свои товары</a>
-                      </h3><span class="catalog-card__title catalog-card__title--start">30 марта 2023, 08:00</span><span class="catalog-card__day">Понедельник</span>
-                    </header>
-                    <div class="catalog-card__body">
-                      <h3 class="catalog-card__title catalog-card__title--right">
-                        <a href="#">WildBerries и 1С: автоматизация создания карточек товаров на маркетплейсе и мониторинг цен на свои товары</a>
-                      </h3>
-                      <p class="catalog-card__text">На вебинаре 6 октября мы подробно рассказали, с чего нужно начать подготовку к распродажам и поговорили про полезные инструменты RDV Маркет.</p>
-                      <div class="catalog-card__footer">
-                        <ul class="catalog-card__markets js-more-button-row-container">
-                          <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">wildberries</li>
-                          <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">Ozon</li>
-                          <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">RDV Маркет</li>
-                          <button class="catalog-card__market-more-button button button--small button--border-grey js-more-button-row">+<span class="js-more-button-row-surplus">0</span>
-                          </button>
-                        </ul>
-                        <button class="catalog-card__button button button--medium button--yellow" data-path="event">Регистрация</button>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li class="other-events__item">
-                  <article class="catalog-card">
-
-                    <header class="catalog-card__header">
-                      <div class="catalog-card__meta-block">
-                        <div class="catalog-card__start card-tag card-tag--white">30 марта 2023, 08:00</div>
-                        <div class="catalog-card__meta">
-                          <div class="catalog-card__meta-item card-tag card-tag--transparent">
-                            <img class="lazyload" data-src="assets/images/meta-icon-1-white.svg" src="#" alt="Иконка мета тега"><span>Конференция</span>
-                          </div>
-                          <div class="catalog-card__meta-item card-tag card-tag--transparent">
-                            <img class="lazyload" data-src="assets/images/meta-icon-2-white.svg" src="#" alt="Иконка мета тега"><span>1 час</span>
-                          </div>
-                        </div>
-                      </div>
-                      <h3 class="catalog-card__title">
-                        <a href="#">Выставка E-com’23</a>
-                      </h3><span class="catalog-card__title catalog-card__title--start">30 марта 2023, 08:00</span><span class="catalog-card__day">Понедельник</span>
-                    </header>
-                    <div class="catalog-card__body">
-                      <h3 class="catalog-card__title catalog-card__title--right">
-                        <a href="#">Выставка E-com’23</a>
-                      </h3>
-                      <p class="catalog-card__text">На вебинаре 6 октября мы подробно рассказали, с чего нужно начать подготовку к распродажам и поговорили про полезные инструменты RDV Маркет.</p>
-                      <div class="catalog-card__footer">
-                        <ul class="catalog-card__markets js-more-button-row-container">
-                          <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">wildberries</li>
-                          <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">Ozon</li>
-                          <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">RDV Маркет</li>
-                          <button class="catalog-card__market-more-button button button--small button--border-grey js-more-button-row">+<span class="js-more-button-row-surplus">0</span>
-                          </button>
-                        </ul>
-                        <button class="catalog-card__button button button--medium button--yellow" data-path="event">Регистрация</button>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li class="other-events__item">
-                  <article class="catalog-card">
-
-                    <header class="catalog-card__header">
-                      <div class="catalog-card__meta-block">
-                        <div class="catalog-card__start card-tag card-tag--white">30 марта 2023, 08:00</div>
-                        <div class="catalog-card__meta">
-                          <div class="catalog-card__meta-item card-tag card-tag--transparent">
-                            <img class="lazyload" data-src="assets/images/meta-icon-1-white.svg" src="#" alt="Иконка мета тега"><span>Конференция</span>
-                          </div>
-                          <div class="catalog-card__meta-item card-tag card-tag--transparent">
-                            <img class="lazyload" data-src="assets/images/meta-icon-2-white.svg" src="#" alt="Иконка мета тега"><span>1 час</span>
-                          </div>
-                        </div>
-                      </div>
-                      <h3 class="catalog-card__title">
-                        <a href="#">Как подготовиться к распродажам на маркетплейсах Wildberries и Ozon</a>
-                      </h3><span class="catalog-card__title catalog-card__title--start">30 марта 2023, 08:00</span><span class="catalog-card__day">Понедельник</span>
-                    </header>
-                    <div class="catalog-card__body">
-                      <h3 class="catalog-card__title catalog-card__title--right">
-                        <a href="#">Как подготовиться к распродажам на маркетплейсах Wildberries и Ozon</a>
-                      </h3>
-                      <p class="catalog-card__text">На вебинаре 6 октября мы подробно рассказали, с чего нужно начать подготовку к распродажам и поговорили про полезные инструменты RDV Маркет.</p>
-                      <div class="catalog-card__footer">
-                        <ul class="catalog-card__markets js-more-button-row-container">
-                          <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">wildberries</li>
-                          <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">Ozon</li>
-                          <li class="catalog-card__market button button--small button--border-grey js-more-button-row-item">RDV Маркет</li>
-                          <button class="catalog-card__market-more-button button button--small button--border-grey js-more-button-row">+<span class="js-more-button-row-surplus">0</span>
-                          </button>
-                        </ul>
-                        <button class="catalog-card__button button button--medium button--yellow" data-path="event">Регистрация</button>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-              </ul>
-              <a class="other-events__more-button button button--medium button--bordered" href="#">Смотреть все<svg class="icon icon-button-arrow">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#button-arrow"></use>
-                </svg>
-              </a>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
 
       <footer class="footer">
