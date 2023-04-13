@@ -38,6 +38,7 @@ import isAdminMod from "./helpers/isAdminMod";
 import mapSlider from "./helpers/mapSlider";
 import contactsMap from "./helpers/contactsMap";
 import integrationEffectSlider from "./helpers/integrationEffectSlider";
+import sticky from "./helpers/sticky";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -76,6 +77,7 @@ documenReady(() => {
   mapSlider();
   contactsMap();
   integrationEffectSlider();
+  sticky();
 });
 
 document.fonts.ready.then((res) => {

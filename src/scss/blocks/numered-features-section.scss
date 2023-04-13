@@ -16,7 +16,6 @@
     @extend .section-inner;
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: flex-start;
     gap: 5.6rem;
 
     @include mq('custom', 'max', 1024) {
@@ -155,6 +154,10 @@
     &:nth-child(7n+7)::before{
       background-image: var(--gradient-07);
     }
+  }
+
+  &__sticky-container {
+    position: relative;
   }
 
   &__form {
