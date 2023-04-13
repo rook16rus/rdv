@@ -1,4 +1,10 @@
 .numered-features-section {
+  &--reverse {
+    .numered-features-section__list {
+      order: 1;
+    }
+  }
+
   &__title {
     max-width: 95rem;
 
@@ -270,5 +276,43 @@
     @include mq('custom', 'max', 640) {
       gap: 2rem;
     }
+  }
+
+  &__content {
+    width: 64.8rem;
+  }
+
+  &__content-img {
+    position: relative;
+
+    margin-bottom: 3.2rem;
+    padding-top: 69.13%;
+    background: radial-gradient(78.35% 78.35% at 50% 50%, #1D689F 0%, #174F77 100%);;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+
+
+    }
+
+    img {
+      @extend .fully-filled-el;
+      left: -2rem;
+      top: -2rem;
+      object-fit: cover;
+    }
+  }
+
+  &__content-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 44rem;
+
+    @extend .content-medium-text;
+    color: var(--main-D-30);
   }
 }

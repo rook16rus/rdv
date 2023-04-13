@@ -9,7 +9,7 @@
     "Сформируем коммерческое предложение, в котором вы найдете ответы на все ваши вопросы и узнаете стоимость внедрения системы 1С:ERP.",
   ]
 
-mixin numered-features-section(title)
+mixin numered-features-section(title, form, content)
   section.numered-features-section&attributes(attributes)
     .narrow-container
       h2.numered-features-section__title= title
@@ -18,26 +18,34 @@ mixin numered-features-section(title)
         ul.numered-features-section__list
           for item in numeredFeatures
             li.numered-features-section__item= item
-        form.numered-features-section__form
-          h3.numered-features-section__form-title
-            | Ваша заявка
-          .numered-features-section__form-wrapper
-            .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
-              input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
-              label.numered-features-section__label(for="featuresCompany") Название компании
-            .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
-              input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresName" id="featuresName" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
-              label.numered-features-section__label(for="featuresName") Ваше имя
-            .numered-features-section__input-wrapper.input-wrapper
-              input.numered-features-section__input.input.input--big.input--white.js-phone-input(type="tel" name="featuresPhone" id="featuresPhone" required data-parsley-phone)
-              label.numered-features-section__label(for="featuresPhone") Телефон
-            .numered-features-section__input-wrapper.input-wrapper
-              input.numered-features-section__input.input.input--big.input--white(type="email" name="featuresEmail" id="featuresEmail" required)
-              label.numered-features-section__label(for="featuresEmail") E-mail
-            .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
-              input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresSite" id="featuresSite" required)
-              label.numered-features-section__label(for="featuresSite") Ваш сайт
-          .numered-features-section__form-bottom
-            button.numered-features-section__button.button.button--big.button--yellow
-              | Отправить заявку
-            +confidence-block("featuresConfidence")
+        if form
+          form.numered-features-section__form
+            h3.numered-features-section__form-title
+              | Ваша заявка
+            .numered-features-section__form-wrapper
+              .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
+                input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresCompany" id="featuresCompany" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+                label.numered-features-section__label(for="featuresCompany") Название компании
+              .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
+                input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresName" id="featuresName" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$")
+                label.numered-features-section__label(for="featuresName") Ваше имя
+              .numered-features-section__input-wrapper.input-wrapper
+                input.numered-features-section__input.input.input--big.input--white.js-phone-input(type="tel" name="featuresPhone" id="featuresPhone" required data-parsley-phone)
+                label.numered-features-section__label(for="featuresPhone") Телефон
+              .numered-features-section__input-wrapper.input-wrapper
+                input.numered-features-section__input.input.input--big.input--white(type="email" name="featuresEmail" id="featuresEmail" required)
+                label.numered-features-section__label(for="featuresEmail") E-mail
+              .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
+                input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresSite" id="featuresSite" required)
+                label.numered-features-section__label(for="featuresSite") Ваш сайт
+            .numered-features-section__form-bottom
+              button.numered-features-section__button.button.button--big.button--yellow
+                | Отправить заявку
+              +confidence-block("featuresConfidence")
+        if content
+          .numered-features-section__content
+            .numered-features-section__content-img
+              +imgLazy("numered-features-1.svg", "Фото")
+            .numered-features-section__content-text
+              p
+                | Чтобы не доводить до критического уровня, рекомендуем оперативно начать процесс оптимизации производительности!
