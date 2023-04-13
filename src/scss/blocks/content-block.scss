@@ -24,6 +24,13 @@
     @include mq('custom', 'max', 640) {
       margin-bottom: 3.2rem;
     }
+
+    &--top {
+      &#{&} {
+        @extend .section-title;
+        @extend .title-h2;
+      }
+    }
   }
 
   &__text {
