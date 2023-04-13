@@ -4457,39 +4457,41 @@
                 <li class="numered-features-section__item">Расскажем о нашем опыте внедрения ERP, где мы уже реализовывали подобное</li>
                 <li class="numered-features-section__item">Сформируем коммерческое предложение, в котором вы найдете ответы на все ваши вопросы и узнаете стоимость внедрения системы 1С:ERP.</li>
               </ul>
-              <form class="numered-features-section__form">
-                <h3 class="numered-features-section__form-title">Ваша заявка</h3>
-                <div class="numered-features-section__form-wrapper">
-                  <div class="numered-features-section__input-wrapper numered-features-section__input-wrapper--large input-wrapper">
-                    <input class="numered-features-section__input input input--big input--white" type="text" name="featuresCompany" id="featuresCompany" required="required" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$">
-                    <label class="numered-features-section__label" for="featuresCompany">Название компании</label>
+              <div class="numered-features-section__sticky-container">
+                <form class="numered-features-section__form js-sticky-widget">
+                  <h3 class="numered-features-section__form-title">Ваша заявка</h3>
+                  <div class="numered-features-section__form-wrapper">
+                    <div class="numered-features-section__input-wrapper numered-features-section__input-wrapper--large input-wrapper">
+                      <input class="numered-features-section__input input input--big input--white" type="text" name="featuresCompany" id="featuresCompany" required="required" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$">
+                      <label class="numered-features-section__label" for="featuresCompany">Название компании</label>
+                    </div>
+                    <div class="numered-features-section__input-wrapper numered-features-section__input-wrapper--large input-wrapper">
+                      <input class="numered-features-section__input input input--big input--white" type="text" name="featuresName" id="featuresName" required="required" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$">
+                      <label class="numered-features-section__label" for="featuresName">Ваше имя</label>
+                    </div>
+                    <div class="numered-features-section__input-wrapper input-wrapper">
+                      <input class="numered-features-section__input input input--big input--white js-phone-input" type="tel" name="featuresPhone" id="featuresPhone" required="required" data-parsley-phone="data-parsley-phone">
+                      <label class="numered-features-section__label" for="featuresPhone">Телефон</label>
+                    </div>
+                    <div class="numered-features-section__input-wrapper input-wrapper">
+                      <input class="numered-features-section__input input input--big input--white" type="email" name="featuresEmail" id="featuresEmail" required="required">
+                      <label class="numered-features-section__label" for="featuresEmail">E-mail</label>
+                    </div>
+                    <div class="numered-features-section__input-wrapper numered-features-section__input-wrapper--large input-wrapper">
+                      <input class="numered-features-section__input input input--big input--white" type="text" name="featuresSite" id="featuresSite" required="required">
+                      <label class="numered-features-section__label" for="featuresSite">Ваш сайт</label>
+                    </div>
                   </div>
-                  <div class="numered-features-section__input-wrapper numered-features-section__input-wrapper--large input-wrapper">
-                    <input class="numered-features-section__input input input--big input--white" type="text" name="featuresName" id="featuresName" required="required" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$">
-                    <label class="numered-features-section__label" for="featuresName">Ваше имя</label>
+                  <div class="numered-features-section__form-bottom">
+                    <button class="numered-features-section__button button button--big button--yellow">Отправить заявку</button>
+                    <div class="confidence-block">
+                      <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="featuresConfidence" id="featuresConfidence" checked="checked" required="required">
+                      <label class="confidence-block__checkbox-label" for="featuresConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="numered-features-section__input-wrapper input-wrapper">
-                    <input class="numered-features-section__input input input--big input--white js-phone-input" type="tel" name="featuresPhone" id="featuresPhone" required="required" data-parsley-phone="data-parsley-phone">
-                    <label class="numered-features-section__label" for="featuresPhone">Телефон</label>
-                  </div>
-                  <div class="numered-features-section__input-wrapper input-wrapper">
-                    <input class="numered-features-section__input input input--big input--white" type="email" name="featuresEmail" id="featuresEmail" required="required">
-                    <label class="numered-features-section__label" for="featuresEmail">E-mail</label>
-                  </div>
-                  <div class="numered-features-section__input-wrapper numered-features-section__input-wrapper--large input-wrapper">
-                    <input class="numered-features-section__input input input--big input--white" type="text" name="featuresSite" id="featuresSite" required="required">
-                    <label class="numered-features-section__label" for="featuresSite">Ваш сайт</label>
-                  </div>
-                </div>
-                <div class="numered-features-section__form-bottom">
-                  <button class="numered-features-section__button button button--big button--yellow">Отправить заявку</button>
-                  <div class="confidence-block">
-                    <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="featuresConfidence" id="featuresConfidence" checked="checked" required="required">
-                    <label class="confidence-block__checkbox-label" for="featuresConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
-                    </label>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </section>
