@@ -1,0 +1,9 @@
+mixin order-banner(title, text)
+  article.order-banner&attributes(attributes)
+    .container
+      .order-banner__inner.lazyload(data-bg="assets/images/order-banner-bg.png")
+        h2.order-banner__title= title
+        .order-banner__text
+          p= text
+        button.order-banner__button.button.button--big.button--yellow
+          | Заказать

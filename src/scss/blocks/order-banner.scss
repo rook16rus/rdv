@@ -1,0 +1,28 @@
+.order-banner {
+  &__inner {
+    @extend .section-inner;
+  }
+
+  &__title {
+    max-width: 95rem;
+    margin-bottom: 1.6rem;
+
+    @extend .title-h2;
+    color: #fff;
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 95rem;
+    margin-bottom: 4rem;
+
+    @extend .content-medium-text;
+    color: var(--white-50);
+  }
+
+  &__button {
+    width: 20rem;
+  }
+}
