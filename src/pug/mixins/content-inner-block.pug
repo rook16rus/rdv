@@ -1,0 +1,13 @@
+mixin content-inner-block(title, text, img)
+  section.content-inner-block&attributes(attributes)
+    .container
+      .content-inner-block__inner
+        .content-inner-block__content
+          h2.content-inner-block__title= title
+          .content-inner-block__text
+            p= text
+          a.content-inner-block__link.button.button--big.button--blue(href="#")
+            | Подробнее
+        .content-inner-block__img
+          +pictureLazy(img, "Фото")
+
