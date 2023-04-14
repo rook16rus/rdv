@@ -1,20 +1,28 @@
-mixin intro-section(tag, title, text, img)
-  .intro-section
-    .intro-section__content
-      ul.intro-section__tags
-        li.intro-section__tag.tag.tag--medium.tag--border-grey= tag
-      h1.intro-section__title= title
-      .intro-section__text
-        p= text
-      .intro-section__buttons
-        button.intro-section__button.button.button--big.button--yellow(data-path="event")
-          | Оставить заявку
-        button.intro-section__button.button.button--big.button--white-trasparent
-          | Второстепенная кнопка
-    .intro-section__graphic(data-src="https://youtu.be/qZRJbuXLHWQ" data-fancybox)
-      +pictureLazy(img, "Фото блока")
-      span.intro-section__graphic-time.tag.tag--small.tag--grey 23:48
-      h3.intro-section__graphic-title
-        | Примерный заголовок видео или анонс видео в одну или две строки
-      .intro-section__play-button
-        +icon-multi('play-icon')
+mixin intro-section(tag, title, text, img, breadcrumbs, isVideo, buttonText, isDoubleButton)
+  .intro-section&attributes(attributes)
+    .narrow-container
+      +breadcrumbs(breadcrumbs)
+    .container
+      .intro-section__inner
+        .intro-section__content
+          ul.intro-section__tags
+            li.intro-section__tag.tag.tag--medium.tag--border-grey= tag
+          h1.intro-section__title= title
+          .intro-section__text
+            p= text
+          .intro-section__buttons
+            button.intro-section__button.button.button--big.button--yellow(data-path="event")= buttonText
+            if isDoubleButton
+              button.intro-section__button.button.button--big.button--white-trasparent
+                | Второстепенная кнопка
+        if isVideo
+          .intro-section__graphic(data-src="https://youtu.be/qZRJbuXLHWQ" data-fancybox)
+            +pictureLazy(img, "Фото блока")
+              span.intro-section__graphic-time.tag.tag--small.tag--grey 23:48
+              h3.intro-section__graphic-title
+                | Примерный заголовок видео или анонс видео в одну или две строки
+              .intro-section__play-button
+                +icon-multi('play-icon')
+        else
+          .intro-section__graphic(data-src=`assets/images/${img}` data-fancybox)
+            +pictureLazy(img, "Фото блока")

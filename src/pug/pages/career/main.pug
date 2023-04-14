@@ -1,0 +1,30 @@
+main.page-main.main
+  +intro-section(
+    "Рады знакомству",
+    "Карьера",
+    "Присоединяйтесь к динамично развивающейся команде профессионалов",
+    "career-intro-1.jpg",
+    [
+      ["Главная", "./index.html"],
+      ["Карьера", "#"]
+    ],
+    false,
+    "Отправить резюме"
+  ).page-section.page-section--first
+  +features-section("Почему выбирают нас").page-section--large-margin
+
+//-
+
+          @include mq('custom', 'max', 1024) {
+
+          }
+
+          @include mq('custom', 'max', 768) {
+
+          }
+
+          @include mq('custom', 'max', 640) {
+
+          }
+
+//
