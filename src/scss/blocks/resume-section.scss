@@ -4,6 +4,15 @@
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 3rem;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding-bottom: 3.2rem;
+    }
   }
 
   &__title {
@@ -11,6 +20,10 @@
 
     @extend .title-h1;
     color: #fff;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__text {
@@ -21,6 +34,21 @@
 
     @extend .content-huge-text;
     color: var(--white-50);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+
+      font: var(--content-big);
+      color: #fff;
+    }
   }
 
   &__form {
@@ -28,20 +56,68 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
     max-width: 62rem;
+
+    @include mq('custom', 'max', 1024) {
+      max-width: none;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.6rem;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__input-wrapper {
     &--large {
       grid-column: span 2;
+
+      @include mq('custom', 'max', 640) {
+        grid-column: span 1;
+      }
     }
+
+    .resume-section__input + .resume-section__label {
+      @include mq('custom', 'max', 640) {
+        left: 1.6rem;
+      }
+    }
+
+    .resume-section__textarea {
+      padding: 1.8rem 1.6rem;
+    }
+  }
+
+  &__input {
+    @include mq('custom', 'max', 640) {
+      height: 4.8rem;
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+      border-radius: 0.8rem;
+    }
+  }
+
+  &__label {
+
   }
 
   &__textarea {
     height: 13rem;
+
+    @include mq('custom', 'max', 768) {
+      height: 8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      border-radius: 0.8rem;
+    }
   }
 
   &__button {
     margin-top: 1.6rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 0.6rem;
+    }
   }
 
   .confidence-block {
@@ -53,6 +129,10 @@
     justify-content: flex-end;
     align-items: flex-end;
     margin-right: -0.4rem;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__social {
