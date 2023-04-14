@@ -2,6 +2,8 @@ export default function moreButton() {
   const buttons = document.querySelectorAll('.js-more-button');
 
   buttons.forEach(button => {
+    if (button.dataset.desktop && matchMedia('(max-width: 1024px)').matches) return;
+
     const container = button.closest('.js-more-button-container');
     if (!container) return
 
