@@ -1,4 +1,10 @@
 .intro-section {
+  &.career-intro {
+    .intro-section__text {
+      max-width: 44rem;
+    }
+  }
+
   .breadcrumbs {
     margin-bottom: 3.2rem;
 
