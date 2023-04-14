@@ -1,0 +1,36 @@
+.file {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.6rem;
+
+  border-radius: 1.2rem;
+  cursor: pointer;
+  overflow: hidden;
+
+  @extend .button-uppercase-text;
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &--big {
+    height: 5.6rem;
+    padding: 0 2.6rem;
+  }
+
+  &--white-transparent {
+    background-color: var(--white-10);
+    color: var(--white-50);
+
+    svg {
+      color: #fff;
+    }
+  }
+}

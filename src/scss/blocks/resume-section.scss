@@ -1,0 +1,61 @@
+.resume-section {
+  &__inner {
+    @extend .section-inner;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+
+    @extend .title-h1;
+    color: #fff;
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 5.6rem;
+
+    @extend .content-huge-text;
+    color: var(--white-50);
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    max-width: 62rem;
+  }
+
+  &__input-wrapper {
+    &--large {
+      grid-column: span 2;
+    }
+  }
+
+  &__textarea {
+    height: 13rem;
+  }
+
+  &__button {
+    margin-top: 1.6rem;
+  }
+
+  .confidence-block {
+    color: #fff;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: -0.4rem;
+  }
+
+  &__social {
+    margin-right: 0.4rem;
+  }
+}

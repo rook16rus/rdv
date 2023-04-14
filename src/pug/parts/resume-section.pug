@@ -1,0 +1,43 @@
+section.resume-section.page-section--large-margin
+  .container
+    .resume-section__inner.lazyload(data-bg="assets/images/contacts-section-bg.png")
+      .resume-section__content
+        h2.resume-section__title
+          | Отправьте резюме
+        .resume-section__text
+          p
+            | Мы с вами свяжемся и обсудим все детали
+        form.resume-section__form
+          .resume-section__input-wrapper.input-wrapper
+            input.resume-section__input.input.input--big.input--white(type="text" name="resumeName" id="resumeName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
+            label.resume-section__label(for="resumeName")
+              | Имя
+          .resume-section__input-wrapper.input-wrapper
+            input.resume-section__input.input.input--big.input--white(type="text" name="resumeLink" id="resumeLink" required)
+            label.resume-section__label(for="resumeLink")
+              | Ссылка на резюме
+          .resume-section__input-wrapper.input-wrapper
+            input.resume-section__input.input.input--big.input--white.js-phone-input(type="tel" name="resumePhone" id="resumePhone" data-parsley-phone required)
+            label.resume-section__label(for="resumePhone")
+              | Ваш телефон
+          .resume-section__input-wrapper.input-wrapper
+            input.resume-section__input.input.input--big.input--white(type="email" name="resumeEmail" id="resumeEmail" required)
+            label.resume-section__label(for="resumeEmail")
+              | Email
+          .resume-section__input-wrapper.resume-section__input-wrapper--large.input-wrapper.input-wrapper--textarea
+            textarea.resume-section__textarea.input.input--big.input--white(name="eventRegComment" id="eventRegComment" placeholder="Ваш комментарий")
+          .resume-section__input-wrapper.resume-section__input-wrapper--large.js-input-file-container
+            input.resume-section__input.visually-hidden(type="file" name="resumeFile" id="resumeFile" data-placeholder="Прикрепить файл").js-input-file
+            label.resume-section__file-label.file.file--big.file--white-transparent(for="resumeFile")
+              +icon-multi("clip-icon")
+              span.js-input-file-desc Прикрепить файл
+          button.resume-section__button.button.button--big.button--yellow(type="button")
+            | Отправить
+          +confidence-block("eventRegConfidence")
+      .resume-section__socials
+        a.resume-section__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
+          +imgLazy("socials-footer-3.svg")
+        a.resume-section__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
+          +imgLazy("socials-footer-6.svg")
+        a.resume-section__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
+          +imgLazy("socials-footer-5.svg")
