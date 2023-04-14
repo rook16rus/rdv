@@ -50,11 +50,13 @@ section.career-search.page-section--large-margin
           input.career-search__input.input.input--big.input--white(type="text" name='careerSearch' id="careerSearch")
           label.career-search__label(for="careerSearch") Выбрать что-то
           +icon-multi('search-icon')
-        ul.career-search__radio-list
+        ul.career-search__radio-list.js-more-button-container
           each item, index in careerFilter
-            li.career-search__radio-block
+            li.career-search__radio-block.js-more-button-item
               input.career-search__radio.visually-hidden(type="radio" name="careerRadio" id=`careerRadio${index}` checked=!!item.active)
               label.career-search__radio-label.button.button--medium.button--bordered(for=`careerRadio${index}`)= item.text
+          li.career-search__radio-more.button.button--medium.button--bordered.js-more-button(data-count="8")
+            span +#[span.js-more-button-surplus 0]
       ul.career-search__list
         for item in careerList
           li.career-search__item.js-more-button-item

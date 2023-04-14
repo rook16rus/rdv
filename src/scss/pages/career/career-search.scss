@@ -53,6 +53,11 @@
     cursor: pointer;
   }
 
+  &__radio-more {
+    cursor: pointer;
+    height: 4rem;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
