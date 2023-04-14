@@ -59,5 +59,19 @@
       display: flex;
       justify-content: center;
     }
+
+    &--main {
+      display: flex;
+      justify-content: center;
+      margin-top: 4rem;
+
+      @include mq('custom', 'max', 1024) {
+        margin-top: 3rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        margin-top: 2rem;
+      }
+    }
   }
 }

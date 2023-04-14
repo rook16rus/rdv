@@ -1,0 +1,20 @@
+.career-gallery {
+  &__title {
+    margin-bottom: 3.2rem;
+
+    @extend .title-h2;
+    color: var(--main-base-0);
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 5.6rem;
+
+    @extend .content-big-text;
+    color: var(--main-base-0);
+  }
+
+
+}
