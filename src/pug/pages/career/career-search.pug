@@ -1,0 +1,78 @@
+-
+  const careerFilter = [
+    {text: "Все", active: true},
+    {text: "Бизнес аналитик"},
+    {text: "Системный консультант"},
+    {text: "Технический архитектор 1С"},
+    {text: "Руководитель проектов"},
+    {text: "Функциональный архитектор 1С"},
+    {text: "Разработчик 1С"},
+    {text: "Технический архитектор 1С"},
+    {text: "Системный консультант"},
+    {text: "Руководитель проектов"},
+  ]
+
+-
+  const careerList = [
+    {
+      tag: "Руководитель проектов",
+      title: "Руководитель проектов 1С ERP"
+    },
+    {
+      tag: "Системный консультант",
+      title: "Консультант 1С (системный аналитик)"
+    },
+    {
+      tag: "Системный консультант",
+      title: "Консультант 1С (системный аналитик)"
+    },
+    {
+      tag: "Руководитель проектов",
+      title: "Руководитель проектов 1С ERP"
+    },
+    {
+      tag: "Руководитель проектов",
+      title: "Руководитель проектов 1С ERP"
+    },
+    {
+      tag: "Системный консультант",
+      title: "Консультант 1С (системный аналитик)"
+    },
+  ]
+
+section.career-search.page-section--large-margin
+  .container
+    .career-search__inner.js-more-button-container
+      h2.career-search__title
+        | Кого мы ищем
+      form.career-search__form(action="#")
+        .career-search__input-wrapper.input-wrapper
+          input.career-search__input.input.input--big.input--white(type="text" name='careerSearch' id="careerSearch")
+          label.career-search__label(for="careerSearch") Выбрать что-то
+          +icon-multi('search-icon')
+        ul.career-search__radio-list
+          each item, index in careerFilter
+            li.career-search__radio-block
+              input.career-search__radio.visually-hidden(type="radio" name="careerRadio" id=`careerRadio${index}` checked=!!item.active)
+              label.career-search__radio-label.button.button--medium.button--bordered(for=`careerRadio${index}`)= item.text
+      ul.career-search__list
+        for item in careerList
+          li.career-search__item.js-more-button-item
+            ul.career-search__item-tags
+              li.career-search__item-tag.button.button--small.button--border-grey= item.tag
+            h3.career-search__item-title= item.title
+            ul.career-search__item-conditions
+              li.career-search__item-condition Занятость: полная, гибкий график
+              li.career-search__item-condition Опыт: от 3 лет
+            p.career-search__item-text
+              | Компания RDV приглашает кандидатов на позицию Руководителя проектов 1С ERP (оперативный учет, производство) для участия в комплексной автоматизации предприятий заказчиков.
+            .career-search__item-buttons
+              button.career-search__item-button.button.button--big.button--yellow
+                | Откликнуться
+              a.career-search__item-button.button.button--big.button--bordered(href="#")
+                | Подробнее
+      button.career-search__button.button.button--big.button--grey.js-more-button(data-count="4" data-mobile-count="4")
+        | Показать еще
+
+
+

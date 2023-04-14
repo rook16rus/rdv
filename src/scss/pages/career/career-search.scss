@@ -1,0 +1,139 @@
+.career-search {
+  &__inner {
+    @extend .section-inner;
+  }
+
+  &__title {
+    @extend .section-title;
+    @extend .title-h2;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 5.6rem;
+  }
+
+  &__input-wrapper {
+    svg {
+      position: absolute;
+      right: 2.4rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
+  &__input {
+    padding-right: 6rem;
+  }
+
+  &__radio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.4rem;
+    margin-bottom: -0.4rem;
+    max-width: 125rem;
+  }
+
+  &__radio-block {
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &__radio:checked + &__radio-label {
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  &__radio-label {
+    cursor: pointer;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+  }
+
+  &__item {
+    @extend .white-card;
+  }
+
+  &__item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.4rem;
+    margin-bottom: 2.8rem;
+  }
+
+  &__item-tag {
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &__item-title {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    margin-bottom: 3.2rem;
+
+    font: var(--medium) 2.6rem/120% var(--main-ff);
+    letter-spacing: -0.01em;
+    color: var(--main-base-0);
+
+    &::after {
+      content: '';
+
+      width: 8rem;
+      height: 0.4rem;
+
+      border-radius: 99.9rem;
+      background: var(--gradient-01);
+    }
+  }
+
+  &__item-conditions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-bottom: 3.2rem;
+
+    @extend .button-uppercase-text;
+    color: var(--main-base-0);
+  }
+
+  &__item-text {
+    margin-bottom: 3.2rem;
+
+    @extend .content-regular-text;
+    color: rgba(23, 79, 119, 0.5);
+  }
+
+  &__item-buttons {
+    display: flex;
+    margin-right: -0.8rem;
+    margin-top: auto;
+  }
+
+  &__item-button {
+    margin-right: 0.8rem;
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 5.6rem;
+    height: 8rem;
+
+    background-color: var(--grey-D-10);
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        background-color: var(--grey-D-20);
+      }
+    }
+  }
+}
