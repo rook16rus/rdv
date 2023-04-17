@@ -3463,7 +3463,7 @@
       </header>
 
       <main class="page-main main">
-        <section class="integration-intro page-section">
+        <div class="intro-section page-section page-section--first">
           <div class="narrow-container">
             <div class="breadcrumbs__container site-content-container">
               <div class="breadcrumbs">
@@ -3477,7 +3477,7 @@
             </div>
           </div>
           <div class="container">
-            <div class="intro-section">
+            <div class="intro-section__inner">
               <div class="intro-section__content">
                 <ul class="intro-section__tags">
                   <li class="intro-section__tag tag tag--medium tag--border-grey">Комплексные решения</li>
@@ -3495,17 +3495,11 @@
                 <picture>
                   <source type="image/webp" data-srcset="assets/images/content-videos-1.webp" alt="Фото блока" srcset="#">
                   <img class="lazyload" data-src="assets/images/content-videos-1.jpg" src="#" alt="Фото блока">
-                </picture><span class="intro-section__graphic-time tag tag--small tag--grey">23:48</span>
-                <h3 class="intro-section__graphic-title">Примерный заголовок видео или анонс видео в одну или две строки</h3>
-                <div class="intro-section__play-button">
-                  <svg class="icon icon-play-icon">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#play-icon"></use>
-                  </svg>
-                </div>
+                </picture>
               </div>
             </div>
           </div>
-        </section>
+        </div>
         <section class="cards-section page-section--large-margin integration-cards">
           <div class="container">
             <div class="cards-section__inner">
@@ -9272,7 +9266,7 @@
         </div>
       </div>
       <div class="modal__container modal-share" data-target="share">
-        <div class="modal__content js-tabs-container">
+        <div class="modal__content">
           <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
           </button>
           <h2 class="modal-share__title">Поделиться материалом</h2><span class="modal-share__caption">Поделиться через:</span>
@@ -9327,6 +9321,51 @@
             <input class="modal-share__link-input input input--big input--blue js-copy-link-input" type="text" value="https://rdv-it.ru/" name="shareLink" id="shareLink" readonly="readonly">
             <button class="modal-share__link-button button button--big button--bordered js-copy-link-button">Скопировать</button>
           </div>
+        </div>
+      </div>
+      <div class="modal__container modal-resume" data-target="resume">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
+          </button>
+          <h2 class="modal-resume__title">Отправить резюме</h2>
+          <p class="modal-resume__text">Мы с вами свяжемся и обсудим все детали</p>
+          <form class="resume-form resume-form--blue">
+            <div class="resume-form__input-wrapper input-wrapper">
+              <input class="resume-form__input input input--big input--white" type="text" name="resumeModalName" id="resumeModalName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$" required="required">
+              <label class="resume-form__label" for="resumeModalName">Имя</label>
+            </div>
+            <div class="resume-form__input-wrapper input-wrapper">
+              <input class="resume-form__input input input--big input--white" type="text" name="resumeModalLink" id="resumeModalLink" required="required">
+              <label class="resume-form__label" for="resumeModalLink">Ссылка на резюме</label>
+            </div>
+            <div class="resume-form__input-wrapper input-wrapper">
+              <input class="resume-form__input input input--big input--white js-phone-input" type="tel" name="resumeModalPhone" id="resumeModalPhone" data-parsley-phone="data-parsley-phone" required="required">
+              <label class="resume-form__label" for="resumeModalPhone">Ваш телефон</label>
+            </div>
+            <div class="resume-form__input-wrapper input-wrapper">
+              <input class="resume-form__input input input--big input--white" type="email" name="resumeModalEmail" id="resumeModalEmail" required="required">
+              <label class="resume-form__label" for="resumeModalEmail">Email</label>
+            </div>
+            <div class="resume-form__input-wrapper resume-form__input-wrapper--large input-wrapper input-wrapper--textarea">
+              <textarea class="resume-form__textarea input input--big input--white" name="resumeModalComment" id="resumeModalComment" placeholder="Ваш комментарий"></textarea>
+            </div>
+            <div class="resume-form__input-wrapper resume-form__input-wrapper--large js-input-file-container">
+              <input class="resume-form__input visually-hidden js-input-file" type="file" name="resumeModalFile" id="resumeModalFile" data-placeholder="Прикрепить файл">
+              <label class="resume-form__file-label file file--big file--bordered" for="resumeModalFile">
+                <svg class="icon icon-clip-icon">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#clip-icon"></use>
+                </svg><span class="js-input-file-desc">Прикрепить файл</span>
+              </label>
+            </div>
+            <div class="resume-form__bottom">
+              <button class="resume-form__button button button--big button--blue" type="button">Отправить</button>
+              <div class="confidence-block confidence-block--blue">
+                <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="resumeModalConfidence" id="resumeModalConfidence" checked="checked" required="required">
+                <label class="confidence-block__checkbox-label" for="resumeModalConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
+                </label>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
