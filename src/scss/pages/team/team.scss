@@ -1,6 +1,10 @@
 .team {
   .breadcrumbs {
     margin-bottom: 3.2rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__title {
@@ -12,6 +16,21 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 3.2rem;
     margin-bottom: 3.2rem;
+
+    @include mq('custom', 'max', 1024) {
+      gap: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      gap: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
   }
 
   &__description {
@@ -23,6 +42,18 @@
 
     @extend .content-big-text;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      padding: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 2rem;
+    }
   }
 
 
@@ -38,6 +69,19 @@
     overflow: hidden;
     cursor: pointer;
 
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+      border-radius: 2rem;
+    }
+
     img {
       @extend .fully-filled-el;
       object-fit: cover;
@@ -48,6 +92,16 @@
       .team__large-item-desc {
         opacity: 1;
         visibility: visible;
+      }
+
+      .team__large-item-tip {
+        svg {
+          display: none;
+
+          &:last-child {
+            display: block;
+          }
+        }
       }
     }
   }
@@ -69,6 +123,60 @@
     color: var(--white-80);
 
     transition: 0.3s;
+
+    @include mq('custom', 'max', 1024) {
+      padding: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.6rem;
+      padding: 2rem;
+    }
+  }
+
+  &__large-item-tip {
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+    background-color: var(--white-10);
+
+    color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+      display: flex;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+
+      @include mq('custom', 'max', 640) {
+        width: 1.4rem;
+        height: 1.4rem;
+
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
   }
 
   &__large-item-title {
@@ -87,6 +195,24 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3.2rem;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: repeat(2 , 1fr);
+      gap: 1.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.4rem;
+    }
+
+    @include mq('custom', 'max', 350) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -99,6 +225,10 @@
     border-radius: 2.4rem;
     overflow: hidden;
 
+    @include mq('custom', 'max', 640) {
+      border-radius: 1.2rem;
+    }
+
     img {
       @extend .fully-filled-el;
       object-fit: cover;
@@ -110,6 +240,24 @@
     flex-direction: column;
     align-items: center;
     padding-top: 8rem;
+
+    @include mq('custom', 'max', 1024) {
+      padding-top: 6.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding-top: 5.3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding-top: 4rem;
+    }
+  }
+
+  &__more-content {
+    @include mq('custom', 'max', 768) {
+      text-align: center;
+    }
   }
 
   &__more-number {
@@ -121,6 +269,19 @@
     -webkit-text-fill-color: transparent;
 
     font: var(--regular) 14rem/100% var(--secondary-ff);
+    letter-spacing: -0.01em;
+
+    @include mq('custom', 'max', 1024) {
+      font-size: 12rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      font-size: 10rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      font-size: 8rem;
+    }
   }
 
   &__more-desc {
@@ -132,5 +293,20 @@
     width: 100%;
     height: 8rem;
     margin-top: 5.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      height: 7.2rem;
+      margin-top: 4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      height: 6.4rem;
+      margin-top: 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 5.6rem;
+      margin-top: 1.2rem;
+    }
   }
 }
