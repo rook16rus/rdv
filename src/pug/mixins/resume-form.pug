@@ -1,0 +1,34 @@
+mixin resume-form(name, mod, fileMod, buttonMod, confidenceMod, isBottomWrapped)
+  form.resume-form(class=`${mod ? mod : ''}`)
+    .resume-form__input-wrapper.input-wrapper
+      input.resume-form__input.input.input--big.input--white(type="text" name=`${name}Name` id=`${name}Name` data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
+      label.resume-form__label(for=`${name}Name`)
+        | Имя
+    .resume-form__input-wrapper.input-wrapper
+      input.resume-form__input.input.input--big.input--white(type="text" name=`${name}Link` id=`${name}Link` required)
+      label.resume-form__label(for=`${name}Link`)
+        | Ссылка на резюме
+    .resume-form__input-wrapper.input-wrapper
+      input.resume-form__input.input.input--big.input--white.js-phone-input(type="tel" name=`${name}Phone` id=`${name}Phone` data-parsley-phone required)
+      label.resume-form__label(for=`${name}Phone`)
+        | Ваш телефон
+    .resume-form__input-wrapper.input-wrapper
+      input.resume-form__input.input.input--big.input--white(type="email" name=`${name}Email` id=`${name}Email` required)
+      label.resume-form__label(for=`${name}Email`)
+        | Email
+    .resume-form__input-wrapper.resume-form__input-wrapper--large.input-wrapper.input-wrapper--textarea
+      textarea.resume-form__textarea.input.input--big.input--white(name=`${name}Comment` id=`${name}Comment` placeholder="Ваш комментарий")
+    .resume-form__input-wrapper.resume-form__input-wrapper--large.js-input-file-container
+      input.resume-form__input.visually-hidden(type="file" name=`${name}File` id=`${name}File` data-placeholder="Прикрепить файл").js-input-file
+      label.resume-form__file-label.file(class=`${fileMod ? fileMod : ''}` for=`${name}File`)
+        +icon-multi("clip-icon")
+        span.js-input-file-desc Прикрепить файл
+    if isBottomWrapped
+      .resume-form__bottom
+        button.resume-form__button.button(class=`${buttonMod ? buttonMod : ''}` type="button")
+          | Отправить
+        +confidence-block(`${name}Confidence`, confidenceMod)
+    else
+      button.resume-form__button.button(class=`${buttonMod ? buttonMod : ''}` type="button")
+        | Отправить
+      +confidence-block(`${name}Confidence`, confidenceMod)

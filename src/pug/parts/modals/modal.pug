@@ -3713,7 +3713,7 @@ each item, index in burgerList
   ]
 
 .modal__container(data-target="share").modal-share
-  .modal__content.js-tabs-container
+  .modal__content
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
       span
@@ -3732,3 +3732,21 @@ each item, index in burgerList
       input.modal-share__link-input.input.input--big.input--blue.js-copy-link-input(type="text" value="https://rdv-it.ru/" name="shareLink" id="shareLink" readonly)
       button.modal-share__link-button.button.button--big.button--bordered.js-copy-link-button
         | Скопировать
+
+.modal__container(data-target="resume").modal-resume
+  .modal__content
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      span
+      span
+    h2.modal-resume__title
+      | Отправить резюме
+    p.modal-resume__text
+      | Мы с вами свяжемся и обсудим все детали
+    +resume-form(
+      'resumeModal',
+      "resume-form--blue",
+      'file--big file--bordered',
+      'button--big button--blue',
+      'confidence-block--blue',
+      true
+    )

@@ -43,4 +43,15 @@
       color: #fff;
     }
   }
+
+  &--bordered {
+    background-color: transparent;
+    border: 1px solid var(--grey-D-10);
+
+    color: var(--grey-D-60);
+
+    svg {
+      color: var(--grey-D-60);
+    }
+  }
 }

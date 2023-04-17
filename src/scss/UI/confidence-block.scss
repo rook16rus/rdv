@@ -13,6 +13,10 @@
       border: none;
     }
 
+    .confidence-block__checkbox-label {
+      color: var(--main-D-30);
+    }
+
     .confidence-block__checkbox-label::before {
       border: 1px solid var(--main-base-0);
     }
@@ -32,6 +36,7 @@
 
     font: var(--content-small);
     letter-spacing: -0.02em;
+    color: #fff;
 
     @include mq('custom', 'min', 1025) {
       &:hover::before {

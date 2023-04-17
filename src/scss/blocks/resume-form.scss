@@ -1,0 +1,113 @@
+.resume-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+
+  @include mq('custom', 'max', 640) {
+    gap: 0.6rem;
+    grid-template-columns: 1fr;
+  }
+
+  &--blue {
+    .resume-form__input, .resume-form__textarea {
+      background-color: var(--grey-base-0);
+    }
+  }
+
+  &__input-wrapper {
+    &--large {
+      grid-column: span 2;
+
+      @include mq('custom', 'max', 640) {
+        grid-column: span 1;
+      }
+    }
+
+    .resume-section__input + .resume-section__label {
+      @include mq('custom', 'max', 640) {
+        left: 1.6rem;
+      }
+    }
+
+    .resume-section__textarea {
+      padding: 1.8rem 1.6rem;
+    }
+  }
+
+  &__input {
+    @include mq('custom', 'max', 640) {
+      height: 4.8rem;
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+      border-radius: 0.8rem;
+    }
+  }
+
+  &__textarea {
+    height: 13rem;
+
+    @include mq('custom', 'max', 768) {
+      height: 8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      border-radius: 0.8rem;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2.4rem;
+    margin-top: 4rem;
+    grid-column: span 2;
+
+    @include mq('custom', 'max', 1024) {
+      gap: 2.4rem;
+      margin-top: 3.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      gap: 1.6rem;
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin-top: 2.4rem;
+      grid-column: span 1;
+    }
+
+    .resume-form__button {
+      margin-top: 0;
+
+      @include mq('custom', 'max', 640) {
+        width: 100%;
+      }
+    }
+
+    .confidence-block {
+      margin-top: 0;
+      margin-left: 0;
+      max-width: 29rem;
+
+      @include mq('custom', 'max', 640) {
+        max-width: none;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 1.6rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 0.6rem;
+    }
+  }
+
+  .confidence-block {
+    color: #fff;
+  }
+}

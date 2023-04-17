@@ -1,4 +1,4 @@
-mixin intro-section(tag, title, text, img, breadcrumbs, isVideo, buttonText, isDoubleButton)
+mixin intro-section(tag, title, text, img, breadcrumbs, isVideo, buttonText, isDoubleButton, buttonPath)
   .intro-section&attributes(attributes)
     .narrow-container
       +breadcrumbs(breadcrumbs)
@@ -11,7 +11,7 @@ mixin intro-section(tag, title, text, img, breadcrumbs, isVideo, buttonText, isD
           .intro-section__text
             p= text
           .intro-section__buttons
-            button.intro-section__button.button.button--big.button--yellow(data-path="event")= buttonText
+            button.intro-section__button.button.button--big.button--yellow(data-path=`${buttonPath}`)= buttonText
             if isDoubleButton
               button.intro-section__button.button.button--big.button--white-trasparent
                 | Второстепенная кнопка

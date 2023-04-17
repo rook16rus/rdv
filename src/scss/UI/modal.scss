@@ -1211,3 +1211,43 @@
     color: var(--grey-D-60);
   }
 }
+
+.modal-resume {
+  &__title {
+    margin-bottom: 0.8rem;
+
+    @extend .title-h3;
+    color: var(--main-base-0);
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+
+    @extend .content-big-text;
+    color: rgba(23, 79, 119, 0.5);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 3.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  .resume-form__button {
+    width: 20rem;
+
+    @include mq('custom', 'max', 640) {
+      height: 4rem;
+    }
+  }
+}
