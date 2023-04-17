@@ -6,23 +6,13 @@
     display: block;
     width: 100%;
     padding-top: 69.76%;
-    margin-bottom: 2.4rem;
 
     border-radius: 1.2rem;
     overflow: hidden;
     cursor: pointer;
 
-    @include mq('custom', 'max', 1024) {
-      margin-bottom: 2rem;
-    }
-
-    @include mq('custom', 'max', 768) {
-      margin-bottom: 1.6rem;
-    }
-
     @include mq('custom', 'max', 640) {
       padding-top: 64.57%;
-      margin-bottom: 1.2rem;
     }
 
     img {
@@ -32,8 +22,23 @@
   }
 
   &__slide-desc {
+    display: block;
+    margin-top: 2.4rem;
+
     @extend .content-small-text;
     color: rgba(13, 54, 83, 0.5);
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 1.2rem;
+    }
   }
 
   .slider-navigation {

@@ -1,21 +1,24 @@
-mixin content-slider(isPagination)
+mixin content-slider(isPagination, isNoneDesc)
   .content-slider.swiper&attributes(attributes)
     .swiper-wrapper
       .content-slider__slide.swiper-slide
         a.content-slider__slide-img(data-fancybox data-src="assets/images/content-slider-1.jpg" href="#")
           +pictureLazy("content-slider-1.jpg", "Контентое фото")
-        .content-slider__slide-desc
-          | Мелкая сноска с описанием фото
+        unless isNoneDesc
+          .content-slider__slide-desc
+            | Мелкая сноска с описанием фото
       .content-slider__slide.swiper-slide
         a.content-slider__slide-img(data-fancybox data-src="assets/images/content-slider-1.jpg" href="#")
           +pictureLazy("content-slider-1.jpg", "Контентое фото")
-        .content-slider__slide-desc
-          | Мелкая сноска с описанием фото
+        unless isNoneDesc
+          .content-slider__slide-desc
+            | Мелкая сноска с описанием фото
       .content-slider__slide.swiper-slide
         a.content-slider__slide-img(data-fancybox data-src="assets/images/content-slider-1.jpg" href="#")
           +pictureLazy("content-slider-1.jpg", "Контентое фото")
-        .content-slider__slide-desc(data-fancybox data-src="assets/images/content-slider-1.jpg")
-          | Мелкая сноска с описанием фото
+        unless isNoneDesc
+          .content-slider__slide-desc
+            | Мелкая сноска с описанием фото
     if isPagination
       .swiper-pagination-bullets.swiper-pagination-bullets--main
     else
