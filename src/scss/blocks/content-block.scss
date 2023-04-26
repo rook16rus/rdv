@@ -81,6 +81,7 @@
 
     img {
       @extend .fully-filled-el;
+      object-fit: cover;
     }
   }
 }

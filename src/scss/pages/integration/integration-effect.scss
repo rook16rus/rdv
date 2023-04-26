@@ -96,6 +96,7 @@
 
     width: 100%;
     @extend .section-inner;
+    padding: 3.2rem;
 
     opacity: 0;
     visibility: hidden;
@@ -110,7 +111,7 @@
     @include mq('custom', 'max', 1024) {
       position: static;
 
-      padding: 3.2rem;
+      padding: 2.8rem;
 
       opacity: 1;
       visibility: visible;
@@ -127,8 +128,12 @@
     }
 
     @include mq('custom', 'max', 768) {
-      padding: 2.4rem 1.2rem;
+      padding: 2.8rem 1.2rem;
       border-radius: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 2.4rem 1.2rem;
     }
   }
 
