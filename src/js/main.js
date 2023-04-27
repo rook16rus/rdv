@@ -59,10 +59,10 @@ documenReady(() => {
   customSelects();
   accordions();
   introSlider();
+  moreButtonRow();
   moreButton();
   infinitySlider();
   header();
-  moreButtonRow();
   tabs();
   catalogModal();
   catalogAdaptive();
