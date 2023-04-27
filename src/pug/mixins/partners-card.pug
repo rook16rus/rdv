@@ -1,0 +1,16 @@
+mixin partners-card(img, title, underline, text, tags)
+  article.partners-card
+    .partners-card__header
+      a.partners-card__logo(href="#")
+        +imgLazy(img, "Логотип компании")
+    h3.partners-card__title
+      span= title
+      .partners-card__title-underline(style=`background-image: ${underline}`)
+    .partners-card__bottom
+      if text
+        p.partners-card__text= text
+      .partners-card__tags.js-more-button-container
+        for tag in tags
+          a.partners-card__tag.button.button--medium.button--bordered.js-more-button-item(href="#")= tag.name
+        button.partners-card__tag.button.button--medium.button--grey.js-more-button(data-count="5")
+          | Еще&nbsp;#[span.js-more-button-surplus 1]

@@ -1,0 +1,37 @@
+mixin order-form(title, text)
+  .order-form&attributes(attributes)
+    .container
+      .order-form__inner.lazyload(data-bg="assets/images/contacts-section-bg.png")
+        .order-form__content
+          h2.order-form__title= title
+          .order-form__text
+            p= text
+          form.order-form__form(action="#")
+            .order-form__input-wrapper.input-wrapper
+              input.order-form__input.input.input--big.input--white(type="text" name="orderRegName" id="orderRegName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
+              label.order-form__label(for="orderRegName")
+                | Имя
+            .order-form__input-wrapper.input-wrapper
+              input.order-form__input.input.input--big.input--white(type="text" name="orderLastname" id="orderLastname" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
+              label.order-form__label(for="orderLastname")
+                | Фамилия
+            .order-form__input-wrapper.input-wrapper
+              input.order-form__input.input.input--big.input--white.js-phone-input(type="tel" name="orderRegPhone" id="orderRegPhone" data-parsley-phone required)
+              label.order-form__label(for="orderRegPhone")
+                | Ваш телефон
+            .order-form__input-wrapper.input-wrapper
+              input.order-form__input.input.input--big.input--white(type="email" name="orderRegEmail" id="orderRegEmail" required)
+              label.order-form__label(for="orderRegEmail")
+                | Email
+            .order-form__input-wrapper.order-form__input-wrapper--large.input-wrapper.input-wrapper--textarea
+              textarea.order-form__textarea.input.input--big.input--white(name="orderRegComment" id="orderRegComment" placeholder="Ваш комментарий")
+            button.order-form__button.button.button--big.button--yellow
+              | Отправить
+            +confidence-block("orderRegConfidence")
+        .order-form__socials
+          a.order-form__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
+            +imgLazy("socials-footer-3.svg")
+          a.order-form__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
+            +imgLazy("socials-footer-6.svg")
+          a.order-form__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
+            +imgLazy("socials-footer-5.svg")

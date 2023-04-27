@@ -1,5 +1,5 @@
 -
-  const data = [
+  const projects = [
     {
       img: "cooperation-1.png",
       title: "Запуск популярного сервиса доставки по всей стране",
@@ -74,15 +74,19 @@
     },
   ]
 
-mixin cards-section(title, visibleCount, mobileVisibleCount)
-  section.cards-section&attributes(attributes)
-    .container
-      .cards-section__inner
-        h2.cards-section__title= title
-        .js-more-button-container
-          ul.cards-section__list
-            for item in data
-              li.cards-section__item.js-more-button-item
-                +partners-card(item.img, item.title, item.underline, item.text, item.tags)
-          button.cards-section__button.button.button--large.button--grey.js-more-button(data-count=visibleCount data-mobile-count=mobileVisibleCount)
-            | Показать еще
+section.projects.page-section.page-section--first
+  .narrow-container
+    +breadcrumbs([
+      ["Главная", "index.html"],
+      ["Проектный опыт", "#"],
+    ])
+    h1.projects__title
+      | Проектный опыт
+  .container
+    .projects__inner.js-more-button-container
+      ul.projects__list
+         for item in projects
+            li.projects__item.js-more-button-item
+              +partners-card(item.img, item.title, item.underline, item.text, item.tags)
+      button.projects__button.button.button--large.button--grey.js-more-button(data-count=6)
+        | Показать еще

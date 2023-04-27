@@ -93,5 +93,5 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter, b
           for item in catalogData
             li.catalog__item.js-more-button-item
               +catalog-card(item.start, item.meta, item.title, item.text, item.markets, item.buttonText, item.record, false, buttonLink)
-        button.catalog__button.button.button--big.button--grey.js-more-button(data-count=6 data-mobile-count=3)
+        button.catalog__button.button.button--large.button--grey.js-more-button(data-count=6 data-mobile-count=3)
           | Показать еще

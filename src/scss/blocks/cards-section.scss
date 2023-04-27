@@ -26,170 +26,10 @@
     }
   }
 
-  &__item {
-    @extend .white-card;
-
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 45rem;
-
-    overflow: hidden;
-
-    transition: border-color 0.3s;
-
-    @include mq('custom', 'min', 1025) {
-      &:hover {
-        border-color: var(--main-base-0);
-      }
-    }
-
-    @include mq('custom', 'max', 1024) {
-      min-height: 41rem;
-    }
-
-    @include mq('custom', 'max', 768) {
-      min-height: auto;
-    }
-  }
-
-  &__item-header {
-    padding-bottom: 3.2rem;
-    margin-bottom: 3.2rem;
-
-    border-bottom: 1px solid var(--grey-L-10);
-
-    @include mq('custom', 'max', 1024) {
-      padding-bottom: 3rem;
-      margin-bottom: 3rem;
-    }
-
-    @include mq('custom', 'max', 768) {
-      padding-bottom: 2.7rem;
-      margin-bottom: 2.7rem;
-    }
-
-    @include mq('custom', 'max', 640) {
-      padding-bottom: 2.4rem;
-      margin-bottom: 2.4rem;
-    }
-  }
-
-  &__item-logo {
-    display: block;
-    height: 4rem;
-
-    @include mq('custom', 'max', 640) {
-      height: 3.2rem;
-    }
-
-    &::before {
-      content: '';
-
-      @extend .fully-filled-el;
-    }
-
-    img {
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-
-  &__item-title {
-    margin-bottom: 3rem;
-
-    font: var(--title-h5);
-    color: var(--main-base-0);
-
-    @include mq('custom', 'max', 640) {
-      margin-bottom: 2rem;
-    }
-  }
-
-  &__item-title-underline {
-    width: 12rem;
-    height: 0.8rem;
-    margin-top: 2.4rem;
-
-    border-radius: 99.9rem;
-    background-repeat: no-repeat;
-    overflow: hidden;
-
-    @include mq('custom', 'max', 1024) {
-      width: 10rem;
-    }
-
-    @include mq('custom', 'max', 768) {
-      width: 8rem;
-    }
-
-    @include mq('custom', 'max', 640) {
-      width: 6rem;
-      height: 0.4rem;
-      margin-top: 2rem;
-    }
-  }
-
-  &__item-bottom {
-    margin-top: auto;
-  }
-
-  &__item-text {
-    margin-bottom: 3.2rem;
-
-    font: var(--content-medium);
-    color: var(--main-base-0);
-
-    @include mq('custom', 'max', 1024) {
-      margin-bottom: 2.8rem;
-    }
-
-    @include mq('custom', 'max', 768) {
-      margin-bottom: 2.4rem;
-    }
-
-    @include mq('custom', 'max', 640) {
-      margin-bottom: 2rem;
-    }
-  }
-
-  &__item-tags {
-    position: relative;
-    z-index: 1;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-right: -0.6rem;
-    margin-bottom: -0.6rem;
-
-    @include mq('custom', 'max', 640) {
-      margin-right: -0.2rem;
-      margin-bottom: -0.2rem;
-    }
-  }
-
-  &__item-tag {
-    margin-right: 0.6rem;
-    margin-bottom: 0.6rem;
-    padding: 0 1.6rem;
-
-    white-space: nowrap;
-
-    @include mq('custom', 'max', 640) {
-      margin-right: 0.2rem;
-      margin-bottom: 0.2rem;
-      padding: 0 1.2rem;
-    }
-  }
-
   &__button {
     width: 100%;
-    height: 8rem;
     margin-top: 5.6rem;
 
-    border-radius: 1.6rem;
     background-color: var(--grey-D-10);
 
     @include mq('custom', 'min', 1025) {
@@ -203,20 +43,15 @@
     }
 
     @include mq('custom', 'max', 1024) {
-      height: 6.4rem;
       margin-top: 4rem;
     }
 
     @include mq('custom', 'max', 768) {
-      height: 6rem;
       margin-top: 2.6rem;
     }
 
     @include mq('custom', 'max', 640) {
-      height: 5.6rem;
       margin-top: 1.2rem;
-
-      border-radius: 1.2rem;
     }
   }
 }

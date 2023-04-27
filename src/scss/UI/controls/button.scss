@@ -17,6 +17,24 @@
     margin-bottom: 0.4rem;
   }
 
+  &--large {
+    height: 8rem;
+    border-radius: 1.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      height: 7.2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      height: 6.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 5.6rem;
+      border-radius: 1.2rem;
+    }
+  }
+
   &--big {
     height: 5.6rem;
     border-radius: 1.2rem;

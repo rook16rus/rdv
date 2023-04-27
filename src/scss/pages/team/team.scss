@@ -291,21 +291,17 @@
 
   &__button {
     width: 100%;
-    height: 8rem;
     margin-top: 5.6rem;
 
     @include mq('custom', 'max', 1024) {
-      height: 7.2rem;
       margin-top: 4rem;
     }
 
     @include mq('custom', 'max', 768) {
-      height: 6.4rem;
       margin-top: 2.6rem;
     }
 
     @include mq('custom', 'max', 640) {
-      height: 5.6rem;
       margin-top: 1.2rem;
     }
   }
