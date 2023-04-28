@@ -1,0 +1,77 @@
+-
+  const searchList = [
+    {
+      title: "Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.",
+      text: "Далеко-далеко за словесными горами в стране гласных и согласных живут <b>рыбные тексты</b>. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана ...",
+      tags: [
+        "Вебинар",
+        "мероприятия",
+      ]
+    },
+    {
+      title: "Вдали от всех живут они в буквенных домах",
+      text: "Вдали от всех живут <b>рыбные тексты</b> в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами ... ",
+      tags: [
+        "Услуга",
+      ]
+    },
+    {
+      title: "Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.",
+      text: "За словесными горами в стране гласных и согласных живут <b>рыбные тексты</b>. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана ...",
+      tags: [
+        "Вебинар",
+        "мероприятия",
+        "услуга",
+      ]
+    },
+    {
+      title: "Эта парадигматическая страна",
+      text: "Вдали от всех живут <b>рыбные тексты</b> в буквенных домах на берегу Семантика ... ",
+      tags: [
+        "Услуга",
+      ]
+    },
+    {
+      title: "Одна маленькая строчка",
+      text: "Далеко-далеко за словесными горами в стране гласных и согласных живут <b>рыбные тексты</b>. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана ...",
+      tags: [
+        "мероприятия",
+      ]
+    },
+  ]
+
+section.search.page-section--large-margin.page-section--first
+  .narrow-container
+    +breadcrumbs([
+      ["Главная", "index.html"],
+      ["Результаты поиска", "#"]
+    ])
+    h1.search__title
+      | Результаты поиска
+  .container
+    form.search__form(action="#")
+      .search__input-wrapper.input-wrapper
+        input.search__input.input.input--big.input--white(type="text" name="search" id="search" placeholder="Введите запрос")
+        +icon-multi('search-icon')
+  .narrow-container
+    span.search__desc
+      | Найдено 40 публикаций
+    ul.search__list
+      for item in searchList
+        li.search__item
+          .search__item-icon
+            +icon-multi("link-icon")
+          .search__item-content
+            h3.search__item-title
+              a(href="#")= item.title
+            p.search__item-text!= item.text
+            ul.search__item-tags
+              for it in item.tags
+                li.search__item-tag.button.button--small.button--border-grey= it
+    .search__pagination
+      a.search__pagination-number.button.button--medium.button--grey(href="#") 1
+      a.search__pagination-number.button.button--medium.button--grey(href="#") 2
+      a.search__pagination-number.button.button--medium.button--grey(href="#") 3
+      a.search__pagination-number.button.button--medium.button--grey(href="#") 4
+      span.search__pagination-number.hide.button.button--medium() ...
+      a.search__pagination-number.hide.button.button--medium.button--grey(href="#") 10

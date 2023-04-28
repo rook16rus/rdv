@@ -1,0 +1,109 @@
+.search {
+  .breadcrumbs {
+    margin-bottom: 3.2rem;
+  }
+
+  &__title {
+    @extend .section-title;
+  }
+
+  &__form {
+    @extend .section-inner;
+
+    margin-bottom: 5.6rem;
+  }
+
+  &__input-wrapper {
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 2.4rem;
+
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
+  &__input {
+    padding: 0 6rem 0 2.4rem;
+  }
+
+  &__desc {
+    display: inline-block;
+    margin-bottom: 5.6rem;
+
+    @extend .content-medium-text;
+    color: var(--main-base-0);
+  }
+
+  &__list {
+    margin-bottom: 5.6rem;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: flex-start;
+    gap: 2.4rem;
+    padding: 3.2rem 0;
+
+    border-bottom: 1px solid var(--grey-D-10);
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__item-icon {
+    margin-top: 0.6rem;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 2rem;
+
+    @extend .title-h5;
+    color: var(--main-base-0);
+  }
+
+  &__item-text {
+    max-width: 90rem;
+    margin-bottom: 3.2rem;
+
+    @extend .content-regular-text;
+    color: var(--grey-D-60);
+
+    @include maxSizeText(2);
+  }
+
+  &__item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.4rem;
+    margin-bottom: -0.4rem;
+  }
+
+  &__item-tag {
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.4rem;
+    margin-bottom: -0.4rem;
+  }
+
+  &__pagination-number {
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+}
