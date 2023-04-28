@@ -1,0 +1,15 @@
+mixin vacancy-card(tag, title)
+  article.vacancy-card
+    ul.vacancy-card__tags
+      li.vacancy-card__tag.button.button--small.button--border-grey= tag
+    h3.vacancy-card__title= title
+    ul.vacancy-card__conditions
+      li.vacancy-card__condition Занятость: полная, гибкий график
+      li.vacancy-card__condition Опыт: от 3 лет
+    p.vacancy-card__text
+      | Компания RDV приглашает кандидатов на позицию Руководителя проектов 1С ERP (оперативный учет, производство) для участия в комплексной автоматизации предприятий заказчиков.
+    .vacancy-card__buttons
+      button.vacancy-card__button.button.button--big.button--yellow(data-path="resume")
+        | Откликнуться
+      a.vacancy-card__button.button.button--big.button--bordered(href="#")
+        | Подробнее

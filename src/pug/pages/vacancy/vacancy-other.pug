@@ -1,0 +1,39 @@
+-
+  const otherVacancies = [
+    {
+      tag: "Руководитель проектов",
+      title: "Руководитель проектов 1С ERP"
+    },
+    {
+      tag: "Системный консультант",
+      title: "Консультант 1С (системный аналитик)"
+    },
+    {
+      tag: "Системный консультант",
+      title: "Консультант 1С (системный аналитик)"
+    },
+    {
+      tag: "Руководитель проектов",
+      title: "Руководитель проектов 1С ERP"
+    },
+    {
+      tag: "Руководитель проектов",
+      title: "Руководитель проектов 1С ERP"
+    },
+    {
+      tag: "Системный консультант",
+      title: "Консультант 1С (системный аналитик)"
+    },
+  ]
+
+section.vacancy-other.page-section--large-margin
+  .container
+    .vacancy-other__inner
+      h2.vacancy-other__title
+        | Похожие вакансии
+      .vacancy-other__slider.swiper.js-init-slider(data-slides="2" data-space="24")
+        .swiper-wrapper
+          for item in otherVacancies
+            .vacancy-other__slide.swiper-slide
+              +vacancy-card(item.tag, item.title)
+        +slider-navigation("slider-navigation--medium slider-navigation--grey-bordered")

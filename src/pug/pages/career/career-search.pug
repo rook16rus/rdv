@@ -65,19 +65,7 @@ section.career-search.page-section--large-margin
       ul.career-search__list
         for item in careerList
           li.career-search__item.js-more-button-item
-            ul.career-search__item-tags
-              li.career-search__item-tag.button.button--small.button--border-grey= item.tag
-            h3.career-search__item-title= item.title
-            ul.career-search__item-conditions
-              li.career-search__item-condition Занятость: полная, гибкий график
-              li.career-search__item-condition Опыт: от 3 лет
-            p.career-search__item-text
-              | Компания RDV приглашает кандидатов на позицию Руководителя проектов 1С ERP (оперативный учет, производство) для участия в комплексной автоматизации предприятий заказчиков.
-            .career-search__item-buttons
-              button.career-search__item-button.button.button--big.button--yellow(data-path="resume")
-                | Откликнуться
-              a.career-search__item-button.button.button--big.button--bordered(href="#")
-                | Подробнее
+            +vacancy-card(item.tag, item.title)
       button.career-search__button.button.button--large.button--grey.js-more-button(data-count="4" data-mobile-count="4")
         | Показать еще
 

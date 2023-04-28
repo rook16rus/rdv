@@ -1,0 +1,21 @@
+.vacancy-other {
+  &__inner {
+    @extend .section-inner;
+  }
+
+  &__title {
+    @extend .section-title;
+    @extend .title-h2;
+  }
+
+  .slider-navigation {
+    position: static;
+
+    display: inline-grid;
+    margin-top: 2.4rem;
+  }
+
+  .vacancy-card {
+    cursor: default;
+  }
+}
