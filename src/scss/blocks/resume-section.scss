@@ -59,6 +59,23 @@
     }
   }
 
+  &__input {
+    @include mq('custom', 'max', 640) {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
+  }
+
+  .resume-form .resume-form__label {
+    @include mq('custom', 'max', 640) {
+      left: 1.2rem;
+    }
+  }
+
+  .resume-form__textarea {
+    padding: 1.8rem 1.2rem;
+  }
+
   &__socials {
     display: flex;
     justify-content: flex-end;
