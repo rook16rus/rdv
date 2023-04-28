@@ -1,6 +1,51 @@
 main.page-main.main
   section.news-single
-    include post-header
+    +post-header(
+      [
+        ["Главная", "./index.html"],
+        ["Мероприятия", "./events.html"],
+        ["RDV на New Retail Forum 2021: обсуждаем новые технологии и полезные онлайн-сервисы для ритейла", "#"]
+      ],
+      "post-header-1.jpg",
+      {
+        isIcon: true,
+        text: "30 марта 2023, 08:00"
+      },
+      [
+        {
+          icon: "meta-icon-3-white.svg",
+          desc: "7500",
+        },
+        {
+          icon: "meta-icon-2-white.svg",
+          desc: "1 Час",
+        },
+        {
+          icon: "meta-icon-4-white.svg",
+          desc: "Вебинар",
+        },
+        {
+          icon: "meta-icon-5-white.svg",
+          desc: "Москва, Красносельская нижн. ул., д. 35 стр. 64",
+        },
+      ],
+      "RDV на New Retail Forum 2022: обсуждаем новые технологии и полезные онлайн-сервисы для ритейла",
+      false,
+      {
+        path: "event",
+        text: "Зарегистрироваться"
+      },
+      [
+        "Технологии",
+        "1С:УПП",
+        "Ритейл",
+        "Перевод клиентов",
+        "Linux",
+        "1С:ERP",
+        "Технологии",
+        "PostgreSQL",
+      ]
+    )
     include post-body
     +event-form().page-section
     include other-events

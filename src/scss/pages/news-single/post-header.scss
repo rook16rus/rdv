@@ -24,11 +24,17 @@
   &__inner {
     @extend .section-inner;
 
+    position: relative;
+    z-index: 1;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     min-height: 56rem;
     margin-bottom: 5.6rem ;
+
+    background: url("../images/post-header-bg.png") no-repeat center;
+    background-size: cover;
 
     @include mq('custom', 'max', 1024) {
       min-height: 58rem;
@@ -47,6 +53,12 @@
       margin-bottom: 4rem;
       padding: 1.2rem;
     }
+  }
+
+  &__img {
+    @extend .fully-filled-el;
+    object-fit: cover;
+    z-index: -1;
   }
 
   &__meta {
@@ -169,6 +181,13 @@
     @include mq('custom', 'max', 640) {
       margin-bottom: 3.2rem;
     }
+  }
+
+  &__text {
+    max-width: 82rem;
+
+    @extend .title-h5;
+    color: #fff;
   }
 
   &__button {
