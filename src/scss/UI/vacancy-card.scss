@@ -1,5 +1,8 @@
 .vacancy-card {
   @extend .white-card;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &__tags {
     display: flex;

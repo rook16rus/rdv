@@ -39,6 +39,7 @@ import mapSlider from "./helpers/mapSlider";
 import contactsMap from "./helpers/contactsMap";
 import integrationEffectSlider from "./helpers/integrationEffectSlider";
 import sticky from "./helpers/sticky";
+import vacancyOtherSlider from "./helpers/vacancyOtherSlider";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -78,6 +79,7 @@ documenReady(() => {
   contactsMap();
   integrationEffectSlider();
   sticky();
+  vacancyOtherSlider();
 });
 
 document.fonts.ready.then((res) => {

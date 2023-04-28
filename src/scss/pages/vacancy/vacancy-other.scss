@@ -8,11 +8,29 @@
     @extend .title-h2;
   }
 
+  &__slide {
+    height: auto;
+  }
+
   .slider-navigation {
     position: static;
 
     display: inline-grid;
     margin-top: 2.4rem;
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullets {
+    display: none;
+
+    @include mq('custom', 'max', 768) {
+      display: flex;
+      justify-content: center;
+      margin-top: 2.4rem;
+    }
   }
 
   .vacancy-card {
