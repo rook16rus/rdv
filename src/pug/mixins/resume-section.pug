@@ -1,0 +1,18 @@
+mixin resume-section()
+  section.resume-section&attributes(attributes)
+    .container
+      .resume-section__inner.lazyload(data-bg="assets/images/contacts-section-bg.png")
+        .resume-section__content
+          h2.resume-section__title
+            | Отправьте резюме
+          .resume-section__text
+            p
+              | Мы с вами свяжемся и обсудим все детали
+          +resume-form('resume', false, 'file--big file--white-transparent', 'button--big button--yellow')
+        .resume-section__socials
+          a.resume-section__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
+            +imgLazy("socials-footer-3.svg")
+          a.resume-section__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
+            +imgLazy("socials-footer-6.svg")
+          a.resume-section__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
+            +imgLazy("socials-footer-5.svg")
