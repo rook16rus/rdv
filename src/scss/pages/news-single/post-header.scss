@@ -185,9 +185,14 @@
 
   &__text {
     max-width: 82rem;
+    margin-bottom: 3rem;
 
     @extend .title-h5;
     color: #fff;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__button {
