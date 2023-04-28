@@ -1,6 +1,10 @@
 .projects {
   .breadcrumbs {
     margin-bottom: 3.2rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__title {
@@ -15,6 +19,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.4rem;
+    }
+
   }
 
   &__button {
@@ -22,5 +40,17 @@
     margin-top: 5.6rem;
 
     background-color: var(--grey-D-10);
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 1.2rem;
+    }
   }
 }
