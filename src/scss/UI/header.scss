@@ -161,7 +161,7 @@
     color: var(--main-base-0);
   }
 
-  &__search-button {
+  &__search {
     margin-right: 0.8rem;
 
     @include mq('custom', 'max', 1024) {
