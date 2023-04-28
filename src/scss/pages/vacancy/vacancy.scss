@@ -1,5 +1,7 @@
 .vacancy {
-  .post-header__title {
-    max-width: 70rem;
+  .post-header {
+    &__title {
+      max-width: 70rem;
+    }
   }
 }

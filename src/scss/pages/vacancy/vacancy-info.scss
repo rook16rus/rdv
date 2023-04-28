@@ -1,0 +1,50 @@
+.vacancy-info {
+  &__block {
+    padding: 5.6rem 0;
+
+    border-bottom: 1px solid var(--grey-D-10);
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &__block-title {
+    margin-bottom: 4rem;
+
+    @extend .title-h2;
+    color: var(--main-base-0);
+  }
+
+  &__block-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  &__block-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2.2rem;
+
+    @extend .content-medium-text;
+    color: var(--main-D-10);
+
+    &::before {
+      content: '';
+
+      width: 0.4rem;
+      height: 0.4rem;
+      margin-left: 1rem;
+      margin-top: 0.8rem;
+
+      border-radius: 50%;
+      background-color: rgba(13, 54, 83, 0.5);
+    }
+  }
+}
