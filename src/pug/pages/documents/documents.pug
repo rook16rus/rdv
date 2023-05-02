@@ -1,0 +1,43 @@
+-
+  const documents = [
+    {
+      title: "Политика конфиденциальности",
+      text: "Политика конфиденциальности и обработки персональных данных"
+    },
+    {
+      title: "Оферта",
+      text: "Оферта на предоставление права использования программных продуктов, их адаптацию, модификацию, внедрение и сопровождение"
+    },
+    {
+      title: "Публичная оферта",
+      text: "Публичная оферта о заключении договора возмездного оказания услуг"
+    },
+    {
+      title: "Публичная оферта",
+      text: "Публичная оферта на предоставление права использования программных дополнений"
+    },
+    {
+      title: "Оферта",
+      text: "Оферта на заключение партнерского соглашения"
+    },
+  ]
+
+section.documents.page-section--large-margin.page-section--first
+  .narrow-container
+    +breadcrumbs(
+      [
+        ["Главная", "index.html"],
+        ["Правовые документы", "#"],
+      ]
+    )
+    h1.documents__title
+      | Правовые документы
+  .container
+    ul.documents__list
+      for item in documents
+        li.documents__item
+          a.documents__item-link(href="#")
+            +icon-multi('document-icon')
+          h3.documents__item-title= item.title
+          p.documents__item-text= item.text
+
