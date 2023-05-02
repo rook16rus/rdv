@@ -15,6 +15,8 @@
 11. [Проекты](https://rook16rus.github.io/rdv/projects.html)
 12. [Детальная вакансии](https://rook16rus.github.io/rdv/vacancy.html)
 13. [Страница поиска](https://rook16rus.github.io/rdv/search.html)
+14. [Документы](https://rook16rus.github.io/rdv/documents.html)
+15. [Детальная документа](https://rook16rus.github.io/rdv/documents-single.html)
 
 
 ## Документация
