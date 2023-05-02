@@ -506,6 +506,143 @@ a:focus {
   }
 }
 
+.documents-text-container {
+  width: 100%;
+  max-width: calc(var(--max-narrow-container-width) + 2 * var(--content-narrow-padding));
+  margin: 0 auto;
+  padding: 0 var(--content-narrow-padding);
+  @supports (width: max(20vw, 100px)) {
+    padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-narrow-padding));
+    padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-narrow-padding));
+  }
+
+  & > p {
+    margin: 2rem 0;
+
+    @extend .content-regular-text;
+    color: var(--main-D-10);
+
+    @include mq('custom', 'max', 640) {
+      margin: 1.8rem 0;
+    }
+  }
+
+  & > h1,
+  & > h2 {
+    margin: 5.6rem 0 3.2rem;
+    color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin: 5rem 0 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin: 4.5rem 0 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin: 4rem 0 2rem;
+    }
+  }
+
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6, {
+    margin: 3.2rem 0;
+    color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin: 2.8rem 0;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin: 2.4rem 0;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin: 2rem 0;
+    }
+  }
+
+  & > h1 {
+    @extend .title-h3;
+  }
+
+  & > h2 {
+    @extend .title-h4;
+  }
+
+  & > h3 {
+    @extend .title-h6;
+
+    @include mq('custom', 'max', 1024) {
+      font: var(--title-h1);
+    }
+  }
+
+  & > h4 {
+    @extend .title-h6;
+  }
+
+  & > h5 {
+    @extend .title-h7;
+  }
+
+  & > ol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 3.2rem 0 5.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin: 2.8rem 0 5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin: 2.4rem 0 4.5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin: 2rem 0 4rem;
+    }
+
+    li {
+      @extend .content-regular-text;
+      color: var(--main-D-10);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .table {
+    margin: 3.2rem 0;
+    color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin: 2.8rem 0;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin: 2.4rem 0;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin: 2rem 0;
+    }
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .page-section {
   padding-bottom: 2.4rem;
 
