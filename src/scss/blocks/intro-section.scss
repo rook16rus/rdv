@@ -1,5 +1,10 @@
 .intro-section {
   &.career-intro {
+    .intro-section__inner {
+      background: url("../images/career-intro-bg.png") no-repeat center;
+      background-size: cover;
+    }
+
     .intro-section__text {
       max-width: 44rem;
     }

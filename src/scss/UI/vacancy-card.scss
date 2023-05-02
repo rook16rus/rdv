@@ -4,6 +4,10 @@
   flex-direction: column;
   height: 100%;
 
+  @include mq('custom', 'max', 640) {
+    border-radius: 1.2rem;
+  }
+
   &__tags {
     display: flex;
     flex-wrap: wrap;
