@@ -2,15 +2,6 @@ export default function header() {
   const header = document.querySelector('.header');
   const pageWrapper = document.querySelector('.page-wrapper');
 
-  /*const burger = document.querySelector('.header__burger');
-  const mobileNavigation = document.querySelector('.header__mobile')
-
-  burger.addEventListener('click', function (e) {
-    e.currentTarget.classList.toggle('active');
-    mobileNavigation.classList.toggle('active');
-    header.classList.toggle('active');
-  })*/
-
   pageWrapper.style.setProperty('--header-height', header.clientHeight + 'px')
 
   window.addEventListener('scroll', () => {
@@ -20,4 +11,12 @@ export default function header() {
       header.classList.remove('header--fixed');
     }
   });
+
+  const search = header.querySelector('.header__search');
+  const searchButton = header.querySelector('.header__search-button');
+
+  searchButton.addEventListener('click', () => search.classList.toggle('active'))
+  document.addEventListener('mousedown', e => {
+    if (!e.target.closest('.header__search')) search.classList.remove('active');
+  })
 }

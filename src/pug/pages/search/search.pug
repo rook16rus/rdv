@@ -51,9 +51,9 @@ section.search.page-section--large-margin.page-section--first
   .container
     form.search__form(action="#")
       .search__input-wrapper.input-wrapper
-        input.search__input.input.input--big.input--white(type="search" name="search" id="search" placeholder="Введите запрос")
+        input.search__input.input.input--big.input--white.js-reset-input(type="search" name="search" id="search" placeholder="Введите запрос")
         .search__buttons
-          button.search__button(type="reset")
+          button.search__button.js-reset-button(type="reset")
             +icon-multi('cross-icon')
           +icon-multi('search-icon')
   .narrow-container

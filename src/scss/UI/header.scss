@@ -72,10 +72,6 @@
     height: 3.2rem;
     margin-right: 2.4rem;
 
-    @include mq('custom', 'max', 1024) {
-
-    }
-
     @include mq('custom', 'max', 640) {
       width: 6.6rem;
       height: 2rem;
@@ -162,11 +158,65 @@
   }
 
   &__search {
+    position: relative;
+
     margin-right: 0.8rem;
 
     @include mq('custom', 'max', 1024) {
       margin-left: 2rem;
     }
+
+    &.active {
+      .header__search-form {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__search-form {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+
+    width: 30.9rem;
+
+    transition: 0.3s;
+
+    @include mq('custom', 'max', 768) {
+      width: 25rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 22rem;
+    }
+  }
+
+  &__search-input {
+    padding-left: 4.2rem;
+  }
+
+  &__search-icon, &__search-reset {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
+  &__search-icon {
+    left: 1.2rem;
+  }
+
+  &__search-reset {
+    right: 1.2rem;
   }
 
   &__burger-button {

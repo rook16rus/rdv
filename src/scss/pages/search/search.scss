@@ -47,17 +47,21 @@
     transform: translateY(-50%);
     right: 2.4rem;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.8rem;
-
-    @include mq('custom', 'max', 640) {
-      gap: 1.4rem;
-    }
+    display: flex;
+    justify-content: flex-end;
 
     svg {
       width: 1.4rem;
       height: 1.4rem;
+    }
+
+    & > svg {
+      margin-left: 1.8rem;
+
+      @include mq('custom', 'max', 640) {
+        margin-left: 1.4rem;
+      }
+
     }
   }
 

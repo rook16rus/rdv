@@ -42,6 +42,10 @@
   &--white {
     background-color: #fff;
   }
+
+  &--bordered {
+    border: 1px solid var(--main-base-0);
+  }
 }
 
 .input-wrapper {

@@ -21,7 +21,7 @@ export default function moreButtonRow() {
       count++;
     }
 
-    button.classList.remove('visually-hidden');
+    if (button) button.classList.remove('visually-hidden');
 
     if (surplus.length === 0) {
       if (!button) return

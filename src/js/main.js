@@ -40,6 +40,7 @@ import contactsMap from "./helpers/contactsMap";
 import integrationEffectSlider from "./helpers/integrationEffectSlider";
 import sticky from "./helpers/sticky";
 import vacancyOtherSlider from "./helpers/vacancyOtherSlider";
+import resetButtons from "./helpers/resetButtons";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -80,6 +81,7 @@ documenReady(() => {
   integrationEffectSlider();
   sticky();
   vacancyOtherSlider();
+  resetButtons();
 });
 
 document.fonts.ready.then((res) => {

@@ -869,8 +869,12 @@ header.header.js-tabs-container.fix-block(data-header-tab='true')
       .header__search
         button.header__search-button.button.button--icon.button--grey
           +icon-multi('search-icon')
-        //form.header__search-form(action="#")
-        //  input.header__search-input
+        form.header__search-form(action="#")
+          input.header__search-input.input.input--small.input--bordered.js-reset-input(type="search" name="headerSearch" placeholder='Введите запрос')
+          .header__search-icon
+            +icon-multi("search-icon")
+          button.header__search-reset.js-reset-button(type="reset")
+            +icon-multi("cross-icon")
       button.header__button.button.button--medium.button--blue
         | Оставить заявку
       button.header__burger-button.button.button--icon.button--bordered(data-path='burger')
