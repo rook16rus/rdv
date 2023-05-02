@@ -2,14 +2,30 @@
   border-top: 1px solid var(--grey-D-30);
   border-left: 1px solid var(--grey-D-30);
 
+  overflow-x: auto;
+
+  &__wrapper {
+    min-width: 90rem;
+  }
+
   &__row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
     font: 700 1.4rem/120% "Geometria";
+    word-break: break-word;
+    letter-spacing: -0.02em;
+
+    @include mq('custom', 'max', 640) {
+      font-size: 1.2rem;
+    }
 
     &--customer {
       grid-template-columns: repeat(4, auto) repeat(4, 1fr);
+
+      &:not(:first-child) {
+        font-weight: 400;
+      }
 
       .table__cell:nth-child(8n + 1) {
         width: 5rem;
@@ -25,6 +41,18 @@
 
     &--big {
       width: 22rem;
+
+      @include mq('custom', 'max', 1024) {
+        width: 15rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        width: 10rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        width: 8rem;
+      }
     }
   }
 }

@@ -1,10 +1,18 @@
 .documents-single {
   .breadcrumbs {
     margin-bottom: 3.2rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__header {
     margin-bottom: 4.2rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__title {
@@ -18,10 +26,27 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
+    @include mq('custom', 'max', 1024) {
+
+    }
+
+    @include mq('custom', 'max', 768) {
+
+    }
+
+    @include mq('custom', 'max', 640) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   &__header-address {
     @extend .content-huge-text;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
   }
 }
