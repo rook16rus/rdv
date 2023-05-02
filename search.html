@@ -69,11 +69,26 @@
                 <button class="header__bottom-menu-link link js-tab" data-href="headerTab3">RDV Маркет</button>
               </li>
             </ul>
-            <button class="header__search-button button button--icon button--grey">
-              <svg class="icon icon-search-icon">
-                <use xlink:href="assets/images/sprites/sprite-multi.svg#search-icon"></use>
-              </svg>
-            </button>
+            <div class="header__search">
+              <button class="header__search-button button button--icon button--grey">
+                <svg class="icon icon-search-icon">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#search-icon"></use>
+                </svg>
+              </button>
+              <form class="header__search-form" action="#">
+                <input class="header__search-input input input--small input--bordered js-reset-input" type="search" name="headerSearch" placeholder="Введите запрос">
+                <div class="header__search-icon">
+                  <svg class="icon icon-search-icon">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#search-icon"></use>
+                  </svg>
+                </div>
+                <button class="header__search-reset js-reset-button" type="reset">
+                  <svg class="icon icon-cross-icon">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#cross-icon"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
             <button class="header__button button button--medium button--blue">Оставить заявку</button>
             <button class="header__burger-button button button--icon button--bordered" data-path="burger">
               <svg class="icon icon-burger-icon">
@@ -3480,9 +3495,9 @@
           <div class="container">
             <form class="search__form" action="#">
               <div class="search__input-wrapper input-wrapper">
-                <input class="search__input input input--big input--white" type="search" name="search" id="search" placeholder="Введите запрос">
+                <input class="search__input input input--big input--white js-reset-input" type="search" name="search" id="search" placeholder="Введите запрос">
                 <div class="search__buttons">
-                  <button class="search__button" type="reset">
+                  <button class="search__button js-reset-button" type="reset">
                     <svg class="icon icon-cross-icon">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#cross-icon"></use>
                     </svg>
