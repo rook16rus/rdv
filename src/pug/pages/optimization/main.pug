@@ -8,8 +8,24 @@ main.page-main.main
     "Как влияют на бизнес проблемы в работе 1С",
     false,
     true
-  ).numered-features-section--reverse.page-section--large-margin
+  ).numered-features-section--reverse.page-section--large-margin.numered-features-section--tablet-none-gap
   +order-banner(
     "Закажите экспресс-обследование вашей системы 1С",
     "Чтобы оценить объем работ по оптимизации производительности системы, выявить наличие «узких» мест, нужно провести глубокий анализ системы. От результата аудита и приоритетности решения проблем будут зависеть как сроки, так и стоимость работ."
   ).page-section--large-margin
+
+//-
+
+          @include mq('custom', 'max', 1024) {
+
+          }
+
+          @include mq('custom', 'max', 768) {
+
+          }
+
+          @include mq('custom', 'max', 640) {
+
+          }
+
+//

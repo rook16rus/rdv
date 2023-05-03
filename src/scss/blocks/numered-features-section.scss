@@ -5,6 +5,14 @@
     }
   }
 
+  &--tablet-none-gag {
+    .numered-features-section__inner {
+      @include mq('custom', 'max', 1024) {
+        gap: 0;
+      }
+    }
+  }
+
   &__title {
     max-width: 95rem;
 
@@ -21,14 +29,17 @@
     @include mq('custom', 'max', 1024) {
       grid-template-columns: 1fr;
       gap: 4rem;
+      padding: 3.6rem;
     }
 
     @include mq('custom', 'max', 768) {
       gap: 2.6rem;
+      padding: 2.4rem;
     }
 
     @include mq('custom', 'max', 640) {
       gap: 1.2rem;
+      padding: 1.2rem;
     }
   }
 
@@ -283,6 +294,10 @@
 
   &__content {
     width: 64.8rem;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__content-img {
@@ -297,8 +312,6 @@
 
     &::before {
       content: '';
-
-
     }
 
     img {

@@ -20,9 +20,18 @@
 
     @extend .content-medium-text;
     color: var(--white-50);
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+      font: var(--content-big);
+    }
   }
 
   &__button {
     width: 20rem;
+
+    @include mq('custom', 'max', 640) {
+      width: 100%;
+    }
   }
 }
