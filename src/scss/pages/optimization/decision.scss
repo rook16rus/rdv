@@ -9,6 +9,18 @@
 
     @extend .title-h2;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__text {
@@ -18,6 +30,18 @@
     margin-bottom: 5.6rem;
 
     @extend .content-big-text;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__list {
@@ -26,6 +50,20 @@
     gap: 1.6rem;
 
     counter-reset: order;
+
+    @include mq('custom', 'max', 1024) {
+
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
   }
 
   &__item {
@@ -34,6 +72,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include mq('custom', 'max', 640) {
+      padding: 2rem;
+    }
 
     &:nth-child(3n + 1)::before {
       background: var(--gradient-01);
@@ -62,6 +104,24 @@
 
       @extend .title-h4;
       color: #fff;
+
+      @include mq('custom', 'max', 1024) {
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-bottom: 2.8rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        width: 5.6rem;
+        height: 5.6rem;
+        margin-bottom: 2.4rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        width: 4.8rem;
+        height: 4.8rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -80,6 +140,19 @@
 
     @include maxSizeText(5);
 
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+      -webkit-line-clamp: 3;
+    }
+
     &.active {
       display: block;
     }
@@ -92,6 +165,10 @@
   &__item-button {
     padding: 0;
     margin-top: auto;
+
+    @include mq('custom', 'max', 640) {
+      font-size: 1rem;
+    }
 
     &.active {
       svg {
