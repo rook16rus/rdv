@@ -3495,8 +3495,10 @@
             </div>
             <h1 class="team__title">Наша команда</h1>
             <ul class="team__large-list">
-              <li class="team__description">
-                <p>Наша компания представляет собой сплоченную и позитивную команду профессиональных специалистов. Наша задача состоит в том, чтобы дать возможность каждой организации достичь большего, ведь главное для нас - это наши клиенты.</p>
+              <li class="team__description"><span class="team__description-number">100+</span><span class="team__description-people">человек в команде</span>
+                <div class="team__description-text">
+                  <p>Наша компания представляет собой сплоченную и позитивную команду профессиональных специалистов. Наша задача состоит в том, чтобы дать возможность каждой организации достичь большего, ведь главное для нас - это наши клиенты.</p>
+                </div>
               </li>
               <li class="team__large-item">
                 <div class="team__large-item-img">
@@ -3541,55 +3543,307 @@
                 <h3 class="team__large-item-title">Павел Дробленко</h3><span class="team__large-item-position">Технический директор</span>
               </li>
             </ul>
-            <ul class="team__list">
-              <li class="team__item">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/team-page-1.webp" alt="Фото сотрудника" srcset="#">
-                  <img class="lazyload" data-src="assets/images/team-page-1.jpg" src="#" alt="Фото сотрудника">
-                </picture>
-              </li>
-              <li class="team__item">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/team-page-2.webp" alt="Фото сотрудника" srcset="#">
-                  <img class="lazyload" data-src="assets/images/team-page-2.jpg" src="#" alt="Фото сотрудника">
-                </picture>
-              </li>
-              <li class="team__item">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/team-page-3.webp" alt="Фото сотрудника" srcset="#">
-                  <img class="lazyload" data-src="assets/images/team-page-3.jpg" src="#" alt="Фото сотрудника">
-                </picture>
-              </li>
-              <li class="team__item">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/team-page-4.webp" alt="Фото сотрудника" srcset="#">
-                  <img class="lazyload" data-src="assets/images/team-page-4.jpg" src="#" alt="Фото сотрудника">
-                </picture>
-              </li>
-              <li class="team__item">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/team-page-5.webp" alt="Фото сотрудника" srcset="#">
-                  <img class="lazyload" data-src="assets/images/team-page-5.jpg" src="#" alt="Фото сотрудника">
-                </picture>
-              </li>
-              <li class="team__item">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/team-page-6.webp" alt="Фото сотрудника" srcset="#">
-                  <img class="lazyload" data-src="assets/images/team-page-6.jpg" src="#" alt="Фото сотрудника">
-                </picture>
-              </li>
-              <li class="team__item">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/team-page-7.webp" alt="Фото сотрудника" srcset="#">
-                  <img class="lazyload" data-src="assets/images/team-page-7.jpg" src="#" alt="Фото сотрудника">
-                </picture>
-              </li>
-              <li class="team__more-card">
-                <div class="team__more-content"><span class="team__more-number">64+</span><span class="team__more-desc">сотрудников</span>
-                </div>
-              </li>
-            </ul>
-            <button class="team__button button button--large button--bordered">Показать еще</button>
+            <div class="team__slider swiper">
+              <ul class="team__list swiper-wrapper">
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-1.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-1.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-2.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-2.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-3.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-3.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-4.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-4.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-5.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-5.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-6.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-6.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-7.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-7.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-1.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-1.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-2.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-2.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-3.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-3.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-4.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-4.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-5.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-5.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-6.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-6.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-7.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-7.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-1.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-1.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-2.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-2.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-3.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-3.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-4.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-4.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-5.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-5.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-6.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-6.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-7.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-7.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-1.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-1.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-2.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-2.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-3.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-3.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-4.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-4.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-5.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-5.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-6.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-6.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-7.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-7.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-1.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-1.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-2.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-2.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-3.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-3.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-4.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-4.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-5.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-5.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-6.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-6.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-7.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-7.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-1.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-1.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-2.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-2.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-3.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-3.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-4.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-4.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-5.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-5.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-6.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-6.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-7.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-7.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-1.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-1.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-2.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-2.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-3.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-3.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-4.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-4.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-5.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-5.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-6.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-6.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+                <li class="team__item swiper-slide">
+                  <picture>
+                    <source type="image/webp" data-srcset="assets/images/team-page-7.webp" alt="Фото сотрудника" srcset="#">
+                    <img class="lazyload" data-src="assets/images/team-page-7.jpg" src="#" alt="Фото сотрудника">
+                  </picture>
+                </li>
+              </ul>
+              <div class="swiper-pagination-bullets-container">
+                <div class="swiper-pagination-bullets"></div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="team-gallery page-section--large-margin">
@@ -3622,19 +3876,9 @@
                   </a>
                 </div>
               </div>
-              <div class="slider-navigation slider-navigation--grey slider-navigation--medium">
-                <button class="slider-navigation__button js-prev-slide" aria-label="Назад">
-                  <svg class="icon icon-button-arrow">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#button-arrow"></use>
-                  </svg>
-                </button>
-                <button class="slider-navigation__button js-next-slide" aria-label="Вперед">
-                  <svg class="icon icon-button-arrow">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#button-arrow"></use>
-                  </svg>
-                </button>
+              <div class="swiper-pagination-bullets-container">
+                <div class="swiper-pagination-bullets swiper-pagination-bullets--main"></div>
               </div>
-              <div class="swiper-pagination-bullets"></div>
             </div>
           </div>
         </section>
