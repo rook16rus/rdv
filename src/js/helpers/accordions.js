@@ -82,10 +82,10 @@ export default function accordions() {
 
             if (element.classList.contains('active')) {
                 closeAccordion(content);
-                btnText ? btnText.textContent = "Подробнее" : null;
+                btnText ? btnText.textContent = btnText.dataset.moreText : null;
             } else {
                 openAccordion(content);
-              btnText ? btnText.textContent = "Скрыть" : null;
+                btnText ? btnText.textContent = btnText.dataset.lessText : null;
             }
             element.classList.toggle('active');
             element.classList.toggle('accordion-close');

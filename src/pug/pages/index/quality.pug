@@ -55,7 +55,7 @@ section.quality.page-section--large-margin
                   li Подбираем варианты развития и изменения процессов таким образом, чтобы не поломать архитектуру системы
               button.quality__item-button.button.button--bordered.js-accordion-btn
                 +icon-multi('arrow-down')
-                span.js-accordion-btn-text Подробнее
+                span.js-accordion-btn-text(data-more-text="Подробнее" data-less-text="Скрыть") Подробнее
         ul.quality__list
           for item in quality2
             li(class=`quality__item js-accordion${item.active ? ' active' : ''}`)

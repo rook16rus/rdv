@@ -44,6 +44,7 @@ section.methods.page-section--large-margin
     .methods__text
       p
         | Основной ключевой момент в процессе нашей работы - мы смотрим не только на «железную коробку», не ограничиваемся замерами производительности серверов, большое внимание уделяем именно анализу взаимодействия элементов системы и удобству работы пользователей.
+  .container
     .methods__inner
       h3.methods__subtitle
         | Работы по выявлению и устранению проблем включают в себя три этапа:
@@ -63,3 +64,6 @@ section.methods.page-section--large-margin
                         ul.methods__accordion-item-sublist
                           for i in it.sublist
                             li.methods__accordion-item-sublist-item= i
+            button.methods__accordion-mobile-button.button.button--medium.button--bordered.js-accordion-btn
+              span.js-accordion-btn-text(data-more-text="Раскрыть" data-less-text="Свернуть") Раскрыть
+              +icon-multi('arrow-down')
