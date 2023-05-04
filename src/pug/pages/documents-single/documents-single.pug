@@ -118,11 +118,11 @@ section.documents-single.page-section--large-margin.page-section--first
     h3
       | 1. Настоящим Заказчик:
     .table
-      .table__wrapper
+      table
         for item in table1
-          .table__row
-            .table__cell= item
-            .table__cell
+          tr
+            td= item
+            td
     p
       | Направляет Обществу c ограниченной ответственностью «ООО „РДВ АВТОМАТИЗАЦИЯ“», ОГРН 1177746679110, ИНН 9701081484 (далее — «Исполнитель»), акцепт (полное и безоговорочное принятие) Публичной оферты о заключении договора возмездного оказания услуг по разработке, адаптации, модификации, сопровождению, внедрению программ для ЭВМ (далее — «Договор»), размещенной на сайте Исполнителя в сети Интернет по адресу: www.rdv-it.ru/legal/oferta-service/ (далее — «Оферта»);
     p
@@ -130,18 +130,18 @@ section.documents-single.page-section--large-margin.page-section--first
     h3
       | 2. Перечень представителей Заказчика:
     .table
-      .table__wrapper
+      table
         for item in table2
-          .table__row.table__row--customer
+          tr
             for it in item.cells
-              .table__cell(class=`${it.big ? "table__cell--big" : ""}`)= it.text
+              td= it.text
     p
       | <sup>*</sup> Необходимо указать признак назначения роли на каждого представителя. Любой сотрудник Заказчика, направляющий Заявки, должен иметь право на Приемку результатов оказанных услуг.
     .table
-      .table__wrapper
+      table
         for item in table3
-          .table__row
-            .table__cell= item
-            .table__cell
+          tr
+            td= item
+            td
 
       // #[a(href="#") ]
