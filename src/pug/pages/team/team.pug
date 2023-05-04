@@ -35,6 +35,132 @@
     {
       img: "team-page-7.jpg",
     },
+    {
+      img: "team-page-1.jpg",
+    },
+    {
+      img: "team-page-2.jpg",
+    },
+    {
+      img: "team-page-3.jpg",
+    },
+    {
+      img: "team-page-4.jpg",
+    },
+    {
+      img: "team-page-5.jpg",
+    },
+    {
+      img: "team-page-6.jpg",
+    },
+    {
+      img: "team-page-7.jpg",
+    },
+    {
+      img: "team-page-1.jpg",
+    },
+    {
+      img: "team-page-2.jpg",
+    },
+    {
+      img: "team-page-3.jpg",
+    },
+    {
+      img: "team-page-4.jpg",
+    },
+    {
+      img: "team-page-5.jpg",
+    },
+    {
+      img: "team-page-6.jpg",
+    },
+    {
+      img: "team-page-7.jpg",
+    },
+    {
+      img: "team-page-1.jpg",
+    },
+    {
+      img: "team-page-2.jpg",
+    },
+    {
+      img: "team-page-3.jpg",
+    },
+    {
+      img: "team-page-4.jpg",
+    },
+    {
+      img: "team-page-5.jpg",
+    },
+    {
+      img: "team-page-6.jpg",
+    },
+    {
+      img: "team-page-7.jpg",
+    },
+    {
+      img: "team-page-1.jpg",
+    },
+    {
+      img: "team-page-2.jpg",
+    },
+    {
+      img: "team-page-3.jpg",
+    },
+    {
+      img: "team-page-4.jpg",
+    },
+    {
+      img: "team-page-5.jpg",
+    },
+    {
+      img: "team-page-6.jpg",
+    },
+    {
+      img: "team-page-7.jpg",
+    },
+    {
+      img: "team-page-1.jpg",
+    },
+    {
+      img: "team-page-2.jpg",
+    },
+    {
+      img: "team-page-3.jpg",
+    },
+    {
+      img: "team-page-4.jpg",
+    },
+    {
+      img: "team-page-5.jpg",
+    },
+    {
+      img: "team-page-6.jpg",
+    },
+    {
+      img: "team-page-7.jpg",
+    },
+    {
+      img: "team-page-1.jpg",
+    },
+    {
+      img: "team-page-2.jpg",
+    },
+    {
+      img: "team-page-3.jpg",
+    },
+    {
+      img: "team-page-4.jpg",
+    },
+    {
+      img: "team-page-5.jpg",
+    },
+    {
+      img: "team-page-6.jpg",
+    },
+    {
+      img: "team-page-7.jpg",
+    },
   ]
 
 section.team.page-section--large-margin.page-section--first
@@ -48,8 +174,13 @@ section.team.page-section--large-margin.page-section--first
       | Наша команда
     ul.team__large-list
       li.team__description
-        p
-          | Наша компания представляет собой сплоченную и позитивную команду профессиональных специалистов. Наша задача состоит в том, чтобы дать возможность каждой организации достичь большего, ведь главное для нас - это наши клиенты.
+        span.team__description-number
+          | 100+
+        span.team__description-people
+          | человек в команде
+        .team__description-text
+          p
+            | Наша компания представляет собой сплоченную и позитивную команду профессиональных специалистов. Наша задача состоит в том, чтобы дать возможность каждой организации достичь большего, ведь главное для нас - это наши клиенты.
       for item in largeTeam
         li.team__large-item
           .team__large-item-img
@@ -64,13 +195,10 @@ section.team.page-section--large-margin.page-section--first
               +icon-multi('cross-icon')
           h3.team__large-item-title= item.title
           span.team__large-item-position= item.position
-    ul.team__list
-      for item in team
-        li.team__item
-          +pictureLazy(item.img, "Фото сотрудника")
-      li.team__more-card
-        .team__more-content
-          span.team__more-number 64+
-          span.team__more-desc сотрудников
-    button.team__button.button.button--large.button--bordered
-      | Показать еще
+    .team__slider.swiper
+      ul.team__list.swiper-wrapper
+        for item in team
+          li.team__item.swiper-slide
+            +pictureLazy(item.img, "Фото сотрудника")
+      .swiper-pagination-bullets-container
+       .swiper-pagination-bullets

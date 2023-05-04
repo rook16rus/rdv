@@ -41,6 +41,7 @@ import integrationEffectSlider from "./helpers/integrationEffectSlider";
 import sticky from "./helpers/sticky";
 import vacancyOtherSlider from "./helpers/vacancyOtherSlider";
 import resetButtons from "./helpers/resetButtons";
+import teamSlider from "./helpers/teamSlider";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -82,6 +83,7 @@ documenReady(() => {
   sticky();
   vacancyOtherSlider();
   resetButtons();
+  teamSlider();
 });
 
 document.fonts.ready.then((res) => {

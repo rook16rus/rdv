@@ -61,13 +61,11 @@
     margin-top: 2rem;
 
     @include mq('custom', 'max', 768) {
-      display: flex;
-      justify-content: center;
+      display: inline-flex;
     }
 
     &--main {
-      display: flex;
-      justify-content: center;
+      display: inline-flex;
       margin-top: 4rem;
 
       @include mq('custom', 'max', 1024) {

@@ -35,13 +35,10 @@
 
   &__description {
     @extend .white-card;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 3.8rem;
 
-    @extend .content-big-text;
-    color: var(--main-base-0);
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
 
     @include mq('custom', 'max', 1024) {
       padding: 3.2rem;
@@ -54,6 +51,48 @@
     @include mq('custom', 'max', 640) {
       padding: 2rem;
     }
+  }
+
+  &__description-number {
+    display: block;
+    margin-bottom: 0.8rem;
+
+    background: var(--gradient-01);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font: var(--regular) 14rem/100% var(--secondary-ff);
+    letter-spacing: -0.01em;
+
+    @include mq('custom', 'max', 1024) {
+      font-size: 12rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      font-size: 10rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      font-size: 8rem;
+    }
+  }
+
+  &__description-people {
+    display: block;
+    margin-bottom: 2rem;
+
+    @extend .title-h6;
+    color: var(--main-base-0);
+  }
+
+  &__description-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: auto;
+
+    @extend .content-medium-text;
+    color: rgba(23, 79, 119, 0.5);
   }
 
 
@@ -191,28 +230,8 @@
     color: rgba(13, 54, 83, 0.5);
   }
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3.2rem;
-
-    @include mq('custom', 'max', 1024) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.2rem;
-    }
-
-    @include mq('custom', 'max', 768) {
-      grid-template-columns: repeat(2 , 1fr);
-      gap: 1.2rem;
-    }
-
-    @include mq('custom', 'max', 640) {
-      gap: 0.4rem;
-    }
-
-    @include mq('custom', 'max', 350) {
-      grid-template-columns: 1fr;
-    }
+  &__slider {
+    overflow: hidden;
   }
 
   &__item {
@@ -220,10 +239,17 @@
     z-index: 1;
 
     width: 100%;
-    padding-top: 100%;
 
     border-radius: 2.4rem;
     overflow: hidden;
+
+    &::before {
+      content: '';
+
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+    }
 
     @include mq('custom', 'max', 640) {
       border-radius: 1.2rem;
@@ -235,74 +261,22 @@
     }
   }
 
-  &__more-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 8rem;
+  .swiper-pagination-bullets {
+    display: inline-flex;
+    width: auto;
+    margin-top: 4rem;
+    justify-content: flex-start;
 
     @include mq('custom', 'max', 1024) {
-      padding-top: 6.6rem;
+      margin-top: 3.2rem;
     }
 
     @include mq('custom', 'max', 768) {
-      padding-top: 5.3rem;
+      margin-top: 2.4rem;
     }
 
     @include mq('custom', 'max', 640) {
-      padding-top: 4rem;
-    }
-  }
-
-  &__more-content {
-    @include mq('custom', 'max', 768) {
-      text-align: center;
-    }
-  }
-
-  &__more-number {
-    display: block;
-    margin-bottom: 0.2rem;
-
-    background: var(--gradient-01);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    font: var(--regular) 14rem/100% var(--secondary-ff);
-    letter-spacing: -0.01em;
-
-    @include mq('custom', 'max', 1024) {
-      font-size: 12rem;
-    }
-
-    @include mq('custom', 'max', 768) {
-      font-size: 10rem;
-    }
-
-    @include mq('custom', 'max', 640) {
-      font-size: 8rem;
-    }
-  }
-
-  &__more-desc {
-    @extend .content-medium-text;
-    color: rgba(23, 79, 119, 0.5);
-  }
-
-  &__button {
-    width: 100%;
-    margin-top: 5.6rem;
-
-    @include mq('custom', 'max', 1024) {
-      margin-top: 4rem;
-    }
-
-    @include mq('custom', 'max', 768) {
-      margin-top: 2.6rem;
-    }
-
-    @include mq('custom', 'max', 640) {
-      margin-top: 1.2rem;
+      margin-top: 1.6rem;
     }
   }
 }

@@ -76,6 +76,15 @@
   height: 98%;
 }
 
+.swiper-grid > .swiper-wrapper {
+  flex-wrap: wrap;
+}
+.swiper-grid-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
 .swiper-fade.swiper-free-mode .swiper-slide {
   transition-timing-function: ease-out;
 }
@@ -349,12 +358,19 @@ button.swiper-pagination-bullet {
   }
 }
 
+.swiper-pagination-bullets-container {
+  display: flex;
+}
+
 .swiper-pagination-bullets {
+  display: inline-flex !important;
+  width: auto !important;
   margin: 0 auto;
   transform: none !important;
 }
 
 .swiper-pagination-bullet {
+  flex-shrink: 0;
   background-color: var(--grey-D-20);
   transform: scale(1) !important;
   opacity: 1;

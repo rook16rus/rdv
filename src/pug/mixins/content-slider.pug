@@ -20,7 +20,9 @@ mixin content-slider(isPagination, isNoneDesc)
           .content-slider__slide-desc
             | Мелкая сноска с описанием фото
     if isPagination
-      .swiper-pagination-bullets.swiper-pagination-bullets--main
+      .swiper-pagination-bullets-container
+        .swiper-pagination-bullets.swiper-pagination-bullets--main
     else
       +slider-navigation("slider-navigation--grey slider-navigation--medium")
-      .swiper-pagination-bullets
+      .swiper-pagination-bullets-container
+        .swiper-pagination-bullets
