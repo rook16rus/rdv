@@ -42,6 +42,7 @@ import sticky from "./helpers/sticky";
 import vacancyOtherSlider from "./helpers/vacancyOtherSlider";
 import resetButtons from "./helpers/resetButtons";
 import teamSlider from "./helpers/teamSlider";
+import copyRequisites from "./helpers/copyRequisites";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -84,6 +85,7 @@ documenReady(() => {
   vacancyOtherSlider();
   resetButtons();
   teamSlider();
+  copyRequisites();
 });
 
 document.fonts.ready.then((res) => {
