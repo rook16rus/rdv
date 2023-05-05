@@ -155,15 +155,18 @@
 
     @include mq('custom', 'max', 1024) {
       min-height: 66rem;
+      padding: 3.6rem;
     }
 
     @include mq('custom', 'max', 768) {
       min-height: 61rem;
       align-items: flex-start;
+      padding: 2.4rem;
     }
 
     @include mq('custom', 'max', 640) {
       min-height: 55.4rem;
+      padding: 1.2rem;
     }
   }
 
@@ -180,6 +183,8 @@
 
     @include mq('custom', 'max', 768) {
       width: 100%;
+
+      border-radius: 1.2rem;
 
       &::after {
         content: '';

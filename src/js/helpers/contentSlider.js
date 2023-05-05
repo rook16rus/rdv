@@ -15,7 +15,8 @@ export default function contentSlider() {
     },
     pagination: {
       el: contentSlider.querySelector('.swiper-pagination-bullets'),
-      type: "bullets"
+      type: "bullets",
+      clickable: true
     },
     breakpoints: {
       641: {

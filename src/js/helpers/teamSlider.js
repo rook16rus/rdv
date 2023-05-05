@@ -17,6 +17,7 @@ export default function teamSlider() {
     pagination: {
       el: section.querySelector('.swiper-pagination-bullets'),
       type: 'bullets',
+      clickable: true
     },
     breakpoints: {
       641: {

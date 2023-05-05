@@ -1,5 +1,8 @@
 .catalog-card {
   @extend .white-card;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   transition: border-color 0.3s;
 
@@ -146,6 +149,12 @@
     color: #fff;
   }
 
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
   &__text {
     margin-bottom: 2.4rem;
 
@@ -162,6 +171,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: auto;
   }
 
   &__markets {

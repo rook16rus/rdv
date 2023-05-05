@@ -21,6 +21,7 @@ export default function introSlider() {
     pagination: {
       el: intro.querySelector('.swiper-pagination-bullets'),
       type: "bullets",
+      clickable: true
     },
     on: {
       init(swiper) {

@@ -47,6 +47,7 @@ import copyRequisites from "./helpers/copyRequisites";
 documenReady(() => {
   window.rdv_API = { };
   window.rdv_API.swipers = [];
+  window.savedWidth = document.documentElement.clientWidth;
 
   lazyIMages();
   initModal();
@@ -102,6 +103,9 @@ window.addEventListener('load', function () {
 });
 
 window.addEventListener('resize', () => {
-  moreButtonRow();
-  catalogAdaptive()
+  if (document.documentElement.clientWidth !== window.savedWidth) {
+    window.savedWidth = document.documentElement.clientWidth;
+    moreButtonRow();
+    catalogAdaptive()
+  }
 })

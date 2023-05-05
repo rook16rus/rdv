@@ -35,11 +35,10 @@ export default function catalog() {
   })
 
   const gridButtons = catalog.querySelector('.catalog__grid-buttons');
-  const catalogList = catalog.querySelector('.catalog__list');
-  const catalogCards = catalog.querySelectorAll('.catalog-card');
-
   gridButtons.addEventListener('click', e => {
     if (e.target.closest('.catalog__grid-button')) {
+      const catalogList = catalog.querySelector('.catalog__list');
+      const catalogCards = catalog.querySelectorAll('.catalog-card');
       const button = e.target.closest('.catalog__grid-button');
       const modification = button.dataset.modification;
       const cardModification = button.dataset.modificationCards;

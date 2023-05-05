@@ -15,7 +15,8 @@ export default function integrationEffectSlider() {
       },
       pagination: {
         type: "bullets",
-        el: slider.querySelector('.swiper-pagination-bullets')
+        el: slider.querySelector('.swiper-pagination-bullets'),
+        clickable: true
       },
       breakpoints: {
         769: {

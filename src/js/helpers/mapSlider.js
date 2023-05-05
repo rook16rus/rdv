@@ -15,6 +15,7 @@ export default function mapSlider() {
     pagination: {
       el: contacts.querySelector('.swiper-pagination-bullets'),
       type: 'bullets',
+      clickable: true
     }
   })
 

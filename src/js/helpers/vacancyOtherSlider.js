@@ -20,7 +20,9 @@ export default function vacancyOtherSlider() {
       nextEl: section.querySelector('.js-next-slide'),
     },
     pagination: {
-      el: section.querySelector('.swiper-pagination-bullets')
+      el: section.querySelector('.swiper-pagination-bullets'),
+      type: 'bullets',
+      clickable: true
     }
   })
 }
