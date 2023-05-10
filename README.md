@@ -17,6 +17,8 @@
 13. [Страница поиска](https://rook16rus.github.io/rdv/search.html)
 14. [Документы](https://rook16rus.github.io/rdv/documents.html)
 15. [Детальная документа](https://rook16rus.github.io/rdv/documents-single.html)
+16. [Реквизиты](https://rook16rus.github.io/rdv/requisites.html)
+17. [О компании](https://rook16rus.github.io/rdv/about.html)
 
 
 ## Документация
