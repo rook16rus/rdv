@@ -8284,159 +8284,22 @@
             <div class="modal-registration__progressbar-line"></div>
           </div>
           <form class="modal-registration__form" action="#">
-            <div class="modal-registration__form-group active js-tab-content" data-id="answerTab0">
-              <h4 class="modal-registration__question">Продаете на МП?</h4>
-              <div class="modal-registration__answers js-simplebar modal-registration__answers--single-column">
-                <div class="modal-registration__answers-left">
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-0" id="answer-0-0">
-                    <label class="modal-registration__label" for="answer-0-0">Да продаю</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-0" id="answer-0-1">
-                    <label class="modal-registration__label" for="answer-0-1">Нет, планирую выходить на МП</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-0" id="answer-0-2">
-                    <label class="modal-registration__label" for="answer-0-2">Нет, не планирую</label>
-                  </div>
+            <template id="eventQuestionTemp">
+              <div class="modal-registration__form-group js-tab-content">
+                <h4 class="modal-registration__question">text</h4>
+                <div class="modal-registration__answers js-simplebar">
+                  <div class="modal-registration__answers-left"></div>
+                  <div class="modal-registration__answers-right"></div>
                 </div>
-                <div class="modal-registration__answers-right"></div>
+                <div class="modal-registration__buttons"></div>
               </div>
-              <div class="modal-registration__buttons">
-                <button class="modal-registration__button button button--medium button--blue js-tab" type="button" data-href="answerTab1" disabled="disabled">Далее</button>
+            </template>
+            <template id="eventAnswerTemp">
+              <div class="modal-registration__answer">
+                <input class="modal-registration__input visually-hidden">
+                <label class="modal-registration__label">text</label>
               </div>
-            </div>
-            <div class="modal-registration__form-group js-tab-content" data-id="answerTab1">
-              <h4 class="modal-registration__question">С какими маркетплейсами планируете работать?</h4>
-              <div class="modal-registration__answers js-simplebar">
-                <div class="modal-registration__answers-left">
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-1-0" id="answer-1-0">
-                    <label class="modal-registration__label" for="answer-1-0">Ozon</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-1-1" id="answer-1-1">
-                    <label class="modal-registration__label" for="answer-1-1">Яндекс.Маркет</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-1-2" id="answer-1-2">
-                    <label class="modal-registration__label" for="answer-1-2">Aliexpress</label>
-                  </div>
-                </div>
-                <div class="modal-registration__answers-right">
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-1-0" id="answer-1-3">
-                    <label class="modal-registration__label" for="answer-1-3">Wildberries</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-1-1" id="answer-1-4">
-                    <label class="modal-registration__label" for="answer-1-4">СберМегаМаркет</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-1-2" id="answer-1-5">
-                    <label class="modal-registration__label" for="answer-1-5">Другой</label>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-registration__buttons">
-                <button class="modal-registration__button button button--medium button--bordered js-tab" type="button" data-href="answerTab0">Назад</button>
-                <button class="modal-registration__button button button--medium button--blue js-tab" type="button" data-href="answerTab2" disabled="disabled">Далее</button>
-              </div>
-            </div>
-            <div class="modal-registration__form-group js-tab-content" data-id="answerTab2">
-              <h4 class="modal-registration__question">По каким схемам планируете работать?</h4>
-              <div class="modal-registration__answers js-simplebar modal-registration__answers--single-column">
-                <div class="modal-registration__answers-left">
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-2-0" id="answer-2-0">
-                    <label class="modal-registration__label" for="answer-2-0">FBM - Продажа со склада маркетплейса</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-2-1" id="answer-2-1">
-                    <label class="modal-registration__label" for="answer-2-1">FBS - Продажа со склада продавца</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-2-2" id="answer-2-2">
-                    <label class="modal-registration__label" for="answer-2-2">DBS - Доставка силами продавца</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="checkbox" name="answer-2-3" id="answer-2-3">
-                    <label class="modal-registration__label" for="answer-2-3">Click &amp; Collect - Закажи и забери в магазине</label>
-                  </div>
-                </div>
-                <div class="modal-registration__answers-right"></div>
-              </div>
-              <div class="modal-registration__buttons">
-                <button class="modal-registration__button button button--medium button--bordered js-tab" type="button" data-href="answerTab1">Назад</button>
-                <button class="modal-registration__button button button--medium button--blue js-tab" type="button" data-href="answerTab3" disabled="disabled">Далее</button>
-              </div>
-            </div>
-            <div class="modal-registration__form-group js-tab-content" data-id="answerTab3">
-              <h4 class="modal-registration__question">Сколько у вас заказов на маркетплейсах в день?</h4>
-              <div class="modal-registration__answers js-simplebar modal-registration__answers--single-column">
-                <div class="modal-registration__answers-left">
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-3" id="answer-3-0">
-                    <label class="modal-registration__label" for="answer-3-0">Больше 250</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-3" id="answer-3-1">
-                    <label class="modal-registration__label" for="answer-3-1">50-250</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-3" id="answer-3-2">
-                    <label class="modal-registration__label" for="answer-3-2">До 50</label>
-                  </div>
-                </div>
-                <div class="modal-registration__answers-right"></div>
-              </div>
-              <div class="modal-registration__buttons">
-                <button class="modal-registration__button button button--medium button--bordered js-tab" type="button" data-href="answerTab2">Назад</button>
-                <button class="modal-registration__button button button--medium button--blue js-tab" type="button" data-href="answerTab4" disabled="disabled">Далее</button>
-              </div>
-            </div>
-            <div class="modal-registration__form-group js-tab-content" data-id="answerTab4">
-              <h4 class="modal-registration__question">Текущая система для автоматизации?</h4>
-              <div class="modal-registration__answers js-simplebar">
-                <div class="modal-registration__answers-left">
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-4" id="answer-4-0">
-                    <label class="modal-registration__label" for="answer-4-0">1С УТ</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-4" id="answer-4-1">
-                    <label class="modal-registration__label" for="answer-4-1">1С ERP</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-4" id="answer-4-2">
-                    <label class="modal-registration__label" for="answer-4-2">1C Комплексная автоматизация</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-4" id="answer-4-3">
-                    <label class="modal-registration__label" for="answer-4-3">1С УНФ</label>
-                  </div>
-                </div>
-                <div class="modal-registration__answers-right">
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-4" id="answer-4-4">
-                    <label class="modal-registration__label" for="answer-4-4">Мой склад</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-4" id="answer-4-5">
-                    <label class="modal-registration__label" for="answer-4-5">Другая</label>
-                  </div>
-                  <div class="modal-registration__answer">
-                    <input class="modal-registration__input visually-hidden" type="radio" name="answer-4" id="answer-4-6">
-                    <label class="modal-registration__label" for="answer-4-6">Нет системы, но очень хочу</label>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-registration__buttons">
-                <button class="modal-registration__button button button--medium button--bordered js-tab" type="button" data-href="answerTab3">Назад</button>
-                <button class="modal-registration__button button button--medium button--blue" type="submit" disabled="disabled">Завершить</button>
-              </div>
-            </div>
+            </template>
           </form>
         </div>
       </div>

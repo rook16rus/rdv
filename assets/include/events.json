@@ -1,0 +1,361 @@
+{
+  "success": true,
+  "questionnaire": true,
+  "question": [
+    {
+      "id": "022e972e-ffab-4f4f-980a-ad6138109d01",
+      "name": "Продаете на МП?",
+      "isMultiple": false,
+      "isLast": false,
+      "answers": [
+        {
+          "id": "e320a652-61fd-42af-b3b1-27b6edd152b7",
+          "name": "Да, продаю",
+          "isLast": false,
+          "nextQuestion": "4f437166-6129-4056-a372-013afd54029f",
+          "position": 1
+        },
+        {
+          "id": "e78a2bd9-d00b-46ed-ab0f-d35ed87a7405",
+          "name": "Нет, планирую выходить на МП",
+          "isLast": false,
+          "nextQuestion": "213bb0f2-02ab-4627-b7b7-1bd343b242de",
+          "position": 2
+        },
+        {
+          "id": "1a5fddb4-a63a-4d69-91cd-1d44dd25ec00",
+          "name": "Нет, не планирую",
+          "isLast": false,
+          "nextQuestion": "7ec8a28b-790a-4812-8345-ae8495c01454",
+          "position": 3
+        }
+      ],
+      "nextQuestion": "00000000-0000-0000-0000-000000000000",
+      "position": 1
+    },
+    {
+      "id": "4f437166-6129-4056-a372-013afd54029f",
+      "name": "С какими маркетплейсами работаете?",
+      "isMultiple": true,
+      "isLast": false,
+      "answers": [
+        {
+          "id": "8e67723f-51dc-4bcd-80c5-d50344b02643",
+          "name": "Ozon22222222222",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 1
+        },
+        {
+          "id": "d3f30777-c845-4d70-a423-28094077d7c7",
+          "name": "Wildberries",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 2
+        },
+        {
+          "id": "86e2e0d5-c5c8-4292-97b5-ee7402749993",
+          "name": "Яндекс.Маркет",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 3
+        },
+        {
+          "id": "832ae9c3-6d42-49fb-b599-0e966c46684c",
+          "name": "СберМегаМаркет",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 4
+        },
+        {
+          "id": "1cd7b821-fb4e-4e60-a5d0-8ead82abab44",
+          "name": "Aliexpress",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 5
+        },
+        {
+          "id": "4bfd7788-0a63-42ca-a26e-7a4bf5aab172",
+          "name": "Другой",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 6
+        }
+      ],
+      "nextQuestion": "59e9dbfa-f48d-47cd-a166-4843ecf32bf3",
+      "position": 2
+    },
+    {
+      "id": "213bb0f2-02ab-4627-b7b7-1bd343b242de",
+      "name": "С какими маркетплейсами планируете работать?",
+      "isMultiple": true,
+      "isLast": false,
+      "answers": [
+        {
+          "id": "dd96de46-d557-414b-895a-725e8ceb41ec",
+          "name": "Ozon",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 1
+        },
+        {
+          "id": "1238d73d-16d9-4c8d-a653-159a997895fb",
+          "name": "Wildberries",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 2
+        },
+        {
+          "id": "ecf73ea1-57c0-4246-952f-c96475464c25",
+          "name": "Яндекс.Маркет",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 3
+        },
+        {
+          "id": "e343311e-0179-4f6a-82b2-dbbdb7df3fe8",
+          "name": "СберМегаМаркет",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 4
+        },
+        {
+          "id": "ff650f82-79ec-4781-b6ee-e15ddf4b4c01",
+          "name": "Aliexpress",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 5
+        },
+        {
+          "id": "163262e9-3353-477d-aab8-ffe29d5e813b",
+          "name": "Другой",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 6
+        }
+      ],
+      "nextQuestion": "e9ca8310-33f4-4b73-b379-fae49b3b1a3b",
+      "position": 3
+    },
+    {
+      "id": "59e9dbfa-f48d-47cd-a166-4843ecf32bf3",
+      "name": "По каким схемам работаете?",
+      "isMultiple": true,
+      "isLast": false,
+      "answers": [
+        {
+          "id": "d3436ba1-d44a-49c5-ba66-1f3f1cf75a52",
+          "name": "FBM - Продажа со склада маркетплейса",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 1
+        },
+        {
+          "id": "7f612c50-5b7c-4a60-81e8-39636e34edae",
+          "name": "FBS - Продажа со склада продавца",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 2
+        },
+        {
+          "id": "56e0fb07-dcd5-4616-866d-9b544e42e641",
+          "name": "DBS - Доставка силами продавца",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 3
+        },
+        {
+          "id": "a7ebff0f-bcad-4cc4-a83c-0478247caaf6",
+          "name": "Click&Collect - Закажи и забери в магазине",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 4
+        }
+      ],
+      "nextQuestion": "cf48151f-5970-4a4b-b104-ecc3ac0e2765",
+      "position": 4
+    },
+    {
+      "id": "e9ca8310-33f4-4b73-b379-fae49b3b1a3b",
+      "name": "По каким схемам планируете работать?",
+      "isMultiple": true,
+      "isLast": false,
+      "answers": [
+        {
+          "id": "4e76c3f6-b3f6-4805-8cff-79fcccb415f5",
+          "name": "FBM - Продажа со склада маркетплейса",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 1
+        },
+        {
+          "id": "953376b8-c9ed-4999-84d2-630aaa33a19c",
+          "name": "FBS - Продажа со склада продавца",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 2
+        },
+        {
+          "id": "6ea37bae-3fda-4366-9cbf-8e2537940fd9",
+          "name": "DBS - Доставка силами продавца",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 3
+        },
+        {
+          "id": "de08ada3-832b-4672-b859-e03cefe585a8",
+          "name": "Click&Collect - Закажи и забери в магазине",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 4
+        }
+      ],
+      "nextQuestion": "cf48151f-5970-4a4b-b104-ecc3ac0e2765",
+      "position": 5
+    },
+    {
+      "id": "cf48151f-5970-4a4b-b104-ecc3ac0e2765",
+      "name": "Сколько у вас заказов на маркетплейсах в день?",
+      "isMultiple": false,
+      "isLast": false,
+      "answers": [
+        {
+          "id": "7028feb1-43d9-4afa-9515-12843a1a9387",
+          "name": "больше 250",
+          "isLast": false,
+          "nextQuestion": "7ec8a28b-790a-4812-8345-ae8495c01454",
+          "position": 1
+        },
+        {
+          "id": "00b889f8-25f2-41ad-b501-88f47425c332",
+          "name": "51-250",
+          "isLast": false,
+          "nextQuestion": "7ec8a28b-790a-4812-8345-ae8495c01454",
+          "position": 2
+        },
+        {
+          "id": "2cdd8ca8-05e2-434d-827b-0ff677095075",
+          "name": "до 50",
+          "isLast": false,
+          "nextQuestion": "7ec8a28b-790a-4812-8345-ae8495c01454",
+          "position": 3
+        }
+      ],
+      "nextQuestion": "00000000-0000-0000-0000-000000000000",
+      "position": 6
+    },
+    {
+      "id": "ece873a3-86e6-4a19-82c0-7c664108a057",
+      "name": "Выберите вашу основую категорию?",
+      "isMultiple": true,
+      "isLast": false,
+      "answers": [
+        {
+          "id": "9e9ac6ac-386a-4cdf-82f3-a0c5fa5ea17c",
+          "name": "Автотовары",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 0
+        },
+        {
+          "id": "21504b8c-39bb-4249-a5ba-b3f713438133",
+          "name": "Бытовая техника",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 0
+        },
+        {
+          "id": "df066681-bc58-49c9-96f1-2c843e43621b",
+          "name": "Дача, сезонные товары",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 0
+        },
+        {
+          "id": "f83ac3a6-5fd7-49ca-89a0-9ee7d30fe997",
+          "name": "Детские товары",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 0
+        },
+        {
+          "id": "751ac1ad-9ee6-45f8-b2fb-9cbda57318ee",
+          "name": "Спорт и активных отдых",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 0
+        },
+        {
+          "id": "31a893ad-2448-4694-89a5-4beb8e8af983",
+          "name": "Строительство и ремонт",
+          "isLast": false,
+          "nextQuestion": "00000000-0000-0000-0000-000000000000",
+          "position": 0
+        }
+      ],
+      "nextQuestion": "7ec8a28b-790a-4812-8345-ae8495c01454",
+      "position": 7
+    },
+    {
+      "id": "7ec8a28b-790a-4812-8345-ae8495c01454",
+      "name": "Текущая система для автоматизации?",
+      "isMultiple": false,
+      "isLast": true,
+      "answers": [
+        {
+          "id": "69196941-2bb6-47c7-ac90-a11f68af45ff",
+          "name": "1С УТ",
+          "isLast": false,
+          "nextQuestion": "ece873a3-86e6-4a19-82c0-7c664108a057",
+          "position": 1
+        },
+        {
+          "id": "5e7b56fa-02a0-4c57-8fe6-9b90b8eac7c6",
+          "name": "1С ERP",
+          "isLast": false,
+          "nextQuestion": "ece873a3-86e6-4a19-82c0-7c664108a057",
+          "position": 2
+        },
+        {
+          "id": "50555dcc-151b-4e4a-a2c9-6f26d96aabd1",
+          "name": "1С Комплексная автоматизация",
+          "isLast": false,
+          "nextQuestion": "ece873a3-86e6-4a19-82c0-7c664108a057",
+          "position": 3
+        },
+        {
+          "id": "9909e2c6-11e0-4bf5-8953-2069da2a960a",
+          "name": "1С УНФ",
+          "isLast": false,
+          "nextQuestion": "ece873a3-86e6-4a19-82c0-7c664108a057",
+          "position": 4
+        },
+        {
+          "id": "8c17f7cb-5c58-4025-bdd1-49aa2060cf2f",
+          "name": "Мой склад",
+          "isLast": false,
+          "nextQuestion": "ece873a3-86e6-4a19-82c0-7c664108a057",
+          "position": 5
+        },
+        {
+          "id": "d542bc88-9a03-46f5-abf8-a6e437d7988b",
+          "name": "Другая",
+          "isLast": false,
+          "nextQuestion": "ece873a3-86e6-4a19-82c0-7c664108a057",
+          "position": 6
+        },
+        {
+          "id": "6b759378-6f95-49fa-9188-5fb7889fe576",
+          "name": "Нет системы, но очень хочу",
+          "isLast": false,
+          "nextQuestion": "ece873a3-86e6-4a19-82c0-7c664108a057",
+          "position": 7
+        }
+      ],
+      "nextQuestion": "00000000-0000-0000-0000-000000000000",
+      "position": 8
+    }
+  ],
+  "idEvent": "d8f16210-55fd-44b8-ad62-7e4aaec32e93",
+  "ActionURL": "/local/api/forms/sendWebinarEvent/"
+}
