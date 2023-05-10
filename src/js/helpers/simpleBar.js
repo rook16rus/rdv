@@ -7,3 +7,5 @@ export default function simpleBar() {
     new SimpleBar(el, {autoHide: false})
   })
 }
+
+window.initSimpleBar = simpleBar;

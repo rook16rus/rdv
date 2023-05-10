@@ -3588,30 +3588,17 @@ each item, index in burgerList
     .modal-registration__progressbar
       .modal-registration__progressbar-line
     form.modal-registration__form(action="#")
-      each item, index in registrationForm
-        div(class=`modal-registration__form-group${item.active ? ' active' : ''} js-tab-content` data-id=`answerTab${index}`)
-          h4.modal-registration__question= item.question
-          div(class=`modal-registration__answers js-simplebar${item.answersRight.length === 0 ? ' modal-registration__answers--single-column' : ''}`)
+      template#eventQuestionTemp
+        div.modal-registration__form-group.js-tab-content
+          h4.modal-registration__question text
+          div.modal-registration__answers.js-simplebar
             .modal-registration__answers-left
-              each answer, i in item.answersLeft
-                .modal-registration__answer
-                  input.modal-registration__input.visually-hidden(type=item.type name=`${item.type === "checkbox" ? "answer-" + index + "-" + i : "answer-" + index}` id=`answer-${index}-${i}`)
-                  label.modal-registration__label(for=`answer-${index}-${i}`)= answer.text
             .modal-registration__answers-right
-              each answer, i in item.answersRight
-                .modal-registration__answer
-                  input.modal-registration__input.visually-hidden(type=item.type name=`${item.type === "checkbox" ? "answer-" + index + "-" + i : "answer-" + index}` id=`answer-${index}-${item.answersLeft.length + i}`)
-                  label.modal-registration__label(for=`answer-${index}-${item.answersLeft.length + i}`)= answer.text
           .modal-registration__buttons
-            if index > 0
-              button.modal-registration__button.button.button--medium.button--bordered.js-tab(type="button" data-href=`answerTab${index - 1}`)
-                | Назад
-            if index + 1 < registrationForm.length
-              button.modal-registration__button.button.button--medium.button--blue.js-tab(type="button" data-href=`answerTab${index + 1}` disabled)
-                | Далее
-            if index + 1 === registrationForm.length
-              button.modal-registration__button.button.button--medium.button--blue(type="submit" disabled)
-                | Завершить
+      template#eventAnswerTemp
+        .modal-registration__answer
+          input.modal-registration__input.visually-hidden
+          label.modal-registration__label text
 
 .modal__container(data-target="sure").modal-sure
   .modal__content.js-tabs-container

@@ -74,3 +74,5 @@ export default function tabs() {
     }
   })
 }
+
+window.initTabs = tabs;

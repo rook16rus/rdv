@@ -8,7 +8,7 @@ mixin event-form()
           .event-form__text
             p
               | Мы с вами свяжемся и обсудим все детали
-          form.event-form__form(action="#")
+          form.event-form__form(action="#" data-json="http://site-stage.rdv-it.ru/local/ajax/events-form.php")
             .event-form__input-wrapper.input-wrapper
               input.event-form__input.input.input--big.input--white(type="text" name="eventRegName" id="eventRegName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
               label.event-form__label(for="eventRegName")
@@ -30,6 +30,7 @@ mixin event-form()
             button.event-form__button.button.button--big.button--yellow(type="button")
               | Отправить
             +confidence-block("eventRegConfidence")
+            input(type="hidden" name="eventId" value="d8f16210-55fd-44b8-ad62-7e4aaec32e93")
         .event-form__socials
           a.event-form__social.button.button--icon.button--icon-big.button--white-trasparent(href="#")
             +imgLazy("socials-footer-3.svg")

@@ -48,6 +48,7 @@ documenReady(() => {
   window.rdv_API = { };
   window.rdv_API.swipers = [];
   window.savedWidth = document.documentElement.clientWidth;
+  window.initRegistrationForm = registrationForm;
 
   lazyIMages();
   initModal();
@@ -76,7 +77,6 @@ documenReady(() => {
   contentSlider();
   simpleBar();
   fixedModalButtons();
-  registrationForm();
   moreText();
   copyLink();
   mapSlider();
