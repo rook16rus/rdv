@@ -1,1 +1,18 @@
-section.about-downloads
+-
+  const aboutDownloads = [
+    "Фирменный стиль",
+    "Презентация о компании",
+    "Презентация о продукте",
+  ]
+
+section.about-downloads.page-section--large-margin
+  .narrow-container
+    ul.about-downloads__list
+      for item in aboutDownloads
+        li.about-downloads__item
+          .about-downloads__item-icon
+            +icon-multi("document-icon")
+          .about-downloads__item-content
+            h3.about-downloads__item-title= item
+            a.about-downloads__item-link(href="#" download)
+              | Скачать

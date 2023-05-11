@@ -1,3 +1,53 @@
 .about-downloads {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+  }
 
+  &__item {
+    @extend .white-card;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 3.2rem;
+
+    background-color: var(--grey-base-0);
+    border: none;
+  }
+
+  &__item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.2rem;
+    height: 7.2rem;
+
+    background-color: #fff;
+    border-radius: 50%;
+
+    color: var(--main-base-0);
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 0.8rem;
+
+    @extend .title-h6;
+    color: var(--main-base-0);
+  }
+
+  &__item-link {
+    @extend .button-uppercase-text;
+
+    &::before {
+      content: '';
+      @extend .fully-filled-el;
+    }
+  }
 }
