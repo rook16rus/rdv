@@ -1,3 +1,104 @@
 .about-mission {
+  &__title {
+    @extend .section-title;
+    @extend .title-h2;
+  }
 
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+
+  &__item {
+    @extend .white-card;
+
+    &:nth-child(6n + 1) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-01) border-box;
+
+      .about-mission__item-icon {
+        background-image: var(--gradient-01);
+      }
+    }
+
+    &:nth-child(6n + 2) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-02) border-box;
+
+      .about-mission__item-icon {
+        background-image: var(--gradient-02);
+      }
+    }
+
+    &:nth-child(6n + 3) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-03) border-box;
+
+      .about-mission__item-icon {
+        background-image: var(--gradient-03);
+      }
+    }
+
+    &:nth-child(6n + 4) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-04) border-box;
+
+      .about-mission__item-icon {
+        background-image: var(--gradient-04);
+      }
+    }
+
+    &:nth-child(6n + 5) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-05) border-box;
+
+      .about-mission__item-icon {
+        background-image: var(--gradient-05);
+      }
+    }
+
+    &:nth-child(6n + 6) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-06) border-box;
+
+      .about-mission__item-icon {
+        background-image: var(--gradient-06);
+      }
+    }
+  }
+
+  &__item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.2rem;
+    height: 7.2rem;
+    margin-bottom: 3.2rem;
+
+    border-radius: 50%;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 1.6rem;
+
+    @extend .title-h5;
+    color: var(--main-base-0);
+  }
+
+  &__item-text {
+    @extend .content-regular-text;
+    color: rgba(23, 79, 119, 0.5);
+  }
 }

@@ -1,1 +1,45 @@
-section.about-mission
+-
+  const aboutMission = [
+    {
+      img: "about-mission-1.svg",
+      title: "Сущность",
+      text: "Создаем продвинутые инструменты для принятия стратегических решений и развития бизнеса",
+    },
+    {
+      img: "about-mission-2.svg",
+      title: "Ценности",
+      text: "Строим дружеские отношения во благо взаимовыгодного сотрудничества, не обвиняя и всегда помогая друг другу",
+    },
+    {
+      img: "about-mission-3.svg",
+      title: "Эмоциональные преимущества",
+      text: "Делаем свою работу так, чтобы результат понравился нам самим",
+    },
+    {
+      img: "about-mission-4.svg",
+      title: "Функциональные преимущества",
+      text: "Создаем инновации для развития бизнеса, предлагаем разумный выбор решений для успеха",
+    },
+    {
+      img: "about-mission-5.svg",
+      title: "Характеристики",
+      text: "Трансформируем идеи в решения для долгосрочного развития бизнеса клиентов",
+    },
+    {
+      img: "about-mission-6.svg",
+      title: "Бренд",
+      text: "Стремимся развиваться, быть разносторонними, уметь слышать коллег и бизнес",
+    },
+  ]
+
+section.about-mission.page-section--large-margin
+  .narrow-container
+    h2.about-mission__title
+      | Миссия компании
+    ul.about-mission__list
+      for item in aboutMission
+        li.about-mission__item
+          .about-mission__item-icon
+            +imgLazy(item.img, "Иконка")
+          h3.about-mission__item-title= item.title
+          p.about-mission__item-text= item.text
