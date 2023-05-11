@@ -13,7 +13,7 @@ export default function infinitySlider() {
       loopAdditionalSlides: 10,
       loopSlides: 20,
       loopedSlidesLimit: false,
-      spaceBetween: 32,
+      spaceBetween: slider.dataset.space ? slider.dataset.space : 32,
       nested: true,
       freeMode: true,
       autoplay: {

@@ -1,1 +1,18 @@
-section.about-partners
+-
+  const aboutPartners = [
+    "about-partners-1.png",
+    "about-partners-2.png",
+    "about-partners-3.png",
+    "about-partners-4.png",
+    "about-partners-5.png",
+    "about-partners-1.png",
+  ]
+
+section.about-partners.page-section--large-margin
+  .narrow-container
+    .about-partners__slider.swiper.js-infinity-slider(data-space="20")
+      .swiper-wrapper
+        for img in aboutPartners
+          .about-partners__slide.swiper-slide
+            +imgLazy(img, "Логотип партнера")
+
