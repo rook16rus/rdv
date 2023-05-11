@@ -151,6 +151,16 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 3.2rem;
+
+    transition: 0.3s border-color;
+
+    &:hover {
+      border-color: rgba(23, 79, 119, 0.5);
+    }
+
+    a {
+      @extend .fully-filled-el;
+    }
   }
 
   &__project-img {
