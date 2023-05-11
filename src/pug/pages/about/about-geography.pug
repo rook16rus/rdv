@@ -1,1 +1,96 @@
+-
+  const aboutGeography = [
+    {
+      text: "Санкт-Петербург",
+      top: "20.7",
+      left: "15.6",
+    },
+    {
+      text: "Москва",
+      top: "32.4",
+      left: "21.4",
+    },
+    {
+      text: "Воронеж",
+      top: "43.3",
+      left: "6.4",
+    },
+    {
+      text: "Краснодар",
+      top: "52.3",
+      left: "-5.5",
+    },
+    {
+      text: "Нижний Новгород",
+      top: "38.5",
+      left: "26.7",
+    },
+    {
+      text: "Казань",
+      top: "44.6",
+      left: "31.2",
+    },
+    {
+      text: "Оренбург",
+      top: "55.3",
+      left: "24.4",
+    },
+    {
+      text: "Екатеринбург",
+      top: "44.9",
+      left: "52.1",
+    },
+  ]
+
+-
+  const aboutGeographyCountries = [
+    {
+      img: "about-countries-1.svg",
+      text: "Россия",
+    },
+    {
+      img: "about-countries-2.svg",
+      text: "Беларусь",
+    },
+  ]
+
+-
+  const aboutGeographyNumbers = [
+    {
+      number: "36+",
+      desc: "регионов ",
+    },
+    {
+      number: "1000+",
+      desc: "успешных проектов",
+    },
+    {
+      number: "80",
+      desc: "сотрудников",
+    },
+  ]
+
 section.about-geography
+  .narrow-container
+    .about-geography__wrapper
+      .about-geography__content
+        h2.about-geography__title
+          | География проектов
+        ul.about-geography__cities
+          for item in aboutGeography
+            li.about-geography__city(style=`top: ${item.top}rem; left: ${item.left}rem`)= item.text
+
+      .about-geography__card
+        ul.about-geography__card-countries
+          for item in aboutGeographyCountries
+            li.about-geography__card-country
+              +imgLazy(item.img)
+              span= item.text
+        ul.about-geography__card-numbers
+          for item in aboutGeographyNumbers
+            li.about-geography__card-number
+              span.about-geography__card-digit= item.number
+              span.about-geography__card-digit-desc= item.desc
+
+      +imgLazy("about-geography-bg.svg").about-geography__bg
+

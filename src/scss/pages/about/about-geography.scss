@@ -1,3 +1,112 @@
 .about-geography {
+  margin-bottom: 23rem;
 
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @extend .title-h2;
+    color: var(--main-base-0);
+  }
+
+  &__cities {
+    @extend .fully-filled-el;
+  }
+
+  &__city {
+    position: absolute;
+
+    display: inline-grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1.2rem;
+    height: 3.5rem;
+    padding: 0 1.2rem;
+
+    border-radius: 0.6rem;
+    background-color: var(--main-base-0);
+
+    @extend .content-big-text;
+    color: #fff;
+
+    &::before {
+      content: '';
+
+      width: 0.8rem;
+      height: 0.8rem;
+
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  &__card {
+    padding: 5.6rem;
+
+    border: 1px solid var(--main-base-0);
+    border-radius: 2.4rem;
+    background-color: #fff;
+  }
+
+  &__card-countries {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -2.4rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__card-country {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.8rem;
+    margin-right: 2.4rem;
+    margin-bottom: 2.4rem;
+
+    @extend .title-h7;
+    color: var(--main-base-0);
+
+    svg {
+      width: 2.4rem;
+      height: 2.9rem;
+    }
+  }
+
+  &__card-numbers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  &__card-digit {
+    display: block;
+
+    background-image: var(--gradient-01);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font: var(--regular) 11rem/110% var(--secondary-ff);
+  }
+
+  &__card-digit-desc {
+    @extend .content-medium-text;
+    color: rgba(23, 79, 119, 0.5);
+  }
+
+  &__bg {
+    position: absolute;
+    left: -7.5rem;
+    top: -13.6rem;
+    z-index: -1;
+
+    width: 173.3rem;
+    height: 97.8rem;
+    max-width: none;
+    object-fit: contain;
+  }
 }
