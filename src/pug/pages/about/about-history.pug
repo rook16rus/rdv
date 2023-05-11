@@ -1,1 +1,65 @@
-section.about-history
+-
+  const aboutHistory = [
+    {age: "2015", active: true},
+    {age: "2016"},
+    {age: "2017"},
+    {age: "2018"},
+    {age: "2019"},
+    {age: "2020"},
+    {age: "2021"},
+    {age: "2022"},
+    {age: "2023"},
+  ]
+
+-
+  const aboutTeamList = [
+    "Развитие проектных компетенций по финансовому и управленческому учету.",
+    "Запуск нового направления в компании – digital инновации, ориентированного на внедрение программных решений CRM, заказную разработку, создание сложных интеграционных решений с нуля.",
+    "Разработка, развитие и первые продажи собственного продукта в сфере e-commerce – RDV Маркет.",
+    "Расширение команды до 30 человек, включая 9 программистов-разработчиков.",
+  ]
+
+-
+  const aboutHistoryProjects = [
+    {
+      img: "about-history-projects-1.png",
+      text: "Создание, внедрение автоматизированной системы управления заказами и передачи методологического опыта на этапах автоматизации процессов для стартапа «Яндекс Лавка»",
+    },
+    {
+      img: "about-history-projects-2.png",
+      text: "Автоматизация бизнес-процессов по управленческому учету и бюджетированию для Аналитического Кредитного Рейтингового агентства (АКРА)",
+    },
+  ]
+
+section.about-history.page-section--large-margin.js-tabs-container(data-tabs-like-radio="true")
+  .narrow-container
+    h2.about-history__title
+      | История компании
+    .about-history__tabs.swiper.js-init-slider(data-slides="auto" data-space="32")
+      .swiper-wrapper.js-tabs-scroll
+        each item, index in aboutHistory
+          button.about-history__tab.swiper-slide.js-tab(class=`${item.active ? "tab-active" : ""}` data-href=`aboutHistoryTab${index}`)= item.age
+  .container
+    .about-history__contents
+      each item, index in aboutHistory
+        .about-history__content.js-tab-content(class=`${item.active ? "active" : ""}` data-id=`aboutHistoryTab${index}`)
+          .about-history__team
+            .about-history__team-content
+              h3.about-history__content-title
+                | Команда
+              .about-history__team-text
+                p
+                  | Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+              ul.about-history__team-list
+                for it in aboutTeamList
+                  li.about-history__team-item= it
+            .about-history__team-img
+              +pictureLazy("about-history-1.jpg", "Фото команды")
+          h3.about-history__content-title
+            | Проекты
+          ul.about-history__projects
+            for it in aboutHistoryProjects
+              li.about-history__project
+                .about-history__project-img
+                  +imgLazy(it.img)
+                p.about-history__project-text= it.text
