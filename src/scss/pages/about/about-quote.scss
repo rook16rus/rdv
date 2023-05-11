@@ -1,3 +1,42 @@
 .about-quote {
+  &__inner {
+    position: relative;
 
+    padding: 8rem 5.6rem;
+
+    border-radius: 3.2rem;
+    background: url("../images/about-quote-bg.png") no-repeat center;
+    background-size: cover;
+
+    color: #fff;
+  }
+
+  &__text {
+    max-width: 95rem;
+    margin-bottom: 5.6rem;
+
+    @extend .title-h4;
+  }
+
+  &__author {
+    display: block;
+    margin-bottom: 0.7rem;
+
+    @extend .content-huge-text;
+  }
+
+  &__position {
+    @extend .content-regular-text;
+    color: var(--white-50);
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 51.5rem;
+    height: 50.2rem;
+    object-fit: contain;
+  }
 }
