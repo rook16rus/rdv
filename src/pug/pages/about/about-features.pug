@@ -1,1 +1,82 @@
-section.about-features
+-
+  const aboutFeatures = [
+    {
+      number: "5 лет",
+      desc: "на рынке",
+    },
+    {
+      number: "91%",
+      desc: "клиентов сотрудничают на постоянной основе",
+    },
+    {
+      number: "600+",
+      desc: "сертификатов 1C",
+    },
+    {
+      number: "250+",
+      desc: "человек в команде ",
+    },
+  ]
+
+-
+  const aboutDirections = [
+    {
+      title: "Проекты 1С",
+      text: "Комплексные проекты для развития и оптимизации работы вашего бизнеса",
+      img: "about-directions-1.png",
+    },
+    {
+      title: "Продукт RDV Маркет",
+      text: "Продукт, разработанный нами, позволяет произвести интеграцию бизнес-процессов и автоматизировать торговлю на маркетплейсах",
+      img: "about-directions-2.png",
+    },
+    {
+      title: "Поддержка продуктов 1С",
+      text: "Быстрая и эффективная поддержка бизнес-пользователей",
+      img: "about-directions-2.png",
+    },
+    {
+      title: "Продукты и проекты Террасофт",
+      text: "Прогрессивные решения для автоматизации бизнес-процессов в областях маркетинга и продаж",
+      img: "about-directions-3.png",
+    },
+    {
+      title: "Интеграция с маркетплейсами",
+      text: "Быстрая и эффективная поддержка бизнес-пользователей",
+      images: [
+        "about-directions-small-1.png",
+        "about-directions-small-2.png",
+        "about-directions-small-3.png",
+      ]
+    },
+    {
+      title: "Проекты 1С",
+      text: "Комплексные проекты для развития и оптимизации работы вашего бизнеса",
+      img: "about-directions-4.png",
+    },
+  ]
+
+section.about-features.page-section--large-margin
+  .container
+    .about-features__inner
+      ul.about-features__list
+        for item in aboutFeatures
+          li.about-features__item
+            span.about-features__item-number= item.number
+            span.about-features__item-desc= item.desc
+      h2.about-features__title
+        | Направления деятельности
+      ul.about-features__directions
+        for item in aboutDirections
+          li.about-features__direction
+            .about-features__direction-top
+              if item.images
+                ul.about-features__direction-images
+                  for img in item.images
+                    li.about-features__direction-images-item
+                      +imgLazy(img)
+              else
+                .about-features__direction-img
+                  +imgLazy(item.img)
+            h3.about-features__direction-title= item.title
+            p.about-features__direction-text= item.text

@@ -91,6 +91,7 @@ documenReady(() => {
 
 document.fonts.ready.then((res) => {
   alignHeights('.cooperation__list', '.cooperation__item-text', true)
+  alignHeights('.about-features__directions', '.about-features__direction-top', true)
 })
 
 window.addEventListener('load', function () {
