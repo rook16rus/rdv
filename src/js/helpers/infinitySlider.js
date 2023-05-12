@@ -13,7 +13,7 @@ export default function infinitySlider() {
       loopAdditionalSlides: 10,
       loopSlides: 20,
       loopedSlidesLimit: false,
-      spaceBetween: slider.dataset.space ? slider.dataset.space : 32,
+      spaceBetween: slider.dataset.space ? Number(slider.dataset.space) : 32,
       nested: true,
       freeMode: true,
       autoplay: {
@@ -21,11 +21,6 @@ export default function infinitySlider() {
         delay: 1,
         disableOnInteraction: false
       },
-      breakpoints: {
-        641: {
-          spaceBetween: 32
-        },
-      }
     })
 
     window.rdv_API.swipers.push(swiper);
