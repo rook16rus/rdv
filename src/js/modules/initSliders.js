@@ -123,6 +123,21 @@ export default function initSliders() {
             ...breakpointsPerview,
         })
 
+      if (slider.dataset.isTapToSlide) {
+        swiper.slides.forEach((slide, index) => {
+          slide.addEventListener('click', () => {
+            const activeSlideDistanceFromRight = slide.clientWidth + slide.offsetLeft;
+            const activeSlideDistanceFromLeft = [...swiper.slides].reduce((sum, item, i) => i < index ? sum : sum + item.clientWidth, 0);
+            const windowWidth = document.documentElement.clientWidth;
+            const containerPadding = swiper.$el[0].getBoundingClientRect().left;
+
+            if ((activeSlideDistanceFromRight >= windowWidth - containerPadding) || (activeSlideDistanceFromLeft >= windowWidth - containerPadding)) {
+              swiper.slideTo(index);
+            }
+          })
+        })
+      }
+
         slider.dataset.swiperId ? window[`swiper${slider.dataset.swiperId}`] = swiper : null;
         window.rdv_API.swipers.push(swiper);
     })

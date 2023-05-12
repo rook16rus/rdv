@@ -35,7 +35,7 @@ section.about-history.page-section--large-margin.js-tabs-container(data-tabs-lik
   .narrow-container
     h2.about-history__title
       | История компании
-    .about-history__tabs.swiper.js-init-slider(data-slides="auto" data-space="32")
+    .about-history__tabs.swiper.js-init-slider(data-slides="auto" data-space="32" data-is-tap-to-slide="true")
       .swiper-wrapper.js-tabs-scroll
         each item, index in aboutHistory
           button.about-history__tab.swiper-slide.js-tab(class=`${item.active ? "tab-active" : ""}` data-href=`aboutHistoryTab${index}`)= item.age
