@@ -1,0 +1,17 @@
+section.error-section.page-section--large-margin.page-section--first
+  .narrow-container
+    +breadcrumbs(
+      [
+        ["Главная", "index.html"],
+        ["Ошибка 404", "#"],
+      ]
+    )
+    .error-section__wrapper
+      div.error-section__number
+        +imgLazy('404-icon.svg')
+      h1.error-section__title
+        | Страница не найдена
+      p.error-section__text
+        | К сожалению, запрашиваемая страница не существует или была удалена. Проверьте правильность написания ссылки или вернитесь на главную
+      a.error-section__link.button.button--big.button--blue(href="#")
+        | На главную
