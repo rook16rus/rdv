@@ -18,8 +18,10 @@
 
     transition: 0.3s background-color;
 
-    &:hover {
-      background-color: var(--grey-D-10);
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        background-color: var(--grey-D-10);
+      }
     }
   }
 

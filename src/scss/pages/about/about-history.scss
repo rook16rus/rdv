@@ -154,8 +154,10 @@
 
     transition: 0.3s border-color;
 
-    &:hover {
-      border-color: rgba(23, 79, 119, 0.5);
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        border-color: rgba(23, 79, 119, 0.5);
+      }
     }
 
     a {

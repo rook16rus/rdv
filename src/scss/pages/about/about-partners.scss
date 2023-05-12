@@ -19,8 +19,27 @@
 
     transition: 0.3s border-color;
 
-    &:hover {
-      border-color: rgba(23, 79, 119, 0.5);
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        border-color: rgba(23, 79, 119, 0.5);
+      }
+    }
+
+    @include mq('custom', 'max', 1024) {
+      width: 28.4rem;
+      height: 12rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 21.8rem;
+      height: 9.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 15.2rem;
+      height: 6.4rem;
+
+      border-radius: 0.6rem;
     }
 
     img {
