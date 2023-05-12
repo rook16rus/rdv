@@ -3,6 +3,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
+
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
   }
 
   &__item {
@@ -17,6 +28,18 @@
     border: none;
 
     transition: 0.3s background-color;
+
+    @include mq('custom', 'max', 1024) {
+      gap: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      gap: 1.8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.2rem;
+    }
 
     @include mq('custom', 'min', 1025) {
       &:hover {
@@ -37,9 +60,34 @@
 
     color: var(--main-base-0);
 
+    @include mq('custom', 'max', 1024) {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+
     svg {
       width: 3rem;
       height: 3rem;
+
+      @include mq('custom', 'max', 768) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 
@@ -48,10 +96,18 @@
 
     @extend .title-h6;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 0.2rem;
+    }
   }
 
   &__item-link {
     @extend .button-uppercase-text;
+
+    @include mq('custom', 'max', 640) {
+      font: var(--button-small);
+    }
 
     &::before {
       content: '';
