@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     /* Инициализация данных форм и их объединение в один объект */
     const registrationFormData = new FormData(registrationForm);
     const registrationModalFormData = new FormData(registrationModalForm);
-    const combinedFormData = Object.assign(registrationFormData, registrationModalFormData);
+
+    for (let pair of registrationModalFormData.entries()) {
+      registrationFormData.append(pair[0], pair[1]);
+    }
 
     /* Путь к php-файлу берется из формы с анкетой */
     const url = registrationModalForm.getAttribute("action");
@@ -163,6 +166,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     answerInput.type = question.isMultiple ? 'radio' : 'checkbox';
     answerInput.name = question.isMultiple ? question.id : answer.id;
     answerInput.id = answer.id;
+    answerInput.value = answer.id
 
     answerLabel.textContent = answer.name;
     answerLabel.htmlFor = answer.id;
