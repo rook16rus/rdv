@@ -105,6 +105,10 @@
   &__title {
     @extend .section-title;
     @extend .title-h2;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__directions {
