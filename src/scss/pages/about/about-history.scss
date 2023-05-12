@@ -33,6 +33,10 @@
     @extend .title-h6;
     color: rgba(23, 79, 119, 0.5);
 
+    @include mq('custom', 'max', 640) {
+      padding-bottom: 2rem;
+    }
+
     &.tab-active {
       color: var(--main-base-0);
     }
@@ -49,6 +53,8 @@
     left: 0;
     top: 0;
 
+    display: flex;
+    flex-direction: column;
     width: 100%;
 
     opacity: 0;
@@ -69,31 +75,70 @@
 
     @extend .title-h4;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__team {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2rem;
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 5.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      display: contents;
+    }
+  }
+
+  &__team-content {
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__team-text {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 70rem;
     margin-bottom: 3.2rem;
 
     @extend .content-medium-text;
     color: var(--main-D-10);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__team-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 70rem;
   }
 
   &__team-item {
@@ -104,6 +149,10 @@
     @extend .content-medium-text;
     color: var(--main-D-10);
 
+    @include mq('custom', 'max', 640) {
+      gap: 1.6rem;
+    }
+
     &::before {
       content: '';
 
@@ -113,6 +162,10 @@
 
       border-radius: 50%;
       background-color: var(--main-D-10);
+
+      @include mq('custom', 'max', 640) {
+        margin-top: 0.6rem;
+      }
     }
   }
 
@@ -120,9 +173,24 @@
     position: relative;
 
     width: 59.2rem;
+    margin-left: 12rem;
+    flex-shrink: 0;
 
     border-radius: 2rem;
     overflow: hidden;
+
+    @include mq('custom', 'max', 1024) {
+      order: 1;
+      margin-left: 0;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+    }
+
+    @include mq('custom', 'max', 640) {
+      border-radius: 1.2rem;
+    }
 
     &::before {
       content: '';
@@ -130,6 +198,10 @@
       display: block;
       width: 100%;
       padding-top: 66.21%;
+
+      @include mq('custom', 'max', 640) {
+        padding-top: 68.57%;
+      }
     }
 
     img {
@@ -142,6 +214,21 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.4rem;
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__project {
@@ -160,6 +247,21 @@
       }
     }
 
+    @include mq('custom', 'max', 1024) {
+      gap: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      gap: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
     a {
       @extend .fully-filled-el;
     }
@@ -168,6 +270,19 @@
   &__project-img {
     width: 12rem;
     height: 6.4rem;
+
+    @include mq('custom', 'max', 1024) {
+
+    }
+
+    @include mq('custom', 'max', 768) {
+
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: auto;
+      height: 2.4rem;
+    }
 
     img {
       width: 100%;
