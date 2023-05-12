@@ -13,6 +13,6 @@ section.about-partners.page-section--large-margin
     .about-partners__slider.swiper.js-infinity-slider(data-space="20")
       .swiper-wrapper
         for img in aboutPartners
-          .about-partners__slide.swiper-slide
+          a.about-partners__slide.swiper-slide(href="#")
             +imgLazy(img, "Логотип партнера")
 

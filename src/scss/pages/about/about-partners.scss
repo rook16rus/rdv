@@ -17,6 +17,12 @@
     border: 1px solid var(--grey-D-10);
     border-radius: 1.2rem;
 
+    transition: 0.3s border-color;
+
+    &:hover {
+      border-color: rgba(23, 79, 119, 0.5);
+    }
+
     img {
       max-width: 70%;
       max-height: 70%;
