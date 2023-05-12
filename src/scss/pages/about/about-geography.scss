@@ -1,21 +1,73 @@
 .about-geography {
   margin-bottom: 23rem;
 
+  @include mq('custom', 'max', 1024) {
+    margin-bottom: 16rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    margin-bottom: 10rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    margin-bottom: 4rem;
+  }
+
   &__wrapper {
     position: relative;
 
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include mq('custom', 'max', 1024) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__content {
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__title {
     @extend .title-h2;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__cities {
     @extend .fully-filled-el;
+
+    @include mq('custom', 'max', 1024) {
+      position: static;
+
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -0.4rem;
+      margin-bottom: -0.4rem;
+    }
   }
 
   &__city {
@@ -34,6 +86,22 @@
     @extend .content-big-text;
     color: #fff;
 
+    @include mq('custom', 'max', 1024) {
+      position: static;
+
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1rem;
+      height: 3rem;
+
+      border-radius: 0.4rem;
+
+      font-size: 1.2rem;
+    }
+
     &::before {
       content: '';
 
@@ -42,6 +110,11 @@
 
       border-radius: 50%;
       background-color: #fff;
+
+      @include mq('custom', 'max', 640) {
+        width: 0.4rem;
+        height: 0.4rem;
+      }
     }
   }
 
@@ -51,6 +124,19 @@
     border: 1px solid var(--main-base-0);
     border-radius: 2.4rem;
     background-color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+      padding: 4.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 3.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 2.4rem;
+      border-radius: 2rem;
+    }
   }
 
   &__card-countries {
@@ -58,6 +144,19 @@
     flex-wrap: wrap;
     margin-right: -2.4rem;
     margin-bottom: 3.2rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 1.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-right: -2rem;
+      margin-bottom: 0;
+    }
   }
 
   &__card-country {
@@ -68,12 +167,22 @@
     margin-right: 2.4rem;
     margin-bottom: 2.4rem;
 
+    @include mq('custom', 'max', 640) {
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+    }
+
     @extend .title-h7;
     color: var(--main-base-0);
 
     svg {
       width: 2.4rem;
       height: 2.9rem;
+
+      @include mq('custom', 'max', 640) {
+        width: 1.8rem;
+        height: 2.2rem;
+      }
     }
   }
 
@@ -81,6 +190,15 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1.2rem;
+    }
   }
 
   &__card-digit {
@@ -91,6 +209,18 @@
     -webkit-text-fill-color: transparent;
 
     font: var(--regular) 11rem/110% var(--secondary-ff);
+
+    @include mq('custom', 'max', 1024) {
+      font-size: 8.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      font-size: 6.3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      font-size: 4rem;
+    }
   }
 
   &__card-digit-desc {
@@ -100,13 +230,31 @@
 
   &__bg {
     position: absolute;
-    left: -7.5rem;
     top: -13.6rem;
+    left: -7.5rem;
     z-index: -1;
 
     width: 173.3rem;
     height: 97.8rem;
     max-width: none;
     object-fit: contain;
+
+    @include mq('custom', 'max', 1024) {
+      width: 150.7rem;
+      height: 85rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 128.1rem;
+      height: 72.3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      top: -0.7rem;
+      left: -13.6rem;
+
+      width: 105.5rem;
+      height: 59.6rem;
+    }
   }
 }
