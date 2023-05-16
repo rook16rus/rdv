@@ -3720,13 +3720,13 @@ each item, index in burgerList
       button.modal-share__link-button.button.button--big.button--bordered.js-copy-link-button
         | Скопировать
 
-.modal__container(data-target="resume").modal-resume
+.modal__container(data-target="question").modal-resume
   .modal__content
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
       span
     h2.modal-resume__title
-      | Отправить резюме
+      | Задать вопрос
     p.modal-resume__text
       | Мы с вами свяжемся и обсудим все детали
     +resume-form(
@@ -3735,5 +3735,6 @@ each item, index in burgerList
       'file--big file--bordered',
       'button--big button--blue',
       'confidence-block--blue',
+      true,
       true
     )
