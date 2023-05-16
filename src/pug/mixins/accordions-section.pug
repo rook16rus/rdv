@@ -22,11 +22,11 @@ mixin accordions-section(title, text)
         p= text
       .accordions-section__accordions
         for item in accordions
-          .accordions-section__accordion.js-accordion.js-more-text-container
+          .accordions-section__accordion.js-accordion.js-more-text-container(data-close-other="true")
             .accordions-section__accordion-header.js-accordion-btn
               h3.accordions-section__accordion-title= item.title
               button.accordions-section__accordion-button
-            .accordions-section__accordion-content.js-accordion-content
+            .accordions-section__accordion-content.js-accordion-content.js-accordion-btn
               .accordions-section__accordion-text
                 p= item.text
             button.accordions-section__accordion-mobile-button.button.button--medium.button--bordered.js-accordion-btn.js-more-text-button

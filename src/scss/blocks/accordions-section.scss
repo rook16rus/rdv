@@ -54,6 +54,7 @@
 
     border-radius: 2.4rem;
     background-color: var(--grey-base-0);
+    cursor: default;
 
     @include mq('custom', 'max', 1024) {
       padding: 2.8rem;
