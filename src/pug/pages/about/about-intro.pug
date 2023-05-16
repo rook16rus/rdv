@@ -1,1 +1,29 @@
 section.about-intro.page-section.page-section--first
+  .narrow-container
+    +breadcrumbs(
+      [
+        ["Главная", "index.html"],
+        ["О компании", "#"],
+      ]
+    )
+  .container
+    .about-intro__inner
+      .about-intro__content
+        span.about-intro__tag.tag.tag--medium.tag--grey
+          | Кто мы
+        h1.about-intro__title
+          | О компании
+        .about-intro__text
+          p
+            | Создаем продвинутые инструменты для принятия стратегических решений и развития бизнеса
+        button.about-intro__button.button.button--big.button--yellow(data-path="question")
+          | Задать вопрос
+      .about-intro__video(data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ")
+        +pictureLazy("about-intro-1.jpg", "Превью к видео")
+        .about-intro__video-play
+          +icon-multi("play-icon")
+        .about-intro__video-info
+          span.about-intro__video-time.tag.tag--small.tag--grey
+            | 23:48
+          p.about-intro__video-desc
+            | Примерный заголовок видео или анонс видео в одну или две строки
