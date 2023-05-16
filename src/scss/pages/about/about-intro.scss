@@ -1,6 +1,18 @@
 .about-intro {
   .breadcrumbs {
     margin-bottom: 3.2rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__inner {
@@ -8,10 +20,21 @@
 
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 13rem;
+    gap: 12rem;
     padding: 2rem;
 
     background-image: url("../images/about-intro-bg.png");
+
+    @include mq('custom', 'max', 1024) {
+      gap: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 1.2rem;
+    }
   }
 
   &__content {
@@ -19,11 +42,28 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 3.6rem 0 3.6rem 3.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin: 0;
+      display: contents;
+    }
   }
 
   &__tag {
     margin-bottom: 5.6rem;
     background-color: var(--white-10);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__title {
@@ -32,6 +72,19 @@
     font: var(--medium) 8rem/100% var(--main-ff);
     letter-spacing: -0.01em;
     color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 1.6rem;
+      font: var(--title-h1);
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__text {
@@ -43,10 +96,26 @@
     @extend .title-h5;
     font-weight: 400;
     color: var(--white-70);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      font: var(--content-huge);
+    }
   }
 
   &__button {
     margin-top: auto;
+
+    @include mq('custom', 'max', 1024) {
+      order: 1;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+    }
   }
 
   &__video {
@@ -65,10 +134,37 @@
     overflow: hidden;
     cursor: pointer;
 
+    @include mq('custom', 'max', 1024) {
+      min-height: 52rem;
+      padding: 3rem;
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      flex-direction: row;
+      justify-content: stretch;
+      align-items: stretch;
+      width: 100%;
+      min-height: 37rem;
+      padding: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      min-height: 22rem;
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      border-radius: 1.2rem;
+    }
+
     img {
       @extend .fully-filled-el;
       object-fit: cover;
       z-index: -1;
+
+      @include mq('custom', 'max', 1024) {
+        object-position: top;
+      }
     }
   }
 
@@ -89,19 +185,60 @@
 
     color: #fff;
 
+    @include mq('custom', 'max', 1024) {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 6rem;
+      height: 6rem;
+    }
+
     svg {
       width: 3.4rem;
       height: 3.4rem;
+
+      @include mq('custom', 'max', 1024) {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 
   &__video-info {
     max-width: 34rem;
+
+    @include mq('custom', 'max', 768) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: none;
+    }
   }
 
   &__video-time {
     display: inline-flex;
     margin-bottom: 2rem;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: auto;
+    }
   }
 
   &__video-desc {
