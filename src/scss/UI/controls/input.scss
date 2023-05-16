@@ -37,14 +37,43 @@
 
   &--blue {
     background-color: var(--grey-base-0);
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus, {
+      -webkit-text-fill-color: var(--main-base-0);
+      -webkit-box-shadow: 0 0 0px 1000px var(--grey-base-0) inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 
   &--white {
     background-color: #fff;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus, {
+      -webkit-text-fill-color: var(--main-base-0);
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 
   &--bordered {
     border: 1px solid var(--main-base-0);
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus, {
+      -webkit-text-fill-color: var(--main-base-0);
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  &.is-error {
+    border: 1px solid var(--other-red-01) !important;
+    background-color: #ffede9 !important;
   }
 }
 
@@ -132,5 +161,11 @@
 }
 
 .parsley-errors-list {
-  display: none;
+  position: absolute;
+  left: 2rem;
+  bottom: 0.2rem;
+
+  font: var(--content-smalles);
+  font-size: 0.9rem;
+  color: var(--other-red-01);
 }
