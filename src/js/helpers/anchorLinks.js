@@ -12,7 +12,7 @@ import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function anchorLinks() {
-    const OFFSET = 80;
+    const OFFSET = 200;
     const DURATION = 2;
     const scrollByHash = (hash) => {
       let elementToScroll;
@@ -58,6 +58,16 @@ export default function anchorLinks() {
                 scrollByHash(hash);
             }
         }
+
+      if (event.target.matches('button') || event.target.closest('button')) {
+        const button = event.target.matches('button') ? event.target : event.target.closest('button');
+        const hash = button.dataset.path;
+
+        if (hash) {
+          event.preventDefault();
+          scrollByHash(hash);
+        }
+      }
     });
 
     if (window.location.hash) {

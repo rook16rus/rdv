@@ -22,14 +22,14 @@
     },
   ]
 
-section.team.page-section--large-margin
+section.team-section.page-section--large-margin
   .container.container--mobile-padding-large
-    h2.team__title
+    h2.team-section__title
       | На вашем проекте будет работать команда профессионалов
-    .team__slider.swiper.js-init-slider(data-slides="auto" data-space="24")
+    .team-section__slider.swiper.js-init-slider(data-slides="auto" data-space="24")
       .swiper-wrapper
         for item in team
-          .team__slide.swiper-slide
+          .team-section__slide.swiper-slide
             +pictureLazy(item.img, "Фото сотрудника")
-            span.team__position= item.position
+            span.team-section__position= item.position
       +slider-navigation('slider-navigation--grey')

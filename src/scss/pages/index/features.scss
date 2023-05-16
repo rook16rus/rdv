@@ -115,8 +115,13 @@
       grid-template-columns: repeat(2,1fr);
     }
 
+    @include mq('custom', 'max', 768) {
+      gap: 0.8rem;
+    }
+
     @include mq('custom', 'max', 360) {
       grid-template-columns: 1fr;
+      gap: 0.4rem;
     }
   }
 

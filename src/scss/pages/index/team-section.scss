@@ -1,4 +1,4 @@
-.team {
+.team-section {
   &__title {
     @extend .title-h1;
 
@@ -37,6 +37,15 @@
 
       border-radius: 1.6rem;
       overflow: hidden;
+      filter: grayscale(1);
+
+      transition: 0.3s;
+
+      @include mq('custom', 'min', 1025) {
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
 
       @include mq('custom', 'max', 1024) {
         width: 28rem;

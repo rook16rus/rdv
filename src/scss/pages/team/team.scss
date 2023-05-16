@@ -121,18 +121,16 @@
       border-radius: 2rem;
     }
 
-    img {
-      @extend .fully-filled-el;
-      object-fit: cover;
-      z-index: -1;
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        .team__large-item-desc {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
 
-    &:hover {
-      .team__large-item-desc {
-        opacity: 1;
-        visibility: visible;
-      }
-
+    &.active {
       .team__large-item-tip {
         svg {
           display: none;
@@ -142,6 +140,17 @@
           }
         }
       }
+
+      .team__large-item-desc {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    img {
+      @extend .fully-filled-el;
+      object-fit: cover;
+      z-index: -1;
     }
   }
 

@@ -43,6 +43,7 @@ import vacancyOtherSlider from "./helpers/vacancyOtherSlider";
 import resetButtons from "./helpers/resetButtons";
 import teamSlider from "./helpers/teamSlider";
 import copyRequisites from "./helpers/copyRequisites";
+import teamCardTips from "./helpers/teamCardTips";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -65,7 +66,6 @@ documenReady(() => {
   customSelects();
   accordions();
   introSlider();
-  moreButtonRow();
   moreButton();
   infinitySlider();
   header();
@@ -87,11 +87,13 @@ documenReady(() => {
   resetButtons();
   teamSlider();
   copyRequisites();
+  teamCardTips();
 });
 
 document.fonts.ready.then((res) => {
-  alignHeights('.cooperation__list', '.cooperation__item-text', true)
-  alignHeights('.about-features__directions', '.about-features__direction-top', true)
+  alignHeights('.cooperation__list', '.cooperation__item-text', true);
+  alignHeights('.about-features__directions', '.about-features__direction-top', true);
+  moreButtonRow();
 })
 
 window.addEventListener('load', function () {

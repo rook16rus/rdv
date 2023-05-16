@@ -15,6 +15,9 @@ export default function resetButtons() {
       }
     })
 
-    button.addEventListener("click", () => button.style.display = "none")
+    button.addEventListener("click", () => {
+      button.style.display = "none";
+      input.value = "";
+    })
   })
 }

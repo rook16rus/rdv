@@ -516,6 +516,12 @@ a:focus {
     padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-narrow-padding));
   }
 
+  a {
+    text-decoration: underline;
+    color: var(--main-L-30);
+    text-underline-offset: 0.3rem;
+  }
+
   & > p {
     margin: 2rem 0;
 
@@ -575,10 +581,6 @@ a:focus {
 
   & > h3 {
     @extend .title-h6;
-
-    @include mq('custom', 'max', 1024) {
-      font: var(--title-h1);
-    }
   }
 
   & > h4 {
@@ -626,10 +628,14 @@ a:focus {
     }
 
     @include mq('custom', 'max', 768) {
+      width: calc(100% + 3rem);
+      padding-right: 3rem;
       margin: 2.4rem 0;
     }
 
     @include mq('custom', 'max', 640) {
+      width: calc(100% + 2rem);
+      padding-right: 2rem;
       margin: 2rem 0;
     }
   }
