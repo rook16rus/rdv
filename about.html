@@ -3478,7 +3478,45 @@
       </header>
 
       <main class="page-main main">
-        <section class="about-intro page-section page-section--first"></section>
+        <section class="about-intro page-section page-section--first">
+          <div class="narrow-container">
+            <div class="breadcrumbs__container site-content-container">
+              <div class="breadcrumbs">
+                <div class="breadcrumbs__item">
+                  <a class="breadcrumbs__item-link page-hover-effect" href="index.html">Главная</a>
+                </div><span class="breadcrumbs__arrow"></span>
+                <div class="breadcrumbs__item">
+                  <a class="breadcrumbs__item-link page-hover-effect" href="#">О компании</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="about-intro__inner">
+              <div class="about-intro__content"><span class="about-intro__tag tag tag--medium tag--grey">Кто мы</span>
+                <h1 class="about-intro__title">О компании</h1>
+                <div class="about-intro__text">
+                  <p>Создаем продвинутые инструменты для принятия стратегических решений и развития бизнеса</p>
+                </div>
+                <button class="about-intro__button button button--big button--yellow" data-path="question">Задать вопрос</button>
+              </div>
+              <div class="about-intro__video" data-fancybox data-src="https://youtu.be/qZRJbuXLHWQ">
+                <picture>
+                  <source type="image/webp" data-srcset="assets/images/about-intro-1.webp" alt="Превью к видео">
+                  <img class="lazyload" data-src="assets/images/about-intro-1.jpg" alt="Превью к видео">
+                </picture>
+                <div class="about-intro__video-play">
+                  <svg class="icon icon-play-icon">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#play-icon"></use>
+                  </svg>
+                </div>
+                <div class="about-intro__video-info"><span class="about-intro__video-time tag tag--small tag--grey">23:48</span>
+                  <p class="about-intro__video-desc">Примерный заголовок видео или анонс видео в одну или две строки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="about-features page-section--large-margin">
           <div class="container">
             <div class="about-features__inner">
@@ -8849,11 +8887,11 @@
           </div>
         </div>
       </div>
-      <div class="modal__container modal-resume" data-target="resume">
+      <div class="modal__container modal-resume" data-target="question">
         <div class="modal__content">
           <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
           </button>
-          <h2 class="modal-resume__title">Отправить резюме</h2>
+          <h2 class="modal-resume__title">Задать вопрос</h2>
           <p class="modal-resume__text">Мы с вами свяжемся и обсудим все детали</p>
           <form class="resume-form resume-form--blue">
             <div class="resume-form__input-wrapper input-wrapper">
@@ -8874,14 +8912,6 @@
             </div>
             <div class="resume-form__input-wrapper resume-form__input-wrapper--large input-wrapper input-wrapper--textarea">
               <textarea class="resume-form__textarea input input--big input--white" name="resumeModalComment" id="resumeModalComment" placeholder="Ваш комментарий"></textarea>
-            </div>
-            <div class="resume-form__input-wrapper resume-form__input-wrapper--large js-input-file-container">
-              <input class="resume-form__input visually-hidden js-input-file" type="file" name="resumeModalFile" id="resumeModalFile" data-placeholder="Прикрепить файл">
-              <label class="resume-form__file-label file file--big file--bordered" for="resumeModalFile">
-                <svg class="icon icon-clip-icon">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#clip-icon"></use>
-                </svg><span class="js-input-file-desc">Прикрепить файл</span>
-              </label>
             </div>
             <div class="resume-form__bottom">
               <button class="resume-form__button button button--big button--blue" type="button">Отправить</button>
