@@ -56,4 +56,39 @@ table {
       }
     }
   }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: flex-start;
+      gap: 1.2rem;
+
+      @extend .content-regular-text;
+      color: var(--main-D-10);
+
+      @include mq('custom', 'max', 640) {
+        gap: 0.8rem;
+      }
+
+      &::before {
+        content: '';
+
+        width: 0.4rem;
+        height: 0.4rem;
+        margin-top: 0.5rem;
+
+        border-radius: 50%;
+        background-color: var(--main-D-10);
+
+        @include mq('custom', 'max', 640) {
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
 }
