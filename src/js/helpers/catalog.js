@@ -15,6 +15,8 @@ export default function catalog() {
         tags.forEach(tag => tag.classList.remove('active'));
         tag.classList.add('active');
       }
+
+      showOrHideResetButton();
     })
   })
 
@@ -71,6 +73,7 @@ export default function catalog() {
         countDisplay.dataset.count = subtagsCount;
 
         checkCount(subtagsCount, countDisplay, resetButton);
+        showOrHideResetButton()
       })
     })
   })
@@ -90,16 +93,17 @@ export default function catalog() {
       count = [...monthCheckBoxes].filter(checkbox => checkbox.checked).length;
 
       checkCount(count, dateButton, resetButton);
+      showOrHideResetButton();
     })
   })
 
   function checkCount(count, display, resetButton, buttonClicked) {
     if (count > 0) {
-      if (!buttonClicked) resetButton.classList.add('active');
+      //if (!buttonClicked) resetButton.classList.add('active');
       display.classList.add('count-active');
     } else {
       display.classList.remove('count-active')
-      resetButton.classList.remove('active');
+      //resetButton.classList.remove('active');
     }
   }
 
@@ -124,8 +128,50 @@ export default function catalog() {
 
       button.classList.remove('active');
       checkCount(count, countButton, button, true);
+
+      showOrHideResetButton()
     })
   })
 
+  const resetButton = catalog.querySelector(".catalog__reset-button");
+  const catalogForm = catalog.querySelector('form');
+  const inputsValues = [...catalogForm.elements].map(el => el.checked);
 
+  resetButton.addEventListener('click', () => {
+    countsDisplays.forEach(tag => {
+      tag.classList.remove('active');
+      tag.classList.remove('count-active');
+    })
+
+    dateButton.classList.remove('tab-active');
+    dateButton.classList.remove('count-active');
+
+    resetButtons.forEach(button => button.classList.remove('active'));
+
+    const filterBottoms = catalog.querySelectorAll('.catalog__filter-bottom-content');
+
+    filterBottoms.forEach(container => container.classList.remove('active'));
+
+    resetButton.classList.remove('active')
+  })
+
+  showOrHideResetButton();
+
+  function showOrHideResetButton() {
+    if (isFormChanged(catalogForm)) {
+      resetButton.classList.add('active')
+    } else {
+      resetButton.classList.remove('active')
+    }
+  }
+
+  function isFormChanged(form) {
+    for (let i = 0; i < form.elements.length; i++) {
+      if(form.elements[i].checked !== inputsValues[i]) {
+        return true
+      }
+    }
+
+    return false;
+  }
 }

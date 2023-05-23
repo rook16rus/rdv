@@ -114,6 +114,9 @@
                 span= item.value
           button.modal-tags__tags-button.button.button--medium.button--bordered(type="submit")
             | Применить
+          button.modal-tags__tags-button-reset.button.button--medium(type="reset")
+            span Очистить все
+            +icon-multi('reset-icon')
         each item, index in modalCatalogTags
           .modal-tags__content.js-tab-content(data-id=`modalCatalogSubtags${index}`)
             ul.modal-tags__subtags
@@ -124,9 +127,6 @@
                     span= ite.value
                     +icon-multi('cross-icon')
             button.modal-tags__subtags-button.button.button--medium.button--bordered.js-tab.js-catalog-modal-back(type="button" data-href="modalCatalogTags") Применить
-            button.modal-tags__subtags-button-reset.button.button--medium.js-catalog-modal-reset(type="button")
-              span Очистить все
-              +icon-multi('reset-icon')
 
 -
   const modalCatalogMonths = [
@@ -153,7 +153,7 @@
       | Календарь
     form.modal-dates__form
       select.modal-dates__select.js-custom-select(name="modalCatalogAge" id="modalCatalogAge")
-        option(value="all") Все года
+        option(value="") Все года
         option(value="2023") 2023
         option(value="2022") 2022
         option(value="2021") 2021

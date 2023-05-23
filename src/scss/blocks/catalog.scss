@@ -95,6 +95,8 @@
   }
 
   &__filter {
+    position: relative;
+
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.8rem;
@@ -585,7 +587,7 @@
     margin-bottom: 0.4rem;
   }
 
-  &__filter-reset {
+  &__filter-reset, &__reset-button {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -612,6 +614,15 @@
       visibility: visible;
     }
   }
+
+  &__reset-button {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 0.6rem);
+
+    padding: 0;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

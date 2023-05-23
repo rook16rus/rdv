@@ -6,6 +6,7 @@ export default function catalogModal() {
     const tabs = modal.querySelectorAll('.js-catalog-modal-tag');
     const backButtons = modal.querySelectorAll('.js-catalog-modal-back');
     const resetButtons = modal.querySelectorAll('.js-catalog-modal-reset');
+    const resetButton = modal.querySelector('.modal-tags__tags-button-reset');
 
     tabs.forEach(tab => {
       const subTagsContainer = modal.querySelector(`*[data-id="${tab.dataset.href}"]`);
@@ -44,6 +45,21 @@ export default function catalogModal() {
         subtags.forEach(subtag => subtag.checked = false);
         checkCount(0, tagButton);
       })
+    })
+
+    resetButton.addEventListener('click', () => {
+      tabs.forEach(tab => tab.classList.remove('count-active'))
+    })
+  })
+
+  const catalogModals = document.querySelectorAll('.modal-dates');
+
+  catalogModals.forEach(container => {
+    const resetButton = container.querySelector('.modal-dates__button-reset');
+    const select = window.customSelects[container.querySelector('select').name];
+
+    resetButton.addEventListener('click', () => {
+      select.setChoiceByValue('');
     })
   })
 }

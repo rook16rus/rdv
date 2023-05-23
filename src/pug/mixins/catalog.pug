@@ -38,6 +38,9 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter, b
               button.catalog__tags-more.button.button--icon.button--bordered(type="button")
                 +icon-multi('elipsis-icon')
             .catalog__buttons
+              button.catalog__reset-button.button(type="reset")
+                span Очистить все
+                +icon-multi("reset-icon")
               .catalog__search
                 button.catalog__search-button.button.button--icon.button--bordered(type="button")
                   +icon-multi('search-icon')
@@ -66,9 +69,6 @@ mixin catalog(breadcrumbsData, title, desc, tags, catalogData, categoryFilter, b
                         +icon-multi('cross-icon')
                   .catalog__subtag-more-button.js-more-button(data-count=6)
                     | + #[span.js-more-button-surplus 0]
-                button.catalog__filter-reset.button(type="button" data-container=`catalogTab${index}`)
-                  span Очистить все
-                  +icon-multi('reset-icon')
             .catalog__filter-bottom-content.js-tab-content(data-id=`catalogDate`)
               .catalog__date.js-tabs-container
                 .catalog__date-tabs.js-tabs-scroll
