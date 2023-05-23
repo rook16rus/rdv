@@ -66,6 +66,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem 3.2rem;
+    align-items: flex-start;
 
     @include mq('custom', 'max', 1024) {
       gap: 2.4rem;
@@ -100,6 +101,7 @@
       background-size: cover;
       border-radius: 50%;
       overflow: hidden;
+      align-self: flex-start;
 
       @include mq('custom', 'max', 640) {
         width: 2.4rem;
