@@ -21,5 +21,7 @@ mixin include-section(title, text, img)
           ul.include-section__list
             for item in includeList
               li.include-section__item= item
+          a.include-section__button.button.button--big.button--blue(href="#")
+            | Подробнее
         .include-section__img
           +pictureLazy(img, "Фото")
