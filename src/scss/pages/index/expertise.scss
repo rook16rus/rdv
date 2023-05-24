@@ -34,10 +34,6 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    @include mq('custom', 'max', 768) {
-      min-height: auto;
-    }
-
     @include mq('custom', 'max', 640) {
       padding: 2rem;
     }
@@ -118,7 +114,7 @@
   &__item-title {
     max-width: 47.5rem;
     padding-right: 12rem;
-    margin-bottom: 3rem;
+    margin-bottom: auto;
 
     box-sizing: content-box;
 
@@ -135,7 +131,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 3.4rem;
+    margin-top: 7rem;
     margin-bottom: -0.4rem;
 
     @include mq('custom', 'max', 640) {
