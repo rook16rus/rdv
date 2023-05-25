@@ -3,10 +3,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
 
-  @include mq('custom', 'max', 1024) {
-
-  }
-
   @include mq('custom', 'max', 768) {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;

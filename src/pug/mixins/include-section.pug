@@ -10,7 +10,7 @@
     "Особенности исторической системы",
   ]
 
-mixin include-section(title, text, img)
+mixin include-section(title, text, img, listMod)
   section.include-section&attributes(attributes)
     .container
       .include-section__inner
@@ -18,10 +18,12 @@ mixin include-section(title, text, img)
           h2.include-section__title= title
           .include-section__text
             p= text
-          ul.include-section__list
+          ul.include-section__list(class=listMod)
             for item in includeList
               li.include-section__item= item
+          .include-section__text
+            p= text
           a.include-section__button.button.button--big.button--blue(href="#")
-            | Заказатьй
+            | Заказать
         .include-section__img
           +pictureLazy(img, "Фото")
