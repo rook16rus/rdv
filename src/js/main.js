@@ -94,6 +94,7 @@ document.fonts.ready.then((res) => {
   alignHeights('.cooperation__list', '.cooperation__item-text', true);
   alignHeights('.about-features__directions', '.about-features__direction-top', true);
   alignHeights('.cards-section', '.partners-card__title', true);
+  alignHeights('.decision__list', '.decision__item-title', true);
   moreButtonRow();
 })
 
