@@ -3549,7 +3549,7 @@
           <nav class="footer__top">
             <div class="footer__phone-block">
               <a class="footer__phone link" href="tel:84951270347">8(495) 127-03-47</a>
-              <button class="footer__phone-button button button--big button--white">Заказать звонок</button>
+              <button class="footer__phone-button button button--big button--white" data-path="phone">Заказать звонок</button>
             </div>
             <div class="footer__middle">
               <a class="footer__email link" href="mailto:info@rdv-it.ru">info@rdv-it.ru</a>
@@ -3660,6 +3660,33 @@
           <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
           </button>
           <h3 class="modal-event__title">Оставьте заявку</h3>
+          <p class="modal-event__desc">Мы с вами свяжемся и обсудим все детали</p>
+          <form class="modal-event__form" action="#" data-need-validation>
+            <div class="modal-event__input-wrapper input-wrapper">
+              <input class="modal-event__input input input--big input--blue" type="text" id="eventName" name="eventName" required data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$">
+              <label class="modal-event__label" for="eventName">Имя</label>
+            </div>
+            <div class="modal-event__input-wrapper input-wrapper">
+              <input class="modal-event__input input input--big input--blue js-phone-input" type="tel" id="eventPhone" name="eventPhone" required data-parsley-phone>
+              <label class="modal-event__label" for="eventPhone">Телефон</label>
+            </div>
+            <div class="modal-event__input-wrapper modal-event__input-wrapper--big input-wrapper input-wrapper--textarea">
+              <textarea class="modal-event__textarea input input--big input--blue" id="eventComment" name="eventComment" required placeholder="Вопрос или комментарий"></textarea>
+            </div>
+            <button class="modal-event__button button button--big button--yellow">Отправить</button>
+            <div class="confidence-block confidence-block--blue">
+              <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="contactsConfidence" id="contactsConfidence" checked="checked" required="required">
+              <label class="confidence-block__checkbox-label" for="contactsConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal__container modal-event" data-target="phone">
+        <div class="modal__content js-simplebar">
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
+          </button>
+          <h3 class="modal-event__title">Заказать звонок</h3>
           <p class="modal-event__desc">Мы с вами свяжемся и обсудим все детали</p>
           <form class="modal-event__form" action="#" data-need-validation>
             <div class="modal-event__input-wrapper input-wrapper">
