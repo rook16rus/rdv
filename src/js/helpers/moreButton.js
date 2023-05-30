@@ -1,3 +1,5 @@
+import alignHeights from "../modules/alignHeights";
+
 export default function moreButton() {
   const buttons = document.querySelectorAll('.js-more-button');
 
@@ -36,6 +38,7 @@ export default function moreButton() {
       button.addEventListener('click', () => {
         surplus.forEach(item => item.classList.remove('visually-hidden'))
         button.classList.add('visually-hidden');
+        alignHeights('.cards-section', '.partners-card__title', true);
       })
     } else {
       button.classList.add('visually-hidden');

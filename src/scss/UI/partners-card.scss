@@ -68,6 +68,9 @@
   }
 
   &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-bottom: 3rem;
 
     font: var(--title-h5);
