@@ -55,15 +55,13 @@ section.methods.page-section--large-margin
               h4.methods__accordion-title= item.title
               button.methods__accordion-button
             .methods__accordion-content.js-accordion-content
-              ul.methods__accordion-list
+              ul
                 for it in item.list
-                  li.methods__accordion-item
-                    .methods__accordion-item-content
-                      p.methods__accordion-item-text= it.text
-                      if it.sublist
-                        ul.methods__accordion-item-sublist
-                          for i in it.sublist
-                            li.methods__accordion-item-sublist-item= i
+                  li= it.text
+                      //if it.sublist
+                      //  ul.methods__accordion-item-sublist
+                      //    for i in it.sublist
+                      //      li.methods__accordion-item-sublist-item= i
             button.methods__accordion-mobile-button.button.button--medium.button--bordered.js-accordion-btn
               span.js-accordion-btn-text(data-more-text="Раскрыть" data-less-text="Свернуть") Раскрыть
               +icon-multi('arrow-down')

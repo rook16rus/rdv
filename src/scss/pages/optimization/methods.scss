@@ -96,7 +96,7 @@
         background: var(--gradient-01);
       }
 
-      .methods__accordion-item::before {
+      .methods__accordion-content li::before {
         background:
           linear-gradient(#fff 0 0) content-box,
           var(--gradient-01) border-box;
@@ -113,7 +113,7 @@
         background: var(--gradient-02);
       }
 
-      .methods__accordion-item::before {
+      .methods__accordion-content li::before {
         background:
           linear-gradient(#fff 0 0) content-box,
           var(--gradient-02) border-box;
@@ -130,7 +130,7 @@
         background: var(--gradient-03);
       }
 
-      .methods__accordion-item::before {
+      .methods__accordion-content li::before {
         background:
           linear-gradient(#fff 0 0) content-box,
           var(--gradient-03) border-box;
@@ -271,93 +271,93 @@
         margin-top: 2rem;
       }
     }
-  }
 
-  &__accordion-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
-  }
-
-  &__accordion-item {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 5.4rem;
-
-    @extend .content-regular-text;
-    letter-spacing: 0;
-    color: var(--main-D-10);
-
-    @include mq('custom', 'max', 1024) {
-      gap: 4rem;
-    }
-
-    @include mq('custom', 'max', 768) {
-      gap: 2.8rem;
-    }
-
-    @include mq('custom', 'max', 640) {
+    & > ul {
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 1.6rem;
-    }
 
-    &::before {
-      content: '';
+      li {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 5.4rem;
 
-      width: 1.3rem;
-      height: 1.3rem;
-      margin-left: 3rem;
-      margin-top: 0.2rem;
+        @extend .content-regular-text;
+        letter-spacing: 0;
+        color: var(--main-D-10);
 
-      border: 3px solid transparent;
-      border-radius: 50%;
+        @include mq('custom', 'max', 1024) {
+          gap: 4rem;
+        }
 
-      @include mq('custom', 'max', 1024) {
-        margin-left: 2.4rem;
+        @include mq('custom', 'max', 768) {
+          gap: 2.8rem;
+        }
+
+        @include mq('custom', 'max', 640) {
+          gap: 1.6rem;
+        }
+
+        &::before {
+          content: '';
+
+          width: 1.3rem;
+          height: 1.3rem;
+          margin-left: 3rem;
+          margin-top: 0.2rem;
+
+          border: 3px solid transparent;
+          border-radius: 50%;
+
+          @include mq('custom', 'max', 1024) {
+            margin-left: 2.4rem;
+          }
+
+          @include mq('custom', 'max', 768) {
+            margin-left: 0.5rem;
+          }
+
+          @include mq('custom', 'max', 640) {
+            width: 0.6rem;
+            height: 0.6rem;
+          }
+        }
       }
-
-      @include mq('custom', 'max', 768) {
-        margin-left: 0.5rem;
-      }
-
-      @include mq('custom', 'max', 640) {
-        width: 0.6rem;
-        height: 0.6rem;
-      }
     }
   }
 
-  &__accordion-item-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
-  }
-
-  &__accordion-item-sublist {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-
-    @include mq('custom', 'max', 640) {
-      gap: 0.8rem;
-    }
-  }
-
-  &__accordion-item-sublist-item {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.8rem;
-
-    &::before {
-      content: '';
-
-      width: 0.4rem;
-      height: 0.4rem;
-      margin-top: 0.5rem;
-
-      border-radius: 50%;
-      background-color: var(--main-D-10);
-    }
-  }
+  //&__accordion-item-content {
+  //  display: grid;
+  //  grid-template-columns: 1fr;
+  //  gap: 1.6rem;
+  //}
+  //
+  //&__accordion-item-sublist {
+  //  display: grid;
+  //  grid-template-columns: 1fr;
+  //  gap: 1.2rem;
+  //
+  //  @include mq('custom', 'max', 640) {
+  //    gap: 0.8rem;
+  //  }
+  //}
+  //
+  //&__accordion-item-sublist-item {
+  //  display: grid;
+  //  grid-template-columns: auto 1fr;
+  //  gap: 1.8rem;
+  //
+  //  &::before {
+  //    content: '';
+  //
+  //    width: 0.4rem;
+  //    height: 0.4rem;
+  //    margin-top: 0.5rem;
+  //
+  //    border-radius: 50%;
+  //    background-color: var(--main-D-10);
+  //  }
+  //}
 
   &__accordion-mobile-button {
     display: none;
