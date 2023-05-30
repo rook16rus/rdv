@@ -95,6 +95,7 @@ document.fonts.ready.then((res) => {
   alignHeights('.about-features__directions', '.about-features__direction-top', true);
   alignHeights('.cards-section', '.partners-card__title', true);
   alignHeights('.decision__list', '.decision__item-title', true);
+  alignHeights('.about-mission__list', '.about-mission__item-title', true);
   moreButtonRow();
 })
 
