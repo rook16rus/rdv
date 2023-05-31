@@ -60,6 +60,8 @@ export default function catalog() {
 
   countsDisplays.forEach(countDisplay => {
     const subTagsContainer = catalog.querySelector(`*[data-id="${countDisplay.dataset.href}"]`);
+    if (!subTagsContainer) return
+
     const subTags = subTagsContainer.querySelectorAll('.catalog__subtag-radio');
     const resetButton = subTagsContainer.querySelector('.catalog__filter-reset');
 
