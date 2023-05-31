@@ -49,9 +49,11 @@ export default function catalogModal() {
       })
     })
 
-    resetButton.addEventListener('click', () => {
-      tabs.forEach(tab => tab.classList.remove('count-active'))
-    })
+    if (resetButton) {
+      resetButton.addEventListener('click', () => {
+        tabs.forEach(tab => tab.classList.remove('count-active'))
+      })
+    }
   })
 
   const catalogModals = document.querySelectorAll('.modal-dates');
