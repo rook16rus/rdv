@@ -10,6 +10,8 @@ export default function catalogModal() {
 
     tabs.forEach(tab => {
       const subTagsContainer = modal.querySelector(`*[data-id="${tab.dataset.href}"]`);
+      if (!subTagsContainer) return
+
       const subTags = subTagsContainer.querySelectorAll('.js-catalog-modal-subtag');
 
       let subtagsCount = tab.dataset.count;
