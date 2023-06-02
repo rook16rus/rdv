@@ -2,19 +2,19 @@ mixin content-slider(isPagination, isNoneDesc)
   .content-slider.swiper&attributes(attributes)
     .swiper-wrapper
       .content-slider__slide.swiper-slide
-        a.content-slider__slide-img(data-fancybox data-src="assets/images/content-slider-1.jpg" href="#")
+        a.content-slider__slide-img(data-fancybox href="assets/images/content-slider-1.jpg")
           +pictureLazy("content-slider-1.jpg", "Контентое фото")
         unless isNoneDesc
           .content-slider__slide-desc
             | Мелкая сноска с описанием фото
       .content-slider__slide.swiper-slide
-        a.content-slider__slide-img(data-fancybox data-src="assets/images/content-slider-1.jpg" href="#")
+        a.content-slider__slide-img(data-fancybox href="assets/images/content-slider-1.jpg")
           +pictureLazy("content-slider-1.jpg", "Контентое фото")
         unless isNoneDesc
           .content-slider__slide-desc
             | Мелкая сноска с описанием фото
       .content-slider__slide.swiper-slide
-        a.content-slider__slide-img(data-fancybox data-src="assets/images/content-slider-1.jpg" href="#")
+        a.content-slider__slide-img(data-fancybox href="assets/images/content-slider-1.jpg")
           +pictureLazy("content-slider-1.jpg", "Контентое фото")
         unless isNoneDesc
           .content-slider__slide-desc
