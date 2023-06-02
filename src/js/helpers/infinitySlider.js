@@ -16,6 +16,9 @@ export default function infinitySlider() {
       spaceBetween: slider.dataset.space ? Number(slider.dataset.space) : 32,
       nested: true,
       freeMode: true,
+      allowTouchMove: false,
+      simulateTouch: false,
+      noSwiping: true,
       autoplay: {
         enabled: true,
         delay: 1,
