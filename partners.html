@@ -8383,6 +8383,44 @@
           </form>
         </div>
       </div>
+      <div class="modal__container modal-order" data-target="order">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
+          </button>
+          <h2 class="modal-order__title">Оставьте заявку</h2>
+          <p class="modal-order__text">Мы с вами свяжемся и обсудим все детали</p>
+          <form class="modal-order__form" action="#" data-need-validation>
+            <div class="modal-order__inputs">
+              <div class="modal-order__input-wrapper input-wrapper">
+                <input class="modal-order__input input input--big input--blue" type="text" name="orderName" id="orderName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$" required>
+                <label class="modal-order__label" for="orderName">Имя</label>
+              </div>
+              <div class="modal-order__input-wrapper input-wrapper">
+                <input class="modal-order__input input input--big input--blue" type="text" name="orderLink" id="orderLink" required>
+                <label class="modal-order__label" for="orderLink">Название компании</label>
+              </div>
+              <div class="modal-order__input-wrapper input-wrapper">
+                <input class="modal-order__input input input--big input--blue js-phone-input" type="tel" name="orderPhone" id="orderPhone" data-parsley-phone required>
+                <label class="modal-order__label" for="orderPhone">Телефон</label>
+              </div>
+              <div class="modal-order__input-wrapper input-wrapper">
+                <input class="modal-order__input input input--big input--blue" type="email" name="orderEmail" id="orderEmail" required>
+                <label class="modal-order__label" for="orderEmail">Корпоративный Email</label>
+              </div>
+              <div class="modal-order__input-wrapper input-wrapper">
+                <input class="modal-order__input input input--big input--blue" type="text" name="orderSite" id="orderSite" required>
+                <label class="modal-order__label" for="orderSite">Сайт</label>
+              </div>
+            </div>
+            <button class="modal-order__button button button--big button--yellow">Отправить</button>
+            <div class="confidence-block confidence-block--blue">
+              <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="orderConfidence" id="orderConfidence" checked="checked" required="required">
+              <label class="confidence-block__checkbox-label" for="orderConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
   </body>
