@@ -3762,3 +3762,38 @@ each item, index in burgerList
       true,
       true
     )
+
+.modal__container(data-target="order").modal-order
+  .modal__content
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      span
+      span
+    h2.modal-order__title
+      | Оставьте заявку
+    p.modal-order__text
+      | Мы с вами свяжемся и обсудим все детали
+    form.modal-order__form(action="#" data-need-validation)
+      .modal-order__inputs
+        .modal-order__input-wrapper.input-wrapper
+          input.modal-order__input.input.input--big.input--blue(type="text" name=`orderName` id=`orderName` data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
+          label.modal-order__label(for=`orderName`)
+            | Имя
+        .modal-order__input-wrapper.input-wrapper
+          input.modal-order__input.input.input--big.input--blue(type="text" name=`orderLink` id=`orderLink` required)
+          label.modal-order__label(for=`orderLink`)
+            | Название компании
+        .modal-order__input-wrapper.input-wrapper
+          input.modal-order__input.input.input--big.input--blue.js-phone-input(type="tel" name=`orderPhone` id=`orderPhone` data-parsley-phone required)
+          label.modal-order__label(for=`orderPhone`)
+            | Телефон
+        .modal-order__input-wrapper.input-wrapper
+          input.modal-order__input.input.input--big.input--blue(type="email" name=`orderEmail` id=`orderEmail` required)
+          label.modal-order__label(for=`orderEmail`)
+            | Корпоративный Email
+        .modal-order__input-wrapper.input-wrapper
+          input.modal-order__input.input.input--big.input--blue(type="text" name=`orderSite` id=`orderSite` required)
+          label.modal-order__label(for=`orderSite`)
+            | Сайт
+      button.modal-order__button.button.button--big.button--yellow
+        | Отправить
+      +confidence-block(`orderConfidence`, "confidence-block--blue")

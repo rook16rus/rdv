@@ -1251,3 +1251,81 @@
     }
   }
 }
+
+.modal-order {
+  max-width: 51.2rem;
+
+  @include mq('custom', 'max', 1024) {
+    max-width: none;
+  }
+
+  .modal__close-btn {
+    span {
+      width: 2.7rem;
+
+      @include mq('custom', 'max', 640) {
+        width: 2.2rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.8rem;
+
+    @extend .title-h3;
+    color: var(--main-base-0);
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+
+    @extend .content-big-text;
+    color: rgba(23, 79, 119, 0.5);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 3.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-bottom: 2.4rem;
+
+    @include mq('custom', 'max', 640) {
+      gap: 0.4rem;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-bottom: 0.8rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  .confidence-block {
+    margin: 0;
+
+    span {
+      margin-top: 0.1rem;
+
+      color: var(--grey-D-60);
+    }
+  }
+}
