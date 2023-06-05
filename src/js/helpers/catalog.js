@@ -5,6 +5,7 @@ export default function catalog() {
   if (!catalog) return
 
   const tags = catalog.querySelectorAll('.catalog__tag-radio');
+  let inputsValues = [];
 
   tags.forEach(tag => {
     tag.addEventListener('click', (e) => {
@@ -131,18 +132,20 @@ export default function catalog() {
       button.classList.remove('active');
       checkCount(count, countButton, button, true);
 
-      showOrHideResetButton()
+      showOrHideResetButton();
     })
   })
 
   const resetButton = catalog.querySelector(".catalog__reset-button");
   const catalogForm = catalog.querySelector('form');
-  const inputsValues = [...catalogForm.elements].map(el => el.checked);
+  inputsValues = [...catalogForm.elements].map(el => el.checked)
 
   resetButton.addEventListener('click', () => {
     countsDisplays.forEach(tag => {
       tag.classList.remove('active');
       tag.classList.remove('count-active');
+      tag.classList.remove('tab-active');
+      tag.checked = false;
     })
 
     dateButton.classList.remove('tab-active');
