@@ -91,6 +91,22 @@
     }
   }
 
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    padding: 0.85rem 1.4rem;
+    margin-bottom: 2rem;
+
+    border-radius: 10rem;
+    background-color: #fff;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
   &__meta-block {
     display: flex;
     flex-wrap: wrap;

@@ -44,6 +44,7 @@ import resetButtons from "./helpers/resetButtons";
 import teamSlider from "./helpers/teamSlider";
 import copyRequisites from "./helpers/copyRequisites";
 import teamCardTips from "./helpers/teamCardTips";
+import projectsSearch from "./helpers/projectsSearch";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -88,6 +89,7 @@ documenReady(() => {
   teamSlider();
   copyRequisites();
   teamCardTips();
+  projectsSearch();
 });
 
 document.fonts.ready.then((res) => {
