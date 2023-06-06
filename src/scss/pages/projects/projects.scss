@@ -76,7 +76,7 @@
     white-space: nowrap;
   }
 
-  &__tag-radio:checked + &__tag-label {
+  &__tag-input:checked + &__tag-label {
     @extend .button--white;
 
     border-color: white;
