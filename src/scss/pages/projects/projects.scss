@@ -30,6 +30,8 @@
   }
 
   &__filter {
+    position: relative;
+
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 2rem;
@@ -50,6 +52,39 @@
     @include mq('custom', 'max', 640) {
       gap: 0.4rem;
       margin-bottom: 1.2rem;
+    }
+  }
+
+  &__filter-reset {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 0.6rem);
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    height: 3.2rem;
+    padding: 0;
+
+    color: var(--grey-D-60);
+
+    opacity: 0;
+    visibility: hidden;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
+
+    svg {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin: 0;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
     }
   }
 

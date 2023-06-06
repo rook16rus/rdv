@@ -45,6 +45,7 @@ import teamSlider from "./helpers/teamSlider";
 import copyRequisites from "./helpers/copyRequisites";
 import teamCardTips from "./helpers/teamCardTips";
 import projectsSearch from "./helpers/projectsSearch";
+import projectsReset from "./helpers/projectsReset";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -90,6 +91,7 @@ documenReady(() => {
   copyRequisites();
   teamCardTips();
   projectsSearch();
+  projectsReset();
 });
 
 document.fonts.ready.then((res) => {

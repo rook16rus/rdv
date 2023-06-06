@@ -18,8 +18,6 @@ export default function catalog() {
         tag.classList.add('active');
       }
 
-      console.log(tag.checked);
-
       showOrHideResetButton();
     })
   })

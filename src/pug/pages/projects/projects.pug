@@ -205,11 +205,14 @@ section.projects.page-section.page-section--first
   .container
     .projects__inner.js-more-button-container
       form.projects__filter
+        button.projects__filter-reset.button(type="reset")
+          span Очистить все
+          +icon-multi("reset-icon")
         .projects__tags-block.js-more-button-container.js-more-button-row-container(data-tablet="true")
           ul.projects__tags
             each item, index in projectTags
               li.projects__tag.js-more-button-item.js-more-button-row-item
-                input.projects__tag-input.visually-hidden(type="radio" name="projectsTags" id=`projectsTag${index}`)
+                input.projects__tag-input.visually-hidden(type="checkbox" name=`projectsTag${index}` id=`projectsTag${index}`)
                 label.projects__tag-label.button.button--medium.button--bordered(for=`projectsTag${index}`)= item.value
             button.projects__tags-more.button.button--medium.button--bordered.js-more-button.js-more-button-row(data-count=5 type="button")
               span Ещё
