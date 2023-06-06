@@ -14,8 +14,11 @@ export default function catalog() {
         tag.classList.remove('active');
       } else {
         tags.forEach(tag => tag.classList.remove('active'));
+        tag.checked = true;
         tag.classList.add('active');
       }
+
+      console.log(tag.checked);
 
       showOrHideResetButton();
     })
@@ -142,10 +145,13 @@ export default function catalog() {
 
   resetButton.addEventListener('click', () => {
     countsDisplays.forEach(tag => {
-      tag.classList.remove('active');
       tag.classList.remove('count-active');
       tag.classList.remove('tab-active');
+    })
+
+    tags.forEach(tag => {
       tag.checked = false;
+      tag.classList.remove('active');
     })
 
     dateButton.classList.remove('tab-active');
