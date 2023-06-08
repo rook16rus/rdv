@@ -5,6 +5,18 @@
 
     @extend .title-h2;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__text {
@@ -12,6 +24,18 @@
 
     @extend .content-big-text;
     color: var(--main-D-10);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__top {
@@ -19,6 +43,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
     margin-bottom: 7.2rem;
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      margin-bottom: 1.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
 
     .optimization-section__card {
       &::before {
@@ -75,8 +109,20 @@
     justify-content: center;
     gap: 1.6rem;
 
+    @include mq('custom', 'max', 768) {
+      flex-direction: column;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.2rem;
+    }
+
     .optimization-section__card {
       width: calc((100% - 3.2rem) / 3);
+
+      @include mq('custom', 'max', 768) {
+        width: 100%;
+      }
 
       &::before {
         bottom: 100%;
@@ -136,6 +182,19 @@
     border: 2px solid transparent;
     border-radius: 2.4rem;
 
+    @include mq('custom', 'max', 1024) {
+      padding: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      min-height: auto;
+      padding: 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 2.4rem;
+    }
+
     &::before {
       content: '';
 
@@ -143,6 +202,20 @@
 
       width: 2px;
       height: 3.2rem;
+
+      @include mq('custom', 'max', 768) {
+        display: none;
+      }
+    }
+  }
+
+  &__card-top {
+    @include mq('custom', 'max', 768) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 1.6rem;
+      margin-bottom: 2.4rem;
     }
   }
 
@@ -158,6 +231,22 @@
 
     font: var(--title-h4);
     color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 6rem;
+      height: 6rem;
+      margin-bottom: 0;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
   }
 
   &__card-title {
@@ -165,6 +254,10 @@
 
     @extend .title-h5;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 0;
+    }
   }
 
   &__card-list {
@@ -192,6 +285,7 @@
 
       background-color: var(--main-base-0);
       border-radius: 50%;
+
     }
   }
 
@@ -199,6 +293,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 7.2rem;
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
   }
 
   &__bullet {
