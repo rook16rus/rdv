@@ -6,6 +6,7 @@ export default function fancybox() {
 
   fancyboxElements.forEach(item => {
     item.dataset.src = item.getAttribute("href");
+    item.setAttribute("href", "#")
   })
 
   Fancybox.bind(fancyboxElements, {

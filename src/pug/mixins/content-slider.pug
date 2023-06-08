@@ -2,7 +2,7 @@ mixin content-slider(isPagination, isNoneDesc)
   .content-slider.swiper&attributes(attributes)
     .swiper-wrapper
       .content-slider__slide.swiper-slide
-        a.content-slider__slide-img(data-fancybox href="assets/images/content-slider-1.jpg")
+        a.content-slider__slide-img(data-fancybox href="assets/images/content-slider-1.jpg" target="_self")
           +pictureLazy("content-slider-1.jpg", "Контентое фото")
         unless isNoneDesc
           .content-slider__slide-desc
