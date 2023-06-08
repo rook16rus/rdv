@@ -1,3 +1,212 @@
 .optimization-section {
+  &__title {
+    max-width: 95rem;
+    margin-bottom: 3.2rem;
 
+    @extend .title-h2;
+    color: var(--main-base-0);
+  }
+
+  &__text {
+    margin-bottom: 5.6rem;
+
+    @extend .content-big-text;
+    color: var(--main-D-10);
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    margin-bottom: 7.2rem;
+
+    .optimization-section__card {
+      &::before {
+        top: 100%;
+        left: 3.8rem;
+      }
+    }
+
+    .optimization-section__card:nth-child(1) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-01) border-box;
+
+      .optimization-section__card-number {
+        background: var(--gradient-01);
+      }
+
+      &::before {
+        background-color: #25B9E9;
+      }
+    }
+
+    .optimization-section__card:nth-child(2) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-03) border-box;
+
+      .optimization-section__card-number {
+        background: var(--gradient-03);
+      }
+
+      &::before {
+        background-color: #F07C16;
+      }
+    }
+
+    .optimization-section__card:nth-child(3) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-05) border-box;
+
+      .optimization-section__card-number {
+        background: var(--gradient-05);
+      }
+
+      &::before {
+        background-color: #9A4EFE;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+
+    .optimization-section__card {
+      width: calc((100% - 3.2rem) / 3);
+
+      &::before {
+        bottom: 100%;
+        right: 3.8rem;
+      }
+    }
+
+    .optimization-section__card:nth-child(1) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-02) border-box;
+
+      .optimization-section__card-number {
+        background: var(--gradient-02);
+      }
+
+      &::before {
+        background-color: #2FE8AA;
+      }
+    }
+
+    .optimization-section__card:nth-child(2) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-04) border-box;
+
+      .optimization-section__card-number {
+        background: var(--gradient-04);
+      }
+
+      &::before {
+        background-color: #9677FF;
+      }
+    }
+
+    .optimization-section__card:nth-child(3) {
+      background:
+        linear-gradient(#fff 0 0) padding-box,
+        var(--gradient-07) border-box;
+
+      .optimization-section__card-number {
+        background: var(--gradient-07);
+      }
+
+      &::before {
+        background-color: #FB4C69;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+
+    min-height: 41.6rem;
+    padding: 3.2rem;
+
+    border: 2px solid transparent;
+    border-radius: 2.4rem;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      width: 2px;
+      height: 3.2rem;
+    }
+  }
+
+  &__card-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.2rem;
+    height: 7.2rem;
+    margin-bottom: 3.2rem;
+
+    border-radius: 50%;
+
+    font: var(--title-h4);
+    color: #fff;
+  }
+
+  &__card-title {
+    margin-bottom: 2.4rem;
+
+    @extend .title-h5;
+    color: var(--main-base-0);
+  }
+
+  &__card-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+
+    opacity: 0.5;
+
+    @extend .content-regular-text;
+    color: var(--main-base-0);
+  }
+
+  &__card-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.7rem;
+
+    &::before {
+      content: '';
+
+      width: 0.6rem;
+      height: 0.6rem;
+      margin-top: 0.4rem;
+
+      background-color: var(--main-base-0);
+      border-radius: 50%;
+    }
+  }
+
+  &__bullets {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7.2rem;
+  }
+
+  &__bullet {
+    width: 0.6rem;
+    height: 0.6rem;
+    flex-shrink: 0;
+
+    border: 2px solid rgba(185, 191, 206, 0.5);
+    border-radius: 50%;
+  }
 }

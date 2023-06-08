@@ -1,4 +1,64 @@
-section.optimization-section
+-
+  const optimizationTop = [
+    {
+      number: "01",
+      title: "Консалтинг и аудит бизнес-процессов",
+      list: [
+        "Оказание консалтинговых услуг, аудит бизнес-требований, формирование стратегии реализации проекта, оценка бюджета.",
+      ]
+    },
+    {
+      number: "03",
+      title: "Разработка технического проекта",
+      list: [
+        "Настройка и развертывание ключевых компонентов портала",
+        "Модули финансового учета и фискализации",
+        "Доработка существующих компонентов",
+        "Наполнение данными",
+        "Интеграция компонент",
+      ]
+    },
+    {
+      number: "05",
+      title: "Развитие и поддержка",
+      list: [
+        "Доработка по результатам прошедшей эксплуатации",
+        "Настройка и запуск вторичных систем",
+        "Поддержка разработанных систем",
+      ]
+    },
+  ]
+
+-
+  const optimizationBottom = [
+    {
+      number: "02",
+      title: "Консалтинг и аудит бизнес-процессов",
+      list: [
+        "Разработка методологии \"to be\" по целевым процессам портала.",
+        "Разработка методологии \"to be\" по целевым процессам портала.",
+        "Разработка технического проекта.",
+      ]
+    },
+    {
+      number: "04",
+      title: "Запуск в продуктивную эксплуатацию",
+      list: [
+        "Доработки по результатам тестовой эксплуатации",
+        "Запуск в промышленную эксплуатацию",
+      ]
+    },
+    {
+      number: "06",
+      title: "Запуск в продуктивную эксплуатацию",
+      list: [
+        "Доработки по результатам тестовой эксплуатации",
+        "Запуск в промышленную эксплуатацию",
+      ]
+    },
+  ]
+
+section.optimization-section.page-section--large-margin
   .narrow-container
     h2.optimization-section__title
       | Как мы решаем вопросы по оптимизации производительности 1С
@@ -6,5 +66,44 @@ section.optimization-section
       p
         | Основной ключевой момент в процессе нашей работы - мы смотрим не только на «железную коробку», не ограничиваемся замерами производительности серверов, большое внимание уделяем именно анализу взаимодействия элементов системы и удобству работы пользователей.
     .optimization-section__top
-
+      for item in optimizationTop
+        .optimization-section__card
+          .optimization-section__card-top
+            span.optimization-section__card-number= item.number
+            h3.optimization-section__card-title= item.title
+          ul.optimization-section__card-list
+            for it in item.list
+              li.optimization-section__card-item= it
+    .optimization-section__bullets
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
+      .optimization-section__bullet
     .optimization-section__bottom
+      for item in optimizationBottom
+        .optimization-section__card
+          .optimization-section__card-top
+            span.optimization-section__card-number= item.number
+            h3.optimization-section__card-title= item.title
+          ul.optimization-section__card-list
+            for it in item.list
+              li.optimization-section__card-item= it
