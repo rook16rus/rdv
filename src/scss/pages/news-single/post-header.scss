@@ -53,6 +53,12 @@
       margin-bottom: 4rem;
       padding: 1.2rem;
     }
+
+    &--without-margin {
+      &#{&} {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__img {
@@ -71,6 +77,16 @@
 
     @include mq('custom', 'max', 640) {
       margin-right: -0.8rem;
+    }
+
+    &--project {
+      flex-wrap: nowrap;
+
+      .post-header__meta-list {
+        @include mq('custom', 'max', 1024) {
+          order: 0;
+        }
+      }
     }
   }
 
@@ -192,6 +208,13 @@
 
     @include mq('custom', 'max', 640) {
       margin-bottom: 2rem;
+    }
+
+    &--small {
+      max-width: 78rem;
+
+      @extend .content-medium-text;
+      font-size: 1.4rem;
     }
   }
 

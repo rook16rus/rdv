@@ -1,21 +1,23 @@
-mixin post-header(breadcrumbs, img, time, meta, title, text, button, tags)
+mixin post-header(breadcrumbs, img, time, meta, title, text, button, tags, metaTagMod, textMod, metaMod)
   header.post-header
     .narrow-container
       +breadcrumbs(breadcrumbs)
     .container
-      .post-header__inner
+      .post-header__inner(class=`${!tags ? "post-header__inner--without-margin" : ""}`)
         if img
           +pictureLazy(img, "Фото интро-блока").post-header__img
-        .post-header__meta
-          .post-header__time.tag.tag--medium.tag--yellow(datetime="2023-03-30")
-            if time.isIcon
-              +icon-multi('date-icon')
-            span= time.text
+        .post-header__meta(class=`${metaMod ? metaMod : ''}`)
+          if time
+            .post-header__time.tag.tag--medium.tag--yellow(datetime="2023-03-30")
+              if time.isIcon
+                +icon-multi('date-icon')
+              span= time.text
           ul.post-header__meta-list
             for item in meta
-              li.post-header__meta-item
-                .post-header__meta-icon
-                  +imgLazy(item.icon)
+              li.post-header__meta-item(class=`${metaTagMod ? metaTagMod : ''}`)
+                if item.icon
+                  .post-header__meta-icon
+                    +imgLazy(item.icon)
                 span.post-header__meta-desc= item.desc
           button.post-header__share.tag.tag--medium.tag--reverse.tag--border-grey(data-path='share')
             span Поделиться
@@ -23,12 +25,14 @@ mixin post-header(breadcrumbs, img, time, meta, title, text, button, tags)
             +icon-multi('share-icon-mobile')
         h1.post-header__title= title
         if text
-          .post-header__text
+          .post-header__text(class=`${textMod ? textMod : ''}`)
             p= text
-        button.post-header__button.button.button--big.button--yellow(data-path=button.path)= button.text
-    .narrow-container
-      ul.post-header__tags.js-more-button-row-container
-        for item in tags
-          li.post-header__tag.button.button--small.button--bordered.js-more-button-row-item= item
-        button.post-header__tag-more.button.button--small.button--bordered.js-more-button-row
-          | + #[span.js-more-button-row-surplus 0]
+        if button
+          button.post-header__button.button.button--big.button--yellow(data-path=button.path)= button.text
+    if tags
+      .narrow-container
+        ul.post-header__tags.js-more-button-row-container
+          for item in tags
+            li.post-header__tag.button.button--small.button--bordered.js-more-button-row-item= item
+          button.post-header__tag-more.button.button--small.button--bordered.js-more-button-row
+            | + #[span.js-more-button-row-surplus 0]
