@@ -177,6 +177,8 @@ export default function validation() {
       let formData = new FormData(form);
       const url = form.getAttribute("action");
 
+      if (form.closest("div[data-target='event']") || form.closest("div[data-target='order']")) return
+
       if ($(form).parsley().isValid()) {
         axios.post(url, formData)
           .then((response) => {
