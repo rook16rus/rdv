@@ -5,6 +5,20 @@
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 8rem;
+
+    @include mq('custom', 'max', 1024) {
+      gap: 3.2rem;
+      padding: 3.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      padding: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 1.2rem;
+    }
   }
 
   &__logo {
@@ -16,6 +30,19 @@
 
     border-radius: 2rem;
     background-color: #fff;
+
+    @include mq('custom', 'max', 1024) {
+      width: 38rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+      height: 25rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 22rem;
+    }
 
     img {
       max-width: 70%;
@@ -34,6 +61,10 @@
 
     @extend .title-h4;
     color: var(--main-base-0);
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__text {
@@ -50,6 +81,11 @@
     align-self: flex-start;
     margin-top: auto;
     padding: 0 1.6rem;
+
+
+    @include mq('custom', 'max', 640) {
+      width: 100%;
+    }
 
     svg {
       width: 1.4rem;
