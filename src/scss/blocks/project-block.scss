@@ -1,0 +1,60 @@
+.project-block {
+  &__inner {
+    @extend .section-inner;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8rem;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44rem;
+    height: 28rem;
+
+    border-radius: 2rem;
+    background-color: #fff;
+
+    img {
+      max-width: 70%;
+      max-height: 70%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+
+    @extend .title-h4;
+    color: var(--main-base-0);
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @extend .content-medium-text;
+    color: var(--main-base-0);
+  }
+
+  &__link {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0 1.6rem;
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      margin: 0 1rem 0 0;
+    }
+  }
+}
