@@ -138,7 +138,7 @@ export default function catalog() {
   })
 
   const resetButton = catalog.querySelector(".catalog__reset-button");
-  const catalogForm = catalog.querySelector('form');
+  const catalogForm = catalog.querySelector('.catalog__filter');
   inputsValues = [...catalogForm.elements].map(el => el.checked)
 
   resetButton.addEventListener('click', () => {
