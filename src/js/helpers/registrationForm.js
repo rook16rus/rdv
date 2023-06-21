@@ -45,20 +45,20 @@ export default function registrationForm() {
 
   const eventFormButton = eventForm.querySelector('.event-form__button');
 
-  $(eventForm).parsley({
-    errorsContainer: function (field) {
-      return field.$element.closest('.input-wrapper');
-    },
-    focus: 'none',
-    errorClass: 'is-error',
-    successClass: 'success',
-    classHandler: (field) => {
-      return field.$element.closest('.js-validation-wrapper');
-    },
-    trigger: 'change'
-  });
-
   eventFormButton.addEventListener('click', () => {
+    $(eventForm).parsley({
+      errorsContainer: function (field) {
+        return field.$element.closest('.input-wrapper');
+      },
+      focus: 'none',
+      errorClass: 'is-error',
+      successClass: 'success',
+      classHandler: (field) => {
+        return field.$element.closest('.js-validation-wrapper');
+      },
+      trigger: 'change'
+    }).validate();
+
     if ($(eventForm).parsley().isValid()) {
       window.rdv_API.modal.onOpen('registration');
     }
