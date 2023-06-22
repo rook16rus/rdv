@@ -8,15 +8,6 @@ export default function projectsReset() {
 
   tags.forEach(tag => {
     tag.addEventListener('click', (e) => {
-      if (tag.classList.contains('active')) {
-        tag.checked = false;
-        tag.classList.remove('active');
-      } else {
-        tags.forEach(tag => tag.classList.remove('active'));
-        tag.checked = true;
-        tag.classList.add('active');
-      }
-
       showOrHideResetButton();
     })
   })

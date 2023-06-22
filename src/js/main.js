@@ -79,7 +79,6 @@ documenReady(() => {
   contentSlider();
   simpleBar();
   fixedModalButtons();
-  moreText();
   copyLink();
   mapSlider();
   contactsMap();
@@ -101,6 +100,7 @@ document.fonts.ready.then((res) => {
   alignHeights('.decision__list', '.decision__item-title', true);
   alignHeights('.about-mission__list', '.about-mission__item-title', true);
   moreButtonRow();
+  moreText();
 })
 
 window.addEventListener('load', function () {

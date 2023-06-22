@@ -159,4 +159,10 @@
       padding: 0 1.2rem;
     }
   }
+
+  .button--bordered {
+    &:hover {
+      border-color: var(--grey-L-10);
+    }
+  }
 }

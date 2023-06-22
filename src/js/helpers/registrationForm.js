@@ -34,8 +34,6 @@ export default function registrationForm() {
       const activeIndex = [...groups].findIndex(group => group.classList.contains('active'));
       const percent = activeIndex / (groups.length) * 100;
 
-      console.log(activeIndex);
-
       progressbarLine.style.setProperty('--registration-progress', percent + '%');
     })
   })

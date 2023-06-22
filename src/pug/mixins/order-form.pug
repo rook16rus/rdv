@@ -6,7 +6,7 @@ mixin order-form(title, text)
           h2.order-form__title= title
           .order-form__text
             p= text
-          form.order-form__form(action="#")
+          form.order-form__form(action="#" data-need-validation)
             .order-form__input-wrapper.input-wrapper
               input.order-form__input.input.input--big.input--white(type="text" name="orderRegName" id="orderRegName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
               label.order-form__label(for="orderRegName")
