@@ -15,7 +15,7 @@ export default function introSlider() {
     autoHeight: true,
     speed: 500,
     autoplay: {
-      delay: 10000,
+      delay: 4000,
     },
     navigation: {
       nextEl: intro.querySelector('.js-next-slide'),
