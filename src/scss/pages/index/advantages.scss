@@ -1,6 +1,19 @@
 .advantages {
   &__title {
     @extend .section-title;
+    margin-left: 3.3rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-left: 2.9rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-left: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-left: 0;
+    }
   }
 
   &__wrapper {

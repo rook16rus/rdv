@@ -3494,40 +3494,42 @@
 each item, index in burgerList
   unless item.link
     .modal__container(class=`modal-burger${item.active ? " modal-open" : ""}` data-target=`burger-${index}`)
-      .modal__content.js-simplebar
+      .modal__content
         .modal-burger__buttons
           button.modal-burger__button.button.button--icon.button--bordered(type="button" data-path="burger")
             +icon-multi('button-arrow')
           button.modal-burger__button.button.button--icon.button--bordered.button-reset.modal-close(type="button")
             +icon-multi('cross-icon')
-        h3.modal-burger__title= item.text
-        ul.modal-burger__list
-          each it, i in item.sublist
-            li.modal-burger__item
-              button.modal-burger__link.modal-burger__link--sublink(data-path=`burger-${index}-${i}`)
-                span= it.title
-                +icon-multi('button-arrow')
+        .modal-burger__content.js-simplebar
+          h3.modal-burger__title= item.text
+          ul.modal-burger__list
+            each it, i in item.sublist
+              li.modal-burger__item
+                button.modal-burger__link.modal-burger__link--sublink(data-path=`burger-${index}-${i}`)
+                  span= it.title
+                  +icon-multi('button-arrow')
 
 each item, index in burgerList
   unless item.link
     each it, i in item.sublist
       .modal__container(class=`modal-burger${it.active ? " modal-open" : ""}` data-target=`burger-${index}-${i}`)
-        .modal__content.js-simplebar
+        .modal__content
           .modal-burger__buttons
             button.modal-burger__button.button.button--icon.button--bordered.modal-prev(type="button")
               +icon-multi('button-arrow')
             button.modal-burger__button.button.button--icon.button--bordered.button-reset.modal-close(type="button")
               +icon-multi('cross-icon')
-          h3.modal-burger__subtitle= it.title
-          ul.modal-burger__submenu
-            for elem in it.submenu
-              li.modal-burger__submenu-item
-                h4.modal-burger__submenu-title= it.title
-                ul.modal-burger__submenu-links
-                  for el in elem.links
-                    li.modal-burger__submenu-link-block
-                      a.modal-burger__submenu-link(href="#")= el.name
-                      p.modal-burger__submenu-link-text= el.text
+          .modal-burger__content.js-simplebar
+            h3.modal-burger__subtitle= it.title
+            ul.modal-burger__submenu
+              for elem in it.submenu
+                li.modal-burger__submenu-item
+                  h4.modal-burger__submenu-title= it.title
+                  ul.modal-burger__submenu-links
+                    for el in elem.links
+                      li.modal-burger__submenu-link-block
+                        a.modal-burger__submenu-link(href="#")= el.name
+                        p.modal-burger__submenu-link-text= el.text
 
 -
   const registrationForm = [

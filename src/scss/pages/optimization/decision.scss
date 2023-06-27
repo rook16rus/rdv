@@ -47,7 +47,6 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: flex-start;
     gap: 1.6rem;
 
     counter-reset: order;

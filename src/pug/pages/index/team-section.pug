@@ -23,9 +23,10 @@
   ]
 
 section.team-section.page-section--large-margin
-  .container.container--mobile-padding-large
+  .narrow-container.container--mobile-padding-large
     h2.team-section__title
-      | На вашем проекте будет работать команда профессионалов
+      | На вашем проекте будет работать команда профессионалов|
+  .container
     .team-section__slider.swiper.js-init-slider(data-slides="auto" data-space="24")
       .swiper-wrapper
         for item in team

@@ -46,6 +46,7 @@ import copyRequisites from "./helpers/copyRequisites";
 import teamCardTips from "./helpers/teamCardTips";
 import projectsSearch from "./helpers/projectsSearch";
 import projectsReset from "./helpers/projectsReset";
+import decisionMore from "./helpers/decisionMore";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -91,6 +92,7 @@ documenReady(() => {
   teamCardTips();
   projectsSearch();
   projectsReset();
+  decisionMore();
 });
 
 document.fonts.ready.then((res) => {
