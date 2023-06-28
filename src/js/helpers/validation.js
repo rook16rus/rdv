@@ -180,18 +180,18 @@ export default function validation() {
       if (form.closest("div[data-target='event']") || form.closest("div[data-target='order']")) return
 
       if ($(form).parsley().isValid()) {
-        axios.post(url, formData)
-          .then((response) => {
-            window.rdv_API.modal.close();
-            window.rdv_API.modal.onOpen("success");
-
-            $(form).trigger("reset");
-          })
-          .catch((error) => {
-            console.log(error.message);
-            window.rdv_API.modal.close();
-            window.rdv_API.modal.onOpen("error");
-          });
+        // axios.post(url, formData)
+        //   .then((response) => {
+        //     window.rdv_API.modal.close();
+        //     window.rdv_API.modal.onOpen("success");
+        //
+        //     $(form).trigger("reset");
+        //   })
+        //   .catch((error) => {
+        //     console.log(error.message);
+        //     window.rdv_API.modal.close();
+        //     window.rdv_API.modal.onOpen("error");
+        //   });
       }
     });
   });
