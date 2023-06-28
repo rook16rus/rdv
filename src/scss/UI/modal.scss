@@ -146,7 +146,6 @@
   }
 }
 
-
 .modal-event {
   &__title {
     @extend .title-h3;
@@ -438,15 +437,17 @@
 }
 
 .modal-burger {
-  left: 0;
-  right: 0;
-  bottom: 0;
+  &#{&} {
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-  height: 100%;
-  padding-top: 8rem;
+    height: 100%;
+    padding-top: 8rem;
 
-  border-radius: 0;
-  background-color: var(--grey-base-0);
+    border-radius: 0;
+    background-color: var(--grey-base-0);
+  }
 
   .modal__content {
     display: flex;
