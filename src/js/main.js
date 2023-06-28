@@ -51,6 +51,7 @@ import decisionMore from "./helpers/decisionMore";
 documenReady(() => {
   window.rdv_API = { };
   window.rdv_API.swipers = [];
+  window.rdv_API.tabs = {}
   window.savedWidth = document.documentElement.clientWidth;
   window.initRegistrationForm = registrationForm;
 

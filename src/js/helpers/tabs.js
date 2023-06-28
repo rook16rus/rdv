@@ -3,8 +3,11 @@ import {disableScroll, enableScroll} from "./disableScroll";
 export default function tabs() {
   const tabsContainers = document.querySelectorAll('.js-tabs-container');
 
-  tabsContainers.forEach(tabsContainer => {
+  tabsContainers.forEach((tabsContainer, index) => {
     if (tabsContainer.dataset.noTablet && matchMedia('(max-width: 1024px)').matches) return
+
+    if (window.rdv_API.tabs[tabsContainer.className + index]) return;
+    window.rdv_API.tabs[tabsContainer.className + index] = true;
 
     let contents = tabsContainer.querySelectorAll('.js-tab-content');
     contents = [...contents].filter(content => content.closest('.js-tabs-container').innerHTML === tabsContainer.innerHTML)

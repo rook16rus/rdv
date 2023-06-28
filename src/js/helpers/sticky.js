@@ -7,3 +7,5 @@ export default function sticky() {
     const stickyEl = new Sticksy(element, { topSpacing: 200, listen: true });
   })
 }
+
+window.initSticky = sticky;
