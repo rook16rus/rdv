@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   /* ====   Реализация отправки данных с форм регистрации на мероприятие и анкеты   ==== */
 
   /* Отправка данных двух форм на сервер */
-  const registrationForm = document.querySelector('.event-form__form');
+  const registrationForm = document.querySelector('.js-event-form');
   const registrationModalForm = document.querySelector('.modal-registration__form');
 
   if (!registrationForm) return
