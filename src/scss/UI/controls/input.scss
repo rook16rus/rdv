@@ -86,6 +86,8 @@
     top: 50%;
     transform: translateY(-50%);
 
+    pointer-events: none;
+
     font: var(--button-meduim);
     text-transform: uppercase;
     color: var(--grey-D-60);
