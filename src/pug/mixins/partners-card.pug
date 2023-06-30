@@ -9,8 +9,8 @@ mixin partners-card(img, title, underline, text, tags)
     .partners-card__bottom
       if text
         p.partners-card__text= text
-      .partners-card__tags.js-more-button-container
+      .partners-card__tags.js-more-button-row-container(data-rows-count=3)
         for tag in tags
-          a.partners-card__tag.button.button--medium.button--bordered.js-more-button-item(href="#")= tag.name
-        button.partners-card__tag.button.button--medium.button--grey.js-more-button(data-count="5")
-          | Еще&nbsp;#[span.js-more-button-surplus 1]
+          a.partners-card__tag.button.button--medium.button--bordered.js-more-button-row-item(href="#")= tag.name
+        button.partners-card__tag.button.button--medium.button--grey.js-more-button-row(data-count="5")
+          | Еще&nbsp;#[span.js-more-button-row-surplus 1]

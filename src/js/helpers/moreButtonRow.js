@@ -13,7 +13,9 @@ export default function moreButtonRow() {
     items.forEach(item => item.classList.remove('visually-hidden'));
     let count = 1;
 
-    while (container.clientHeight > items[0].clientHeight * 2 - items[0].clientHeight / 2) {
+    const rowsCount = container.dataset.rowsCount || 2;
+
+    while (container.clientHeight > items[0].clientHeight * rowsCount - items[0].clientHeight / 2) {
       const lastItem = items[items.length - count];
 
       surplus.push(lastItem);
