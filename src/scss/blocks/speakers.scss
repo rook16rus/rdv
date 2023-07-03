@@ -37,10 +37,6 @@
     border-radius: 1.2rem;
     overflow: hidden;
 
-    @include mq('custom', 'max', 768) {
-      filter: grayscale(1);
-    }
-
     @include mq('custom', 'max', 640) {
       margin-bottom: 1.2rem;
     }

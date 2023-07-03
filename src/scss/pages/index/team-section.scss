@@ -50,6 +50,8 @@
       @include mq('custom', 'max', 1024) {
         width: 28rem;
         height: 28rem;
+
+        filter: grayscale(0);
       }
 
       @include mq('custom', 'max', 768) {
