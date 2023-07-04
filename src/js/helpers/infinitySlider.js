@@ -19,6 +19,7 @@ export default function infinitySlider() {
       allowTouchMove: false,
       simulateTouch: false,
       noSwiping: true,
+      preventInteractionOnTransition: true,
       autoplay: {
         enabled: true,
         delay: 1,

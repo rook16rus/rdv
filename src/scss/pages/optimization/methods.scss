@@ -54,7 +54,11 @@
     }
 
     @include mq('custom', 'max', 768) {
-      display: none;
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3.2rem;
     }
   }
 
