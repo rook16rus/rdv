@@ -11,5 +11,7 @@ export default function isAdminMod() {
       swiperHtmlEl.classList.add('swiper--admin')
       swiper.disable();
     })
+
+
   }
 }
