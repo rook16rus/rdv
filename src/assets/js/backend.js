@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       /* Перебираю все вопросы */
       const questions = json.question;
 
+      if (!questions) throw new Error("The questionnaire is empty");
+
       questions.forEach((question, index) => {
         /* Дают первому табу класс active */
         if (index === 0) {
