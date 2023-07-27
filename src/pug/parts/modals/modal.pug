@@ -3781,7 +3781,7 @@ each item, index in burgerList
           label.modal-order__label(for=`orderName`)
             | Имя
         .modal-order__input-wrapper.input-wrapper
-          input.modal-order__input.input.input--big.input--blue(type="text" name=`orderLink` id=`orderLink` required)
+          input.modal-order__input.input.input--big.input--blue(type="text" name=`orderLink` id=`orderLink` data-parsley-minlenght="3" required)
           label.modal-order__label(for=`orderLink`)
             | Название компании
         .modal-order__input-wrapper.input-wrapper
