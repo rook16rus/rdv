@@ -48,6 +48,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   /* Фомирую урл */
   const url = `${jsonUrl}?${eventId.name}=${eventId.value}`;
 
+  /* Нахожу контейнер анкеты, чтобы потом присвоить ему класс для работы с табами */
+  const registrationContainer = document.querySelector('.js-registration-container');
+
   /* Template блока с вопросом для формирования разметки */
   const questionTemplate = registrationModalForm.querySelector('#eventQuestionTemp');
 
@@ -151,6 +154,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         /* Добавляю получившийся блок вопроса в разметку */
         const questionBlock = questionTemplate.content.cloneNode(true);
         registrationModalForm.append(questionBlock);
+
+        /* Присваиваю для контейнера класс для работы с табами */
+        registrationContainer.classList.add('js-tabs-container')
       })
     })
     .then(() => {
