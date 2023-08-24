@@ -5,6 +5,8 @@ export default function moreText() {
     const text = container.querySelector('.js-more-text');
     const button = container.querySelector('.js-more-text-button');
 
+    if (!button) return
+
     if (!isOvercrowding(text)) {
       button.classList.add('visually-hidden');
     }

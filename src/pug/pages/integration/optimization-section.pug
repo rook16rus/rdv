@@ -8,6 +8,66 @@
       ]
     },
     {
+      number: "03",
+      title: "Разработка технического проекта",
+      list: [
+        "Настройка и развертывание ключевых компонентов портала",
+        "Модули финансового учета и фискализации",
+        "Доработка существующих компонентов",
+        "Наполнение данными",
+        "Интеграция компонент",
+      ]
+    },
+    {
+      number: "05",
+      title: "Развитие и поддержка",
+      list: [
+        "Доработка по результатам прошедшей эксплуатации",
+        "Настройка и запуск вторичных систем",
+        "Поддержка разработанных систем",
+      ]
+    },
+  ]
+
+-
+  const optimizationBottom = [
+    {
+      number: "02",
+      title: "Консалтинг и аудит бизнес-процессов",
+      list: [
+        "Разработка методологии \"to be\" по целевым процессам портала.",
+        "Разработка методологии \"to be\" по целевым процессам портала.",
+        "Разработка технического проекта.",
+      ]
+    },
+    {
+      number: "04",
+      title: "Запуск в продуктивную эксплуатацию",
+      list: [
+        "Доработки по результатам тестовой эксплуатации",
+        "Запуск в промышленную эксплуатацию",
+      ]
+    },
+    // {
+    //   number: "06",
+    //   title: "Запуск в продуктивную эксплуатацию",
+    //   list: [
+    //     "Доработки по результатам тестовой эксплуатации",
+    //     "Запуск в промышленную эксплуатацию",
+    //   ]
+    // },
+  ]
+
+-
+  const optimizationTopMobile = [
+    {
+      number: "01",
+      title: "Консалтинг и аудит бизнес-процессов",
+      list: [
+        "Оказание консалтинговых услуг, аудит бизнес-требований, формирование стратегии реализации проекта, оценка бюджета.",
+      ]
+    },
+    {
       number: "02",
       title: "Разработка технического проекта",
       list: [
@@ -30,7 +90,7 @@
   ]
 
 -
-  const optimizationBottom = [
+  const optimizationBottomMobile = [
     {
       number: "04",
       title: "Консалтинг и аудит бизнес-процессов",
@@ -42,14 +102,6 @@
     },
     {
       number: "05",
-      title: "Запуск в продуктивную эксплуатацию",
-      list: [
-        "Доработки по результатам тестовой эксплуатации",
-        "Запуск в промышленную эксплуатацию",
-      ]
-    },
-    {
-      number: "06",
       title: "Запуск в продуктивную эксплуатацию",
       list: [
         "Доработки по результатам тестовой эксплуатации",
@@ -74,30 +126,7 @@ section.optimization-section.page-section--large-margin
           ul.optimization-section__card-list
             for it in item.list
               li.optimization-section__card-item= it
-    .optimization-section__bullets
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
-      .optimization-section__bullet
+          .optimization-section__card-arrow
     .optimization-section__bottom
       for item in optimizationBottom
         .optimization-section__card
@@ -107,3 +136,24 @@ section.optimization-section.page-section--large-margin
           ul.optimization-section__card-list
             for it in item.list
               li.optimization-section__card-item= it
+          .optimization-section__card-arrow
+    .optimization-section__top.optimization-section__top--mobile
+      for item in optimizationTopMobile
+        .optimization-section__card
+          .optimization-section__card-top
+            span.optimization-section__card-number= item.number
+            h3.optimization-section__card-title= item.title
+          ul.optimization-section__card-list
+            for it in item.list
+              li.optimization-section__card-item= it
+          .optimization-section__card-arrow
+    .optimization-section__bottom.optimization-section__bottom--mobile
+      for item in optimizationBottomMobile
+        .optimization-section__card
+          .optimization-section__card-top
+            span.optimization-section__card-number= item.number
+            h3.optimization-section__card-title= item.title
+          ul.optimization-section__card-list
+            for it in item.list
+              li.optimization-section__card-item= it
+          .optimization-section__card-arrow
