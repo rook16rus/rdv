@@ -6,6 +6,10 @@ export default function moreButton() {
   buttons.forEach(button => {
     if (button.dataset.desktop && matchMedia('(max-width: 1024px)').matches) return;
 
+    const defaultText = button.textContent;
+    const activeText = 'Свернуть';
+    let isActive = false;
+
     const container = button.closest('.js-more-button-container');
     if (!container) return
 
@@ -36,8 +40,10 @@ export default function moreButton() {
       }
 
       button.addEventListener('click', () => {
-        surplus.forEach(item => item.classList.remove('visually-hidden'))
-        button.classList.add('visually-hidden');
+        isActive = !isActive;
+        surplus.forEach(item => item.classList.toggle('visually-hidden', !isActive))
+        button.classList.toggle('--active', isActive);
+        button.textContent = isActive ? activeText : defaultText;
         alignHeights('.cards-section', '.partners-card__title', true);
       })
     } else {
