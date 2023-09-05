@@ -55,8 +55,10 @@
   /* Layout containers */
   --max-container-width: 152rem;
   --max-narrow-container-width: 140.8rem;
+  --max-wide-container-width: 164.5rem;
   --content-padding: 5rem;
   --content-narrow-padding: 5rem;
+  --content-wide-padding: 5rem;
 
   /* Font Family */
   --main-ff: 'Geometria', sans-serif;
@@ -96,6 +98,7 @@
     /* Layout containers */
     --content-padding: 3rem;
     --content-narrow-padding: 3rem;
+    --content-wide-padding: 3rem;
 
     /* Titles */
     --title-h1: var(--medium) 3.9rem/110% var(--main-ff);
@@ -112,6 +115,7 @@
     /* Layout containers */
     --content-padding: 0.8rem;
     --content-narrow-padding: 2rem;
+    --content-wide-padding: 2rem;
 
     /* Text */
     --content-huge: var(--regular) 1.8rem/130% var(--main-ff);

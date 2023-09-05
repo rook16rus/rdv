@@ -29,10 +29,6 @@ export default function optimizationSection() {
   const topCards = topCardsBlock.querySelectorAll('.optimization-section__card');
   const bottomCards = bottomCardsBlock.querySelectorAll('.optimization-section__card');
 
-  if (bottomCards.length === 3) {
-    bottomCardsBlock.style.justifyContent = "flex-end";
-  }
-
   topCards.forEach((card, index) => {
     const cardArrow = card.querySelector('.optimization-section__card-arrow');
     const cardNumber = card.querySelector('.optimization-section__card-number');

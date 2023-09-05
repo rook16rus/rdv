@@ -119,6 +119,10 @@
     justify-content: center;
     gap: 1.6rem;
 
+    &--end {
+      justify-content: flex-end;
+    }
+
     @include mq('custom', 'max', 768) {
       justify-content: stretch;
       flex-direction: column;
@@ -205,7 +209,7 @@
     position: relative;
 
     width: 100%;
-    max-width: 40rem;
+    max-width: 45.8rem;
     min-height: 41.6rem;
     padding: 3.2rem;
 

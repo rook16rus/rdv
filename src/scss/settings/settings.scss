@@ -265,6 +265,17 @@ a:focus {
   }
 }
 
+.wide-container {
+  width: 100%;
+  max-width: calc(var(--max-wide-container-width) + 2 * var(--content-wide-padding));
+  margin: 0 auto;
+  padding: 0 var(--content-wide-padding);
+  @supports (width: max(20vw, 100px)) {
+    padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-wide-padding));
+    padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-wide-padding));
+  }
+}
+
 .container {
   width: 100%;
   max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
