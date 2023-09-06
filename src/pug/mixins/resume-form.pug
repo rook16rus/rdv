@@ -5,7 +5,7 @@ mixin resume-form(name, mod, fileMod, buttonMod, confidenceMod, isBottomWrapped,
       label.resume-form__label(for=`${name}Name`)
         | Имя
     .resume-form__input-wrapper.input-wrapper
-      input.resume-form__input.input.input--big.input--white(type="text" name=`${name}Link` id=`${name}Link` required)
+      input.resume-form__input.input.input--big.input--white(type="url" name=`${name}Link` id=`${name}Link` required)
       label.resume-form__label(for=`${name}Link`)
         | Ссылка на резюме
     .resume-form__input-wrapper.input-wrapper
