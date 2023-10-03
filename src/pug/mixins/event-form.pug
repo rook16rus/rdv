@@ -22,7 +22,7 @@ mixin event-form()
               label.event-form__label(for="eventRegPhone")
                 | Ваш телефон
             .event-form__input-wrapper.input-wrapper
-              input.event-form__input.input.input--big.input--white(type="email" name="eventRegEmail" id="eventRegEmail" required)
+              input.event-form__input.input.input--big.input--white(type="email" data-parsley-pattern=`/^\\w+@\\w+\\.\\w+$/` name="eventRegEmail" id="eventRegEmail" required)
               label.event-form__label(for="eventRegEmail")
                 | Email
             .event-form__input-wrapper.event-form__input-wrapper--large.input-wrapper.input-wrapper--textarea

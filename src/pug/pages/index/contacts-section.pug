@@ -15,7 +15,7 @@ section.contacts-section.page-section--large-margin
           label.contacts-section__label(for="contactsPhone")
             | Ваш телефон
         .contacts-section__input-wrapper.contacts-section__input-wrapper--large.input-wrapper
-          input.contacts-section__input.input.input--big.input--white(type="email" name="contactsEmail" id="contactsEmail" required)
+          input.contacts-section__input.input.input--big.input--white(type="email" data-parsley-pattern=`/^\\w+@\\w+\\.\\w+$/` name="contactsEmail" id="contactsEmail" required)
           label.contacts-section__label(for="contactsEmail")
             | Email
         .contacts-section__input-wrapper.contacts-section__input-wrapper--large.input-wrapper.input-wrapper--textarea

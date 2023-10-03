@@ -9,7 +9,7 @@ article.mailing.page-section--large-margin
             | Получайте актуальную информацию об акциях и полезные статьи
       form.mailing__form(action="#" data-need-validation)
         .mailing__input-wrapper.input-wrapper
-          input.mailing__input.input.input--big.input--white(type="email" name="mailingEmail" id="mailingEmail" required)
+          input.mailing__input.input.input--big.input--white(type="email" data-parsley-pattern=`/^\\w+@\\w+\\.\\w+$/` name="mailingEmail" id="mailingEmail" required)
           label.mailing__label(for="mailingEmail") E-mail
         button.mailing__button.button.button--big.button--yellow
           | Подписаться

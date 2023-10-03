@@ -48,6 +48,8 @@ import projectsSearch from "./helpers/projectsSearch";
 import projectsReset from "./helpers/projectsReset";
 import decisionMore from "./helpers/decisionMore";
 import optimizationSection from "./helpers/optimizationSection";
+import noDigits from "./helpers/noDigits";
+import noCyrillic from "./helpers/noCyrillic";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -95,6 +97,8 @@ documenReady(() => {
   projectsReset();
   decisionMore();
   optimizationSection();
+  noDigits();
+  noCyrillic()
 });
 
 document.fonts.ready.then((res) => {

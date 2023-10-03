@@ -3789,7 +3789,7 @@ each item, index in burgerList
           label.modal-order__label(for=`orderPhone`)
             | Телефон
         .modal-order__input-wrapper.input-wrapper
-          input.modal-order__input.input.input--big.input--blue(type="email" name=`orderEmail` id=`orderEmail` required)
+          input.modal-order__input.input.input--big.input--blue(type="email" data-parsley-pattern=`/^\\w+@\\w+\\.\\w+$/` name=`orderEmail` id=`orderEmail` required)
           label.modal-order__label(for=`orderEmail`)
             | Корпоративный Email
         .modal-order__input-wrapper.input-wrapper

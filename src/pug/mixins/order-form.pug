@@ -20,7 +20,7 @@ mixin order-form(title, text)
               label.order-form__label(for="orderRegPhone")
                 | Ваш телефон
             .order-form__input-wrapper.input-wrapper
-              input.order-form__input.input.input--big.input--white(type="email" name="orderRegEmail" id="orderRegEmail" required)
+              input.order-form__input.input.input--big.input--white(type="email" data-parsley-pattern=`/^\\w+@\\w+\\.\\w+$/` name="orderRegEmail" id="orderRegEmail" required)
               label.order-form__label(for="orderRegEmail")
                 | Email
             .order-form__input-wrapper.order-form__input-wrapper--large.input-wrapper.input-wrapper--textarea

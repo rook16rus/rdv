@@ -31,7 +31,7 @@ mixin numered-features-section(title, form, content)
                   input.numered-features-section__input.input.input--big.input--white.js-phone-input(type="tel" name="featuresPhone" id="featuresPhone" required data-parsley-phone)
                   label.numered-features-section__label(for="featuresPhone") Телефон
                 .numered-features-section__input-wrapper.input-wrapper
-                  input.numered-features-section__input.input.input--big.input--white(type="email" name="featuresEmail" id="featuresEmail" required)
+                  input.numered-features-section__input.input.input--big.input--white(type="email" data-parsley-pattern=`/^\\w+@\\w+\\.\\w+$/` name="featuresEmail" id="featuresEmail" required)
                   label.numered-features-section__label(for="featuresEmail") E-mail
                 .numered-features-section__input-wrapper.numered-features-section__input-wrapper--large.input-wrapper
                   input.numered-features-section__input.input.input--big.input--white(type="text" name="featuresSite" id="featuresSite")

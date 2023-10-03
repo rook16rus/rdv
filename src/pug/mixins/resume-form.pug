@@ -1,5 +1,5 @@
 mixin resume-form(name, mod, fileMod, buttonMod, confidenceMod, isBottomWrapped, deleteFileInput)
-  form.resume-form(class=`${mod ? mod : ''}`)
+  form.resume-form(class=`${mod ? mod : ''}` data-need-validation="")
     .resume-form__input-wrapper.input-wrapper
       input.resume-form__input.input.input--big.input--white(type="text" name=`${name}Name` id=`${name}Name` data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
       label.resume-form__label(for=`${name}Name`)
@@ -13,7 +13,7 @@ mixin resume-form(name, mod, fileMod, buttonMod, confidenceMod, isBottomWrapped,
       label.resume-form__label(for=`${name}Phone`)
         | Ваш телефон
     .resume-form__input-wrapper.input-wrapper
-      input.resume-form__input.input.input--big.input--white(type="email" name=`${name}Email` id=`${name}Email` required)
+      input.resume-form__input.input.input--big.input--white(type="email" data-parsley-pattern=`/^\\w+@\\w+\\.\\w+$/` name=`${name}Email` id=`${name}Email` required)
       label.resume-form__label(for=`${name}Email`)
         | Email
     .resume-form__input-wrapper.resume-form__input-wrapper--large.input-wrapper.input-wrapper--textarea
@@ -26,10 +26,10 @@ mixin resume-form(name, mod, fileMod, buttonMod, confidenceMod, isBottomWrapped,
           span.js-input-file-desc Прикрепить файл
     if isBottomWrapped
       .resume-form__bottom
-        button.resume-form__button.button(class=`${buttonMod ? buttonMod : ''}` type="button")
+        button.resume-form__button.button(class=`${buttonMod ? buttonMod : ''}`)
           | Отправить
         +confidence-block(`${name}Confidence`, confidenceMod)
     else
-      button.resume-form__button.button(class=`${buttonMod ? buttonMod : ''}` type="button")
+      button.resume-form__button.button(class=`${buttonMod ? buttonMod : ''}`)
         | Отправить
       +confidence-block(`${name}Confidence`, confidenceMod)
