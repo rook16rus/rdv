@@ -3603,7 +3603,7 @@
                     <label class="event-form__label" for="eventRegPhone">Ваш телефон</label>
                   </div>
                   <div class="event-form__input-wrapper input-wrapper">
-                    <input class="event-form__input input input--big input--white" type="email" name="eventRegEmail" id="eventRegEmail" required="required">
+                    <input class="event-form__input input input--big input--white" type="email" data-parsley-pattern="/^\w+@\w+\.\w+$/" name="eventRegEmail" id="eventRegEmail" required="required">
                     <label class="event-form__label" for="eventRegEmail">Email</label>
                   </div>
                   <div class="event-form__input-wrapper event-form__input-wrapper--large input-wrapper input-wrapper--textarea">
@@ -8393,7 +8393,7 @@
           </button>
           <h2 class="modal-resume__title">Задать вопрос</h2>
           <p class="modal-resume__text">Мы с вами свяжемся и обсудим все детали</p>
-          <form class="resume-form resume-form--blue">
+          <form class="resume-form resume-form--blue" data-need-validation="">
             <div class="resume-form__input-wrapper input-wrapper">
               <input class="resume-form__input input input--big input--white" type="text" name="resumeModalName" id="resumeModalName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^s]+$" required="required">
               <label class="resume-form__label" for="resumeModalName">Имя</label>
@@ -8407,14 +8407,14 @@
               <label class="resume-form__label" for="resumeModalPhone">Ваш телефон</label>
             </div>
             <div class="resume-form__input-wrapper input-wrapper">
-              <input class="resume-form__input input input--big input--white" type="email" name="resumeModalEmail" id="resumeModalEmail" required="required">
+              <input class="resume-form__input input input--big input--white" type="email" data-parsley-pattern="/^\w+@\w+\.\w+$/" name="resumeModalEmail" id="resumeModalEmail" required="required">
               <label class="resume-form__label" for="resumeModalEmail">Email</label>
             </div>
             <div class="resume-form__input-wrapper resume-form__input-wrapper--large input-wrapper input-wrapper--textarea">
               <textarea class="resume-form__textarea input input--big input--white" name="resumeModalComment" id="resumeModalComment" placeholder="Ваш комментарий"></textarea>
             </div>
             <div class="resume-form__bottom">
-              <button class="resume-form__button button button--big button--blue" type="button">Отправить</button>
+              <button class="resume-form__button button button--big button--blue">Отправить</button>
               <div class="confidence-block confidence-block--blue">
                 <input class="confidence-block__checkbox visually-hidden" type="checkbox" name="resumeModalConfidence" id="resumeModalConfidence" checked="checked" required="required">
                 <label class="confidence-block__checkbox-label" for="resumeModalConfidence"><span>Даю согласие на обработку<a href="#">персональных данных</a></span>
@@ -8445,7 +8445,7 @@
                 <label class="modal-order__label" for="orderPhone">Телефон</label>
               </div>
               <div class="modal-order__input-wrapper input-wrapper">
-                <input class="modal-order__input input input--big input--blue" type="email" name="orderEmail" id="orderEmail" required>
+                <input class="modal-order__input input input--big input--blue" type="email" data-parsley-pattern="/^\w+@\w+\.\w+$/" name="orderEmail" id="orderEmail" required>
                 <label class="modal-order__label" for="orderEmail">Корпоративный Email</label>
               </div>
               <div class="modal-order__input-wrapper input-wrapper">
