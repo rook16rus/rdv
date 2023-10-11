@@ -125,6 +125,7 @@ window.addEventListener('resize', () => {
   if (document.documentElement.clientWidth !== window.savedWidth) {
     window.savedWidth = document.documentElement.clientWidth;
     moreButtonRow();
-    catalogAdaptive()
+    catalogAdaptive();
+    optimizationSection();
   }
 })

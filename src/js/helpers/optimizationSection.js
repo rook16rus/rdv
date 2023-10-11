@@ -8,7 +8,6 @@ export default function optimizationSection() {
       const cardNumber = card.querySelector('.optimization-section__card-number');
       const isTopCard = !!card.closest('.optimization-section__top');
 
-      console.log(cardNumber.offsetLeft)
       const cardArrowLeftPosition = cardNumber.offsetLeft + (cardNumber.clientWidth / 2) + 10;
       const cardArrowVerticalPosition =
         isTopCard ?
