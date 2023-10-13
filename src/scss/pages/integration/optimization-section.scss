@@ -62,11 +62,10 @@
     }
 
     &--start {
-      justify-content: flex-start;
-      padding-left: 8rem;
+      padding-right: 26rem;
 
       @include mq('custom', 'max', 1024) {
-        padding-left: 0;
+        padding-right: 0;
       }
     }
 
