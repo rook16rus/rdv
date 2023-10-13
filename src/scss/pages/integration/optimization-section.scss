@@ -61,6 +61,15 @@
       margin-bottom: 1.2rem;
     }
 
+    &--start {
+      justify-content: flex-start;
+      padding-left: 8rem;
+
+      @include mq('custom', 'max', 1024) {
+        padding-left: 0;
+      }
+    }
+
     .optimization-section__card {
       &::before {
         top: 100%;
@@ -123,6 +132,10 @@
       justify-content: flex-end;
     }
 
+    &--padding-right {
+      padding-left: 10rem;
+    }
+
     @include mq('custom', 'max', 768) {
       justify-content: stretch;
       flex-direction: column;
@@ -133,11 +146,7 @@
     }
 
     .optimization-section__card {
-      width: calc((100% - 3.2rem) / 3);
-
-      @include mq('custom', 'max', 768) {
-        width: 100%;
-      }
+      width: 100%;
 
       &::before {
         bottom: 100%;

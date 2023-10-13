@@ -109,7 +109,7 @@ section.optimization-section.page-section--large-margin
       p
         | Основной ключевой момент в процессе нашей работы - мы смотрим не только на «железную коробку», не ограничиваемся замерами производительности серверов, большое внимание уделяем именно анализу взаимодействия элементов системы и удобству работы #[br] пользователей.
   .wide-container
-    .optimization-section__top
+    .optimization-section__top.optimization-section__top--start
       for item in optimizationTop
         .optimization-section__card
           .optimization-section__card-top
@@ -119,7 +119,7 @@ section.optimization-section.page-section--large-margin
             for it in item.list
               li.optimization-section__card-item= it
           .optimization-section__card-arrow
-    .optimization-section__bottom.optimization-section__bottom--end
+    .optimization-section__bottom.optimization-section__bottom--padding-right
       for item in optimizationBottom
         .optimization-section__card
           .optimization-section__card-top
