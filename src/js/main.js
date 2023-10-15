@@ -50,6 +50,7 @@ import decisionMore from "./helpers/decisionMore";
 import optimizationSection from "./helpers/optimizationSection";
 import noDigits from "./helpers/noDigits";
 import noCyrillic from "./helpers/noCyrillic";
+import adaptiveTables from "./modules/adaptiveTables";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -99,6 +100,7 @@ documenReady(() => {
   optimizationSection();
   noDigits();
   noCyrillic()
+  adaptiveTables();
 });
 
 document.fonts.ready.then((res) => {

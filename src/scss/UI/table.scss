@@ -12,8 +12,8 @@ table {
   tr {
     width: 100%;
 
-    font: 700 1.4rem/120% "Geometria";
-    word-break: break-word;
+    font: 400 1.4rem/120% "Geometria";
+    word-break: normal;
     letter-spacing: -0.02em;
 
     @include mq('custom', 'max', 640) {
@@ -33,12 +33,20 @@ table {
     }
   }
 
-  td {
+  thead, th {
+    font-weight: 700;
+  }
+
+  td, th {
     padding: 1.6rem;
     min-width: 8rem;
 
     border-right: 1px solid var(--grey-D-30);
     border-bottom: 1px solid var(--grey-D-30);
+
+    @include mq('custom', 'max', 768) {
+      padding: 0.8rem;
+    }
 
     &--big {
       width: 22rem;
@@ -90,5 +98,37 @@ table {
         }
       }
     }
+  }
+}
+
+.js-table-desktop {
+  @include mq('custom', 'max', 768) {
+    display: none;
+  }
+}
+
+.js-table-mobile {
+  min-width: unset;
+
+  border: 1px solid #D1D6E3;
+
+  @include mq('custom', 'min', 769) {
+    display: none;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  td, th {
+    border: none;
+  }
+
+  .odd {
+    background-color: #F5F7FD;
+  }
+
+  .last {
+    border-bottom: 1px solid #D1D6E3;
   }
 }
