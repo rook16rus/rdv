@@ -10,8 +10,8 @@ export default function speakersSlider() {
       slidesPerView: "auto",
       spaceBetween: 0,
       navigation: {
-        nextEl: speakers.querySelector('.js-next-slide'),
-        prevEl: speakers.querySelector('.js-prev-slide')
+        nextEl: element.querySelector('.js-next-slide'),
+        prevEl: element.querySelector('.js-prev-slide')
       },
       breakpoints: {
         769: {
