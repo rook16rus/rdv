@@ -3,7 +3,7 @@ import Swiper, {Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode])
 
 export default function teamSlider() {
-  const sections = document.querySelector('.team');
+  const sections = document.querySelectorAll('.team');
 
   sections.forEach(section => {
     const element = section.querySelector(".team__slider");
