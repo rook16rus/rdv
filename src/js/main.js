@@ -99,8 +99,7 @@ documenReady(() => {
   decisionMore();
   optimizationSection();
   noDigits();
-  noCyrillic()
-  adaptiveTables();
+  noCyrillic();
 });
 
 document.fonts.ready.then((res) => {

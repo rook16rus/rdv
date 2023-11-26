@@ -6,8 +6,6 @@
 table {
   width: 100%;
   min-width: 90rem;
-  border-top: 1px solid var(--grey-D-30);
-  border-left: 1px solid var(--grey-D-30);
 
   tr {
     width: 100%;
@@ -33,16 +31,49 @@ table {
     }
   }
 
-  thead, th {
-    font-weight: 700;
+  thead, th, thead td {
+    font-weight: 500;
+
+    text-align: left;
+  }
+
+  thead th {
+    background-color: #3C87BC;
+    color: white;
+    border: 1px solid #3C87BC;
+    padding: 2rem 1.6rem;
+
+    font: var(--content-huge);
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
+
+  tbody th {
+    background-color: #F5F7FD;
+    color: #3074A5;
+    padding: 2rem 1.6rem;
+    font: var(--content-medium);
+  }
+
+  tbody td {
+    padding: 2rem 1.6rem;
+    font: var(--content-regular);
+    color: #0D3653;
+  }
+
+  tbody th,
+  td {
+    border-right: 1px solid var(--grey-D-30);
+    border-bottom: 1px solid var(--grey-D-30);
+  }
+
+  tbody tr {
+    border-left: 1px solid var(--grey-D-30);
   }
 
   td, th {
     padding: 1.6rem;
     min-width: 8rem;
-
-    border-right: 1px solid var(--grey-D-30);
-    border-bottom: 1px solid var(--grey-D-30);
 
     @include mq('custom', 'max', 768) {
       padding: 0.8rem;
@@ -66,15 +97,14 @@ table {
   }
 
   ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1rem 0;
 
     li {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      align-items: flex-start;
-      gap: 1.2rem;
+      position: relative;
+      padding-left: 1.4rem;
 
       @extend .content-regular-text;
       color: var(--main-D-10);
@@ -84,6 +114,10 @@ table {
       }
 
       &::before {
+        position: absolute;
+        top: 0.1rem;
+        left: 0.2rem;
+
         content: '';
 
         width: 0.4rem;
@@ -98,6 +132,47 @@ table {
         }
       }
     }
+  }
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    counter-reset: ordered-list;
+
+    & > li {
+      position: relative;
+      counter-increment: ordered-list;
+
+      padding-left: 2rem;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: counter(ordered-list) ".";
+      }
+    }
+  }
+
+  h1 {
+    @extend .title-h1;
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    @extend .title-h4;
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    @extend .title-h6;
+    margin-bottom: 0.5em;
+  }
+
+  b {
+    font-weight: 700;
   }
 }
 
