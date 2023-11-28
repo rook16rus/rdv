@@ -51,6 +51,7 @@ import optimizationSection from "./helpers/optimizationSection";
 import noDigits from "./helpers/noDigits";
 import noCyrillic from "./helpers/noCyrillic";
 import adaptiveTables from "./modules/adaptiveTables";
+import scrollbars from "./helpers/scrollbars";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -100,6 +101,7 @@ documenReady(() => {
   optimizationSection();
   noDigits();
   noCyrillic();
+  scrollbars();
 });
 
 document.fonts.ready.then((res) => {

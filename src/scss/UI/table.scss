@@ -1,11 +1,30 @@
 .table {
   width: 100%;
   overflow-x: auto;
+
+  /*scrollbar-color: var(--main-L-20) white;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: var(--grey-D-30);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--main-L-20);
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }*/
+
 }
 
 table {
   width: 100%;
   min-width: 90rem;
+  margin-bottom: 0.1rem;
 
   tr {
     width: 100%;
@@ -69,6 +88,10 @@ table {
 
   tbody tr {
     border-left: 1px solid var(--grey-D-30);
+
+    &:first-child {
+      border-top: 1px solid var(--grey-D-30);
+    }
   }
 
   td, th {
