@@ -52,6 +52,7 @@ import noDigits from "./helpers/noDigits";
 import noCyrillic from "./helpers/noCyrillic";
 import adaptiveTables from "./modules/adaptiveTables";
 import scrollbars from "./helpers/scrollbars";
+import reviews from "./helpers/reviews";
 
 documenReady(() => {
   window.rdv_API = { };
@@ -102,6 +103,7 @@ documenReady(() => {
   noDigits();
   noCyrillic();
   scrollbars();
+  reviews();
 });
 
 document.fonts.ready.then((res) => {
